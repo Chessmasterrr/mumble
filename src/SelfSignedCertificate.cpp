@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2017-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -141,7 +141,7 @@ bool SelfSignedCertificate::generate(CertificateType certificateType, QString cl
 		}
 	}
 
-	if (X509_NAME_add_entry_by_txt(name, "CN", MBSTRING_ASC,
+	if (X509_NAME_add_entry_by_txt(name, "CN", MBSTRING_UTF8,
 								   reinterpret_cast< unsigned char * >(commonName.toUtf8().data()), -1, -1, 0)
 		== 0) {
 		ok = false;
@@ -278,3 +278,5 @@ bool SelfSignedCertificate::generateMumbleCertificate(QString name, QString emai
 bool SelfSignedCertificate::generateMurmurV2Certificate(QSslCertificate &qscCert, QSslKey &qskKey) {
 	return SelfSignedCertificate::generate(CertificateTypeServerCertificate, QString(), QString(), qscCert, qskKey);
 }
+
+#undef SSL_STRING

@@ -1,11 +1,11 @@
-// Copyright 2020 The Mumble Developers. All rights reserved.
+// Copyright 2020-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
 
 #include "Game.h"
 
-#include "mumble_plugin_utils.h"
+#include "../mumble_positional_audio_utils.h"
 
 Game::Game(const procid_t id, const std::string name) : m_ok(false), m_proc(id, name) {
 	if (!m_proc.isOk()) {
@@ -18,11 +18,10 @@ Game::Game(const procid_t id, const std::string name) : m_ok(false), m_proc(id, 
 		return;
 	}
 
-	// 74 39             jz     short loc_????????
+	// 75 58             jnz    short loc_????????
 	// A1 ?? ?? ?? ??    mov    eax, AmongUsClient_c **
 	// 8B 40 5C          mov    eax, [eax+5Ch]
-	// 8B 00             mov    eax, [eax]
-	const std::vector< uint8_t > clientPattern = { 0x74, 0x39, 0xA1, '?', '?', '?', '?', 0x8B, 0x40, 0x5C, 0x8B, 0x00 };
+	const std::vector< uint8_t > clientPattern = { 0x75, 0x58, 0xA1, '?', '?', '?', '?', 0x8B, 0x40, 0x5C };
 	m_client                                   = m_proc.findPattern(clientPattern, iter->second);
 
 	if (!m_client) {

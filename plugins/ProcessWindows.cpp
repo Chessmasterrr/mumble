@@ -1,11 +1,11 @@
-// Copyright 2020 The Mumble Developers. All rights reserved.
+// Copyright 2020-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
 
 #include "ProcessWindows.h"
 
-#include "mumble_plugin_win32_internals.h"
+#include "mumble_positional_audio_win32_internals.h"
 
 ProcessWindows::ProcessWindows(const procid_t id, const std::string &name) : Process(id, name) {
 	const auto mods = modules();

@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2008-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -154,6 +154,9 @@ public:
 
 	virtual void getListeningUsers_async(const ::Murmur::AMD_Server_getListeningUsersPtr &, ::Ice::Int,
 										 const Ice::Current &);
+
+	virtual void sendWelcomeMessage_async(const ::Murmur::AMD_Server_sendWelcomeMessagePtr &,
+										  const ::Murmur::IdList &p1, const ::Ice::Current &current);
 
 	virtual void ice_ping(const Ice::Current &) const;
 };

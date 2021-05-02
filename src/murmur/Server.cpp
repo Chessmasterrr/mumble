@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2007-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -418,6 +418,8 @@ void Server::readParams() {
 	qrChannelName          = Meta::mp.qrChannelName;
 	iMessageLimit          = Meta::mp.iMessageLimit;
 	iMessageBurst          = Meta::mp.iMessageBurst;
+	iPluginMessageLimit    = Meta::mp.iPluginMessageLimit;
+	iPluginMessageBurst    = Meta::mp.iPluginMessageBurst;
 	qvSuggestVersion       = Meta::mp.qvSuggestVersion;
 	qvSuggestPositional    = Meta::mp.qvSuggestPositional;
 	qvSuggestPushToTalk    = Meta::mp.qvSuggestPushToTalk;
@@ -526,6 +528,15 @@ void Server::readParams() {
 	if (iMessageBurst < 1) { // Prevent disabling messages entirely
 		iMessageBurst = 1;
 	}
+
+	iPluginMessageLimit = getConf("mpluginessagelimit", iPluginMessageLimit).toUInt();
+	if (iPluginMessageLimit < 1) { // Prevent disabling messages entirely
+		iPluginMessageLimit = 1;
+	}
+	iPluginMessageBurst = getConf("pluginmessageburst", iPluginMessageBurst).toUInt();
+	if (iPluginMessageBurst < 1) { // Prevent disabling messages entirely
+		iPluginMessageBurst = 1;
+	}
 }
 
 void Server::setLiveConf(const QString &key, const QString &value) {
@@ -596,9 +607,6 @@ void Server::setLiveConf(const QString &key, const QString &value) {
 		QString text = !v.isNull() ? v : Meta::mp.qsWelcomeText;
 		if (text != qsWelcomeText) {
 			qsWelcomeText = text;
-			MumbleProto::ServerConfig mpsc;
-			mpsc.set_welcome_text(u8(qsWelcomeText));
-			sendAll(mpsc);
 		}
 	} else if (key == "registername") {
 		QString text = !v.isNull() ? v : Meta::mp.qsRegName;
@@ -708,7 +716,7 @@ void Server::udpActivated(int socket) {
 	iov[0].iov_base = encrypt;
 	iov[0].iov_len  = UDP_PACKET_SIZE;
 
-	u_char controldata[CMSG_SPACE(MAX(sizeof(struct in6_pktinfo), sizeof(struct in_pktinfo)))];
+	uint8_t controldata[CMSG_SPACE(MAX(sizeof(struct in6_pktinfo), sizeof(struct in_pktinfo)))];
 
 	memset(&msg, 0, sizeof(msg));
 	msg.msg_name       = reinterpret_cast< struct sockaddr * >(&from);
@@ -846,7 +854,7 @@ void Server::run() {
 				iov[0].iov_base = encrypt;
 				iov[0].iov_len  = UDP_PACKET_SIZE;
 
-				u_char controldata[CMSG_SPACE(MAX(sizeof(struct in6_pktinfo), sizeof(struct in_pktinfo)))];
+				uint8_t controldata[CMSG_SPACE(MAX(sizeof(struct in6_pktinfo), sizeof(struct in_pktinfo)))];
 
 				memset(&msg, 0, sizeof(msg));
 				msg.msg_name       = reinterpret_cast< struct sockaddr * >(&from);
@@ -1025,7 +1033,7 @@ void Server::sendMessage(ServerUser *u, const char *data, int len, QByteArray &c
 		iov[0].iov_base = buffer;
 		iov[0].iov_len  = len + 4;
 
-		u_char controldata[CMSG_SPACE(MAX(sizeof(struct in6_pktinfo), sizeof(struct in_pktinfo)))];
+		uint8_t controldata[CMSG_SPACE(MAX(sizeof(struct in6_pktinfo), sizeof(struct in_pktinfo)))];
 		memset(controldata, 0, sizeof(controldata));
 
 		memset(&msg, 0, sizeof(msg));
@@ -1272,8 +1280,8 @@ void Server::processMsg(ServerUser *u, const char *data, int len) {
 										ServerUser *pDst = static_cast< ServerUser * >(qhUsers.value(currentSession));
 
 										if (pDst && (!group || Group::isMember(tc, tc, qsg, pDst))) {
-											// Only send audio to listener if the user exists and it is in the group the speech is directed
-											// at (if any)
+											// Only send audio to listener if the user exists and it is in the group the
+											// speech is directed at (if any)
 											listener << pDst;
 										}
 									}
@@ -1453,15 +1461,8 @@ void Server::newClient() {
 		}
 
 		ServerUser *u = new ServerUser(this, sock);
-		u->uiSession  = qqIds.dequeue();
 		u->haAddress  = ha;
 		HostAddress(sock->localAddress()).toSockaddr(&u->saiTcpLocalAddress);
-
-		{
-			QWriteLocker wl(&qrwlVoiceThread);
-			qhUsers.insert(u->uiSession, u);
-			qhHostUsers[ha].insert(u);
-		}
 
 		connect(u, SIGNAL(connectionClosed(QAbstractSocket::SocketError, const QString &)), this,
 				SLOT(connectionClosed(QAbstractSocket::SocketError, const QString &)));
@@ -1681,7 +1682,7 @@ void Server::connectionClosed(QAbstractSocket::SocketError err, const QString &r
 		QCoreApplication::instance()->postEvent(this,
 												new ExecEvent(boost::bind(&Server::removeChannel, this, old->iId)));
 
-	if (static_cast< int >(u->uiSession) < iMaxUsers * 2)
+	if (u->uiSession > 0 && static_cast< int >(u->uiSession) < iMaxUsers * 2)
 		qqIds.enqueue(u->uiSession); // Reinsert session id into pool
 
 	if (u->sState == ServerUser::Authenticated) {
@@ -1763,6 +1764,8 @@ void Server::message(unsigned int uiType, const QByteArray &qbaMsg, ServerUser *
 #endif
 
 	switch (uiType) { MUMBLE_MH_ALL }
+
+#undef MUMBLE_MH_MSG
 }
 
 void Server::checkTimeout() {
@@ -2100,7 +2103,9 @@ QString Server::addressToString(const QHostAddress &adr, unsigned short port) {
 }
 
 bool Server::validateUserName(const QString &name) {
-	return (qrUserName.exactMatch(name) && (name.length() <= 512));
+	// We expect the name passed to this function to be fully trimmed already. This way we
+	// prevent "empty" names (at least with the default username restriction).
+	return (name.trimmed().length() == name.length() && qrUserName.exactMatch(name) && (name.length() <= 512));
 }
 
 bool Server::validateChannelName(const QString &name) {
@@ -2298,3 +2303,8 @@ bool Server::canNest(Channel *newParent, Channel *channel) const {
 
 	return (parentLevel + channelDepth) < iChannelNestingLimit;
 }
+
+#undef MAX
+#undef UDP_PACKET_SIZE
+#undef SIO_UDP_CONNRESET
+#undef SENDTO

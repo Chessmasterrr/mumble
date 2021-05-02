@@ -462,6 +462,17 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
 </context>
 <context>
+    <name>ALSAEnumerator</name>
+    <message>
+        <source>Getting name (longname) of the sound card failed: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Getting name of the sound card failed: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ASIOConfig</name>
     <message>
         <source>%1 (version %2)</source>
@@ -595,10 +606,6 @@ This value allows you to set the maximum number of users allowed in the channel.
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;h3&gt;Mumble (%1)&lt;/h3&gt;&lt;p&gt;%3&lt;/p&gt;&lt;p&gt;&lt;b&gt;A voice-chat utility for gamers&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;&lt;a href=&quot;%2&quot;&gt;%2&lt;/a&gt;&lt;/tt&gt;&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>&amp;About Mumble</source>
         <translation type="unfinished"></translation>
     </message>
@@ -628,6 +635,10 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Third-party license agreements</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;h3&gt;Mumble (%1)&lt;/h3&gt;&lt;p&gt;%3&lt;/p&gt;&lt;p&gt;&lt;b&gt;An Open Source, low-latency, high quality voice-chat utility&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;&lt;a href=&quot;%2&quot;&gt;%2&lt;/a&gt;&lt;/tt&gt;&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1003,6 +1014,18 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Speex suppression strength</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mute cue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Br&amp;owse...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pre&amp;view</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2165,7 +2188,7 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     <message numerus="yes">
         <source>Ban List - %n Ban(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform><numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>
@@ -2816,6 +2839,10 @@ Are you sure you wish to replace your certificate?
         <source>This button will restore the defaults for all settings.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Defaults (All)</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ConnectDialog</name>
@@ -2828,59 +2855,7 @@ Are you sure you wish to replace your certificate?
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Adding host %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Servername</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Hostname</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Bonjour name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Port</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Addresses</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Website</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Packet loss</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ping (80%)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>%1 ms</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ping (95%)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Bandwidth</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>%1 kbit/s</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Connect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2889,10 +2864,6 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>Users</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3009,6 +2980,62 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>&lt;p&gt;To measure the latency (ping) of public servers and determine the number of active users, your IP address must be transmitted to each public server.&lt;/p&gt;&lt;p&gt;Do you consent to the transmission of your IP address? If you answer no, the public server list will be deactivated. However, you can reactivate it at any time in the network settings.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>C&amp;onnect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Adding host %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hostname</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bonjour name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Port</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Addresses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Website</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Packet loss</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ping (80%)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 ms</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ping (95%)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bandwidth</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 kbit/s</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Version</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3175,19 +3202,19 @@ Label of the server. This is what the server will be named like in your server l
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>We&apos;re really sorry, but it appears the crash upload has failed with error %1 %2. Please inform a developer.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>This really isn&apos;t funny, but apparently there&apos;s a bug in the crash reporting code, and we&apos;ve failed to upload the report. You may inform a developer about error %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Uploading crash report</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Abort upload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>HTTP error %1: &quot;%2&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Internal error encountered in CrashReporter.cpp: Received network reply does not contain an HTTP status code. Please inform a developer about error code %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3293,14 +3320,6 @@ Label of the server. This is what the server will be named like in your server l
     </message>
     <message>
         <source>Additional Shortcut Engines</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;b&gt;Enable Windows hooks&lt;/b&gt;.&lt;br /&gt;This enables the Windows hooks shortcut engine. Using this engine allows Mumble to suppress keypresses and mouse clicks.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Enable Windows hooks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3760,6 +3779,10 @@ This field describes the size of an LCD device. The size is given either in pixe
     </message>
     <message>
         <source>User stopped listening to channel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plugin message</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4559,55 +4582,11 @@ The setting only applies for new messages, the already shown ones will retain th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;p&gt;%1 (%2)&lt;br /&gt;%3&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;h2&gt;Voice channel&lt;/h2&gt;&lt;p&gt;Encrypted with 128 bit OCB-AES128&lt;br /&gt;%1 ms average latency (%4 deviation)&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Register yourself as %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;p&gt;You are about to register yourself on this server. This action cannot be undone, and your username cannot be changed once this is done. You will forever be known as &apos;%1&apos; on this server.&lt;/p&gt;&lt;p&gt;Are you sure you want to register yourself?&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;h2&gt;Version&lt;/h2&gt;&lt;p&gt;Protocol %1&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;No build information or OS version available&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The connection is encrypted and authenticated using %1 and uses %2 as the key exchange mechanism (%3)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The connection is encrypted using %1, with %2 for message authentication and %3 as the key exchange mechanism (%4)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The connection is secured by the cipher suite that OpenSSL identifies as %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;The connection provides perfect forward secrecy&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;The connection does not provide perfect forward secrecy&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;h2&gt;Control channel&lt;/h2&gt;&lt;p&gt;The connection uses %1&lt;/p&gt;%2%3&lt;p&gt;%4 ms average latency (%5 deviation)&lt;/p&gt;&lt;p&gt;Remote host %6 (port %7)&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Voice channel is sent over control channel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4784,46 +4763,6 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Transmit Mode set to Push-to-Talk</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;Connected users: %1/%2&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>UDP Statistics</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>To Server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>From Server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Good</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Late</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Lost</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Resync</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;h2&gt;Audio bandwidth&lt;/h2&gt;&lt;p&gt;Maximum %1 kbit/s&lt;br /&gt;Current %2 kbit/s&lt;br /&gt;Codec: %3&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mumble Server Information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6145,49 +6084,6 @@ the channel&apos;s context menu.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Usage: mumble [options] [&lt;url&gt;]
-
-&lt;url&gt; specifies a URL to connect to after startup instead of showing
-the connection window, and has the following form:
-mumble://[&lt;username&gt;[:&lt;password&gt;]@]&lt;host&gt;[:&lt;port&gt;][/&lt;channel&gt;[/&lt;subchannel&gt;...]][?version=&lt;x.y.z&gt;]
-
-The version query parameter has to be set in order to invoke the
-correct client version. It currently defaults to 1.2.0.
-
-Valid options are:
-  -h, --help    Show this help text and exit.
-  -m, --multiple
-                Allow multiple instances of the client to be started.
-  -c, --config
-                Specify an alternative configuration file.
-                If you use this to run multiple instances of Mumble at once,
-                make sure to set an alternative &apos;database&apos; value in the config.
-  -n, --noidentity
-                Suppress loading of identity files (i.e., certificates.)
-  -jn, --jackname &lt;arg&gt;
-                Set custom Jack client name.
-  --license
-                Show the Mumble license.
-  --authors
-                Show the Mumble authors.
-  --third-party-licenses
-                Show licenses for third-party software used by Mumble.
-  --window-title-ext &lt;arg&gt;
-                Sets a custom window title extension.
-  --dump-input-streams
-                Dump PCM streams at various parts of the input chain
-                (useful for debugging purposes)
-                - raw microphone input
-                - speaker readback for echo cancelling
-                - processed microphone input
-  --print-echocancel-queue
-                Print on stdout the echo cancellation queue state
-                (useful for debugging purposes)
-
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Hide/show main window</source>
         <comment>Global Shortcut</comment>
         <translation type="unfinished"></translation>
@@ -6228,6 +6124,74 @@ Valid actions are:
   stoptalking
                 Stop talking
 
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Usage: mumble [options] [&lt;url&gt; | &lt;plugin_list&gt;]
+
+&lt;url&gt; specifies a URL to connect to after startup instead of showing
+the connection window, and has the following form:
+mumble://[&lt;username&gt;[:&lt;password&gt;]@]&lt;host&gt;[:&lt;port&gt;][/&lt;channel&gt;[/&lt;subchannel&gt;...]][?version=&lt;x.y.z&gt;]
+
+&lt;plugin_list&gt; is a list of plugin files that shall be installed
+The version query parameter has to be set in order to invoke the
+correct client version. It currently defaults to 1.2.0.
+
+Valid options are:
+  -h, --help    Show this help text and exit.
+  -m, --multiple
+                Allow multiple instances of the client to be started.
+  -c, --config
+                Specify an alternative configuration file.
+                If you use this to run multiple instances of Mumble at once,
+                make sure to set an alternative &apos;database&apos; value in the config.
+  --default-certificate-dir &lt;dir&gt;
+                Specify an alternative default certificate path.
+                This path is only used if there is no certificate loaded
+                from the settings.
+  -n, --noidentity
+                Suppress loading of identity files (i.e., certificates.)
+  -jn, --jackname &lt;arg&gt;
+                Set custom Jack client name.
+  --license
+                Show the Mumble license.
+  --authors
+                Show the Mumble authors.
+  --third-party-licenses
+                Show licenses for third-party software used by Mumble.
+  --window-title-ext &lt;arg&gt;
+                Sets a custom window title extension.
+  --dump-input-streams
+                Dump PCM streams at various parts of the input chain
+                (useful for debugging purposes)
+                - raw microphone input
+                - speaker readback for echo cancelling
+                - processed microphone input
+  --print-echocancel-queue
+                Print on stdout the echo cancellation queue state
+                (useful for debugging purposes)
+  --translation-dir &lt;dir&gt;
+                Specifies an additional translation fir &lt;dir&gt; in which
+                Mumble will search for translation files that overwrite
+                the bundled ones
+                Directories added this way have higher priority than
+                the default locations used otherwise
+  --print-translation-dirs
+                Print out the paths in which Mumble will search for
+                translation files that overwrite the bundled ones.
+                (Useful for translators testing their translations)
+  --locale &lt;locale&gt;
+                Overwrite the locale in Mumble&apos;s settings with a
+                locale that corresponds to the given locale string.
+                If the format is invalid, Mumble will error.
+                Otherwise the locale will be permanently saved to
+                Mumble&apos;s settings.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Directory %1 does not exist.
 </source>
         <translation type="unfinished"></translation>
     </message>
@@ -6499,10 +6463,6 @@ Valid actions are:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Download plugin and overlay updates on startup</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Privacy</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6525,6 +6485,14 @@ Prevents the client from sending potentially identifying information about the o
     </message>
     <message>
         <source>Hide public server list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check for plugin updates on startup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Automatically download and install plugin updates</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7077,30 +7045,188 @@ To upgrade these files to their latest versions, click the button below.</source
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Enabled</source>
+        <source>Enable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PA</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyEvents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Install a plugin from a local file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Install plugin...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unload the currently selected plugin. This will remove it from the plugin list for the current session.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The plugin was installed successfully</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to deactivate all requested features for plugin &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to load plugin &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Whether the positional audio feature of this plugin should be enabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This plugin does not provide support for positional audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Whether this plugin has the permission to be listening to all keyboard events that occur while Mumble has focus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Whether this plugin should be enabled</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>Plugins</name>
+    <name>PluginInstaller</name>
     <message>
-        <source>Skipping plugin update in debug mode.</source>
+        <source>PluginInstaller</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Downloaded new or updated plugin to %1.</source>
+        <source>You are about to install the plugin listed below. Do you wish to proceed?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Failed to install new plugin to %1.</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>%1 lost link.</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Version:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>%1 linked.</source>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Author(s):&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Description:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;No</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Yes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The file &quot;%1&quot; is not a valid plugin file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Found more than one plugin library for the current OS in &quot;%1&quot; (&quot;%2&quot; and &quot;%3&quot;)!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to find a plugin for the current OS in &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to load plugin &quot;%1&quot; - check the plugin interface!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to delete old plugin at &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to copy plugin library from &quot;%1&quot; to &quot;%2&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to move plugin library to &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PluginManager</name>
+    <message>
+        <source>%1 lost link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 linked</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plugin &quot;%1&quot; encountered a permanent error in positional data gathering</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Non-plugin found in plugin directory: &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed at loading manual plugin: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PluginUpdater</name>
+    <message>
+        <source>PluginUpdater</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The following plugins can be updated.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plugin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Download-URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Do you want to update the selected plugins?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to download plugin update for &quot;%1&quot; from &quot;%2&quot; (%3)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update for plugin &quot;%1&quot; failed due to too many redirects</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to download plugin update for &quot;%1&quot; from &quot;%2&quot; (HTTP status code %3)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Successfully updated plugin &quot;%1&quot;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7241,10 +7367,6 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This option works best when using built-in microphone and speaker.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Access to the microphone was denied. Please allow Mumble to use the microphone by changing the settings in System Preferences -&gt; Security &amp; Privacy -&gt; Privacy -&gt; Microphone.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7281,7 +7403,24 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Acoustic echo cancellation provided by Apple.</source>
+        <source>The provided URL uses an invalid version format: &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The directories in which Mumble searches for extra translation files are:
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invocation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>EXPERIMENTAL: Acoustic echo cancellation (Apple).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The support for this option is experimental only! This option works best when using built-in microphone and speaker.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7395,6 +7534,145 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     </message>
     <message>
         <source>Connection timed out</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ServerInformation</name>
+    <message>
+        <source>Server information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Server Information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Host:&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Port:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Users&lt;/b&gt;:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Protocol:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Release:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;OS:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Allowed:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Current:&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Codec:&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Connection details</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>UDP (Voice)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Encryption:&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Avg. latency:&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Statistics</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Good</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Late</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lost</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Resync</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Outgoing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Incoming</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Voice packets is currently sent over TCP.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TCP (Control)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;TLS version:&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Cipher suite:&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;forward secrecy&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;View certificate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Ok</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The connection provides perfect forward secrecy.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The connection does NOT provide perfect forward secrecy.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No information about forward secrecy available.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7623,7 +7901,7 @@ An access token is a text string, which can be used as a password for very simpl
     <message numerus="yes">
         <source>Registered users: %n account(s)</source>
         <translation type="unfinished">
-            <numerusform></numerusform><numerusform></numerusform>
+            <numerusform></numerusform>
         </translation>
     </message>
     <message>

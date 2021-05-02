@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2010-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -13,7 +13,8 @@
 #endif
 
 ServerUser::ServerUser(Server *p, QSslSocket *socket)
-	: Connection(p, socket), User(), s(nullptr), leakyBucket(p->iMessageLimit, p->iMessageBurst) {
+	: Connection(p, socket), User(), s(nullptr), leakyBucket(p->iMessageLimit, p->iMessageBurst),
+	  m_pluginMessageBucket(5, 20) {
 	sState     = ServerUser::Connected;
 	sUdpSocket = INVALID_SOCKET;
 

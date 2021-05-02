@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -7,14 +7,11 @@
 #include <IOKit/audio/IOAudioTypes.h>
 #include <CoreAudio/AudioHardware.h>
 #include "MainWindow.h"
+#include "Global.h"
 
 #include <exception>
 #include <sstream>
 #include "CoreAudio.h"
-
-// We define a global macro called 'g'. This can lead to issues when included code uses 'g' as a type or parameter name
-// (like protobuf 3.7 does). As such, for now, we have to make this our last include.
-#include "Global.h"
 
 // Ignore deprecation warnings for the whole file, for now.
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
@@ -256,6 +253,20 @@ bool IsInputDevice(AudioObjectID device_id) {
 	       (num_undefined_input_streams > 0 && num_output_streams == 0);
 }
 
+bool IsOutputDevice(AudioObjectID device_id) {
+    QVector<AudioObjectID> streams = GetAudioObjectIDs(device_id, kAudioDevicePropertyStreams);
+
+    for (auto stream_id : streams) {
+	    auto direction = GetDeviceUint32Property(stream_id, kAudioStreamPropertyDirection,
+						     kAudioObjectPropertyScopeGlobal);
+	    const UInt32 kDirectionOutput = 0;
+	    if (direction == kDirectionOutput) {
+	    	return true;
+	    }
+    }
+    return false;
+}
+
 
 #ifdef DEBUG
 
@@ -406,7 +417,7 @@ void CoreAudioInit::destroy() {
 }
 
 const QList< audioDevice > CoreAudioSystem::getDeviceChoices(bool input) {
-	bool doEcho = (g.s.echoOption == EchoCancelOptionID::APPLE_AEC);
+	bool doEcho = (Global::get().s.echoOption == EchoCancelOptionID::APPLE_AEC);
 	QHash< QString, QString > qhDevices = CoreAudioSystem::getDevices(input, doEcho);
 	QList< audioDevice > qlReturn;
 	QStringList qlDevices;
@@ -414,7 +425,7 @@ const QList< audioDevice > CoreAudioSystem::getDeviceChoices(bool input) {
 	qhDevices.insert(QString(), QObject::tr("Default Device"));
 	qlDevices = qhDevices.keys();
 
-	const QString &qsDev = input ? g.s.qsCoreAudioInput : g.s.qsCoreAudioOutput;
+	const QString &qsDev = input ? Global::get().s.qsCoreAudioInput : Global::get().s.qsCoreAudioOutput;
 	if (qlDevices.contains(qsDev)) {
 		qlDevices.removeAll(qsDev);
 		qlDevices.prepend(qsDev);
@@ -441,9 +452,8 @@ const QHash< QString, QString > CoreAudioSystem::getDevices(bool input, bool ech
 				continue;
 			}
 
-			bool isInput = core_audio_utils::IsInputDevice(devid);
-
-			if (isInput != input) continue;
+			if ((input && !core_audio_utils::IsInputDevice(devid))
+			    || (!input && !core_audio_utils::IsOutputDevice(devid))) continue;
 
 			QString qsDeviceName = core_audio_utils::GetDeviceStringProperty(devid, kAudioDevicePropertyDeviceNameCFString);
 			QString qsDeviceIdentifier = core_audio_utils::GetDeviceStringProperty(devid, kAudioDevicePropertyDeviceUID);
@@ -516,7 +526,7 @@ bool CoreAudioInputRegistrar::isMicrophoneAccessDeniedByOS() {
 			case AVAuthorizationStatusDenied: {
 				// The user has previously denied access.
 				qWarning("CoreAudioInput: Microphone access has been previously denied by user.");
-				g.mw->msgBox(QObject::tr("Access to the microphone was denied. Please allow Mumble to use the microphone "
+				Global::get().mw->msgBox(QObject::tr("Access to the microphone was denied. Please allow Mumble to use the microphone "
 				                         "by changing the settings in System Preferences -> Security & Privacy -> Privacy -> "
 				                         "Microphone."));
 				return true;
@@ -524,7 +534,7 @@ bool CoreAudioInputRegistrar::isMicrophoneAccessDeniedByOS() {
 			case AVAuthorizationStatusRestricted: {
 				// The user can't grant access due to restrictions.
 				qWarning("CoreAudioInput: Microphone access denied due to system restrictions.");
-				g.mw->msgBox(QObject::tr("Access to the microphone was denied due to system restrictions. You will not be able"
+				Global::get().mw->msgBox(QObject::tr("Access to the microphone was denied due to system restrictions. You will not be able"
 				                         "to use the microphone in this session."));
 				return true;
 			}
@@ -557,8 +567,8 @@ CoreAudioInput::CoreAudioInput() {
 }
 
 bool CoreAudioInput::openAUHAL(AudioStreamBasicDescription &streamDescription){
-	Component comp;
-	ComponentDescription desc;
+	AudioComponent comp;
+	AudioComponentDescription desc;
 	UInt32 val, len;
 
 	desc.componentType         = kAudioUnitType_Output;
@@ -569,13 +579,13 @@ bool CoreAudioInput::openAUHAL(AudioStreamBasicDescription &streamDescription){
 
 	qDebug("CoreAudioInput: Use AUHAL as IO AudioUnit.");
 
-	comp = FindNextComponent(nullptr, &desc);
+	comp = AudioComponentFindNext(nullptr, &desc);
 	if (!comp) {
 		qWarning("CoreAudioInput: Unable to find AUHAL.");
 		return false;
 	}
 
-	CHECK_RETURN_FALSE(OpenAComponent(comp, &auHAL), "CoreAudioInput: Unable to open AUHAL component.");
+	CHECK_RETURN_FALSE(AudioComponentInstanceNew(comp, &auHAL), "CoreAudioInput: Unable to open AUHAL component.");
 
 	val = 1;
 	CHECK_RETURN_FALSE(AudioUnitSetProperty(auHAL, kAudioOutputUnitProperty_EnableIO, kAudioUnitScope_Input,
@@ -723,7 +733,7 @@ void CoreAudioInput::run() {
 	AudioStreamBasicDescription fmt;
 	inputDevId = 0;
 	echoOutputDevId = 0;
-	bool doEcho = (g.s.echoOption == EchoCancelOptionID::APPLE_AEC);
+	bool doEcho = (Global::get().s.echoOption == EchoCancelOptionID::APPLE_AEC);
 
 	auHAL = nullptr;
 	auVoip = nullptr;
@@ -731,16 +741,16 @@ void CoreAudioInput::run() {
 	memset(&buflist, 0, sizeof(AudioBufferList));
 
 	try {
-		if (!g.s.qsCoreAudioInput.isEmpty()) {
-			qWarning("CoreAudioInput: Set device to '%s'.", qPrintable(g.s.qsCoreAudioInput));
-			inputDevId = core_audio_utils::GetDeviceID(g.s.qsCoreAudioInput, AUDirection::INPUT);
+		if (!Global::get().s.qsCoreAudioInput.isEmpty()) {
+			qWarning("CoreAudioInput: Set device to '%s'.", qPrintable(Global::get().s.qsCoreAudioInput));
+			inputDevId = core_audio_utils::GetDeviceID(Global::get().s.qsCoreAudioInput, AUDirection::INPUT);
 		} else {
 			qWarning("CoreAudioInput: Set device to 'Default Device'.");
 			inputDevId = core_audio_utils::GetDefaultDeviceID(AUDirection::INPUT);
 		}
 
 		if (doEcho) {
-			echoOutputDevId = core_audio_utils::GetDeviceID(g.s.qsCoreAudioOutput, AUDirection::OUTPUT);
+			echoOutputDevId = core_audio_utils::GetDeviceID(Global::get().s.qsCoreAudioOutput, AUDirection::OUTPUT);
 			if (!openAUVoip(fmt)) { return; };
 		} else {
 			if (!openAUHAL(fmt)) { return; };
@@ -919,10 +929,10 @@ void CoreAudioOutput::run() {
 	                                               kAudioObjectPropertyElementMaster };
 
 	try {
-		if (!g.s.qsCoreAudioOutput.isEmpty()) {
-			qWarning("CoreAudioOutput: Set device to '%s'.", qPrintable(g.s.qsCoreAudioOutput));
+		if (!Global::get().s.qsCoreAudioOutput.isEmpty()) {
+			qWarning("CoreAudioOutput: Set device to '%s'.", qPrintable(Global::get().s.qsCoreAudioOutput));
 
-			devId = core_audio_utils::GetDeviceID(g.s.qsCoreAudioOutput, AUDirection::OUTPUT);
+			devId = core_audio_utils::GetDeviceID(Global::get().s.qsCoreAudioOutput, AUDirection::OUTPUT);
 		} else {
 			qWarning("CoreAudioOutput: Set device to 'Default Device'.");
 
@@ -932,8 +942,8 @@ void CoreAudioOutput::run() {
 		qWarning() << "CoreAudioOutput: " << e.what();
 	}
 
-	Component comp;
-	ComponentDescription desc;
+	AudioComponent comp;
+	AudioComponentDescription desc;
 
 	desc.componentType         = kAudioUnitType_Output;
 	desc.componentSubType      = kAudioUnitSubType_HALOutput;
@@ -941,13 +951,13 @@ void CoreAudioOutput::run() {
 	desc.componentFlags        = 0;
 	desc.componentFlagsMask    = 0;
 
-	comp = FindNextComponent(nullptr, &desc);
+	comp = AudioComponentFindNext(nullptr, &desc);
 	if (!comp) {
 		qWarning("CoreAudioOuput: Unable to find AudioUnit.");
 		return;
 	}
 
-	CHECK_RETURN(OpenAComponent(comp, &auHAL),
+	CHECK_RETURN(AudioComponentInstanceNew(comp, &auHAL),
 	             "CoreAudioOutput: Unable to open AudioUnit component.");
 
 	CHECK_RETURN(AudioUnitInitialize(auHAL),

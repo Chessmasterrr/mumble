@@ -1,4 +1,4 @@
-# Copyright 2019-2020 The Mumble Developers. All rights reserved.
+# Copyright 2020-2021 The Mumble Developers. All rights reserved.
 # Use of this source code is governed by a BSD-style license
 # that can be found in the LICENSE file at the root of the
 # Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -39,6 +39,9 @@ endif()
 remove_definitions("-DUNICODE")
 
 add_library(overlay SHARED)
+
+# The overlay doesn't work well with unity builds
+set_target_properties(overlay PROPERTIES UNITY_BUILD FALSE)
 
 find_program(FXC "fxc" DOC "Effect-Compiler tool")
 if(NOT FXC)

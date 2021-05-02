@@ -1,21 +1,23 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="hu" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="hu">
 <context>
     <name>ACLEditor</name>
     <message>
         <source>Deny</source>
-        <translation>Tiltás</translation>
+        <translation>Tiltva</translation>
     </message>
     <message>
         <source>Allow</source>
-        <translation>Engedélyezés</translation>
+        <translation>Engedélyezve</translation>
     </message>
     <message>
         <source>Allow %1</source>
-        <translation>%1 engedélyezése</translation>
+        <translation>%1 művelet engedélyezése</translation>
     </message>
     <message>
         <source>Deny %1</source>
-        <translation>%1 tiltása</translation>
+        <translation>%1 művelet tiltása</translation>
     </message>
     <message>
         <source>Mumble - Add channel</source>
@@ -23,7 +25,7 @@
     </message>
     <message>
         <source>Default server value</source>
-        <translation>Alapértelmezett kiszolgáló érték</translation>
+        <translation>Kiszolgáló által meghatározott</translation>
     </message>
     <message>
         <source>Failed: Invalid channel</source>
@@ -75,11 +77,11 @@
     </message>
     <message>
         <source>Check to create a temporary channel.</source>
-        <translation>Jelölje be átmeneti csatorna létrehozásához.</translation>
+        <translation>Ideiglenes csatornát hoz létre, mely elhagyást követően törlődik.</translation>
     </message>
     <message>
         <source>Temporary</source>
-        <translation>Átmeneti</translation>
+        <translation>Ideiglenes csatorna</translation>
     </message>
     <message>
         <source>&lt;b&gt;Position&lt;/b&gt;&lt;br/&gt;
@@ -155,11 +157,11 @@ Ezzel az értékkel módosíthatja azt a sorrendet, ahogy a Mumble egy faszerkez
     </message>
     <message>
         <source>&amp;ACL</source>
-        <translation>&amp;ACL</translation>
+        <translation>&amp;Engedélyek</translation>
     </message>
     <message>
         <source>Active ACLs</source>
-        <translation>Aktív ACL-ek</translation>
+        <translation>Érvényes engedélyek</translation>
     </message>
     <message>
         <source>List of entries</source>
@@ -167,7 +169,7 @@ Ezzel az értékkel módosíthatja azt a sorrendet, ahogy a Mumble egy faszerkez
     </message>
     <message>
         <source>Inherit ACL of parent?</source>
-        <translation>Öröklődjön a hozzáférést szabályzó lista (ACL) a szülőtől?</translation>
+        <translation>Engedélyek öröklése a szülőtől</translation>
     </message>
     <message>
         <source>This sets whether or not the ACL up the chain of parent channels are applied to this object. Only those entries that are marked in the parent as &quot;Apply to sub-channels&quot; will be inherited.</source>
@@ -175,7 +177,7 @@ Ezzel az értékkel módosíthatja azt a sorrendet, ahogy a Mumble egy faszerkez
     </message>
     <message>
         <source>Inherit ACLs</source>
-        <translation>ACL öröklése</translation>
+        <translation>Engedélyek öröklése</translation>
     </message>
     <message>
         <source>Move entry up</source>
@@ -227,7 +229,7 @@ Ezzel az értékkel módosíthatja azt a sorrendet, ahogy a Mumble egy faszerkez
     </message>
     <message>
         <source>Context</source>
-        <translation>Összefüggések</translation>
+        <translation>Kiterjesztés</translation>
     </message>
     <message>
         <source>Entry should apply to this channel.</source>
@@ -240,7 +242,7 @@ Ezzel az értékkel módosíthatja azt a sorrendet, ahogy a Mumble egy faszerkez
     </message>
     <message>
         <source>Applies to this channel</source>
-        <translation>Alkalmazás erre a mappára</translation>
+        <translation>Érvényes erre a csatornára</translation>
     </message>
     <message>
         <source>Entry should apply to sub-channels.</source>
@@ -294,7 +296,7 @@ Hozzáad egy új csoportot.</translation>
     </message>
     <message>
         <source>Applies to sub-channels</source>
-        <translation>Alkalmazás az almappákra</translation>
+        <translation>Érvényes alcsatornákra</translation>
     </message>
     <message>
         <source>Permissions</source>
@@ -337,7 +339,8 @@ Amennyiben engedélyezed a létrehozandó csatorna ideglenesként lesz megjelöl
     <message>
         <source>&lt;b&gt;Group&lt;/b&gt;&lt;br /&gt;
 These are all the groups currently defined for the channel. To create a new group, just type in the name and press enter.</source>
-        <translation type="unfinished"/>
+        <translation>&lt;b&gt;Csoport&lt;/b&gt;&lt;br /&gt;
+Jelenleg ezek a csoportok léteznek a csatornán. Új csoport létrehozásához csak gépeljen be egy nevet, és üssön entert.</translation>
     </message>
     <message>
         <source>&lt;b&gt;Remove&lt;/b&gt;&lt;br /&gt;This removes the currently selected group. If the group was inherited, it will not be removed from the list, but all local information about the group will be cleared.</source>
@@ -349,38 +352,38 @@ These are all the groups currently defined for the channel. To create a new grou
     </message>
     <message>
         <source>&lt;b&gt;Inheritable&lt;/b&gt;&lt;br /&gt;This makes this group inheritable to sub-channels. If the group is non-inheritable, sub-channels are still free to create a new group with the same name.</source>
-        <translation type="unfinished"/>
+        <translation>&lt;b&gt;Öröklődés&lt;/b&gt;&lt;br /&gt;A csoportot öröklődővé teszi az alcsatornák számára. Ha a csoport nem öröklődő, az alcsatornák továbbra is szabadon létrehozhatnak egy azonos nevű csoportot.</translation>
     </message>
     <message>
         <source>&lt;b&gt;Inherited&lt;/b&gt;&lt;br /&gt;This indicates that the group was inherited from the parent channel. You cannot edit this flag, it&apos;s just for information.</source>
-        <translation type="unfinished"/>
+        <translation>&lt;b&gt;Örökölt&lt;/b&gt;&lt;br /&gt;A csoport a szülőcsatornából öröklődött. Ez a beállítás nem szerkeszthető, csak informatív célú.</translation>
     </message>
     <message>
         <source>&lt;b&gt;Members&lt;/b&gt;&lt;br /&gt;
 This list contains all members that were added to the group by the current channel. Be aware that this does not include members inherited by higher levels of the channel tree. These can be found in the &lt;i&gt;Inherited members&lt;/i&gt; list. To prevent this list to be inherited by lower level channels uncheck &lt;i&gt;Inheritable&lt;/i&gt; or manually add the members to the &lt;i&gt;Excluded members&lt;/i&gt; list.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;b&gt;Excluded members&lt;/b&gt;&lt;br /&gt;
 Contains a list of members whose group membership will not be inherited from the parent channel.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;b&gt;Inherited members&lt;/b&gt;&lt;br /&gt;
 Contains the list of members inherited by the current channel. Uncheck &lt;i&gt;Inherit&lt;/i&gt; to prevent inheritance from higher level channels.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This controls which group of users this entry applies to.&lt;br /&gt;Note that the group is evaluated in the context of the channel the entry is used in. For example, the default ACL on the Root channel gives &lt;i&gt;Write&lt;/i&gt; permission to the &lt;i&gt;admin&lt;/i&gt; group. This entry, if inherited by a channel, will give a user write privileges if he belongs to the &lt;i&gt;admin&lt;/i&gt; group in that channel, even if he doesn&apos;t belong to the &lt;i&gt;admin&lt;/i&gt; group in the channel where the ACL originated.&lt;br /&gt;If a group name starts with &apos;!&apos;, its membership is negated, and if it starts with &apos;~&apos;, it is evaluated in the channel the ACL was defined in, rather than the channel the ACL is active in.&lt;br /&gt;If a group name starts with &apos;#&apos;, it is interpreted as an access token. Users must have entered whatever follows the &apos;#&apos; in their list of access tokens to match. This can be used for very simple password access to channels for non-authenticated users.&lt;br /&gt;If a group name starts with &apos;$&apos;, it will only match users whose certificate hash matches what follows the &apos;$&apos;.&lt;br /&gt;A few special predefined groups are:&lt;br /&gt;&lt;b&gt;all&lt;/b&gt; - Everyone will match.&lt;br /&gt;&lt;b&gt;auth&lt;/b&gt; - All authenticated users will match.&lt;br /&gt;&lt;b&gt;sub,a,b,c&lt;/b&gt; - User currently in a sub-channel minimum &lt;i&gt;a&lt;/i&gt; common parents, and between &lt;i&gt;b&lt;/i&gt; and &lt;i&gt;c&lt;/i&gt; channels down the chain. See the website for more extensive documentation on this one.&lt;br /&gt;&lt;b&gt;in&lt;/b&gt; - Users currently in the channel will match (convenience for &apos;&lt;i&gt;sub,0,0,0&lt;/i&gt;&apos;).&lt;br /&gt;&lt;b&gt;out&lt;/b&gt; - Users outside the channel will match (convenience for &apos;&lt;i&gt;!sub,0,0,0&lt;/i&gt;&apos;).&lt;br /&gt;Note that an entry applies to either a user or a group, not both.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;b&gt;Password&lt;/b&gt;&lt;br /&gt;This field allows you to easily set and change the password of a channel. It uses Mumble&apos;s access tokens feature in the background. Use ACLs and groups if you need more fine grained and powerful access control.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This shows all the entries active on this channel. Entries inherited from parent channels will be shown in italics.&lt;br /&gt;ACLs are evaluated top to bottom, meaning priority increases as you move down the list.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>ID of the channel.</source>
@@ -388,56 +391,56 @@ Contains the list of members inherited by the current channel. Uncheck &lt;i&gt;
     </message>
     <message>
         <source>Maximum Users</source>
-        <translation>Maximális felhasználó</translation>
+        <translation>Férőhely</translation>
     </message>
     <message>
         <source>Maximum number of users allowed in the channel</source>
-        <translation>Maximális engedélyezett felhasználó a csatornában</translation>
+        <translation>Ez határozza meg, hogy az adott csatornában összesen hány férőhely legyen biztosított</translation>
     </message>
     <message>
         <source>&lt;b&gt;Maximum Users&lt;/b&gt;&lt;br /&gt;
 This value allows you to set the maximum number of users allowed in the channel. If the value is above zero, only that number of users will be allowed to enter the channel. If the value is zero, the maximum number of users in the channel is given by the server&apos;s default limit.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This is the sort order for the channel.</source>
-        <translation type="unfinished"/>
+        <translation>A csatorna rendezési elve.</translation>
     </message>
     <message>
         <source>Properties</source>
-        <translation type="unfinished"/>
+        <translation>Tulajdonságok</translation>
     </message>
     <message>
         <source>Channel password</source>
-        <translation type="unfinished"/>
+        <translation>Csatorna jelszava</translation>
     </message>
     <message>
         <source>Maximum users</source>
-        <translation type="unfinished"/>
+        <translation>Férőhely</translation>
     </message>
     <message>
         <source>Channel name</source>
-        <translation type="unfinished"/>
+        <translation>Csatorna neve</translation>
     </message>
     <message>
         <source>Inherited group members</source>
-        <translation type="unfinished"/>
+        <translation>Örökölt csoporttagok</translation>
     </message>
     <message>
         <source>Foreign group members</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Inherited channel members</source>
-        <translation type="unfinished"/>
+        <translation>Örökölt csatornatagok</translation>
     </message>
     <message>
         <source>Add members to group</source>
-        <translation type="unfinished"/>
+        <translation>Tagok csoporthoz adása</translation>
     </message>
     <message>
         <source>List of ACL entries</source>
-        <translation type="unfinished"/>
+        <translation>Engedélyek listája</translation>
     </message>
 </context>
 <context>
@@ -460,6 +463,17 @@ This value allows you to set the maximum number of users allowed in the channel.
     <message>
         <source>Opening chosen ALSA Output failed: %1</source>
         <translation>A kiválasztott ALSA kimenet megnyitása sikertelen: %1</translation>
+    </message>
+</context>
+<context>
+    <name>ALSAEnumerator</name>
+    <message>
+        <source>Getting name (longname) of the sound card failed: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Getting name of the sound card failed: %1</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -571,18 +585,18 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>List of microphones</source>
-        <translation type="unfinished"/>
+        <translation>Mikrofonok listája</translation>
     </message>
     <message>
         <source>List of speakers</source>
-        <translation type="unfinished"/>
+        <translation>Fejhallgatók/hangszórók listája</translation>
     </message>
 </context>
 <context>
     <name>ASIOInput</name>
     <message>
         <source>You need to select at least one microphone and one speaker source to use ASIO.</source>
-        <translation type="unfinished"/>
+        <translation>Az ASIO meghajtó használatához legalább egy kimeneti és egy bemeteni eszköz beállítása szükséges.</translation>
     </message>
     <message>
         <source>Opening selected ASIO device failed. No input will be done.</source>
@@ -593,15 +607,11 @@ This value allows you to set the maximum number of users allowed in the channel.
     <name>AboutDialog</name>
     <message>
         <source>About Mumble</source>
-        <translation>Mumble névjegye</translation>
-    </message>
-    <message>
-        <source>&lt;h3&gt;Mumble (%1)&lt;/h3&gt;&lt;p&gt;%3&lt;/p&gt;&lt;p&gt;&lt;b&gt;A voice-chat utility for gamers&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;&lt;a href=&quot;%2&quot;&gt;%2&lt;/a&gt;&lt;/tt&gt;&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;Mumble (%1)&lt;/h3&gt;&lt;p&gt;%3&lt;/p&gt;&lt;p&gt;&lt;b&gt;Hang-chat alkalmazás játékosok számára&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;&lt;a href=&quot;%2&quot;&gt;%2&lt;/a&gt;&lt;/tt&gt;&lt;/p&gt;</translation>
+        <translation>A Mumble névjegye</translation>
     </message>
     <message>
         <source>&amp;About Mumble</source>
-        <translation>Mumble &amp;Névjegye</translation>
+        <translation>&amp;Névjegy</translation>
     </message>
     <message>
         <source>&amp;License</source>
@@ -609,27 +619,31 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>A&amp;uthors</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Köszönet</translation>
     </message>
     <message>
         <source>&amp;Third-Party Licenses</source>
-        <translation>Harmadik fél licens</translation>
+        <translation>&amp;Felhasznált szoftverek</translation>
     </message>
     <message>
         <source>OK</source>
-        <translation>OK</translation>
+        <translation>Rendben</translation>
     </message>
     <message>
         <source>License agreement</source>
-        <translation type="unfinished"/>
+        <translation>Licencszerződés</translation>
     </message>
     <message>
         <source>Authors</source>
-        <translation type="unfinished"/>
+        <translation>Köszönet</translation>
     </message>
     <message>
         <source>Third-party license agreements</source>
-        <translation type="unfinished"/>
+        <translation>Harmadik féllel megkötött licencszerződés</translation>
+    </message>
+    <message>
+        <source>&lt;h3&gt;Mumble (%1)&lt;/h3&gt;&lt;p&gt;%3&lt;/p&gt;&lt;p&gt;&lt;b&gt;An Open Source, low-latency, high quality voice-chat utility&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;&lt;a href=&quot;%2&quot;&gt;%2&lt;/a&gt;&lt;/tt&gt;&lt;/p&gt;</source>
+        <translation>&lt;h3&gt;Mumble (%1)&lt;/h3&gt;&lt;p&gt;%3&lt;/p&gt;&lt;p&gt;&lt;b&gt;Hangalapú csevegőalkalmazás játékosok számára&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;&lt;a href=&quot;%2&quot;&gt;%2&lt;/a&gt;&lt;/tt&gt;&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -844,27 +858,27 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Exclusive mode</source>
-        <translation type="unfinished"/>
+        <translation>Kizárólagos mód</translation>
     </message>
     <message>
         <source>&lt;b&gt;This opens the device in exclusive mode.&lt;/b&gt;&lt;br /&gt;No other application will be able to use the device.</source>
-        <translation type="unfinished"/>
+        <translation>&lt;b&gt;Eszköz használata kizárólagos módban.&lt;/b&gt;&lt;br /&gt;Más alkalmazás nem használhatja az eszközt.</translation>
     </message>
     <message>
         <source>Exclusive</source>
-        <translation type="unfinished"/>
+        <translation>Kizárólagos</translation>
     </message>
     <message>
         <source>R&amp;eset</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Visszavonás</translation>
     </message>
     <message>
         <source>&amp;Browse...</source>
-        <translation>&amp;Tallózás</translation>
+        <translation>&amp;Tallózás...</translation>
     </message>
     <message>
         <source>B&amp;rowse...</source>
-        <translation>T&amp;allózás</translation>
+        <translation>T&amp;allózás...</translation>
     </message>
     <message>
         <source>&amp;Preview</source>
@@ -892,7 +906,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>&lt;b&gt;This enables transmission audio cues.&lt;/b&gt;&lt;br /&gt;Setting this will give you a short audio beep when you start and stop transmitting.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Audio cue</source>
@@ -900,23 +914,23 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Gets played when starting to transmit</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Gets played when stopping to transmit</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Hold Time</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Time the microphone stays open after the PTT key is released</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Server maximum network bandwidth is only %1 kbit/s. Audio quality auto-adjusted to %2 kbit/s (%3 ms)</source>
-        <translation type="unfinished"/>
+        <translation>A kiszolgáló sávszélessége legfeljebb %1 kbit/s, ezért a Mumble most automatikusan %2 kbit/s (%3 ms) értékekhez igazodik</translation>
     </message>
     <message>
         <source>Max. Amplification</source>
@@ -924,11 +938,11 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Idle action</source>
-        <translation type="unfinished"/>
+        <translation>Művelet</translation>
     </message>
     <message>
         <source>minutes do</source>
-        <translation type="unfinished"/>
+        <translation>percig tétlen:</translation>
     </message>
     <message>
         <source>nothing</source>
@@ -936,83 +950,87 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>deafen</source>
-        <translation type="unfinished"/>
+        <translation>süketítés</translation>
     </message>
     <message>
         <source>mute</source>
-        <translation>némitás</translation>
+        <translation>némítás</translation>
     </message>
     <message>
         <source>after</source>
-        <translation>utána</translation>
+        <translation>ha</translation>
     </message>
     <message>
         <source>Echo Cancellation</source>
         <translation>Visszhangmentesítés</translation>
     </message>
     <message>
-        <source>Mixed echo cancellation</source>
-        <translation>Kevert visszhangmentesítés</translation>
-    </message>
-    <message>
-        <source>Multichannel echo cancellation</source>
-        <translation>Többcsatornás visszhangmentesítés</translation>
-    </message>
-    <message>
         <source>The idle action will be reversed upon any key or mouse button input</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Undo Idle action upon activity</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Audio input</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;b&gt;This is the input method to use for audio.&lt;/b&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Enable Opus&apos; low-delay mode when the quality is set to &lt;b&gt;64 kb/s&lt;/b&gt; or higher. </source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>If checked, Mumble will enable Opus&apos; low-delay mode when the quality is set to &lt;b&gt;64 kbit/s&lt;/b&gt; or higher. Low-delay mode decreases latency by &lt;b&gt;~15 milliseconds&lt;/b&gt; in the round trip. This mode may require an higher bitrate to preserve the same quality, in comparison with the music and VOIP modes.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Allow low delay mode</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Don&apos;t use noise suppression.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Use the noise suppression algorithm provided by Speex.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Use the noise suppression algorithm provided by RNNoise.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Use a combination of Speex and RNNoise to do noise suppression.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Both</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This controls the amount by which Speex will suppress noise.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Speex suppression strength</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mute cue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Br&amp;owse...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pre&amp;view</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1059,75 +1077,91 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Audio system</source>
-        <translation type="unfinished"/>
+        <translation>Hangrendszer</translation>
     </message>
     <message>
         <source>Input device</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Echo cancellation mode</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Transmission mode</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>PTT lock threshold</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>PTT hold threshold</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Silence below</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Current speech detection chance</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Speech above</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Speech below</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Audio per packet</source>
-        <translation type="unfinished"/>
+        <translation>Csomagonkénti hang</translation>
     </message>
     <message>
         <source>Quality of compression (peak bandwidth)</source>
-        <translation type="unfinished"/>
+        <translation>A tömörítés minősége (sávszélesség csúcsa)</translation>
     </message>
     <message>
         <source>Noise suppression</source>
-        <translation type="unfinished"/>
+        <translation>Zajszűrés</translation>
     </message>
     <message>
         <source>Maximum amplification</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Transmission started sound</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Transmission stopped sound</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Initiate idle action after (in minutes)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Idle action</source>
-        <translation type="unfinished"/>
+        <translation>Művelet</translation>
+    </message>
+    <message>
+        <source>Access to the microphone was denied. Please allow Mumble to use the microphone by changing the settings in System Preferences -&gt; Security &amp; Privacy -&gt; Privacy -&gt; Microphone.</source>
+        <translation>Hozzáférés megtagadva. Kérem, engedélyezze a Mumble számára a mikrofonhoz való hozzáférést a Gépház &gt; Adatvédelem &gt; Mikrofon beállítási felületen!</translation>
+    </message>
+    <message>
+        <source>Access to the microphone was denied. Please check that your operating system&apos;s microphone settings allow Mumble to use the microphone.</source>
+        <translation>Hozzáférés megtagadva. Kérem, ellenőrizze, hogy az operációs-rendszere engedélyezi-e a Mumble számára a mikrofonhoz való hozzáférést!</translation>
+    </message>
+    <message>
+        <source>Disabled</source>
+        <translation>Tiltva</translation>
+    </message>
+    <message>
+        <source>Disable echo cancellation.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1215,7 +1249,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     <message>
         <source>The connected &quot;speakers&quot; are actually headphones</source>
         <oldsource>The connected &quot;speakers&quot; are actually headphones.</oldsource>
-        <translation>A bekötött &quot;hangszórók&quot; valójában fejhallgatók</translation>
+        <translation>A csatlakoztatott „hangszóró” valójában fejhallgató</translation>
     </message>
     <message>
         <source>Factor for sound volume decrease</source>
@@ -1284,7 +1318,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Packet Loss</source>
-        <translation>Csomagvesztés</translation>
+        <translation>Csomagkiesés</translation>
     </message>
     <message>
         <source>Packet loss for loopback mode</source>
@@ -1356,51 +1390,51 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>If checked, Mumble will only attenuate applications that are using the same output source as Mumble</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;b&gt;Attenuate only applications using the same output as Mumble&lt;/b&gt;&lt;br /&gt;If checked, applications that use a different output than Mumble will not be attenuated.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Only attenuate applications using the same output device</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>If checked, PulseAudio loopback modules will be attenuated</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;b&gt;Attenuate PulseAudio loopback modules&lt;/b&gt;&lt;br /&gt;If loopback modules are linked to Mumble&apos;s output device/sink, they will also be attenuated.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Attenuate PulseAudio loopback modules</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Audio output</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;b&gt;This is the output method to use for audio.&lt;/b&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;b&gt;Attenuate other users while talking as Priority Speaker&lt;/b&gt;&lt;br /&gt;Mumble supports decreasing the volume of other users while you talk as the &lt;i&gt;Priority Speaker&lt;/i&gt; to avoid getting disturbed. Checking this checkbox will enable this feature.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Attenuate other users while talking as Priority Speaker</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Enable</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Attenuation</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1435,55 +1469,55 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Output system</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Output device</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Default jitter buffer</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Volume of incoming speech</source>
-        <translation type="unfinished"/>
+        <translation>Bejövő beszéd hangereje</translation>
     </message>
     <message>
         <source>Output delay</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Attenuation of other applications during speech</source>
-        <translation type="unfinished"/>
+        <translation>Beszéd közben a többi alkalmazást halkítja</translation>
     </message>
     <message>
         <source>Minimum distance</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Maximum distance</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Minimum volume</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Bloom</source>
-        <translation type="unfinished"/>
+        <translation>Hangosítás</translation>
     </message>
     <message>
         <source>Delay variance</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Packet loss</source>
-        <translation type="unfinished"/>
+        <translation>Csomagkiesés</translation>
     </message>
     <message>
         <source>Loopback</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1534,7 +1568,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>This shows the peak power of the speakers in the last frame (20 ms). Unless you are using a multi-channel sampling method (such as ASIO) with speaker channels configured, this will be 0. If you have such a setup configured, and this still shows 0 while you&apos;re playing audio from other programs, your setup is not working.</source>
-        <oldsource>This shows the peak power in the last frame (20 ms) of the speakers. Unless you are using a multi-channel sampling method (such as ASIO) with speaker channels configured, this will be 0. If you have such a setup configured, and this still shows 0 while you're playing audio from other programs, your setup is not working.</oldsource>
+        <oldsource>This shows the peak power in the last frame (20 ms) of the speakers. Unless you are using a multi-channel sampling method (such as ASIO) with speaker channels configured, this will be 0. If you have such a setup configured, and this still shows 0 while you&apos;re playing audio from other programs, your setup is not working.</oldsource>
         <translation>A hangszórók hangerejének csúcsát mutatja az utolsó hangkeretben (20 ms). Hacsak nem használ egy többcsatornás mintavételezési módszert (mint az ASIO) a beállított hangszóró csatornákra, ez az érték 0 lesz. Ha ilyen beállítással rendelkezik és mégis 0-t mutat mialatt más programok hangot játszanak le, akkor az ön beállításai nem jók.</translation>
     </message>
     <message>
@@ -1643,7 +1677,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>This is the audio bitrate of the last compressed frame (20 ms), and as such will jump up and down as the VBR adjusts the quality. The peak bitrate can be adjusted in the Settings dialog.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1751,7 +1785,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>&lt;p&gt;
-To keep latency to an absolute minimum, it's important to buffer as little audio as possible on the soundcard. However, many soundcards report that they require a much smaller buffer than what they can actually work with, so the only way to set this value is to try and fail.
+To keep latency to an absolute minimum, it&apos;s important to buffer as little audio as possible on the soundcard. However, many soundcards report that they require a much smaller buffer than what they can actually work with, so the only way to set this value is to try and fail.
 &lt;/p&gt;
 &lt;p&gt;
 You should hear a voice sample. Change the slider below to the lowest value which gives &lt;b&gt;no&lt;/b&gt; interruptions or jitter in the sound. Please note that local echo is disabled during this test.
@@ -1775,7 +1809,7 @@ Egy hangmintát kell halljon. Állítsa a csúszkát a legkisebb érték alá, a
     </message>
     <message>
         <source>&lt;p&gt;
-Open your sound control panel and go to the recording settings. Make sure the microphone is selected as active input with maximum recording volume. If there's an option to enable a &quot;Microphone boost&quot; make sure it's checked.
+Open your sound control panel and go to the recording settings. Make sure the microphone is selected as active input with maximum recording volume. If there&apos;s an option to enable a &quot;Microphone boost&quot; make sure it&apos;s checked.
 &lt;/p&gt;
 &lt;p&gt;
 Speak loudly, as when you are annoyed or excited. Decrease the volume in the sound control panel until the bar below stays as high as possible in the blue and green but &lt;b&gt;not&lt;/b&gt; the red zone while you speak.
@@ -1806,7 +1840,7 @@ Beszéljen hangosan, mint mikor bosszús vagy izgatott. Csökkentse a hangerőt 
 Congratulations. You should now be ready to enjoy a richer sound experience with Mumble.
 &lt;/p&gt;
 &lt;p&gt;
-Mumble is under continuous development, and the development team wants to focus on the features that benefit the most users. To this end, Mumble supports submitting anonymous statistics about your configuration to the developers. These statistics are essential for future development, and also make sure the features you use aren't deprecated.
+Mumble is under continuous development, and the development team wants to focus on the features that benefit the most users. To this end, Mumble supports submitting anonymous statistics about your configuration to the developers. These statistics are essential for future development, and also make sure the features you use aren&apos;t deprecated.
 &lt;/p&gt;
 </source>
         <translation>&lt;p&gt;
@@ -1859,7 +1893,7 @@ A Mumble-t folyamatosan fejlesztik, és a fejlesztők azokra a tulajdonságokra 
     </message>
     <message>
         <source>Next you need to adjust the following slider. The first few utterances you say should end up in the green area (definitive speech). While talking, you should stay inside the yellow (might be speech) and when you&apos;re not talking, everything should be in the red (definitively not speech).</source>
-        <oldsource>Next you need to adjust the following two sliders. The first few utterances you say should end up in the green area (definitive speech). While talking, you should stay inside the yellow (might be speech) and when you're not talking, everything should be in the red (definitively not speech).</oldsource>
+        <oldsource>Next you need to adjust the following two sliders. The first few utterances you say should end up in the green area (definitive speech). While talking, you should stay inside the yellow (might be speech) and when you&apos;re not talking, everything should be in the red (definitively not speech).</oldsource>
         <translation>Ezután a következő csúszkát kell beállítani. Az ön beszédének első néhány kiejtett hangja a zöld zónáig kell vigye a kijelzést (biztosan beszéd). Amíg beszél, a kijelzés a sárga zónában kell maradjon (lehetséges beszéd) és amikor nem beszél, minden a vörös zónában kell legyen (biztosan nem beszéd).</translation>
     </message>
     <message>
@@ -1952,91 +1986,95 @@ A Mumble-t folyamatosan fejlesztik, és a fejlesztők azokra a tulajdonságokra 
     </message>
     <message>
         <source>&lt;p&gt;
-Open your sound control panel and go to the recording settings. Make sure the microphone is selected as active input with maximum recording volume. If there's an option to enable a &quot;Microphone boost&quot; make sure it's checked.
+Open your sound control panel and go to the recording settings. Make sure the microphone is selected as active input with maximum recording volume. If there&apos;s an option to enable a &quot;Microphone boost&quot; make sure it&apos;s checked.
 &lt;/p&gt;
 &lt;p&gt;
 Speak loudly, as when you are annoyed or excited. Decrease the volume in the sound control panel until the bar below stays as high as possible in the striped and the empty but &lt;b&gt;not&lt;/b&gt; the crisscrossed zone while you speak.
 &lt;/p&gt;
 </source>
         <oldsource>&lt;p&gt;
-Open your sound control panel and go to the recording settings. Make sure the microphone is selected as active input with maximum recording volume. If there's an option to enable a &quot;Microphone boost&quot; make sure it's checked.
+Open your sound control panel and go to the recording settings. Make sure the microphone is selected as active input with maximum recording volume. If there&apos;s an option to enable a &quot;Microphone boost&quot; make sure it&apos;s checked.
 &lt;/p&gt;
 &lt;p&gt;
 Speak loudly, as when you are annoyed or excited. Decrease the volume in the sound control panel until the bar below stays as high as possible in the striped and the empty but &lt;b&gt;not&lt;/b&gt; the criss-crossed zone while you speak.
 &lt;/p&gt;
 </oldsource>
         <comment>For high contrast mode</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Now talk softly, as you would when talking late at night and you don&apos;t want to disturb anyone. Adjust the slider below so that the bar moves into empty zone when you talk, but stays in the striped one while you&apos;re silent.</source>
         <comment>For high contrast mode</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Next you need to adjust the following slider. The first few utterances you say should end up in the empty area (definitive speech). While talking, you should stay inside the striped (might be speech) and when you&apos;re not talking, everything should be in the crisscrossed (definitively not speech).</source>
         <comment>For high contrast mode</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>In this configuration Mumble will use a &lt;b&gt;low amount of bandwidth&lt;/b&gt;. This will inevitably result in high latency and poor quality. Choose this only if your connection cannot handle the other settings. (16kbit/s, 60ms per packet)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This is the &lt;b&gt;recommended default&lt;/b&gt; configuration. It provides a good balance between quality, latency, and bandwidth usage. (40kbit/s, 20ms per packet)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This configuration is only recommended for use in setups where bandwidth is not an issue, like a LAN. It provides the lowest latency supported by Mumble and &lt;b&gt;high quality&lt;/b&gt;. (72kbit/s, 10ms per packet)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;b&gt;This is the input method to use for audio.&lt;/b&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;b&gt;This is the Output method to use for audio.&lt;/b&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;This is the audio tuning wizard for Mumble. This will help you correctly set the input levels of your sound card, and also set the correct parameters for sound processing in Mumble. &lt;/p&gt;&lt;p&gt;Please be aware that as long as this wizard is active, audio will be looped locally to allow you to listen to it, and no audio will be sent to the server. &lt;/p&gt;&lt;p&gt;Note that you can cancel this wizard at any time without it having an effect on your current audio systems. The settings are only once this wizard has been completed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mumble supports positional audio for some games, and will position the voice of other users relative to their position in game. Depending on their position, the volume of the voice will be changed between the speakers to simulate the direction and distance the other user is at. Such positioning depends on your speaker configuration being correct in your operating system, so a test is done here. &lt;/p&gt;&lt;p&gt;The graph below shows the position of &lt;span style=&quot; color:#56b4e9;&quot;&gt;you&lt;/span&gt;, the &lt;span style=&quot; color:#d55e00;&quot;&gt;speakers&lt;/span&gt; and a &lt;span style=&quot; color:#009e73;&quot;&gt;moving sound source&lt;/span&gt; as if seen from above. You should hear the audio move between the channels. &lt;/p&gt;&lt;p&gt;You can also use your mouse to position the &lt;span style=&quot; color:#009e73;&quot;&gt;sound source&lt;/span&gt; manually.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Input system</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Input device</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Output system</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Output device</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Output delay</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Maximum amplification</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>PTT key</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>VAD level</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PTT shortcut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No buttons assigned</source>
+        <translation>Nincs hozzárendelve billentyű</translation>
     </message>
 </context>
 <context>
@@ -2091,55 +2129,55 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>Search field</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This is the search field. Use it to find bans that have this username set in the username field.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Who are you looking for?</source>
-        <translation type="unfinished"/>
+        <translation>Felhasználó keresése...</translation>
     </message>
     <message>
         <source>No nickname</source>
-        <translation type="unfinished"/>
+        <translation>Felhasználónév nincs megadva</translation>
     </message>
     <message>
         <source>IP address</source>
-        <translation type="unfinished"/>
+        <translation>IP-cím</translation>
     </message>
     <message>
         <source>No IP address</source>
-        <translation type="unfinished"/>
+        <translation>IP-cím nincs megadva</translation>
     </message>
     <message>
         <source>Reason for the ban</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>No reason</source>
-        <translation type="unfinished"/>
+        <translation>Indok nincs megadva</translation>
     </message>
     <message>
         <source>Ban end date</source>
-        <translation type="unfinished"/>
+        <translation>Tiltás lejárata</translation>
     </message>
     <message>
         <source>Ban end date. If you set the same date for start and end, the ban will be permanent (it will not expire).</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Certificate hash</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>No certificate hash</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Banned users</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This is a list with banned users.</source>
@@ -2147,11 +2185,11 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>Use this button if you want to add a new ban.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Use this button if you want to update ban information.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Use this button if you want to remove user from the ban list.</source>
@@ -2159,39 +2197,41 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>Clear all fields</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This button clears all fields. Use it if you want to add a new ban.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Clear</source>
-        <translation type="unfinished"/>
+        <translation>Napló törlése</translation>
     </message>
     <message numerus="yes">
         <source>Ban List - %n Ban(s)</source>
-        <translation><numerusform>Tiltólista (%n Kitiltva)</numerusform><numerusform>Tiltólista (%n Kitiltva)</numerusform></translation>
+        <translation>
+            <numerusform>Tiltólista - %n tiltás</numerusform>
+        </translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished"/>
+        <translation>Keresés</translation>
     </message>
     <message>
         <source>IP Address</source>
-        <translation type="unfinished"/>
+        <translation>IP-cím</translation>
     </message>
     <message>
         <source>Mask</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Start date/time</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>End date/time</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2202,7 +2242,7 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>Email</source>
-        <translation>Email</translation>
+        <translation>E-mail cím</translation>
     </message>
     <message>
         <source>Issuer</source>
@@ -2218,7 +2258,7 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>Self-signed</source>
-        <translation>saját aláírású</translation>
+        <translation>Önaláírt</translation>
     </message>
 </context>
 <context>
@@ -2241,7 +2281,7 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>The file&apos;s permissions could not be set. No certificate and key has been written. Please use another file.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>The file could not be written successfully. Please use another file.</source>
@@ -2269,7 +2309,7 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>Unable to import. Missing password or incompatible file type.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;b&gt;Certificate Expiry:&lt;/b&gt; Your certificate is about to expire. You need to renew it, or you will no longer be able to connect to servers you are registered on.</source>
@@ -2277,35 +2317,35 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>Current certificate</source>
-        <translation type="unfinished"/>
+        <translation>Jelenlegi tanúsítvány</translation>
     </message>
     <message>
         <source>Certificate file to import</source>
-        <translation type="unfinished"/>
+        <translation>Betöltendő tanúsítvány</translation>
     </message>
     <message>
         <source>Certificate password</source>
-        <translation type="unfinished"/>
+        <translation>Tanúsítvány jelszava</translation>
     </message>
     <message>
         <source>Certificate to import</source>
-        <translation type="unfinished"/>
+        <translation>Importálandó tanúsítvány</translation>
     </message>
     <message>
         <source>New certificate</source>
-        <translation type="unfinished"/>
+        <translation>Új tanúsítvány</translation>
     </message>
     <message>
         <source>File to export certificate to</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Email address</source>
-        <translation type="unfinished"/>
+        <translation>E-mail cím</translation>
     </message>
     <message>
         <source>Your name</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2316,7 +2356,7 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>Certificate Authentication</source>
-        <translation>Hitelesítés tanusítvánnyal</translation>
+        <translation>Hitelesítés tanúsítvánnyal</translation>
     </message>
     <message>
         <source>Authenticating to servers without using passwords</source>
@@ -2336,7 +2376,7 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>Create a new certificate</source>
-        <translation>Új tanúsítvány készítése</translation>
+        <translation>Új tanúsítvány létrehozása</translation>
     </message>
     <message>
         <source>This will create a new certificate.</source>
@@ -2352,11 +2392,11 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>Import a certificate</source>
-        <translation>Tanúsítvány importálása</translation>
+        <translation>Meglévő tanúsítvány betöltése</translation>
     </message>
     <message>
         <source>Export Certificate</source>
-        <translation>Tanúsítvány exportálása</translation>
+        <translation>Tanúsítvány mentése</translation>
     </message>
     <message>
         <source>This will export a certificate to file.</source>
@@ -2368,11 +2408,11 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>Import Certificate</source>
-        <translation>Tanúsítvány importálása</translation>
+        <translation>Meglévő tanúsítvány betöltése</translation>
     </message>
     <message>
         <source>PKCS #12 Certificate import</source>
-        <translation>PKCS #12 Tanúsítvány importálása</translation>
+        <translation>PKCS #12-tanúsítvány betöltése</translation>
     </message>
     <message>
         <source>&lt;p&gt;Mumble can import certificates stored in PKCS #12 format. This is the format used when exporting a key from Mumble, and also when exporting keys from Firefox, Internet Explorer, Opera etc.&lt;/p&gt;&lt;p&gt;If the file is password protected, you will need the password to import the certificate.&lt;/p&gt;</source>
@@ -2439,7 +2479,7 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
         <source>&lt;p&gt;You already have a certificate stored in Mumble, and you are about to replace it.&lt;/p&gt;
 &lt;p&gt;If you are upgrading to a certificate issued to you by a trusted CA and the email addresses match your current certificate, this is completely safe, and servers you connect to will automatically recognize the strong certificate for your email address.
 &lt;/p&gt;
-&lt;p&gt;If this is not the case, you will no longer be recognized by any server you previously have authenticated with. If you haven't been registered on any server yet, this is nothing to worry about.
+&lt;p&gt;If this is not the case, you will no longer be recognized by any server you previously have authenticated with. If you haven&apos;t been registered on any server yet, this is nothing to worry about.
 &lt;/p&gt;
 &lt;p&gt;
 Are you sure you wish to replace your certificate?
@@ -2509,11 +2549,11 @@ Biztos abban, hogy le akarja cserélni a tanúsítványát?
     </message>
     <message>
         <source>Email</source>
-        <translation>Email</translation>
+        <translation>E-mail cím</translation>
     </message>
     <message>
         <source>Your email address (e.g. johndoe@mumble.info)</source>
-        <translation>Az ön email címe (pl. johndoe@mumble.info)</translation>
+        <translation>Az ön e-mail címe (pl.: johndoe@mumble.info)</translation>
     </message>
     <message>
         <source>This is your email address. It is strongly recommended to provide a valid email address, as this will allow you to upgrade to a strong certificate without authentication problems.</source>
@@ -2541,7 +2581,7 @@ Biztos abban, hogy le akarja cserélni a tanúsítványát?
     </message>
     <message>
         <source>Automatic certificate creation</source>
-        <translation>Tanúsítvány készítése automatikusan</translation>
+        <translation>Tanúsítvány automatikus létrehozása</translation>
     </message>
     <message>
         <source>&lt;p&gt;If you ever lose your current certificate, which will happen if your computer suffers a hardware failure or you reinstall your machine, you will no longer be able to authenticate to any server you are registered on. It is therefore &lt;b&gt;mandatory&lt;/b&gt; that you make a backup of your certificate. We strongly recommend you store this backup on removable storage, such as a USB flash drive.&lt;/p&gt;
@@ -2558,147 +2598,147 @@ Biztos abban, hogy le akarja cserélni a tanúsítványát?
     <name>ChanACL</name>
     <message>
         <source>None</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Traverse</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Enter</source>
-        <translation type="unfinished"/>
+        <translation>Belépés</translation>
     </message>
     <message>
         <source>Speak</source>
-        <translation type="unfinished"/>
+        <translation>Beszéd</translation>
     </message>
     <message>
         <source>Mute/Deafen</source>
-        <translation type="unfinished"/>
+        <translation>Némítás és süketítés</translation>
     </message>
     <message>
         <source>Make channel</source>
-        <translation type="unfinished"/>
+        <translation>Csatorna létrehozása</translation>
     </message>
     <message>
         <source>Make temporary</source>
-        <translation> Ideiglenes létrehozása</translation>
+        <translation>Ideiglenes csatorna létrehozása</translation>
     </message>
     <message>
         <source>Link channel</source>
-        <translation type="unfinished"/>
+        <translation>Csatorna csatolása</translation>
     </message>
     <message>
         <source>This represents no privileges.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This represents total access to the channel, including the ability to change group and ACL information. This privilege implies all other privileges.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This represents the permission to traverse the channel. If a user is denied this privilege, he will be unable to access this channel and any sub-channels in any way, regardless of other permissions in the sub-channels.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This represents the permission to join the channel. If you have a hierarchical channel structure, you might want to give everyone Traverse, but restrict Enter in the root of your hierarchy.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This represents the permission to speak in a channel. Users without this privilege will be suppressed by the server (seen as muted), and will be unable to speak until they are unmuted by someone with the appropriate privileges.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This represents the permission to whisper to this channel from the outside. This works exactly like the &lt;i&gt;speak&lt;/i&gt; privilege, but applies to packets spoken with the Whisper key held down. This may be used to broadcast to a hierarchy of channels without linking.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This represents the permission to mute and deafen other users. Once muted, a user will stay muted until he is unmuted by another privileged user or reconnects to the server.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This represents the permission to move a user to another channel or kick him from the server. To actually move the user, either the moving user must have Move privileges in the destination channel, or the user must normally be allowed to enter the channel. Users with this privilege can move users into channels the target user normally wouldn&apos;t have permission to enter.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This represents the permission to make sub-channels. The user making the sub-channel will be added to the admin group of the sub-channel.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This represents the permission to make a temporary subchannel. The user making the sub-channel will be added to the admin group of the sub-channel. Temporary channels are not stored and disappear when the last user leaves.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This represents the permission to link channels. Users in linked channels hear each other, as long as the speaking user has the &lt;i&gt;speak&lt;/i&gt; privilege in the channel of the listener. You need the link privilege in both channels to create a link, but just in either channel to remove it.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This represents the permission to write text messages to other users in this channel.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This represents the permission to forcibly remove users from the server.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This represents the permission to permanently remove users from the server.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This represents the permission to register and unregister users on the server.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This represents the permission to register oneself on the server.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Whisper</source>
-        <translation type="unfinished"/>
+        <translation>Suttogás</translation>
     </message>
     <message>
         <source>Move</source>
-        <translation type="unfinished"/>
+        <translation>Mozgatás</translation>
     </message>
     <message>
         <source>Text message</source>
-        <translation type="unfinished"/>
+        <translation>Üzenet küldése</translation>
     </message>
     <message>
         <source>Kick</source>
-        <translation type="unfinished"/>
+        <translation>Kirúgás</translation>
     </message>
     <message>
         <source>Ban</source>
-        <translation type="unfinished"/>
+        <translation>Tiltás</translation>
     </message>
     <message>
         <source>Register User</source>
-        <translation type="unfinished"/>
+        <translation>Felhasználó regisztrálása</translation>
     </message>
     <message>
         <source>Register Self</source>
-        <translation type="unfinished"/>
+        <translation>Regisztrálás önállóan</translation>
     </message>
     <message>
         <source>Write ACL</source>
-        <translation type="unfinished"/>
+        <translation>Engedélyek szerkesztése</translation>
     </message>
     <message>
         <source>This represents the permission to use the listen-feature allowing to listen to a channel without being in it.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Listen</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This represents the permission to reset the comment or avatar of a user.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Reset User Content</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2706,19 +2746,23 @@ Biztos abban, hogy le akarja cserélni a tanúsítványát?
     <message>
         <source>Paste and &amp;Send</source>
         <oldsource>Paste and send</oldsource>
-        <translation type="unfinished"/>
+        <translation>Beillesztés és k&amp;üldés</translation>
     </message>
     <message>
         <source>&lt;center&gt;Type chat message here&lt;/center&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;center&gt;Üzenet írása...&lt;/center&gt;</translation>
     </message>
     <message>
         <source>Unable to send image: too large.</source>
-        <translation type="unfinished"/>
+        <translation>Kép küldése sikertelen: a képfájl túl nagy.</translation>
     </message>
     <message>
         <source>Unable to send image %1: too large.</source>
-        <translation type="unfinished"/>
+        <translation>%1 küldése sikertelen: a képfájl túl nagy.</translation>
+    </message>
+    <message>
+        <source>This server does not allow sending images.</source>
+        <translation>A kiszolgáló nem támogatja képfájlok küldését.</translation>
     </message>
 </context>
 <context>
@@ -2729,7 +2773,7 @@ Biztos abban, hogy le akarja cserélni a tanúsítványát?
     </message>
     <message>
         <source>Authenticated</source>
-        <translation>Azonosítva</translation>
+        <translation>Regisztrált fehasználó</translation>
     </message>
     <message>
         <source>Priority speaker</source>
@@ -2737,7 +2781,7 @@ Biztos abban, hogy le akarja cserélni a tanúsítványát?
     </message>
     <message>
         <source>Recording</source>
-        <translation type="unfinished"/>
+        <translation>Beszélgetés rögzítése</translation>
     </message>
     <message>
         <source>Muted (server)</source>
@@ -2749,7 +2793,7 @@ Biztos abban, hogy le akarja cserélni a tanúsítványát?
     </message>
     <message>
         <source>Local Ignore (Text messages)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Local Mute</source>
@@ -2761,11 +2805,11 @@ Biztos abban, hogy le akarja cserélni a tanúsítványát?
     </message>
     <message>
         <source>Deafened (self)</source>
-        <translation>Hallgatás ki (magát)</translation>
+        <translation>Süketítve</translation>
     </message>
     <message>
         <source>Local Ignore (Text-To-Speech)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2812,19 +2856,23 @@ Biztos abban, hogy le akarja cserélni a tanúsítványát?
     </message>
     <message>
         <source>Configuration categories</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This button will restore the defaults for the settings on the current page. Other pages will not be changed.&lt;br /&gt;To restore all settings to their defaults, you can press the &quot;Defaults (All)&quot; button.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Restore all defaults</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This button will restore the defaults for all settings.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Defaults (All)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2835,95 +2883,39 @@ Biztos abban, hogy le akarja cserélni a tanúsítványát?
     </message>
     <message>
         <source>Enter username</source>
-        <translation>Adja meg a felhasználónevet</translation>
-    </message>
-    <message>
-        <source>Adding host %1</source>
-        <translation>Gép hozzáadása: %1</translation>
+        <translation>Felhasználónév megadása</translation>
     </message>
     <message>
         <source>Servername</source>
-        <translation>Szervernév</translation>
-    </message>
-    <message>
-        <source>Hostname</source>
-        <translation>Gépnév</translation>
-    </message>
-    <message>
-        <source>Bonjour name</source>
-        <translation>Bonjour-név</translation>
-    </message>
-    <message>
-        <source>Port</source>
-        <translation>Portszám</translation>
-    </message>
-    <message>
-        <source>Addresses</source>
-        <translation>Címek</translation>
-    </message>
-    <message>
-        <source>Website</source>
-        <translation>Web-oldal</translation>
-    </message>
-    <message>
-        <source>Packet loss</source>
-        <translation>Elveszett csomagok</translation>
-    </message>
-    <message>
-        <source>Ping (80%)</source>
-        <translation>Kopogtatás (80%)</translation>
-    </message>
-    <message>
-        <source>%1 ms</source>
-        <translation>%1 ms</translation>
-    </message>
-    <message>
-        <source>Ping (95%)</source>
-        <translation>Kopogtatás (95%)</translation>
-    </message>
-    <message>
-        <source>Bandwidth</source>
-        <translation>Sávszélesség</translation>
-    </message>
-    <message>
-        <source>%1 kbit/s</source>
-        <translation>%1 kbit/s</translation>
-    </message>
-    <message>
-        <source>&amp;Connect</source>
-        <translation>&amp;Kapcsolódás</translation>
+        <translation>Kiszolgáló neve</translation>
     </message>
     <message>
         <source>Unknown</source>
-        <translation type="unfinished"/>
+        <translation>Ismeretlen</translation>
     </message>
     <message>
         <source>Users</source>
-        <translation>Felhasználók</translation>
-    </message>
-    <message>
-        <source>Version</source>
-        <translation>Verzió</translation>
+        <translation>Férőhely</translation>
     </message>
     <message>
         <source>Failed to fetch server list</source>
-        <translation>Szerverlista betöltése nem sikerült</translation>
+        <translation>Kiszolgálók listájának letöltése sikertelen</translation>
     </message>
     <message>
         <source>Mumble Server Connect</source>
-        <translation>Kapcsolódás Mumble szerverhez</translation>
+        <translation>Kapcsolódás Mumble kiszolgálóhoz</translation>
     </message>
     <message>
         <source>Ping</source>
-        <translation>Kopogtatás</translation>
+        <translation>Válaszidő</translation>
     </message>
     <message>
         <source>Remove from Favorites</source>
-        <translation>Eltávolítja a kedvencekből</translation>
+        <translation>Eltávolítás a kedvencekből</translation>
     </message>
     <message>
         <source>Add custom server</source>
-        <translation>Egyedi szerver hozzáadása</translation>
+        <translation>Egyedi kiszolgáló hozzáadása</translation>
     </message>
     <message>
         <source>&amp;Copy</source>
@@ -2939,15 +2931,15 @@ Biztos abban, hogy le akarja cserélni a tanúsítványát?
     </message>
     <message>
         <source>Paste favorite from clipboard</source>
-        <translation type="unfinished"/>
+        <translation>Kedvenc kapcsolat beillesztése vágólapról</translation>
     </message>
     <message>
         <source>&amp;Edit...</source>
-        <translation>&amp;Szerkeszt...</translation>
+        <translation>&amp;Szerkesztés...</translation>
     </message>
     <message>
         <source>&amp;Add New...</source>
-        <translation>Ú&amp;j hozzáadása...</translation>
+        <translation>&amp;Új hozzáadása...</translation>
     </message>
     <message>
         <source>Add to &amp;Favorites</source>
@@ -2955,82 +2947,138 @@ Biztos abban, hogy le akarja cserélni a tanúsítványát?
     </message>
     <message>
         <source>Open &amp;Webpage</source>
-        <translation>&amp;Weblap megnyitása</translation>
+        <translation>&amp;Honlap megnyitása</translation>
     </message>
     <message>
         <source>Server list</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished"/>
+        <translation>Keresés</translation>
     </message>
     <message>
         <source>Location</source>
-        <translation type="unfinished"/>
+        <translation>Helyszín</translation>
     </message>
     <message>
         <source>Filter</source>
-        <translation type="unfinished"/>
+        <translation>Szűrő</translation>
     </message>
     <message>
         <source>Show All</source>
-        <translation type="unfinished"/>
+        <translation>Összes mutatása</translation>
     </message>
     <message>
         <source>Show Populated</source>
-        <translation type="unfinished"/>
+        <translation>Csak népszerű</translation>
     </message>
     <message>
         <source>Show Reachable</source>
-        <translation type="unfinished"/>
+        <translation>Csak elérhető</translation>
     </message>
     <message>
         <source>All</source>
-        <translation type="unfinished"/>
+        <translation>Összes</translation>
     </message>
     <message>
         <source>Africa</source>
-        <translation type="unfinished"/>
+        <translation>Afrika</translation>
     </message>
     <message>
         <source>Asia</source>
-        <translation type="unfinished"/>
+        <translation>Ázsia</translation>
     </message>
     <message>
         <source>Europe</source>
-        <translation type="unfinished"/>
+        <translation>Európa</translation>
     </message>
     <message>
         <source>North America</source>
-        <translation type="unfinished"/>
+        <translation>Észak-Amerika</translation>
     </message>
     <message>
         <source>Oceania</source>
-        <translation type="unfinished"/>
+        <translation>Óceánia</translation>
     </message>
     <message>
         <source>South America</source>
-        <translation type="unfinished"/>
+        <translation>Dél-Amerika</translation>
     </message>
     <message>
         <source>Consent to the transmission of private data</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;p&gt;To measure the latency (ping) of public servers and determine the number of active users, your IP address must be transmitted to each public server.&lt;/p&gt;&lt;p&gt;Do you consent to the transmission of your IP address? If you answer no, the public server list will be deactivated. However, you can reactivate it at any time in the network settings.&lt;/p&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;p&gt;Ahhoz, hogy a nyilvános kiszolgálók válaszidejét (ping) mérni tudjuk és létszámot lekérdezzük az ön IP-címének továbbítása szükséges.&lt;/p&gt;&lt;p&gt;Hozzájárul az IP-címe továbbításához? Nemleges válasz esetén nem lesznek elérhetők a nyilvános kiszolgálók. Ez a beállítás utólag bármikor visszavonható a Mumble beállításaiban.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <source>C&amp;onnect</source>
+        <translation>&amp;Kapcsolódás</translation>
+    </message>
+    <message>
+        <source>Adding host %1</source>
+        <translation>%1 kiszolgáló hozzáadása</translation>
+    </message>
+    <message>
+        <source>Hostname</source>
+        <translation>Kiszolgáló címe</translation>
+    </message>
+    <message>
+        <source>Bonjour name</source>
+        <translation>Bonjour-név</translation>
+    </message>
+    <message>
+        <source>Port</source>
+        <translation>Port</translation>
+    </message>
+    <message>
+        <source>Addresses</source>
+        <translation>IP-cím</translation>
+    </message>
+    <message>
+        <source>Website</source>
+        <translation>Honlap</translation>
+    </message>
+    <message>
+        <source>Packet loss</source>
+        <translation>Csomagkiesés</translation>
+    </message>
+    <message>
+        <source>Ping (80%)</source>
+        <translation>Válaszidő (80%)</translation>
+    </message>
+    <message>
+        <source>%1 ms</source>
+        <translation>%1 ms</translation>
+    </message>
+    <message>
+        <source>Ping (95%)</source>
+        <translation>Válaszidő (95%)</translation>
+    </message>
+    <message>
+        <source>Bandwidth</source>
+        <translation>Sávszélesség</translation>
+    </message>
+    <message>
+        <source>%1 kbit/s</source>
+        <translation>%1 kbit/s</translation>
+    </message>
+    <message>
+        <source>Version</source>
+        <translation>Kiszolgáló verziója</translation>
     </message>
 </context>
 <context>
     <name>ConnectDialogEdit</name>
     <message>
         <source>Edit Server</source>
-        <translation>Szerver szerkesztése</translation>
+        <translation>Kiszolgáló szerkesztése</translation>
     </message>
     <message>
         <source>Name of the server</source>
-        <translation>Szerver neve</translation>
+        <translation>Kiszolgáló neve</translation>
     </message>
     <message>
         <source>A&amp;ddress</source>
@@ -3039,29 +3087,29 @@ Biztos abban, hogy le akarja cserélni a tanúsítványát?
     <message>
         <source>Internet address of the server.</source>
         <oldsource>Internet address of the server. </oldsource>
-        <translation>A szerver Internet címe.</translation>
+        <translation>A kiszolgáló internetes címe</translation>
     </message>
     <message>
         <source>&lt;b&gt;Address&lt;/b&gt;&lt;br/&gt;
 Internet address of the server. This can be a normal hostname, an IPv4/IPv6 address or a Bonjour service identifier. Bonjour service identifiers have to be prefixed with a &apos;@&apos; to be recognized by Mumble.</source>
         <oldsource>&lt;b&gt;Address&lt;/b&gt;&lt;/br&gt;
-Internet address of the server. This can be a normal hostname, an ipv4/6 address or a bonjour service identifier. Bonjour service identifiers have to be prefixed with a '@' to be recognized by Mumble.</oldsource>
+Internet address of the server. This can be a normal hostname, an ipv4/6 address or a bonjour service identifier. Bonjour service identifiers have to be prefixed with a &apos;@&apos; to be recognized by Mumble.</oldsource>
         <translation>&lt;b&gt;Cím&lt;/b&gt;&lt;br/&gt;
 A szerver Internet címe. Ez lehet egy normál gépnév vagy IPV4/IPV6 cím vagy egy Bonjour szolgáltatás azonosító. A Bonjour szolgáltatás azonosítók elé egy @ jelet kell tenni, hogy a Mumble felismerje őket.</translation>
     </message>
     <message>
         <source>&amp;Port</source>
-        <translation>&amp;Portszám</translation>
+        <translation>&amp;Port</translation>
     </message>
     <message>
         <source>Port on which the server is listening</source>
-        <translation>A portszám, amit a szerver figyel</translation>
+        <translation>A port, amin az adott kiszolgáló elérhető</translation>
     </message>
     <message>
         <source>&lt;b&gt;Port&lt;/b&gt;&lt;br/&gt;
 Port on which the server is listening. If the server is identified by a Bonjour service identifier this field will be ignored.</source>
-        <translation>&lt;b&gt;Portszám&lt;/b&gt;&lt;br/&gt;
-A portszám, amit a szerver figyel. Ha a szervert egy Bonjour szolgáltatás azonosító azonosítja, akkor ez a mező figyelmen kívül lesz hagyva.</translation>
+        <translation>&lt;b&gt;Port&lt;/b&gt;&lt;br/&gt;
+A port, amin az adott kiszolgáló elérhető. Ha a szervert egy Bonjour szolgáltatás azonosító azonosítja, akkor ez a mező figyelmen kívül lesz hagyva.</translation>
     </message>
     <message>
         <source>&amp;Username</source>
@@ -3069,7 +3117,7 @@ A portszám, amit a szerver figyel. Ha a szervert egy Bonjour szolgáltatás azo
     </message>
     <message>
         <source>Username to send to the server</source>
-        <translation>A szervernek küldött felhasználónév</translation>
+        <translation>A kiszolgálón használt felhasználónév</translation>
     </message>
     <message>
         <source>&lt;b&gt;Username&lt;/b&gt;&lt;br/&gt;
@@ -3079,31 +3127,35 @@ A szervernek küldött felhasználónév. Figyeljen arra, hogy a szerver megszab
     </message>
     <message>
         <source>Label</source>
-        <translation type="unfinished"/>
+        <translation>Kiszogláló neve</translation>
     </message>
     <message>
         <source>Add Server</source>
-        <translation type="unfinished"/>
+        <translation>Kiszolgáló hozzáadása</translation>
     </message>
     <message>
         <source>You are currently connected to a server.
 Do you want to fill the dialog with the connection data of this server?
 Host: %1 Port: %2</source>
-        <translation type="unfinished"/>
+        <translation>Jelenleg is kapcsolódik egy kiszolgálóhoz.
+Szeretné a jelen kiszolgálót hozzáadni a kedvencekhez?
+Kiszolgáló: %1 Port: %2</translation>
     </message>
     <message>
         <source>You have an URL in your clipboard.
 Do you want to fill the dialog with this data?
 Host: %1 Port: %2</source>
-        <translation type="unfinished"/>
+        <translation>Úgy tűnik egy kiszolgáló adatai szerepelnek a vágólapon.
+Szeretné hozzáadni a kedvencekhez?
+Kiszolgáló: %1 Port: %2</translation>
     </message>
     <message>
         <source>Password</source>
-        <translation type="unfinished"/>
+        <translation>Jelszó</translation>
     </message>
     <message>
         <source>Password to send to the server</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;b&gt;Password&lt;/b&gt;&lt;br/&gt;
@@ -3113,47 +3165,40 @@ A kapcsolódás során a kiszolgálónak elküldött jelszó. Erre a jelszóra s
     </message>
     <message>
         <source>Show password</source>
-        <translation type="unfinished"/>
+        <translation>Jeleszó mutatása</translation>
     </message>
     <message>
         <source>&lt;b&gt;Label&lt;/b&gt;&lt;br/&gt;
 Label of the server. This is what the server will be named like in your server list and can be chosen freely.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Local server label</source>
-        <translation type="unfinished"/>
+        <translation>A kiszolgáló megnevezése</translation>
     </message>
     <message>
         <source>127.0.0.1</source>
-        <translation type="unfinished"/>
+        <translation>127.0.0.1</translation>
     </message>
     <message>
         <source>64738</source>
-        <translation type="unfinished"/>
+        <translation>64738</translation>
     </message>
     <message>
         <source>Your username</source>
-        <translation type="unfinished"/>
+        <translation>Az ön felhasználóneve a kiszolgálón</translation>
     </message>
     <message>
         <source>Your password</source>
-        <translation type="unfinished"/>
+        <translation>Az ön jelszava</translation>
     </message>
     <message>
         <source>&amp;Fill</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Kitöltés</translation>
     </message>
     <message>
         <source>&amp;Ignore</source>
-        <translation type="unfinished"/>
-    </message>
-</context>
-<context>
-    <name>CoreAudioSystem</name>
-    <message>
-        <source>Default Device</source>
-        <translation>Alapértelmezett eszköz</translation>
+        <translation>&amp;Elvetés</translation>
     </message>
 </context>
 <context>
@@ -3168,7 +3213,7 @@ Label of the server. This is what the server will be named like in your server l
     </message>
     <message>
         <source>Email address (optional)</source>
-        <translation>Email cím (nem kötelező)</translation>
+        <translation>E-mail cím (nem kötelező)</translation>
     </message>
     <message>
         <source>Please describe briefly, in English, what you were doing at the time of the crash</source>
@@ -3196,14 +3241,6 @@ Label of the server. This is what the server will be named like in your server l
         <translation>Összeomlás-jelentés feltöltése nem sikerült</translation>
     </message>
     <message>
-        <source>We&apos;re really sorry, but it appears the crash upload has failed with error %1 %2. Please inform a developer.</source>
-        <translation>Nagyon sajnáljuk, de úgy tűnik, hogy az összeomlás-jelentés feltöltése nem sikerült, hiba oka: %1 %2. Kérjük értesítse a fejlesztőket.</translation>
-    </message>
-    <message>
-        <source>This really isn&apos;t funny, but apparently there&apos;s a bug in the crash reporting code, and we&apos;ve failed to upload the report. You may inform a developer about error %1</source>
-        <translation>Ez nem túl mulatságos, de kétségtelenül az összeomlás-jelentő kódjában van egy hiba, és a jelentés feltöltése nem sikerült. Értesítheti a fejlesztőket a hibáról: %1</translation>
-    </message>
-    <message>
         <source>Uploading crash report</source>
         <translation>Összeomlás-jelentés feltöltése</translation>
     </message>
@@ -3211,35 +3248,43 @@ Label of the server. This is what the server will be named like in your server l
         <source>Abort upload</source>
         <translation>Feltöltés megszakítása</translation>
     </message>
+    <message>
+        <source>HTTP error %1: &quot;%2&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Internal error encountered in CrashReporter.cpp: Received network reply does not contain an HTTP status code. Please inform a developer about error code %1</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Database</name>
     <message>
         <source>The database &apos;%1&apos; is read-only. Mumble cannot store server settings (i.e. SSL certificates) until you fix this problem.</source>
-        <oldsource>The database '%1' is read-only. Mumble can not store server settings (ie. SSL certificates) until you fix this problem.</oldsource>
-        <translation type="unfinished"/>
+        <oldsource>The database &apos;%1&apos; is read-only. Mumble can not store server settings (ie. SSL certificates) until you fix this problem.</oldsource>
+        <translation>A(z) „%1” adatbázis írásvédett. Így a Mumble nem tudja tárolni a beállításokat (pl.: SSL-tanúsítványokat) a hiba kijavításáig.</translation>
     </message>
     <message>
         <source>The database file &apos;%1&apos; set in the configuration file does not exist. Do you want to create a new database file at this location?</source>
-        <translation type="unfinished"/>
+        <translation>The database file &apos;%1&apos; set in the configuration file does not exist. Do you want to create a new database file at this location?</translation>
     </message>
     <message>
         <source>Mumble failed to initialize a database in any of the possible locations.</source>
-        <translation type="unfinished"/>
+        <translation>Mumble failed to initialize a database in any of the possible locations.</translation>
     </message>
 </context>
 <context>
     <name>DeveloperConsole</name>
     <message>
         <source>Developer Console</source>
-        <translation type="unfinished"/>
+        <translation>Fejlesztői parancssor</translation>
     </message>
 </context>
 <context>
     <name>DockTitleBar</name>
     <message>
         <source>Drag here</source>
-        <translation type="unfinished"/>
+        <translation>Vontatás ide</translation>
     </message>
 </context>
 <context>
@@ -3254,7 +3299,7 @@ Label of the server. This is what the server will be named like in your server l
     </message>
     <message>
         <source>Function</source>
-        <translation>Funkció</translation>
+        <translation>Művelet</translation>
     </message>
     <message>
         <source>Data</source>
@@ -3294,68 +3339,89 @@ Label of the server. This is what the server will be named like in your server l
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mumble can currently only use mouse buttons and keyboard modifier keys (Alt, Ctrl, Cmd, etc.) for global shortcuts.&lt;/p&gt;&lt;p&gt;If you want more flexibility, you can enable &lt;span style=&quot; font-style:italic;&quot;&gt;Access for assistive devices&lt;/span&gt; in the system&apos;s Accessibility preferences. However, please note that this change also potentially allows malicious programs to read what is typed on your keyboard.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Open Accessibility Preferences</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Skip</source>
-        <translation type="unfinished"/>
+        <translation>Kihagyás</translation>
     </message>
     <message>
         <source>Enable Global Shortcuts</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;b&gt;Additional Shortcut Engines&lt;/b&gt;&lt;br /&gt;This section allows you to configure the use of additional GlobalShortcut engines.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Additional Shortcut Engines</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;b&gt;Enable Windows hooks&lt;/b&gt;.&lt;br /&gt;This enables the Windows hooks shortcut engine. Using this engine allows Mumble to suppress keypresses and mouse clicks.</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Enable Windows hooks</source>
-        <translation type="unfinished"/>
+        <translation>További modulok</translation>
     </message>
     <message>
         <source>&lt;b&gt;Enable GKey&lt;/b&gt;.&lt;br /&gt;This setting enables support for the GKey shortcut engine, for &quot;G&quot;-keys found on Logitech keyboards.</source>
-        <translation type="unfinished"/>
+        <translation>&lt;b&gt;Logitech G-Key támogatása&lt;/b&gt;.&lt;br /&gt;Ez a beállítás lehetővé teszi a Logitech billentyűzetek dedikált G-Key billentyűinek használatát.</translation>
     </message>
     <message>
         <source>Enable GKey</source>
-        <translation type="unfinished"/>
+        <translation>Logitech G-Key támogatása</translation>
     </message>
     <message>
         <source>&lt;b&gt;Enable XInput&lt;/b&gt;&lt;br /&gt;This setting enables support for the XInput shortcut engine, for Xbox compatible controllers.</source>
-        <translation type="unfinished"/>
+        <translation>&lt;b&gt;XInput bevitel támogatása&lt;/b&gt;&lt;br /&gt;Ez a beállítás lehetővé teszi az XInput bevitelt támogató eszközök használatát is, többek között az Xbox vezérlő használatát.</translation>
     </message>
     <message>
         <source>Enable XInput</source>
-        <translation type="unfinished"/>
+        <translation>XInput bevitel támogatása</translation>
     </message>
     <message>
         <source>&lt;b&gt;Enable shortcuts in privileged applications&lt;/b&gt;.&lt;br /&gt;Also known as &quot;UIAccess&quot;. This allows Mumble to receive global shortcut events from programs running at high privilege levels, such as an Admin Command Prompt or older games that run with admin privileges.
 &lt;br /&gt;&lt;br /&gt;
 Without this option enabled, using Mumble&apos;s global shortcuts in privileged applications will not work. This can seem inconsistent: for example, if the Push-to-Talk button is pressed in a non-privileged program, but released in a privileged application, Mumble will not observe that it has been released and you will continue to talk until you press the Push-to-Talk button again.</source>
-        <translation type="unfinished"/>
+        <translation>&lt;b&gt;Kompatibilitás a rendszergazdaként futtatott játékokkal&lt;/b&gt;.&lt;br /&gt;Ez a beállítás lehetővé teszi, hogy a Mumble akkor is észlelje a gyorsbillentyűk használatát, ha párhuzamosan futó játék vagy alkalmazás magasabb szinten, rendszergazdai jogosultsággal fut.
+&lt;br /&gt;&lt;br /&gt;
+Ha ez a beállítás nincs bejelölve az adott játék nem fogja engedni, hogy a Mumble észlelje a gyorsbillentyűket. Például: ha a beszéd gombnyomásra van beállítva és megnyomja a gombot, majd eközben előtérbe kerül egy rendszergazdaként futó játék, akkor a gomb elengedését követően sem szakad meg az adás, míg nem nyomja meg ismét a gombot.</translation>
     </message>
     <message>
         <source>Enable shortcuts in privileged applications</source>
-        <translation type="unfinished"/>
+        <translation>Kompatibilitás a rendszergazdaként futtatott játékokkal</translation>
+    </message>
+</context>
+<context>
+    <name>GlobalShortcutButtons</name>
+    <message>
+        <source>Edit shortcut</source>
+        <translation>Gyorsbillentyű módosítása</translation>
+    </message>
+    <message>
+        <source>Start capture process</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Starts the capture process: all buttons you press will be added to the tree.&lt;/p&gt;&lt;p&gt;Once all buttons are released, the capture process stops automatically.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add</source>
+        <translation>Hozzáadás</translation>
+    </message>
+    <message>
+        <source>Remove the currently selected items</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation>Törlés</translation>
     </message>
 </context>
 <context>
     <name>GlobalShortcutConfig</name>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mumble can currently only use mouse buttons and keyboard modifier keys (Alt, Ctrl, Cmd, etc.) for global shortcuts.&lt;/p&gt;&lt;p&gt;If you want more flexibility, you can add Mumble as a trusted accessibility program in the Security &amp; Privacy section of your Mac&apos;s System Preferences.&lt;/p&gt;&lt;p&gt;In the Security &amp; Privacy preference pane, change to the Privacy tab. Then choose Accessibility (near the bottom) in the list to the left. Finally, add Mumble to the list of trusted accessibility programs.&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Shortcuts</source>
@@ -3376,7 +3442,25 @@ Without this option enabled, using Mumble&apos;s global shortcuts in privileged 
     </message>
     <message>
         <source>Configured shortcuts</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>GlobalShortcutEngine</name>
+    <message>
+        <source>Unknown</source>
+        <translation>Ismeretlen</translation>
+    </message>
+</context>
+<context>
+    <name>GlobalShortcutMac</name>
+    <message>
+        <source>Mouse</source>
+        <translation>Egér</translation>
+    </message>
+    <message>
+        <source>Keyboard</source>
+        <translation>Billentyűzet</translation>
     </message>
 </context>
 <context>
@@ -3423,61 +3507,76 @@ Without this option enabled, using Mumble&apos;s global shortcuts in privileged 
     </message>
     <message>
         <source>Shout to Linked channels</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Shout to subchannels</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>The whisper will also be transmitted to linked channels.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>The whisper will also be sent to the subchannels of the channel target.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Shout/Whisper to:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Current selection</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>When shouting to channel:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Shout to linked channels</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Channel</source>
-        <translation type="unfinished"/>
+        <translation>Csatorna</translation>
+    </message>
+</context>
+<context>
+    <name>GlobalShortcutWin</name>
+    <message>
+        <source>Mouse</source>
+        <translation>Egér</translation>
+    </message>
+    <message>
+        <source>Keyboard</source>
+        <translation>Billentyűzet</translation>
     </message>
 </context>
 <context>
     <name>GlobalShortcutX</name>
     <message>
-        <source>Mouse %1</source>
-        <translation>Egér %1</translation>
+        <source>Keyboard</source>
+        <translation>Billentyűzet</translation>
+    </message>
+    <message>
+        <source>Mouse</source>
+        <translation>Egér</translation>
     </message>
 </context>
 <context>
     <name>JackAudioSystem</name>
     <message>
         <source>Hardware Ports</source>
-        <translation type="unfinished"/>
+        <translation>Csatlakozók</translation>
     </message>
     <message>
         <source>Mono</source>
-        <translation type="unfinished"/>
+        <translation>Mono</translation>
     </message>
     <message>
         <source>Stereo</source>
-        <translation type="unfinished"/>
+        <translation>Sztereó</translation>
     </message>
 </context>
 <context>
@@ -3553,18 +3652,18 @@ Ez a mező mutatja egy LCD eszköz méretét. A méret vagy pixelben (a grafikus
     </message>
     <message>
         <source>Minimum column width</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Splitter width</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ListenerLocalVolumeDialog</name>
     <message>
         <source>Adjusting local volume for listening to %1</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3587,11 +3686,11 @@ Ez a mező mutatja egy LCD eszköz méretét. A méret vagy pixelben (a grafikus
     </message>
     <message>
         <source>Other self-muted/deafened</source>
-        <translation>Más némította önmagát/ teljesen kikapcsolta a hangot</translation>
+        <translation>Más némította és süketítette önmagát</translation>
     </message>
     <message>
         <source>User recording state changed</source>
-        <translation type="unfinished"/>
+        <translation>Felhasználó rögzítési állapota megváltozott</translation>
     </message>
     <message>
         <source>User kicked (you or by you)</source>
@@ -3599,7 +3698,7 @@ Ez a mező mutatja egy LCD eszköz méretét. A méret vagy pixelben (a grafikus
     </message>
     <message>
         <source>User kicked</source>
-        <translation>Felhasználó kidobva</translation>
+        <translation>Felhasználó kirúgva</translation>
     </message>
     <message>
         <source>You self-muted</source>
@@ -3619,39 +3718,39 @@ Ez a mező mutatja egy LCD eszköz méretét. A méret vagy pixelben (a grafikus
     </message>
     <message>
         <source>You self-unmuted</source>
-        <translation>Ön kikapcsolta a némítását</translation>
+        <translation>Ön visszavonta a némítását</translation>
     </message>
     <message>
         <source>You self-deafened</source>
-        <translation>Saját hang teljesen kikapcsolva</translation>
+        <translation>Ön némította és süketítette magát</translation>
     </message>
     <message>
         <source>You self-undeafened</source>
-        <translation>Saját hang bekapcsolva</translation>
+        <translation>Ön visszavonta a némítást és süketítést</translation>
     </message>
     <message>
         <source>User renamed</source>
-        <translation type="unfinished"/>
+        <translation>Felhasználó átnevezve</translation>
     </message>
     <message>
         <source>User connected and entered channel</source>
-        <translation type="unfinished"/>
+        <translation>Egy felhasználó kapcsolódott és belépett a csatornába</translation>
     </message>
     <message>
         <source>User left channel and disconnected</source>
-        <translation type="unfinished"/>
+        <translation>Egy felhasználó elhagyta a csatornát és lekapcsolódott</translation>
     </message>
     <message>
         <source>Private text message</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>the server</source>
-        <translation>a szerver</translation>
+        <translation>A kiszolgáló</translation>
     </message>
     <message>
         <source>[[ Invalid size ]]</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>[[ Text object too large to display ]]</source>
@@ -3669,7 +3768,7 @@ Ez a mező mutatja egy LCD eszköz méretét. A méret vagy pixelben (a grafikus
     </message>
     <message>
         <source>FTP link to %1</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>player link</source>
@@ -3685,51 +3784,55 @@ Ez a mező mutatja egy LCD eszköz méretét. A méret vagy pixelben (a grafikus
     </message>
     <message>
         <source>Server connected</source>
-        <translation type="unfinished"/>
+        <translation>Kiszolgáló kapcsolódott</translation>
     </message>
     <message>
         <source>Server disconnected</source>
-        <translation type="unfinished"/>
+        <translation>Kiszolgáló lekapcsolódott</translation>
     </message>
     <message>
         <source>User joined server</source>
-        <translation type="unfinished"/>
+        <translation>Egy felhasználó belépett</translation>
     </message>
     <message>
         <source>User left server</source>
-        <translation type="unfinished"/>
+        <translation>Egy felhasználó kilépett</translation>
     </message>
     <message>
         <source>User joined channel</source>
-        <translation type="unfinished"/>
+        <translation>Egy felhasználó belépett a csatornába</translation>
     </message>
     <message>
         <source>User left channel</source>
-        <translation type="unfinished"/>
+        <translation>Egy felhasználó elhagyta a csatornát</translation>
     </message>
     <message>
         <source>Permission denied</source>
-        <translation type="unfinished"/>
+        <translation>Hozzáférés megtagadva</translation>
     </message>
     <message>
         <source>Text message</source>
-        <translation type="unfinished"/>
+        <translation>Üzenet küldése</translation>
     </message>
     <message>
         <source>You joined channel</source>
-        <translation type="unfinished"/>
+        <translation>Belépett a csatornába</translation>
     </message>
     <message>
         <source>You joined channel (moved)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>User started listening to channel</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>User stopped listening to channel</source>
-        <translation type="unfinished"/>
+        <translation>User stopped listening to channel</translation>
+    </message>
+    <message>
+        <source>Plugin message</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3752,7 +3855,7 @@ Ez a mező mutatja egy LCD eszköz méretét. A méret vagy pixelben (a grafikus
     </message>
     <message>
         <source>Toggle window highlight (if not active) for %1 events</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Path to sound file used for sound notifications in the case of %1 events&lt;br /&gt;Single click to play&lt;br /&gt;Double-click to change</source>
@@ -3769,7 +3872,7 @@ Ez a mező mutatja egy LCD eszköz méretét. A méret vagy pixelben (a grafikus
     </message>
     <message>
         <source>Click here to toggle window highlight for %1 events.&lt;br /&gt;If checked, Mumble&apos;s window will be highlighted for every %1 event, if not active.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Path to sound file used for sound notifications in the case of %1 events.&lt;br /&gt;Single click to play&lt;br /&gt;Double-click to change&lt;br /&gt;Ensure that sound notifications for these events are enabled or this field will not have any effect.</source>
@@ -3843,7 +3946,7 @@ Ez a mező mutatja egy LCD eszköz méretét. A méret vagy pixelben (a grafikus
     </message>
     <message>
         <source> Characters</source>
-        <translation>.betű</translation>
+        <translation> betű</translation>
     </message>
     <message>
         <source>Whisper</source>
@@ -3855,81 +3958,81 @@ Ez a mező mutatja egy LCD eszköz méretét. A méret vagy pixelben (a grafikus
     </message>
     <message>
         <source>Only accept whispers from friends</source>
-        <translation>Csak barát suttogását hallgatja</translation>
+        <translation>Suttogás fogadása kizárólag barátoktól</translation>
     </message>
     <message>
         <source>If enabled text messages you send will be read back to you with TTS</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Read back own messages</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Chat Log</source>
-        <translation type="unfinished"/>
+        <translation>Üzenetek naplózása</translation>
     </message>
     <message>
         <source>Maximum chat length</source>
-        <translation type="unfinished"/>
+        <translation>Tárolt sorok száma</translation>
     </message>
     <message>
         <source>Unlimited</source>
-        <translation type="unfinished"/>
+        <translation>Korlátlan</translation>
     </message>
     <message>
         <source> Lines</source>
-        <translation type="unfinished"/>
+        <translation> sor</translation>
     </message>
     <message>
         <source>Highlight</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>If enabled, TTS will not dictate the message scope.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Omit Message Scope</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>If enabled, TTS will not dictate the message author.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Omit Message Author</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>If checked the time at the beginning of a message will be displayed in the 24-hour format.
 
 The setting only applies for new messages, the already shown ones will retain the previous time format.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Use 24-hour clock</source>
-        <translation type="unfinished"/>
+        <translation>24 órás időformátum</translation>
     </message>
     <message>
         <source>How far individual messages are spaced out from one another.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Message margins</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Log messages</source>
-        <translation type="unfinished"/>
+        <translation>Napló üzenetek</translation>
     </message>
     <message>
         <source>TTS engine volume</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Chat message margins</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3940,11 +4043,11 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>None</source>
-        <translation>Semmi</translation>
+        <translation>Ne bontsa ki</translation>
     </message>
     <message>
         <source>Only with users</source>
-        <translation>Csak felhasználókkal</translation>
+        <translation>Csak ha nem üres</translation>
     </message>
     <message>
         <source>All</source>
@@ -3956,7 +4059,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Do Nothing</source>
-        <translation>Nem csinál semmit</translation>
+        <translation>Ne csináljon semmit sem</translation>
     </message>
     <message>
         <source>Move</source>
@@ -3965,11 +4068,11 @@ The setting only applies for new messages, the already shown ones will retain th
     <message>
         <source>&lt;a href=&quot;%1&quot;&gt;Browse&lt;/a&gt;</source>
         <extracomment>This link is located next to the theme heading in the ui config and opens the user theme directory</extracomment>
-        <translation type="unfinished"/>
+        <translation>&lt;a href=&quot;%1&quot;&gt;Tallózás&lt;/a&gt;</translation>
     </message>
     <message>
         <source>User Interface</source>
-        <translation>Felhasználói felület</translation>
+        <translation>Kezelőfelület</translation>
     </message>
     <message>
         <source>This sets which channels to automatically expand. &lt;i&gt;None&lt;/i&gt; and &lt;i&gt;All&lt;/i&gt; will expand no or all channels, while &lt;i&gt;Only with users&lt;/i&gt; will expand and collapse channels as users join and leave them.</source>
@@ -3997,7 +4100,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Show channel user count</source>
-        <translation>Mutatja a felhasználók számát</translation>
+        <translation>Létszám mutatása a csatornák mellett</translation>
     </message>
     <message>
         <source>Language</source>
@@ -4013,7 +4116,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Look and Feel</source>
-        <translation>Kinézet</translation>
+        <translation>Felhasználói felület</translation>
     </message>
     <message>
         <source>Layout</source>
@@ -4046,7 +4149,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Expand</source>
-        <translation>Kibontása</translation>
+        <translation>Csatornák kibontása</translation>
     </message>
     <message>
         <source>When to automatically expand channels</source>
@@ -4054,7 +4157,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Channel Dragging</source>
-        <translation>Csatorna húzása</translation>
+        <translation>Csatorna mozgatása</translation>
     </message>
     <message>
         <source>Ask whether to close or minimize when quitting Mumble.</source>
@@ -4074,11 +4177,11 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Hide in tray when minimized</source>
-        <translation>Tálcára küldi minimalizáláskor</translation>
+        <translation>Kis méret esetén Mumble értesítési területre küldése</translation>
     </message>
     <message>
         <source>Hide the main Mumble window in the tray when it is minimized.</source>
-        <translation>Minimalizáláskor elrejti a Mumble főablakát a tálcán.</translation>
+        <translation>Kis méret esetén elrejti a Mumble főablakát az értesítési területen.</translation>
     </message>
     <message>
         <source>This setting controls when the application will be always on top.</source>
@@ -4094,7 +4197,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>In minimal view</source>
-        <translation>Minimális nézetben</translation>
+        <translation>Egyszerű nézetben</translation>
     </message>
     <message>
         <source>In normal view</source>
@@ -4106,7 +4209,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Show talking status in tray icon</source>
-        <translation>Beszélgetés státusza a tálcán</translation>
+        <translation>Állapot mutatása az értesítési területen</translation>
     </message>
     <message>
         <source>This setting controls in which situations the application will stay always on top. If you select &lt;i&gt;Never&lt;/i&gt; the application will not stay on top. &lt;i&gt;Always&lt;/i&gt; will always keep the application on top. &lt;i&gt;In minimal view&lt;/i&gt; / &lt;i&gt;In normal view&lt;/i&gt; will only keep the application always on top when minimal view is activated / deactivated.</source>
@@ -4114,7 +4217,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Show context menu in menu bar</source>
-        <translation>Helyi menük mutatása</translation>
+        <translation>Helyi menü megjelenítése a menüszalagon</translation>
     </message>
     <message>
         <source>Apply some high contrast optimizations for visually impaired users</source>
@@ -4138,27 +4241,27 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Channel Tree</source>
-        <translation>Csatornák fája</translation>
+        <translation>Csatornalista</translation>
     </message>
     <message>
         <source>Use selected item as the chat bar target</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Filter automatically hides empty channels</source>
-        <translation type="unfinished"/>
+        <translation>Üres csatornák automatikus elrejtése</translation>
     </message>
     <message>
         <source>Show transmit mode dropdown in toolbar</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Theme</source>
-        <translation type="unfinished"/>
+        <translation>Téma</translation>
     </message>
     <message>
         <source>Theme to use to style the user interface</source>
-        <translation>A témákkal testre szabhatja a felhasználói felület stílusát.</translation>
+        <translation>A témákkal testre szabhatja a felhasználói felület kinézetét</translation>
     </message>
     <message>
         <source>&lt;b&gt;Configures which theme the Mumble user interface should be styled with&lt;/b&gt;&lt;br /&gt;Mumble will pick up themes from certain directories and display them in this list. The one you select will be used to customize the visual appearance of Mumble. This includes colors, icons and more.</source>
@@ -4166,175 +4269,183 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>User Dragging</source>
-        <translation type="unfinished"/>
+        <translation>Felhasználó mozgatása</translation>
     </message>
     <message>
         <source>This changes the behavior when moving users.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This sets the behavior of user drags; it can be used to prevent accidental dragging. &lt;i&gt;Move&lt;/i&gt; moves the user without prompting. &lt;i&gt;Do Nothing&lt;/i&gt; does nothing and prints an error message. &lt;i&gt;Ask&lt;/i&gt; uses a message box to confirm if you really wanted to move the user.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;b&gt;Enable Developer menu&lt;/b&gt;&lt;br /&gt;This enables the &quot;Developer&quot;-menu in Mumble. This menu is used for developer-specific features, such as the Developer Console.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Enable Developer menu</source>
-        <translation type="unfinished"/>
+        <translation>Fejlesztői menü engedélyezése</translation>
     </message>
     <message>
         <source>When in custom layout mode, checking this disables rearranging.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Lock layout</source>
-        <translation type="unfinished"/>
+        <translation>Elrendezés zárolása</translation>
     </message>
     <message>
         <source>Talking UI</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>A user that is silent for the given amount of seconds will be removed from the Talkin UI.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Remove silent user after</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>If this is checked, the local user (yourself) will always be visible in the TalkingUI (regardless of talking state).</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Always keep local user visible</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>How many characters from the original name to display at the beginning of an abbreviated name.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>String to separate a channel name from its parent&apos;s.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Channel separator</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Abbreviated prefix characters</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>The names of how many parent channels should be included in the channel&apos;s name when displaying it in the TalkingUI?</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>How many characters from the original name to display at the end of an abbreviated name.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Abbreviated postfix characters</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Whether to also allow abbreviating the current channel of a user (instead of only its parent channels).</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Abbreviate current channel name</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Channel hierarchy depth</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Abbreviation replacement</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Whether the channel (hierarchy) name should be abbreviated, if it exceeds the specified maximum length.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Abbreviate channel names</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>The preferred maximum length of a channel (hierarchy) name in the Talking UI. Note that this is not a hard limit though.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Max. channel name length</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Relative font size to use in the Talking UI in percent.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Rel. font size (%)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>String that gets used instead of the cut-out part of an abbreviated name.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Prefix character count</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Postfix character count</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Maximum name length</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Relative font size</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Always on top</source>
-        <translation type="unfinished"/>
+        <translation>Mindig előtérben</translation>
     </message>
     <message>
         <source>Channel dragging</source>
-        <translation type="unfinished"/>
+        <translation>Csatorna mozgatása</translation>
     </message>
     <message>
         <source>Automatically expand channels when</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>User dragging behavior</source>
-        <translation type="unfinished"/>
+        <translation>Művelet felhasználó mozgatása esetén</translation>
     </message>
     <message>
         <source>Silent user lifetime</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Show the local volume adjustment for each user (if any).</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Show volume adjustments</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Whether to show all of the local user&apos;s listeners (ears) in the TalkingUI (and thereby also the channels they are in). </source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Show local user&apos;s listeners (ears)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hide the username for each user if they have a nickname.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show nicknames only</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4376,12 +4487,12 @@ The setting only applies for new messages, the already shown ones will retain th
     <message>
         <source>Join Channel</source>
         <comment>Global Shortcut</comment>
-        <translation>Csatlakozás a csatornához</translation>
+        <translation>Belépés a csatornába</translation>
     </message>
     <message>
         <source>Toggle Overlay</source>
         <comment>Global Shortcut</comment>
-        <translation>Overlay átkapcsolása</translation>
+        <translation>Képátfedés ki/bekapcsolása</translation>
     </message>
     <message>
         <source>Toggle state of in-game overlay.</source>
@@ -4434,7 +4545,7 @@ The setting only applies for new messages, the already shown ones will retain th
     <message>
         <source>Mute Self</source>
         <comment>Global Shortcut</comment>
-        <translation>Saját beszéd némítása</translation>
+        <translation>Némítás</translation>
     </message>
     <message>
         <source>Set self-mute status.</source>
@@ -4464,20 +4575,20 @@ The setting only applies for new messages, the already shown ones will retain th
     <message>
         <source>Whisper/Shout</source>
         <oldsource>Whisper</oldsource>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&lt;center&gt;Not connected&lt;/center&gt;</source>
         <oldsource>Not connected</oldsource>
-        <translation type="unfinished"/>
+        <translation>&lt;center&gt;Nem kapcsolódik&lt;/center&gt;</translation>
     </message>
     <message>
         <source>Clear</source>
-        <translation>Töröl</translation>
+        <translation>Napló törlése</translation>
     </message>
     <message>
         <source>Opening URL %1</source>
-        <translation>Megnyitott webcím: %1</translation>
+        <translation>%1 megnyitása</translation>
     </message>
     <message>
         <source>File does not exist</source>
@@ -4505,11 +4616,11 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Enter username</source>
-        <translation>Adja meg a felhasználónevet</translation>
+        <translation>Felhasználónév megadása</translation>
     </message>
     <message>
         <source>Connecting to server %1.</source>
-        <translation>%1 szerverhez kapcsolódás.</translation>
+        <translation>Kapcsolódás a(z) %1 kiszolgálóhoz.</translation>
     </message>
     <message>
         <source>Reconnecting.</source>
@@ -4517,15 +4628,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Transmit Mode set to Continuous</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;p&gt;%1 (%2)&lt;br /&gt;%3&lt;/p&gt;</source>
-        <translation>&lt;p&gt;%1 (%2)&lt;br /&gt;%3&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;h2&gt;Voice channel&lt;/h2&gt;&lt;p&gt;Encrypted with 128 bit OCB-AES128&lt;br /&gt;%1 ms average latency (%4 deviation)&lt;/p&gt;</source>
-        <translation>&lt;h2&gt;Hangcsatorna&lt;/h2&gt;&lt;p&gt;Titkosítva: 128 bit OCB-AES128&lt;br /&gt;%1 ms átlagos késleltetés (%4 eltérés)&lt;/p&gt;</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Register yourself as %1</source>
@@ -4533,55 +4636,19 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>&lt;p&gt;You are about to register yourself on this server. This action cannot be undone, and your username cannot be changed once this is done. You will forever be known as &apos;%1&apos; on this server.&lt;/p&gt;&lt;p&gt;Are you sure you want to register yourself?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Ön éppen regisztrálja magát ezen a szerveren. Ez a művelet nem vonható vissza, és az ön felhasználó neve többet már nem módosítható. Ezen a szerveren önt ezentúl &apos;%1&apos; néven fogják ismerni.&lt;/p&gt;&lt;p&gt;Biztos abban, hogy regisztrálni akarja magát?&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;h2&gt;Version&lt;/h2&gt;&lt;p&gt;Protocol %1&lt;/p&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;p&gt;No build information or OS version available&lt;/p&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>The connection is encrypted and authenticated using %1 and uses %2 as the key exchange mechanism (%3)</source>
-        <translation>A kapcsolat titkosított és hitelesített %1 használatával és a kulcscseréhez használt mechanizmus: %2 (%3)</translation>
-    </message>
-    <message>
-        <source>The connection is encrypted using %1, with %2 for message authentication and %3 as the key exchange mechanism (%4)</source>
-        <translation>A kapcsolat %1 használatával lett titkosítva, %2 az üzenet hitelesítéséhez és %3 a kulcscserélési mechanizmushoz (%4)</translation>
-    </message>
-    <message>
-        <source>The connection is secured by the cipher suite that OpenSSL identifies as %1</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;p&gt;The connection provides perfect forward secrecy&lt;/p&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;p&gt;The connection does not provide perfect forward secrecy&lt;/p&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;h2&gt;Control channel&lt;/h2&gt;&lt;p&gt;The connection uses %1&lt;/p&gt;%2%3&lt;p&gt;%4 ms average latency (%5 deviation)&lt;/p&gt;&lt;p&gt;Remote host %6 (port %7)&lt;/p&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Voice channel is sent over control channel</source>
-        <translation type="unfinished"/>
+        <translation>&lt;p&gt;Ön ezzel a folyamattal regisztrálni fogja magát a kiszolgálón. Ez a művelet nem visszavonható és ezután nem módosíthatja a felhasználónevét. A továbbiakban &apos;%1&apos; néven lesz ismert a kiszolgálón.&lt;/p&gt;&lt;p&gt;Biztos benne, hogy regisztrálja magát?&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Register user %1</source>
-        <translation>Regisztrálja %1 felhasználót</translation>
+        <translation>%1 felhasználó regisztrálása</translation>
     </message>
     <message>
         <source>&lt;p&gt;You are about to register %1 on the server. This action cannot be undone, the username cannot be changed, and as a registered user, %1 will have access to the server even if you change the server password.&lt;/p&gt;&lt;p&gt;From this point on, %1 will be authenticated with the certificate currently in use.&lt;/p&gt;&lt;p&gt;Are you sure you want to register %1?&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Ön éppen regisztrálja %1 felhasználót ezen a szerveren. Ez a művelet nem vonható vissza, a felhasználónév többet már nem módosítható és mint %1 felhasználó hozzáférése lesz a szerverhez, akkor is ha megváltoztatja a szerver jelszavát.&lt;/p&gt;&lt;p&gt;Ezen a szerveren %1 ezentúl a jelenleg használt tanusítvánnyal fogja magát hitelesíteni.&lt;/p&gt;&lt;p&gt;Biztos abban, hogy regisztrálni akarja %1 felhasználót?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Ön ezzel a folyamattal regisztrálni fogja %1 felhasználót a kiszolgálón. Ez a művelet nem visszavonható és ezután %1 felhasználó nem módosíthatja a nevét. A kiszolgáló jelszavának esetleges változása esetén továbbra is tud majd csatlakozni.&lt;/p&gt;&lt;p&gt;Ezentúl %1 felhasználó a jelenleg használt tanúsítvánnyal fogja tudni hitelesíteni magát a kiszolgálón.&lt;/p&gt;&lt;p&gt;Biztos benne, hogy regisztrálja %1 felhasználót?&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Kicking user %1</source>
-        <translation>%1 felhasználó kidobása</translation>
+        <translation>%1 felhasználó kirúgása</translation>
     </message>
     <message>
         <source>Banning user %1</source>
@@ -4601,15 +4668,15 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>&lt;li&gt;Expected certificate digest (SHA-1):	%1&lt;/li&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;li&gt;Várt kivonat (SHA-1):	%1&lt;/li&gt;</translation>
     </message>
     <message>
         <source>Server presented a certificate which failed verification.</source>
-        <translation type="unfinished"/>
+        <translation>A kiszolgáló tanúsítványa nem rendelkezik aláírással.</translation>
     </message>
     <message>
         <source>&lt;p&gt;%1&lt;/p&gt;&lt;ul&gt;%2&lt;/ul&gt;&lt;p&gt;The specific errors with this certificate are:&lt;/p&gt;&lt;ol&gt;%3&lt;/ol&gt;&lt;p&gt;Do you wish to accept this certificate anyway?&lt;br /&gt;(It will also be stored so you won&apos;t be asked this again.)&lt;/p&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;p&gt;%1&lt;/p&gt;&lt;ul&gt;%2&lt;/ul&gt;&lt;p&gt;A tanúsítvány a következő okok miatt nem megfelelő:&lt;/p&gt;&lt;ol&gt;%3&lt;/ol&gt;&lt;p&gt;Elfogadja a tanúsítványt ennek ellenére?&lt;br /&gt;(A tanúsítvány tárolásra kerül, így többször nem kell jóváhagyni.)&lt;/p&gt;</translation>
     </message>
     <message>
         <source>SSL Version mismatch</source>
@@ -4617,21 +4684,21 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Server connection failed.</source>
-        <translation type="unfinished"/>
+        <translation>Nem sikerült kapcsolódni a kiszolgálóhoz.</translation>
     </message>
     <message>
         <source>&lt;center&gt;Type message to channel &apos;%1&apos; here&lt;/center&gt;</source>
-        <oldsource>Type message to channel '%1' here</oldsource>
-        <translation type="unfinished"/>
+        <oldsource>Type message to channel &apos;%1&apos; here</oldsource>
+        <translation>&lt;center&gt;Üzenet írása a(z) &apos;%1&apos; csatornába&lt;/center&gt;</translation>
     </message>
     <message>
         <source>&lt;center&gt;Type message to user &apos;%1&apos; here&lt;/center&gt;</source>
-        <oldsource>Type message to user '%1' here</oldsource>
-        <translation type="unfinished"/>
+        <oldsource>Type message to user &apos;%1&apos; here</oldsource>
+        <translation>&lt;center&gt;Üzenet írása &apos;%1&apos; felhasználónak&lt;/center&gt;</translation>
     </message>
     <message>
         <source>Choose image file</source>
-        <translation>Válasszon kép fájlt</translation>
+        <translation>Kép kiválasztása</translation>
     </message>
     <message>
         <source>Failed to load image</source>
@@ -4656,136 +4723,96 @@ The setting only applies for new messages, the already shown ones will retain th
     <message>
         <source>Use in conjunction with Whisper to.</source>
         <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This will switch the states of the in-game overlay.</source>
         <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Link Channel</source>
         <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
+        <translation>Csatorna csatolása</translation>
     </message>
     <message>
         <source>Cycle Transmit Mode</source>
         <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Set Transmit Mode to Push-To-Talk</source>
         <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Set Transmit Mode to Continuous</source>
         <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Set Transmit Mode to VAD</source>
         <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Send Text Message</source>
         <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Send Clipboard Text Message</source>
         <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This will send your Clipboard content to the channel you are currently in.</source>
         <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Continuous</source>
-        <translation type="unfinished"/>
+        <translation>Folyamatos</translation>
     </message>
     <message>
         <source>Voice Activity</source>
-        <translation type="unfinished"/>
+        <translation>Beszéd érzékelése</translation>
     </message>
     <message>
         <source>Push-to-Talk</source>
-        <translation type="unfinished"/>
+        <translation>Adásgomb</translation>
     </message>
     <message>
         <source>Mumble - Minimal View -- %1</source>
-        <translation type="unfinished"/>
+        <translation>Mumble - Egyszerű nézet -- %1</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"/>
+        <translation>Mégse</translation>
     </message>
     <message>
         <source>Save Image As...</source>
-        <translation type="unfinished"/>
+        <translation>Kép mentése másként...</translation>
     </message>
     <message>
         <source>Save Image File</source>
-        <translation type="unfinished"/>
+        <translation>Kép mentése</translation>
     </message>
     <message>
         <source>Could not save image: %1</source>
-        <translation type="unfinished"/>
+        <translation>Kép mentése sikertelen: %1</translation>
     </message>
     <message>
         <source>Change your comment</source>
-        <translation>Módosítja a megjegyzését</translation>
+        <translation>Megjegyzés módosítása</translation>
     </message>
     <message>
         <source>Transmit Mode set to Voice Activity</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Transmit Mode set to Push-to-Talk</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;p&gt;Connected users: %1/%2&lt;/p&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>UDP Statistics</source>
-        <translation>UDP statisztika</translation>
-    </message>
-    <message>
-        <source>To Server</source>
-        <translation>Szerver felé</translation>
-    </message>
-    <message>
-        <source>From Server</source>
-        <translation>Szervertől</translation>
-    </message>
-    <message>
-        <source>Good</source>
-        <translation>Jó</translation>
-    </message>
-    <message>
-        <source>Late</source>
-        <translation>Késésben</translation>
-    </message>
-    <message>
-        <source>Lost</source>
-        <translation>Elveszett</translation>
-    </message>
-    <message>
-        <source>Resync</source>
-        <translation>Újra szinkronizálva</translation>
-    </message>
-    <message>
-        <source>&lt;h2&gt;Audio bandwidth&lt;/h2&gt;&lt;p&gt;Maximum %1 kbit/s&lt;br /&gt;Current %2 kbit/s&lt;br /&gt;Codec: %3&lt;/p&gt;</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Mumble Server Information</source>
-        <translation>Mumble szerver információk</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&amp;View Certificate</source>
@@ -4797,11 +4824,11 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Sending message to %1</source>
-        <translation>%1 felhasználónak üzenetet küld</translation>
+        <translation>Üzenet küldése %1 felhasználónak</translation>
     </message>
     <message>
         <source>To %1: %2</source>
-        <translation>%1 felhasználónak: %2</translation>
+        <translation>Üzenet %1 felhasználó(i)nak: %2</translation>
     </message>
     <message>
         <source>Message to %1</source>
@@ -4813,15 +4840,15 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Are you sure you want to reset the avatar of user %1?</source>
-        <translation type="unfinished"/>
+        <translation>Biztos benne, hogy eltávolítja %1 felhasználó profilképét?</translation>
     </message>
     <message>
         <source>Are you sure you want to delete %1 and all its sub-channels?</source>
-        <translation>Biztos abban, hogy törli %1 csatornát és az összes alcsatornáját?</translation>
+        <translation>Biztos benne, hogy törli a(z) %1 csatornát és minden alcsatornáját?</translation>
     </message>
     <message>
         <source>Sending message to channel %1</source>
-        <translation>Üzenet küldése %1 csatornába</translation>
+        <translation>Üzenet küldése a(z) %1 csatornába</translation>
     </message>
     <message>
         <source>Message to tree %1</source>
@@ -4830,15 +4857,15 @@ The setting only applies for new messages, the already shown ones will retain th
     <message>
         <source>To %1 (Tree): %2</source>
         <oldsource>(Tree) %1: %2</oldsource>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Unmuted and undeafened.</source>
-        <translation>Mikrofon és hangszóró bekapcsolva.</translation>
+        <translation>Némítás és süketítés visszavonva.</translation>
     </message>
     <message>
         <source>Unmuted.</source>
-        <translation>Hangosítva.</translation>
+        <translation>Némítás visszavonva.</translation>
     </message>
     <message>
         <source>Muted.</source>
@@ -4846,23 +4873,23 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Muted and deafened.</source>
-        <translation>Mikrofon és hangszóró kikapcsolva.</translation>
+        <translation>Némítva és süketítve.</translation>
     </message>
     <message>
         <source>Deafened.</source>
-        <translation>Hangszóró kikapcsolva.</translation>
+        <translation>Süketítve.</translation>
     </message>
     <message>
         <source>Undeafened.</source>
-        <translation>Hangszóró bekapcsolva.</translation>
+        <translation>Süketítés visszavonva.</translation>
     </message>
     <message>
         <source>Restart Mumble?</source>
-        <translation type="unfinished"/>
+        <translation>Mumble újraindítása</translation>
     </message>
     <message>
         <source>Some settings will only apply after a restart of Mumble. Restart Mumble now?</source>
-        <translation type="unfinished"/>
+        <translation>Egyes beállítások a Mumble újraindítását követően lépnek érvénybe. Újraindítja a Mumble-t?</translation>
     </message>
     <message>
         <source>About Qt</source>
@@ -4870,27 +4897,27 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>SSL Verification failed: %1</source>
-        <translation>SSL ellenőrzés hibát jelzett: %1</translation>
+        <translation>Hiba történt a tanúsítvány ellenőrzése során: %1</translation>
     </message>
     <message>
         <source>&lt;li&gt;Server certificate digest (SHA-1):	%1&lt;/li&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;li&gt;Tanúsítvány kivonata (SHA-1):	%1&lt;/li&gt;</translation>
     </message>
     <message>
         <source>&lt;b&gt;WARNING:&lt;/b&gt; The server presented a certificate that was different from the stored one.</source>
-        <translation>&lt;b&gt;FIGYELMEZTETÉS:&lt;/b&gt; A szerver az elmentett tanúsítványtól eltérőt mutatott.</translation>
+        <translation>&lt;b&gt;FIGYELMEZTETÉS:&lt;/b&gt; A kiszolgáló által biztosított és a tárolt tanúsítvány nem azonos.</translation>
     </message>
     <message>
         <source>This server is using an older encryption standard, and is no longer supported by modern versions of Mumble.</source>
-        <translation type="unfinished"/>
+        <translation>A kiszolgáló már a Mumble által nem támogatott titkosítást használ.</translation>
     </message>
     <message>
         <source>Server connection failed: %1.</source>
-        <translation>Nem sikerült kapcsolódni a szerverhez: %1.</translation>
+        <translation>Nem sikerült kapcsolódni a(z) %1 kiszolgálóhoz.</translation>
     </message>
     <message>
         <source>Disconnected from server.</source>
-        <translation>Szerverről lekapcsolva.</translation>
+        <translation>Kiszolgáló lekapcsolódott.</translation>
     </message>
     <message>
         <source>Invalid username</source>
@@ -4902,7 +4929,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Username in use</source>
-        <translation type="unfinished"/>
+        <translation>A felhasználónév foglalt</translation>
     </message>
     <message>
         <source>That username is already in use, please try another username.</source>
@@ -4910,13 +4937,13 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Wrong certificate or password</source>
-        <translation type="unfinished"/>
+        <translation>Hibás tanúsítvány vagy jelszó</translation>
     </message>
     <message>
         <source>Wrong certificate or password for registered user. If you are
 certain this user is protected by a password please retry.
 Otherwise abort and check your certificate and username.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Wrong password</source>
@@ -4928,7 +4955,7 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>Images (*.png *.jpg *.jpeg)</source>
-        <translation type="unfinished"/>
+        <translation>Képfájl (*.png *.jpg *.jpeg)</translation>
     </message>
     <message>
         <source>C&amp;onfigure</source>
@@ -4964,7 +4991,7 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>Open the server connection dialog</source>
-        <translation>Megnyitja a kapcsolódás a szerverhez párbeszédablakot</translation>
+        <translation>Kapcsolódás Mumble kiszolgálóhoz</translation>
     </message>
     <message>
         <source>&amp;Disconnect</source>
@@ -4980,7 +5007,7 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>Show information about the server connection</source>
-        <translation>A szerverrel való kapcsolat információit mutatja</translation>
+        <translation>Információ a kiszolgálóról</translation>
     </message>
     <message>
         <source>This will show extended information about the connection to the server.</source>
@@ -4988,11 +5015,11 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>&amp;Mute</source>
-        <translation>&amp;Némít</translation>
+        <translation>&amp;Némítás</translation>
     </message>
     <message>
         <source>&amp;Deafen</source>
-        <translation>&amp;Hangszóró ki</translation>
+        <translation>&amp;Süketítés</translation>
     </message>
     <message>
         <source>&amp;Local Mute</source>
@@ -5052,11 +5079,11 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>Kick user (with reason)</source>
-        <translation>Felhasználó kidobása (okkal)</translation>
+        <translation>Felhasználó kirúgása (indoklással)</translation>
     </message>
     <message>
         <source>Kick selected user off server. You&apos;ll be asked to specify a reason.</source>
-        <translation>Kidobja a kiválasztott felhasználót a szerverről. Meg kell adnia egy okot.</translation>
+        <translation>Kiválasztott felhasználó kirúgása. A döntést meg kell indokolni.</translation>
     </message>
     <message>
         <source>Mute user</source>
@@ -5068,11 +5095,11 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>Kick and ban user (with reason)</source>
-        <translation>Felhasználó kidobása és kitiltása (okkal)</translation>
+        <translation>Felhasználó kirúgása és tiltása (indoklással)</translation>
     </message>
     <message>
         <source>Kick and ban selected user from server. You&apos;ll be asked to specify a reason.</source>
-        <translation>Kidobja és kitiltja a kiválasztott felhasználót a szerverről. Meg kell adnia egy okot.</translation>
+        <translation>Kiválasztott felhasználó kirúgása és tiltása. A döntést meg kell indokolni.</translation>
     </message>
     <message>
         <source>Deafen user</source>
@@ -5118,7 +5145,7 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>&amp;Reset</source>
-        <translation>&amp;Lenullázás</translation>
+        <translation>&amp;Visszavonás</translation>
     </message>
     <message>
         <source>Reset audio preprocessor</source>
@@ -5130,11 +5157,11 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>&amp;Mute Self</source>
-        <translation>Saját beszéd &amp;némítása</translation>
+        <translation>&amp;Némítás</translation>
     </message>
     <message>
         <source>Mute yourself</source>
-        <translation>Saját beszéd némítása</translation>
+        <translation>Némítás</translation>
     </message>
     <message>
         <source>Mute or unmute yourself. When muted, you will not send any data to the server. Unmuting while deafened will also undeafen.</source>
@@ -5142,11 +5169,11 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>&amp;Deafen Self</source>
-        <translation>&amp;Hang ki</translation>
+        <translation>&amp;Süketítés</translation>
     </message>
     <message>
         <source>Deafen yourself</source>
-        <translation>Saját hang teljes kikapcsolása</translation>
+        <translation>Süketítés</translation>
     </message>
     <message>
         <source>Deafen or undeafen yourself. When deafened, you will not hear anything. Deafening yourself will also mute.</source>
@@ -5154,7 +5181,7 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>&amp;Text-To-Speech</source>
-        <translation>&amp;Felolvasás</translation>
+        <translation>&amp;Szövegfelolvasás</translation>
     </message>
     <message>
         <source>Toggle Text-To-Speech</source>
@@ -5182,7 +5209,7 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>Configure Mumble</source>
-        <translation>Beállítja a Mumble-t</translation>
+        <translation>Beállítások</translation>
     </message>
     <message>
         <source>Allows you to change most settings for Mumble.</source>
@@ -5258,11 +5285,11 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>Register user on server</source>
-        <translation>Regisztrálja a felhasználót a szerveren</translation>
+        <translation>Felhasználó regisztrálása a kiszolgálón</translation>
     </message>
     <message>
         <source>This will permanently register the user on the server.</source>
-        <translation>Véglegesen regisztrálja a felhasználót a szerveren.</translation>
+        <translation>Ezzel a művelettel regisztrálni fogja a felhasználót a kiszolgálón.</translation>
     </message>
     <message>
         <source>Add &amp;Friend</source>
@@ -5314,7 +5341,7 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>&amp;Minimal View</source>
-        <translation>&amp;Minimális nézet</translation>
+        <translation>&amp;Egyszerű nézet</translation>
     </message>
     <message>
         <source>Toggle minimal window modes</source>
@@ -5370,7 +5397,7 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>%1 is now muted and deafened.</source>
-        <translation>%1 most némítva és hangszórói kikapcsolva.</translation>
+        <translation>%1 némítva és süketítve.</translation>
     </message>
     <message>
         <source>Your account information can not be verified currently. Please try again later</source>
@@ -5430,11 +5457,11 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>Channel nesting limit reached.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Channel count limit reached. Need to delete channels before creating new ones.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Permission denied.</source>
@@ -5442,7 +5469,7 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>%1 connected and entered channel.</source>
-        <translation type="unfinished"/>
+        <translation>%1 kapcsolódott és belépett a csatornába.</translation>
     </message>
     <message>
         <source>%1 connected.</source>
@@ -5450,67 +5477,67 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>%1 is now muted.</source>
-        <translation>%1 most némítva.</translation>
+        <translation>%1 némítva.</translation>
     </message>
     <message>
         <source>%1 is now unmuted.</source>
-        <translation>%1 most hangosítva.</translation>
+        <translation>%1 visszavonta a némítást.</translation>
     </message>
     <message>
         <source>Recording started</source>
-        <translation type="unfinished"/>
+        <translation>Rögzítés elkezdődött</translation>
     </message>
     <message>
         <source>Recording stopped</source>
-        <translation type="unfinished"/>
+        <translation>Rögzítés befejeződött</translation>
     </message>
     <message>
         <source>%1 started recording.</source>
-        <translation type="unfinished"/>
+        <translation>%1 elkezdte a beszélgetés rögzítését.</translation>
     </message>
     <message>
         <source>%1 stopped recording.</source>
-        <translation type="unfinished"/>
+        <translation>%1 befejezte a beszélgetés rögzítését.</translation>
     </message>
     <message>
         <source>You revoked your priority speaker status.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>You assumed priority speaker status.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>%1 revoked your priority speaker status.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>%1 gave you priority speaker status.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>You revoked priority speaker status for %1.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>You gave priority speaker status to %1.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>%1 revoked own priority speaker status.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>%1 assumed priority speaker status.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>%1 revoked priority speaker status for %2.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>%1 gave priority speaker status to %2.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>You were unmuted and undeafened by %1.</source>
@@ -5539,19 +5566,19 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>You joined %1.</source>
-        <translation type="unfinished"/>
+        <translation>Belépett a(z) %1 csatornába.</translation>
     </message>
     <message>
         <source>You moved %1 to %2.</source>
-        <translation type="unfinished"/>
+        <translation>Ön áthelyezte %1 felhasználót a(z) %2 csatornába.</translation>
     </message>
     <message>
         <source>%1 is recording</source>
-        <translation type="unfinished"/>
+        <translation>%1 rögzíti a beszélgetést</translation>
     </message>
     <message>
         <source>%1 renamed to %2 by %3.</source>
-        <translation type="unfinished"/>
+        <translation>%3 megváltoztatta 1% nevét erre: %2.</translation>
     </message>
     <message>
         <source>%1 disconnected.</source>
@@ -5560,31 +5587,31 @@ Otherwise abort and check your certificate and username.</source>
     <message>
         <source>Server</source>
         <comment>message from</comment>
-        <translation>Szerver</translation>
+        <translation>Kiszolgáló</translation>
     </message>
     <message>
         <source>Failed to load Opus, it will not be available for audio encoding/decoding.</source>
-        <translation type="unfinished"/>
+        <translation>Opus kódoló betöltése sikertelen, így más kódoló lesz betöltve.</translation>
     </message>
     <message>
         <source>The server requests minimum client version %1</source>
-        <translation type="unfinished"/>
+        <translation>A kiszolgálóhoz való csatlakozáshoz legalább %1 változat telepítése szükséges</translation>
     </message>
     <message>
         <source>The server requests positional audio be enabled.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>The server requests positional audio be disabled.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>The server requests Push-to-Talk be enabled.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>The server requests Push-to-Talk be disabled.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>You were unmuted by %1.</source>
@@ -5625,7 +5652,7 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>You were kicked from the server by %1: %2.</source>
-        <translation>%1 kidobta önt a szerverről: %2.</translation>
+        <translation>%1 kirúgta önt: %2.</translation>
     </message>
     <message>
         <source>%3 was kicked from the server by %1: %2.</source>
@@ -5641,15 +5668,15 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>You were moved to %1 by %2.</source>
-        <translation>%2 önt áthelyezte a %1 csatornára.</translation>
+        <translation>%2 áthelyezte önt a(z) %1 csatornába.</translation>
     </message>
     <message>
         <source>%1 entered channel.</source>
-        <translation>%1 csatlakozott a csatornához.</translation>
+        <translation>%1 belépett a csatornába.</translation>
     </message>
     <message>
         <source>Server connection rejected: %1.</source>
-        <translation>A kapcsolódást a szerver visszautasította: %1.</translation>
+        <translation>A kapcsolódást a kiszolgáló visszautasította: %1.</translation>
     </message>
     <message>
         <source>Denied: %1.</source>
@@ -5657,11 +5684,11 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>%1 renamed to %2.</source>
-        <translation type="unfinished"/>
+        <translation>%1 új neve mostantól %2.</translation>
     </message>
     <message>
         <source>%1 left channel and disconnected.</source>
-        <translation type="unfinished"/>
+        <translation>%1 elhagyta a csatornát és lekapcsolódott.</translation>
     </message>
     <message>
         <source>Message from %1</source>
@@ -5669,7 +5696,7 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>You have User Dragging set to &quot;Do Nothing&quot; so the user wasn&apos;t moved.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>You have Channel Dragging set to &quot;Do Nothing&quot; so the channel wasn&apos;t moved.</source>
@@ -5683,50 +5710,29 @@ Otherwise abort and check your certificate and username.</source>
         <source>Remote controlling Mumble:
 
 </source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Usage: mumble rpc &lt;action&gt; [options]
+        <translation>Mumble távoli elérése:
 
-It is possible to remote control a running instance of Mumble by using
-the 'mumble rpc' command.
-
-Valid actions are:
-  mute
-                Mute self
-  unmute
-                Unmute self
-  togglemute
-                Toggle self-mute status
-  deaf
-                Deafen self
-  undeaf
-                Undeafen self
-  toggledeaf
-                Toggle self-deafen status
-
-</source>
-        <translation type="unfinished"/>
+</translation>
     </message>
     <message>
         <source>Invocation</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Error: No RPC command specified</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>RPC</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Welcome to Mumble.</source>
-        <translation>Üdvözli a Mumble.</translation>
+        <translation>Üdvözli a Mumble!</translation>
     </message>
     <message>
         <source>Skipping version check in debug mode.</source>
-        <translation type="unfinished"/>
+        <translation>Új változat keresésének kihagyása hibakereső módban.</translation>
     </message>
     <message>
         <source>Hide Frame</source>
@@ -5750,7 +5756,7 @@ Valid actions are:
     </message>
     <message>
         <source>&amp;Join Channel</source>
-        <translation>&amp;Csatlakozás csatornához</translation>
+        <translation>&amp;Belépés a csatornába</translation>
     </message>
     <message>
         <source>View comment in editor</source>
@@ -5762,11 +5768,11 @@ Valid actions are:
     </message>
     <message>
         <source>S&amp;erver</source>
-        <translation>Sz&amp;erver</translation>
+        <translation>&amp;Kiszolgáló</translation>
     </message>
     <message>
         <source>&amp;Self</source>
-        <translation>F&amp;elhasználó</translation>
+        <translation>&amp;Saját</translation>
     </message>
     <message>
         <source>&amp;Unlink Plugins</source>
@@ -5778,7 +5784,7 @@ Valid actions are:
     </message>
     <message>
         <source>Change your avatar image on this server</source>
-        <translation>Az ön profilképét módosítja ezen a szerveren</translation>
+        <translation>Saját profilkép módosítása ezen kiszolgálón</translation>
     </message>
     <message>
         <source>&amp;Remove Avatar</source>
@@ -5794,35 +5800,35 @@ Valid actions are:
     </message>
     <message>
         <source>Change your own comment</source>
-        <translation type="unfinished"/>
+        <translation>Megjegyzés módosítása</translation>
     </message>
     <message>
         <source>Recording</source>
-        <translation type="unfinished"/>
+        <translation>Beszélgetés rögzítése</translation>
     </message>
     <message>
         <source>Priority Speaker</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&amp;Copy URL</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Meghívó másolása</translation>
     </message>
     <message>
         <source>Copies a link to this channel to the clipboard.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Ignore Messages</source>
-        <translation type="unfinished"/>
+        <translation>Üzenetek mellőzése</translation>
     </message>
     <message>
         <source>Locally ignore user&apos;s text chat messages.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Silently drops all text messages from the user.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Edit ban list on server</source>
@@ -5834,307 +5840,352 @@ Valid actions are:
     </message>
     <message>
         <source>&amp;Filter on/off</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Toggle the channel filter (Ctrl+F)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Enable or disable the filtering of select channels.
 By default all empty channels will be filtered.
 You can mark additional channels for filtering from
 the channel&apos;s context menu.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Ctrl+F</source>
-        <translation type="unfinished"/>
+        <translation>Ctrl+F</translation>
     </message>
     <message>
         <source>&amp;Hide Channel when Filtering</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Reset the avatar of the selected user.</source>
-        <translation type="unfinished"/>
+        <translation>Kiválasztott felhasználó profilképének eltávolítása</translation>
     </message>
     <message>
         <source>Locally adjust the user&apos;s speech volume.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Opens a dialog with a volume slider. Use this on other users in the same room.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&amp;Developer</source>
-        <translation type="unfinished"/>
+        <translation>Fe&amp;jlesztő</translation>
     </message>
     <message>
         <source>&amp;Hide Mumble</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Mumble tálcára küldése</translation>
     </message>
     <message>
         <source>Hides the main Mumble window.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Hides the main Mumble window. Restore by clicking on the tray icon or starting Mumble again.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Show the Developer Console</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Shows the Mumble Developer Console, where Mumble&apos;s log output can be inspected.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&amp;Connect...</source>
-        <translation type="unfinished"/>
+        <translation>Kap&amp;csolódás...</translation>
     </message>
     <message>
         <source>&amp;Ban list...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Tiltólista...</translation>
     </message>
     <message>
         <source>&amp;Information...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Információ...</translation>
     </message>
     <message>
         <source>&amp;Kick...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Kirúgás...</translation>
     </message>
     <message>
         <source>&amp;Ban...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Tiltás...</translation>
     </message>
     <message>
         <source>Local Volume Adjustment...</source>
-        <translation type="unfinished"/>
+        <translation>Hangerő módosítása...</translation>
     </message>
     <message>
         <source>Send &amp;Message...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Üzenet küldése...</translation>
     </message>
     <message>
         <source>&amp;Add...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Hozzáadás...</translation>
     </message>
     <message>
         <source>&amp;Remove...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Eltávolítás...</translation>
     </message>
     <message>
         <source>&amp;Edit...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Szerkesztés...</translation>
     </message>
     <message>
         <source>Audio S&amp;tatistics...</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&amp;Settings...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Beállítások...</translation>
     </message>
     <message>
         <source>&amp;Audio Wizard...</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Developer &amp;Console...</source>
-        <translation type="unfinished"/>
+        <translation>Fejlesztői &amp;parancssor...</translation>
     </message>
     <message>
         <source>&amp;About...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Névjegy...</translation>
     </message>
     <message>
         <source>About &amp;Speex...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Speex névjegye...</translation>
     </message>
     <message>
         <source>About &amp;Qt...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Qt névjegye...</translation>
     </message>
     <message>
         <source>&amp;Certificate Wizard...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Tanúsítványkezelő...</translation>
     </message>
     <message>
         <source>&amp;Register...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Regisztrálás...</translation>
     </message>
     <message>
         <source>Registered &amp;Users...</source>
-        <translation type="unfinished"/>
+        <translation>Regisztrált &amp;felhasználók...</translation>
     </message>
     <message>
         <source>Change &amp;Avatar...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Profilkép módosítása...</translation>
     </message>
     <message>
         <source>&amp;Access Tokens...</source>
-        <translation type="unfinished"/>
+        <translation>K&amp;ulcsok...</translation>
     </message>
     <message>
         <source>Reset &amp;Comment...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Megjegyzés eltávolítása...</translation>
     </message>
     <message>
         <source>Reset &amp;Avatar...</source>
-        <translation type="unfinished"/>
+        <translation>Profilkép &amp;eltávolítása...</translation>
     </message>
     <message>
         <source>View Comment...</source>
-        <translation type="unfinished"/>
+        <translation>Megjegyzés megtekintése...</translation>
     </message>
     <message>
         <source>&amp;Change Comment...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Megjegyzés módosítása...</translation>
     </message>
     <message>
         <source>R&amp;egister...</source>
-        <translation type="unfinished"/>
+        <translation>&amp;Regisztrálás...</translation>
     </message>
     <message>
         <source>Show</source>
-        <translation type="unfinished"/>
+        <translation>Mumble megnyitása</translation>
     </message>
     <message>
         <source>Shows the main Mumble window.</source>
-        <translation type="unfinished"/>
+        <translation>Mumble főablakának mutatása.</translation>
     </message>
     <message>
         <source>Server sync protocol violation. No user profile received.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Protocol violation. Server sent remove for occupied channel.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Listen to channel</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Listen to this channel without joining it</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Locally adjust the volume for this virtual ear.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&amp;Listener</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>No action available...</source>
-        <translation type="unfinished"/>
+        <translation>Nincs elérhető művelet...</translation>
     </message>
     <message>
         <source>Unable to %1 into %2 - Adding the respective access (password) token might grant you access.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>No more listeners allowed in this channel.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>You are not allowed to listen to more channels than you currently are.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>You started listening to %1</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>%1 started listening to your channel</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>You stopped listening to %1</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>%1 stopped listening to your channel</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Talking UI</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Toggles the visibility of the TalkingUI.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Join user&apos;s channel</source>
-        <translation type="unfinished"/>
+        <translation>Belépés a felhasználó csatornájába</translation>
     </message>
     <message>
         <source>Joins the channel of this user.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Channels and users</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Activity log</source>
-        <translation type="unfinished"/>
+        <translation>Tevékenységnapló</translation>
     </message>
     <message>
         <source>Chat message</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Disable Text-To-Speech</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Locally disable Text-To-Speech for this user&apos;s text chat messages.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Silently disables Text-To-Speech for all text messages from the user.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Tree</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Channel</source>
-        <translation type="unfinished"/>
+        <translation>Csatorna</translation>
     </message>
     <message>
         <source>Private</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>%1: %2</source>
-        <translation type="unfinished"/>
+        <translation>%1: %2</translation>
     </message>
     <message>
         <source>(%1) %2</source>
-        <translation type="unfinished"/>
+        <translation>(%1) %2</translation>
     </message>
     <message>
         <source>Configuration file %1 does not exist or is not writable.
 </source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Usage: mumble [options] [&lt;url&gt;]
+        <source>Hide/show main window</source>
+        <comment>Global Shortcut</comment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Set Nickname...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set a local nickname</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sets a local nickname for another user.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Usage: mumble rpc &lt;action&gt; [options]
+
+It is possible to remote control a running instance of Mumble by using
+the &apos;mumble rpc&apos; command.
+
+Valid actions are:
+  mute
+                Mute self
+  unmute
+                Unmute self
+  togglemute
+                Toggle self-mute status
+  deaf
+                Deafen self
+  undeaf
+                Undeafen self
+  toggledeaf
+                Toggle self-deafen status
+  starttalking
+                Start talking
+  stoptalking
+                Stop talking
+
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Usage: mumble [options] [&lt;url&gt; | &lt;plugin_list&gt;]
 
 &lt;url&gt; specifies a URL to connect to after startup instead of showing
 the connection window, and has the following form:
 mumble://[&lt;username&gt;[:&lt;password&gt;]@]&lt;host&gt;[:&lt;port&gt;][/&lt;channel&gt;[/&lt;subchannel&gt;...]][?version=&lt;x.y.z&gt;]
 
+&lt;plugin_list&gt; is a list of plugin files that shall be installed
 The version query parameter has to be set in order to invoke the
 correct client version. It currently defaults to 1.2.0.
 
@@ -6145,7 +6196,11 @@ Valid options are:
   -c, --config
                 Specify an alternative configuration file.
                 If you use this to run multiple instances of Mumble at once,
-                make sure to set an alternative 'database' value in the config.
+                make sure to set an alternative &apos;database&apos; value in the config.
+  --default-certificate-dir &lt;dir&gt;
+                Specify an alternative default certificate path.
+                This path is only used if there is no certificate loaded
+                from the settings.
   -n, --noidentity
                 Suppress loading of identity files (i.e., certificates.)
   -jn, --jackname &lt;arg&gt;
@@ -6167,101 +6222,116 @@ Valid options are:
   --print-echocancel-queue
                 Print on stdout the echo cancellation queue state
                 (useful for debugging purposes)
-
+  --translation-dir &lt;dir&gt;
+                Specifies an additional translation fir &lt;dir&gt; in which
+                Mumble will search for translation files that overwrite
+                the bundled ones
+                Directories added this way have higher priority than
+                the default locations used otherwise
+  --print-translation-dirs
+                Print out the paths in which Mumble will search for
+                translation files that overwrite the bundled ones.
+                (Useful for translators testing their translations)
+  --locale &lt;locale&gt;
+                Overwrite the locale in Mumble&apos;s settings with a
+                locale that corresponds to the given locale string.
+                If the format is invalid, Mumble will error.
+                Otherwise the locale will be permanently saved to
+                Mumble&apos;s settings.
 </source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Hide/show main window</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
+        <source>Directory %1 does not exist.
+</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Manual</name>
     <message>
         <source>Manual Mumble Positional Audio</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Position</source>
-        <translation type="unfinished"/>
+        <translation>Helyzet</translation>
     </message>
     <message>
         <source>X</source>
-        <translation type="unfinished"/>
+        <translation>X</translation>
     </message>
     <message>
         <source>Y</source>
-        <translation type="unfinished"/>
+        <translation>Y</translation>
     </message>
     <message>
         <source>Z</source>
-        <translation type="unfinished"/>
+        <translation>Z</translation>
     </message>
     <message>
         <source>m</source>
-        <translation type="unfinished"/>
+        <translation>m</translation>
     </message>
     <message>
         <source>Heading</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Azimuth</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Elevation</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>°</source>
-        <translation type="unfinished"/>
+        <translation>°</translation>
     </message>
     <message>
         <source>Meta data</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Context</source>
-        <translation type="unfinished"/>
+        <translation>Kiterjesztés</translation>
     </message>
     <message>
         <source>Identity</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Set</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>State</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Unhinge</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Link</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Activate</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Display</source>
-        <translation type="unfinished"/>
+        <translation>Megjelenés</translation>
     </message>
     <message>
         <source>How long silent user&apos;s positions should stay marked after they have stopped talking (in seconds).</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Silent user displaytime:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6277,7 +6347,7 @@ Valid options are:
     <message>
         <source>Use TCP compatibility mode</source>
         <oldsource>Use TCP compatability mode</oldsource>
-        <translation>Használja a TCP kompatibilis módot</translation>
+        <translation>TCP-kompatibilis mód használata</translation>
     </message>
     <message>
         <source>&lt;b&gt;Enable TCP compatibility mode&lt;/b&gt;.&lt;br /&gt;This will make Mumble use only TCP when communicating with the server. This will increase overhead and cause lost packets to produce noticeable pauses in communication, so this should only be used if you are unable to use the default (which uses UDP for voice and TCP for control).</source>
@@ -6297,7 +6367,7 @@ Valid options are:
     </message>
     <message>
         <source>Proxy</source>
-        <translation>Proxy</translation>
+        <translation>Proxy átjáró</translation>
     </message>
     <message>
         <source>Type</source>
@@ -6321,15 +6391,15 @@ Valid options are:
     </message>
     <message>
         <source>Hostname</source>
-        <translation>Gépnév</translation>
+        <translation>Kiszolgáló</translation>
     </message>
     <message>
         <source>Hostname of the proxy</source>
-        <translation>Proxy gépneve</translation>
+        <translation>Proxy átjáró címe</translation>
     </message>
     <message>
         <source>Force TCP mode</source>
-        <translation>Kikényszeríti a TCP módot</translation>
+        <translation>TCP-mód kényszerítése</translation>
     </message>
     <message>
         <source>Enable QoS to prioritize packets</source>
@@ -6353,7 +6423,7 @@ Valid options are:
     </message>
     <message>
         <source>Suppress certificate and password storage</source>
-        <translation>Elnyomja a tanúsítvány és jelszó tárolását</translation>
+        <translation>Hitelesítési adatok tárolásának mellőzése</translation>
     </message>
     <message>
         <source>&lt;b&gt;Type of proxy to connect through.&lt;/b&gt;&lt;br /&gt;This makes Mumble connect through a proxy for all outgoing connections. Note: Proxy tunneling forces Mumble into TCP compatibility mode, causing all voice data to be sent via the control channel.</source>
@@ -6365,15 +6435,15 @@ Valid options are:
     </message>
     <message>
         <source>Port</source>
-        <translation>Portszám</translation>
+        <translation>Port</translation>
     </message>
     <message>
         <source>Port number of the proxy</source>
-        <translation>A proxy portszáma</translation>
+        <translation>A proxy portja</translation>
     </message>
     <message>
         <source>&lt;b&gt;Port number of the proxy.&lt;/b&gt;&lt;br /&gt;This field specifies the port number that the proxy expects connections on.</source>
-        <translation>&lt;b&gt;A proxy portszáma.&lt;/b&gt;&lt;br /&gt;Ebben a mezőben adhatja meg annak a proxy-nak a portszámát, amelyhez kapcsolódni kíván.</translation>
+        <translation>&lt;b&gt;A proxy portja.&lt;/b&gt;&lt;br /&gt;Ebben a mezőben adhatja meg annak a proxy-nak a portszámát, amelyhez kapcsolódni kíván.</translation>
     </message>
     <message>
         <source>Username</source>
@@ -6405,7 +6475,7 @@ Valid options are:
     </message>
     <message>
         <source>Check for new releases of Mumble automatically.</source>
-        <translation>A Mumble új verzióinak automatikus keresése.</translation>
+        <translation>A Mumble újabb kiadásának automatikus keresése.</translation>
     </message>
     <message>
         <source>This will check for new releases of Mumble every time you start the program, and notify you if one is available.</source>
@@ -6413,11 +6483,11 @@ Valid options are:
     </message>
     <message>
         <source>Check for application updates on startup</source>
-        <translation>Indításkor alkalmazásfrissítés keresése</translation>
+        <translation>Mumble frissítésének keresése indításkor</translation>
     </message>
     <message>
         <source>Check for new releases of plugins automatically.</source>
-        <translation>A pluginek új verzióinak automatikus keresése.</translation>
+        <translation>Bővítmények újabb kiadásának automatikus keresése.</translation>
     </message>
     <message>
         <source>This will check for new releases of plugins every time you start the program, and download them automatically.</source>
@@ -6429,98 +6499,103 @@ Valid options are:
     </message>
     <message>
         <source>Submit anonymous statistics to the Mumble project</source>
-        <translation>Statisztikát küld névtelenül a Mumble fejlesztőknek</translation>
+        <translation>Névtelen adatok küldése a felhasználói szokásokról a Mumble fejlesztői számára</translation>
     </message>
     <message>
         <source>Submit anonymous statistics</source>
-        <translation>Statisztikák küldése névtelenül</translation>
+        <translation>Névtelen felhasználási adatok küldése</translation>
     </message>
     <message>
         <source>Reconnect to last used server when starting Mumble</source>
-        <translation type="unfinished"/>
+        <translation>A Mumble indításkor automatikusan csatlakozni fog az utoljára használt kiszolgálóhoz</translation>
     </message>
     <message>
         <source>Reconnect to last server on startup</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>Download plugin and overlay updates on startup</source>
-        <translation type="unfinished"/>
+        <translation>Újracsatlakozás az utoljára használt kiszolgálóhoz indításkor</translation>
     </message>
     <message>
         <source>Privacy</source>
-        <translation type="unfinished"/>
+        <translation>Adatvédelem</translation>
     </message>
     <message>
         <source>Prevent OS information being sent to Mumble servers and web servers</source>
-        <translation type="unfinished"/>
+        <translation>Bekapcsolás esetén a Mumble nem osztja meg rendszere adatait az adott kiszolgálóval</translation>
     </message>
     <message>
-        <source>&lt;b&gt;Don't send OS information to servers&lt;/b&gt;&lt;br/&gt;
+        <source>&lt;b&gt;Don&apos;t send OS information to servers&lt;/b&gt;&lt;br/&gt;
 Prevents the client from sending potentially identifying information about the operating system to the Mumble server and web servers.</source>
-        <translation type="unfinished"/>
+        <translation>&lt;b&gt;Ne ossza meg a Mumble a rendszer adait a kiszolgálóval&lt;/b&gt;&lt;br/&gt;
+Ez a beállítás meggátolja, hogy a Mumble érzékeny adatokat továbbítson az adott kiszolgálónak.</translation>
     </message>
     <message>
         <source>Do not send OS information to Mumble servers and web servers</source>
-        <translation type="unfinished"/>
+        <translation>Ne ossza meg a Mumble a rendszer adait a kiszolgálóval</translation>
     </message>
     <message>
         <source>When toggled this hides the public server list from the connect dialog</source>
-        <translation type="unfinished"/>
+        <translation>Bekapcsolás esetén a kiszolgálók listáján nem fognak megjelenni a nyilvános kiszolgálók</translation>
     </message>
     <message>
         <source>Hide public server list</source>
-        <translation type="unfinished"/>
+        <translation>Nyilvános kiszolgálók listájának elrejtése</translation>
+    </message>
+    <message>
+        <source>Check for plugin updates on startup</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Automatically download and install plugin updates</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>Overlay</name>
     <message>
         <source>Silent</source>
-        <translation type="unfinished"/>
+        <translation>Hallgat</translation>
     </message>
     <message>
         <source>Talking</source>
-        <translation type="unfinished"/>
+        <translation>Beszél</translation>
     </message>
     <message>
         <source>Whisper</source>
-        <translation type="unfinished"/>
+        <translation>Privát suttog</translation>
     </message>
     <message>
         <source>Shout</source>
-        <translation type="unfinished"/>
+        <translation>Suttogás csatornában</translation>
     </message>
     <message>
         <source>Channel</source>
-        <translation type="unfinished"/>
+        <translation>Csatorna</translation>
     </message>
     <message>
         <source>Failed to create communication with overlay at %2: %1. No overlay will be available.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>OverlayClient</name>
     <message>
         <source>Filter</source>
-        <translation type="unfinished"/>
+        <translation>Szűrő</translation>
     </message>
     <message>
         <source>Only talking</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Talking and recently active</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>All in current channel</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>All in linked channels</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Always show yourself</source>
@@ -6528,88 +6603,88 @@ Prevents the client from sending potentially identifying information about the o
     </message>
     <message>
         <source>Configure recently active time (%1 seconds)...</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Columns</source>
-        <translation type="unfinished"/>
+        <translation>Oszlopok</translation>
     </message>
     <message>
         <source>Sort</source>
-        <translation type="unfinished"/>
+        <translation>Rendezés</translation>
     </message>
     <message>
         <source>Alphabetically</source>
-        <translation type="unfinished"/>
+        <translation>Név szerint</translation>
     </message>
     <message>
         <source>Last state change</source>
-        <translation type="unfinished"/>
+        <translation>Utolsó állapot szerint</translation>
     </message>
     <message>
         <source>Edit...</source>
-        <translation type="unfinished"/>
+        <translation>Szerkesztés...</translation>
     </message>
     <message>
         <source>Reset Zoom</source>
-        <translation type="unfinished"/>
+        <translation>Méret visszaállítása</translation>
     </message>
     <message>
         <source>Configure recently active time</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Amount of seconds users remain active after talking:</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>OverlayConfig</name>
     <message>
         <source>To move the users, drag the little red dot.</source>
-        <translation type="unfinished"/>
+        <translation>A lista mozgatásához fogja meg a piros pontot!</translation>
     </message>
     <message>
         <source>To resize the users, mouse wheel over a user.</source>
         <oldsource>To resize the users, mousewheel over a user.</oldsource>
-        <translation type="unfinished"/>
+        <translation>Átméretezéséhez használja az egér görgőjét!</translation>
     </message>
     <message>
         <source>For more options, right click a user.</source>
         <oldsource>For more options, rightclick a user.</oldsource>
-        <translation type="unfinished"/>
+        <translation>További beállítások eléréséhez kattintson jobb egér gombbal!</translation>
     </message>
     <message>
         <source>Launcher Filter</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Overlay</source>
-        <translation>Overlay</translation>
+        <translation>Képátfedés</translation>
     </message>
     <message>
         <source>Choose executable</source>
-        <translation type="unfinished"/>
+        <translation>Futtatható alkalmazás kiválasztása</translation>
     </message>
     <message>
         <source>Choose application</source>
-        <translation type="unfinished"/>
+        <translation>Futtatható alkalmazás kiválasztása</translation>
     </message>
     <message>
         <source>Choose path</source>
-        <translation type="unfinished"/>
+        <translation>Könyvtár kiválasztása</translation>
     </message>
     <message>
         <source>Load Overlay Presets</source>
-        <translation type="unfinished"/>
+        <translation>Képátfedési elrendezés betöltése</translation>
     </message>
     <message>
         <source>Mumble overlay presets (*.mumblelay)</source>
-        <translation type="unfinished"/>
+        <translation>Mumble képátfedési sablon (*.mumblelay)</translation>
     </message>
     <message>
         <source>Save Overlay Presets</source>
-        <translation type="unfinished"/>
+        <translation>Képátfedési elrendezés mentése</translation>
     </message>
     <message>
         <source>Options</source>
@@ -6617,11 +6692,11 @@ Prevents the client from sending potentially identifying information about the o
     </message>
     <message>
         <source>Enable overlay.</source>
-        <translation>Overlay engedélyezése.</translation>
+        <translation>Képátfedés engedélyezése.</translation>
     </message>
     <message>
         <source>Enable Overlay</source>
-        <translation>Overlay engedélyezése</translation>
+        <translation>Képátfedés engedélyezése</translation>
     </message>
     <message>
         <source>This sets whether the overlay is enabled or not. This setting is only checked when applications are started, so make sure Mumble is running and this option is on before you start the application.&lt;br /&gt;Please note that if you start Mumble after starting the application, or if you disable the overlay while the application is running, there is no safe way to restart the overlay without also restarting the application.</source>
@@ -6630,340 +6705,340 @@ Prevents the client from sending potentially identifying information about the o
     </message>
     <message>
         <source>Layout</source>
-        <translation type="unfinished"/>
+        <translation>Elrendezés</translation>
     </message>
     <message>
         <source>Blacklist</source>
-        <translation type="unfinished"/>
+        <translation>Feketelista</translation>
     </message>
     <message>
         <source>Whitelist</source>
-        <translation type="unfinished"/>
+        <translation>Fehérlista</translation>
     </message>
     <message>
         <source>Uninstall Overlay</source>
-        <translation type="unfinished"/>
+        <translation>Képátfedés eltávolítása</translation>
     </message>
     <message>
         <source>Overlay Installation</source>
-        <translation type="unfinished"/>
+        <translation>Képátfedés telepítése</translation>
     </message>
     <message>
         <source>Mumble has detected that you do not have the Mumble Overlay installed.
 
 Click the button below to install the overlay.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Install Mumble Overlay</source>
-        <translation type="unfinished"/>
+        <translation>Mumble képátfedés telepítése</translation>
     </message>
     <message>
         <source>Overlay Upgrade</source>
-        <translation type="unfinished"/>
+        <translation>Képátfedés frissítése</translation>
     </message>
     <message>
         <source>Mumble has detected an old version of the overlay support files installed on your computer.
 
 To upgrade these files to their latest versions, click the button below.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Upgrade Mumble Overlay</source>
-        <translation type="unfinished"/>
+        <translation>Mumble képátfedés frissítése</translation>
     </message>
     <message>
         <source>Display a frame counter in the overlay</source>
-        <translation type="unfinished"/>
+        <translation>Képsebesség megjelenítése az átfedésen</translation>
     </message>
     <message>
         <source>Show FPS counter</source>
-        <translation type="unfinished"/>
+        <translation>Képsebesség mutatása</translation>
     </message>
     <message>
         <source>Load an overlay preset from file</source>
-        <translation type="unfinished"/>
+        <translation>Képátfedési elrendezés betöltése sablonból</translation>
     </message>
     <message>
         <source>Load…</source>
-        <translation type="unfinished"/>
+        <translation>Betöltés…</translation>
     </message>
     <message>
         <source>Save your overlay settings to file</source>
-        <translation type="unfinished"/>
+        <translation>Képátfedési elrendezés mentése sablonba</translation>
     </message>
     <message>
         <source>Save…</source>
-        <translation type="unfinished"/>
+        <translation>Mentés…</translation>
     </message>
     <message>
         <source>Set the overlay font.</source>
-        <translation type="unfinished"/>
+        <translation>Képátfedésben megjelenő feliratok betűtípusának beállítása.</translation>
     </message>
     <message>
         <source>Set the overlay text color.</source>
-        <translation type="unfinished"/>
+        <translation>Képátfedésben megjelenő feliratok színe.</translation>
     </message>
     <message>
         <source>Color</source>
-        <translation type="unfinished"/>
+        <translation>Szín</translation>
     </message>
     <message>
         <source>Remove</source>
-        <translation type="unfinished"/>
+        <translation>-</translation>
     </message>
     <message>
         <source>Font</source>
-        <translation>Betűkészlet</translation>
+        <translation>Betűtípus</translation>
     </message>
     <message>
         <source>FPS and Clock Display</source>
-        <translation type="unfinished"/>
+        <translation>Képsebesség és idő mutatása</translation>
     </message>
     <message>
         <source>Display a clock in the overlay showing the current local time (system time).</source>
-        <translation type="unfinished"/>
+        <translation>Rendszeridő megjelenítése a képátfedésen.</translation>
     </message>
     <message>
         <source>Show Clock</source>
-        <translation type="unfinished"/>
+        <translation>Idő mutatása</translation>
     </message>
     <message>
         <source>Overlay Exceptions</source>
-        <translation type="unfinished"/>
+        <translation>Kivételek</translation>
     </message>
     <message>
         <source>Overlay Exception Mode</source>
-        <translation type="unfinished"/>
+        <translation>Kivételezési elv</translation>
     </message>
     <message>
         <source>Allowed launchers</source>
-        <translation type="unfinished"/>
+        <translation>Engedélyezett áruházak</translation>
     </message>
     <message>
         <source>Add</source>
-        <translation type="unfinished"/>
+        <translation>+</translation>
     </message>
     <message>
         <source>Allowed programs</source>
-        <translation type="unfinished"/>
+        <translation>Engedélyezett játékok</translation>
     </message>
     <message>
         <source>Allowed paths</source>
-        <translation type="unfinished"/>
+        <translation>Engedélyezett könyvtárak</translation>
     </message>
     <message>
         <source>Blacklisted programs</source>
-        <translation type="unfinished"/>
+        <translation>Feketelista</translation>
     </message>
 </context>
 <context>
     <name>OverlayEditor</name>
     <message>
         <source>State</source>
-        <translation type="unfinished"/>
+        <translation>Állapot</translation>
     </message>
     <message>
         <source>User is not talking</source>
-        <translation type="unfinished"/>
+        <translation>A felhasználó nem beszél</translation>
     </message>
     <message>
         <source>Passive</source>
-        <translation type="unfinished"/>
+        <translation>Hallgat</translation>
     </message>
     <message>
         <source>User is talking in your channel or a linked channel</source>
-        <translation type="unfinished"/>
+        <translation>A felhasználó beszél a csatornában vagy az egyik összefűzött csatornában</translation>
     </message>
     <message>
         <source>Talking</source>
-        <translation type="unfinished"/>
+        <translation>Beszél</translation>
     </message>
     <message>
         <source>User is whispering to you privately</source>
-        <translation type="unfinished"/>
+        <translation>A felhasználó önnek suttog</translation>
     </message>
     <message>
         <source>Private Whisper</source>
-        <translation type="unfinished"/>
+        <translation>Privát suttog</translation>
     </message>
     <message>
         <source>User is shouting to your channel</source>
-        <translation type="unfinished"/>
+        <translation>A felhasználó a csatornában suttog</translation>
     </message>
     <message>
         <source>Channel Whisper</source>
-        <translation type="unfinished"/>
+        <translation>Csatornában suttog</translation>
     </message>
     <message>
         <source>Zoom</source>
-        <translation type="unfinished"/>
+        <translation>Méret</translation>
     </message>
     <message>
         <source>Zoom Factor</source>
-        <translation type="unfinished"/>
+        <translation>Méretezés mértéke</translation>
     </message>
     <message>
         <source>Enabled Elements</source>
-        <translation type="unfinished"/>
+        <translation>Megjelenő elemek</translation>
     </message>
     <message>
         <source>User avatar, chosen by each user</source>
-        <translation type="unfinished"/>
+        <translation>A felhasználó saját profilképe</translation>
     </message>
     <message>
         <source>Avatar</source>
-        <translation type="unfinished"/>
+        <translation>Profilkép</translation>
     </message>
     <message>
         <source>User&apos;s name</source>
-        <translation type="unfinished"/>
+        <translation>A felhasználó neve</translation>
     </message>
     <message>
         <source>Username</source>
-        <translation type="unfinished"/>
+        <translation>Felhasználónév</translation>
     </message>
     <message>
         <source>Name of user&apos;s channel, if outside your current channel</source>
-        <translation>Felhasználó csatorna neve, amikor a jelenlegi csatornán kívül van</translation>
+        <translation>Csatorna neve, ha a felhasználó más csatornában tartózkodik</translation>
     </message>
     <message>
         <source>Channel</source>
-        <translation type="unfinished"/>
+        <translation>Csatorna</translation>
     </message>
     <message>
         <source>Muted or deafened</source>
-        <translation>Mikrofon vagy hangszórók kikapcsolva</translation>
+        <translation>Némítva vagy süketítve</translation>
     </message>
     <message>
         <source>Mute state</source>
-        <translation type="unfinished"/>
+        <translation>Mikrofon állapota</translation>
     </message>
     <message>
         <source>Bounding box, automatically shrunk to minimum size to contain all visible elements</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Bounding box</source>
-        <translation type="unfinished"/>
+        <translation>Keret</translation>
     </message>
     <message>
         <source>Overlay Editor</source>
-        <translation type="unfinished"/>
+        <translation>Képátfedés szerkesztése</translation>
     </message>
     <message>
         <source>Zoom level</source>
-        <translation type="unfinished"/>
+        <translation>Nagyítás mértéke</translation>
     </message>
 </context>
 <context>
     <name>OverlayEditorScene</name>
     <message>
         <source>Layout preset</source>
-        <translation type="unfinished"/>
+        <translation>Elrendezés</translation>
     </message>
     <message>
         <source>Large square avatar</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Avatar and Name</source>
-        <translation type="unfinished"/>
+        <translation>Profilkép és név</translation>
     </message>
     <message>
         <source>User Opacity</source>
-        <translation type="unfinished"/>
+        <translation>Név áttetszősége</translation>
     </message>
     <message>
         <source>%1%</source>
-        <translation type="unfinished"/>
+        <translation>%1%</translation>
     </message>
     <message>
         <source>Object Opacity</source>
-        <translation type="unfinished"/>
+        <translation>Elem áttetszősége</translation>
     </message>
     <message>
         <source>Alignment</source>
-        <translation type="unfinished"/>
+        <translation>Igazítás</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation type="unfinished"/>
+        <translation>Balra</translation>
     </message>
     <message>
         <source>Center</source>
-        <translation type="unfinished"/>
+        <translation>Középre/középen</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation type="unfinished"/>
+        <translation>Jobbra</translation>
     </message>
     <message>
         <source>Top</source>
-        <translation type="unfinished"/>
+        <translation>Fent</translation>
     </message>
     <message>
         <source>Bottom</source>
-        <translation type="unfinished"/>
+        <translation>Lent</translation>
     </message>
     <message>
         <source>Color...</source>
-        <translation type="unfinished"/>
+        <translation>Szín...</translation>
     </message>
     <message>
         <source>Font...</source>
-        <translation type="unfinished"/>
+        <translation>Betűtípus...</translation>
     </message>
     <message>
         <source>Bounding box</source>
-        <translation type="unfinished"/>
+        <translation>Keret</translation>
     </message>
     <message>
         <source>Pen width</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Padding</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Pen color</source>
-        <translation type="unfinished"/>
+        <translation>Körvonal színe</translation>
     </message>
     <message>
         <source>Fill color</source>
-        <translation type="unfinished"/>
+        <translation>Kitöltés színe</translation>
     </message>
     <message>
         <source>Pick pen color</source>
-        <translation type="unfinished"/>
+        <translation>Körvonal színének kiválasztása</translation>
     </message>
     <message>
         <source>Pick fill color</source>
-        <translation type="unfinished"/>
+        <translation>Kitöltés színének kiválasztása</translation>
     </message>
     <message>
         <source>Pick color</source>
-        <translation type="unfinished"/>
+        <translation>Szín kiválasztása</translation>
     </message>
     <message>
         <source>Pick font</source>
-        <translation type="unfinished"/>
+        <translation>Betűtípus kiválasztása</translation>
     </message>
 </context>
 <context>
     <name>PluginConfig</name>
     <message>
         <source>Plugins</source>
-        <translation>Pluginok</translation>
+        <translation>Bővítmények</translation>
     </message>
     <message>
         <source>Plugin has no configure function.</source>
-        <translation>A pluginnak nincs beállítási funkciója.</translation>
+        <translation>A bővítmény nem rendelkezik beállításokkal.</translation>
     </message>
     <message>
         <source>Plugin has no about function.</source>
-        <translation>A pluginnak nincs névjegye.</translation>
+        <translation>A bővítménynek nincs névjegye.</translation>
     </message>
     <message>
         <source>Options</source>
@@ -6983,7 +7058,7 @@ To upgrade these files to their latest versions, click the button below.</source
     </message>
     <message>
         <source>Reloads all plugins</source>
-        <translation>Újratölt minden plugint</translation>
+        <translation>Minden bővítményt újratölt</translation>
     </message>
     <message>
         <source>This rescans and reloads plugins. Use this if you just added or changed a plugin to the plugins directory.</source>
@@ -6991,11 +7066,11 @@ To upgrade these files to their latest versions, click the button below.</source
     </message>
     <message>
         <source>&amp;Reload plugins</source>
-        <translation>Pluginok új&amp;ratöltése</translation>
+        <translation>Bővítmények &amp;újratültése</translation>
     </message>
     <message>
         <source>Information about plugin</source>
-        <translation>Információ a pluginról</translation>
+        <translation>Kiválasztott bővítmény névjegye</translation>
     </message>
     <message>
         <source>This shows a small information message about the plugin.</source>
@@ -7022,38 +7097,196 @@ To upgrade these files to their latest versions, click the button below.</source
         <translation>Név</translation>
     </message>
     <message>
-        <source>Enabled</source>
-        <translation>Engedélyezett</translation>
+        <source>Enable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PA</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KeyEvents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Install a plugin from a local file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Install plugin...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unload the currently selected plugin. This will remove it from the plugin list for the current session.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The plugin was installed successfully</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to deactivate all requested features for plugin &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to load plugin &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Whether the positional audio feature of this plugin should be enabled</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This plugin does not provide support for positional audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Whether this plugin has the permission to be listening to all keyboard events that occur while Mumble has focus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Whether this plugin should be enabled</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>Plugins</name>
+    <name>PluginInstaller</name>
     <message>
-        <source>Skipping plugin update in debug mode.</source>
-        <translation type="unfinished"/>
+        <source>PluginInstaller</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Downloaded new or updated plugin to %1.</source>
-        <translation>Új plugin letöltve vagy frissítve: %1.</translation>
+        <source>You are about to install the plugin listed below. Do you wish to proceed?</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Failed to install new plugin to %1.</source>
-        <translation>Nem sikerült új plugin telepítése: %1.</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>%1 lost link.</source>
-        <translation>%1 elveszett kapcsolat.</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Version:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>%1 linked.</source>
-        <translation>%1 kapcsolva.</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Author(s):&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Description:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;No</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Yes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The file &quot;%1&quot; is not a valid plugin file!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Found more than one plugin library for the current OS in &quot;%1&quot; (&quot;%2&quot; and &quot;%3&quot;)!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to find a plugin for the current OS in &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to load plugin &quot;%1&quot; - check the plugin interface!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to delete old plugin at &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to copy plugin library from &quot;%1&quot; to &quot;%2&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to move plugin library to &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PluginManager</name>
+    <message>
+        <source>%1 lost link</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1 linked</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plugin &quot;%1&quot; encountered a permanent error in positional data gathering</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Non-plugin found in plugin directory: &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed at loading manual plugin: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PluginUpdater</name>
+    <message>
+        <source>PluginUpdater</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The following plugins can be updated.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plugin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Download-URL</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Do you want to update the selected plugins?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to download plugin update for &quot;%1&quot; from &quot;%2&quot; (%3)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update for plugin &quot;%1&quot; failed due to too many redirects</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unable to download plugin update for &quot;%1&quot; from &quot;%2&quot; (HTTP status code %3)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Successfully updated plugin &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>PortAudioSystem</name>
     <message>
         <source>Default device</source>
-        <translation type="unfinished"/>
+        <translation>Alapértelmezett eszköz</translation>
     </message>
 </context>
 <context>
@@ -7071,101 +7304,176 @@ To upgrade these files to their latest versions, click the button below.</source
     <name>QApplication</name>
     <message>
         <source>Failed to restart mumble</source>
-        <translation type="unfinished"/>
+        <translation>A Mumble újraindítása nem sikerült</translation>
     </message>
     <message>
         <source>Mumble failed to restart itself. Please restart it manually.</source>
-        <translation>A Mumble nem tudott magától újraindulni. Kérjük indítsa újra manuálisan.</translation>
+        <translation>A Mumble nem tudott újraindulni. Kérem, indítsa újra kézileg!</translation>
+    </message>
+    <message>
+        <source>Mumble is currently connected to a server</source>
+        <translation>A Mumble jelenleg kiszolgálóhoz csatlakozik</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
         <source>CodecInit: Failed to load Opus, it will not be available for encoding/decoding audio.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Talking UI</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Echo cancellation is not supported for the interface combination &quot;%1&quot; (in) and &quot;%2&quot; (out).</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>If enabled this tries to cancel out echo from the audio stream.
-Mixed echo cancellation mixes all speaker outputs in one mono stream and passes that stream to the echo canceller, while multichannel echo cancellation passes all audio channels to the echo canceller directly.
-Multichannel echo cancellation requires more CPU, so you should try mixed first</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>&lt;p&gt;If you're using Linux this is most likely because you are using a version from your distribution's package repository that have their own update cycles.&lt;/p&gt;&lt;p&gt;If you want to always have the most recent Mumble version, you should consider using a different method of installation.
+        <source>&lt;p&gt;If you&apos;re using Linux this is most likely because you are using a version from your distribution&apos;s package repository that have their own update cycles.&lt;/p&gt;&lt;p&gt;If you want to always have the most recent Mumble version, you should consider using a different method of installation.
 See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;the Mumble wiki&lt;/a&gt; for what alternatives there are.&lt;/p&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Local Mute</source>
-        <translation type="unfinished"/>
+        <translation>Helyi némítás</translation>
     </message>
     <message>
         <source>Ignore Messages</source>
-        <translation type="unfinished"/>
+        <translation>Üzenetek mellőzése</translation>
     </message>
     <message>
         <source>Disable Text-To-Speech</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>&quot;%1&quot; could not be saved permanently and is lost on restart because %2 does not have a certificate.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Local Volume Adjustment...</source>
-        <translation type="unfinished"/>
+        <translation>Hangerő módosítása...</translation>
     </message>
     <message>
         <source>&lt;p&gt;You&apos;re using a Mumble version that &lt;b&gt;explicitly disabled&lt;/b&gt; update-checks.&lt;/p&gt;&lt;p&gt;This means that the update notification you might receive by using this option will &lt;b&gt;most likely be meaningless&lt;/b&gt; for you.&lt;/p&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Talking (muted)</source>
-        <translation type="unfinished"/>
+        <translation>Beszél (néma)</translation>
     </message>
     <message>
         <source>All messages</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Toggle console for all events</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Toggle pop-up notifications for all events</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Toggle window highlight (if not active) for all events</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Click here to toggle sound notifications for all events</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Toggle Text-to-Speech for all events</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>RNNoise is not available due to a sample rate mismatch.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Reset all settings?</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Do you really want to reset all settings (not only the ones currently visible) to their default value?</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Local Nickname Adjustment...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Blocked URL scheme &quot;%1&quot;&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The URL uses a scheme that has been blocked for security reasons.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Blocked URL: &quot;%1&quot;</source>
+        <translation>Tiltott hivatkozás: &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <source>Default Device</source>
+        <translation>Alapértelmezett eszköz</translation>
+    </message>
+    <message>
+        <source>Access to the microphone was denied. Please allow Mumble to use the microphone by changing the settings in System Preferences -&gt; Security &amp; Privacy -&gt; Privacy -&gt; Microphone.</source>
+        <translation>Hozzáférés megtagadva. Kérem, engedélyezze a Mumble számára a mikrofonhoz való hozzáférést a Gépház &gt; Adatvédelem &gt; Mikrofon beállítási felületen!</translation>
+    </message>
+    <message>
+        <source>Access to the microphone was denied due to system restrictions. You will not be ableto use the microphone in this session.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>If enabled this tries to cancel out echo from the audio stream.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disabled</source>
+        <translation>Tiltva</translation>
+    </message>
+    <message>
+        <source>Echo cancellation is disabled.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mixed echo cancellation (speex)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mixed has low CPU impact, but only works well if your speakers are equally loud and equidistant from the microphone.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Multichannel echo cancellation (speex)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Multichannel echo cancellation provides much better echo cancellation, but at a higher CPU cost. Multichannel echo cancellation requires more CPU, so you should try mixed first.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The provided URL uses an invalid version format: &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The directories in which Mumble searches for extra translation files are:
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Invocation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>EXPERIMENTAL: Acoustic echo cancellation (Apple).</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The support for this option is experimental only! This option works best when using built-in microphone and speaker.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7184,11 +7492,11 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     </message>
     <message>
         <source>Display</source>
-        <translation>Kijelző</translation>
+        <translation>Megjelenés</translation>
     </message>
     <message>
         <source>Source Text</source>
-        <translation>Szöveg forrása</translation>
+        <translation>Forráskód</translation>
     </message>
     <message>
         <source>&amp;Bold</source>
@@ -7204,7 +7512,7 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     </message>
     <message>
         <source>Italic</source>
-        <translation>Dőlt betű</translation>
+        <translation>Dőlt</translation>
     </message>
     <message>
         <source>Ctrl+I</source>
@@ -7224,7 +7532,7 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     </message>
     <message>
         <source>Insert Link</source>
-        <translation>Hivatkozás beillesztése</translation>
+        <translation>Hivatkozás beszúrása</translation>
     </message>
     <message>
         <source>Ctrl+L</source>
@@ -7239,26 +7547,26 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     <name>RichTextEditorLink</name>
     <message>
         <source>Add Link</source>
-        <translation>Link beszúrása</translation>
+        <translation>Hivatkozás beszúrása</translation>
     </message>
     <message>
         <source>URL</source>
-        <translation>URL</translation>
+        <translation>Hivatkozás</translation>
     </message>
     <message>
         <source>Text</source>
-        <translation>Szöveg</translation>
+        <translation>Címke</translation>
     </message>
 </context>
 <context>
     <name>ServerHandler</name>
     <message>
         <source>Unable to resolve hostname</source>
-        <translation type="unfinished"/>
+        <translation>A kiszolgáló nem elérhető</translation>
     </message>
     <message>
         <source>Server is not responding to TCP pings</source>
-        <translation type="unfinished"/>
+        <translation>A kiszolgáló nem válaszol a TCP kopogtatásra</translation>
     </message>
     <message>
         <source>UDP packets cannot be sent to or received from the server. Switching to TCP mode.</source>
@@ -7278,7 +7586,146 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     </message>
     <message>
         <source>Connection timed out</source>
-        <translation>A kapcsolat ideje lejárt</translation>
+        <translation>Időtúllépés</translation>
+    </message>
+</context>
+<context>
+    <name>ServerInformation</name>
+    <message>
+        <source>Server information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Server Information</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Host:&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Port:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Users&lt;/b&gt;:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Protocol:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Release:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;OS:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Audio</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Allowed:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Current:&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Codec:&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Connection details</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>UDP (Voice)</source>
+        <translation type="unfinished">UDP (hang)</translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Encryption:&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Avg. latency:&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Statistics</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Good</source>
+        <translation type="unfinished">Jó</translation>
+    </message>
+    <message>
+        <source>Late</source>
+        <translation type="unfinished">Késett</translation>
+    </message>
+    <message>
+        <source>Lost</source>
+        <translation type="unfinished">Elveszett</translation>
+    </message>
+    <message>
+        <source>Resync</source>
+        <translation type="unfinished">Újraszink.</translation>
+    </message>
+    <message>
+        <source>Outgoing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Incoming</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Voice packets is currently sent over TCP.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TCP (Control)</source>
+        <translation type="unfinished">TCP (vezérlés)</translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;TLS version:&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Cipher suite:&lt;/b&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;forward secrecy&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;View certificate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Ok</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation type="unfinished">Ismeretlen</translation>
+    </message>
+    <message>
+        <source>The connection provides perfect forward secrecy.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The connection does NOT provide perfect forward secrecy.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No information about forward secrecy available.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7293,7 +7740,7 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     </message>
     <message>
         <source>Public Internet</source>
-        <translation>Nyilvános Internet</translation>
+        <translation>Nyilvános kiszolgálók</translation>
     </message>
 </context>
 <context>
@@ -7322,15 +7769,12 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
         <translation>Semmi</translation>
     </message>
     <message>
-        <source>Shortcut button combination:</source>
-        <translation type="unfinished"/>
+        <source>No buttons assigned</source>
+        <translation>Nincs hozzárendelve billentyű</translation>
     </message>
-</context>
-<context>
-    <name>ShortcutKeyWidget</name>
     <message>
-        <source>Press Shortcut</source>
-        <translation>Nyomd meg a gyorsbillentyűt</translation>
+        <source>Press to show button combination</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7385,11 +7829,11 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     <message>
         <source>Empty</source>
         <oldsource>&lt;Empty&gt;</oldsource>
-        <translation type="unfinished"/>
+        <translation>Üres</translation>
     </message>
     <message>
         <source>Current selection</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7411,19 +7855,19 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     <name>TextMessage</name>
     <message>
         <source>Enter text</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>If checked the message is recursively sent to all subchannels</source>
-        <translation>Ha kipipálva, akkor az üzenetet rekuzívan küldi minden alcsatornába</translation>
+        <translation>Bejelölés esetén az üzentet a csatornába tartozó alcsatornákba is elküldi</translation>
     </message>
     <message>
         <source>Send recursively to subchannels</source>
-        <translation>Rekurzívan küldi minden alcsatornába</translation>
+        <translation>Küldés alcsatornákba is</translation>
     </message>
     <message>
         <source>Message</source>
-        <translation type="unfinished"/>
+        <translation>Üzenet</translation>
     </message>
 </context>
 <context>
@@ -7434,16 +7878,16 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     </message>
     <message>
         <source>Mumble - Access Tokens</source>
-        <translation>Mumble - kulcsok</translation>
+        <translation>Mumble - Kulcsok</translation>
     </message>
     <message>
         <source>List of access tokens on current server</source>
-        <translation>Az aktuális szerver kulcsainak listája</translation>
+        <translation>Jelen kiszolgálóhoz elérhető kulcsok</translation>
     </message>
     <message>
         <source>&lt;b&gt;This is an editable list of access tokens on the connected server.&lt;/b&gt;
 &lt;br /&gt;
-An access token is a text string, which can be used as a password for very simple access management on channels. Mumble will remember the tokens you've used and resend them to the server next time you reconnect, so you don't have to enter these every time.
+An access token is a text string, which can be used as a password for very simple access management on channels. Mumble will remember the tokens you&apos;ve used and resend them to the server next time you reconnect, so you don&apos;t have to enter these every time.
 </source>
         <translation>&lt;b&gt;Ez egy szerkeszthető kulcslista, amelyek a kapcsolatban levő szerveren vannak.&lt;/b&gt;
 &lt;br /&gt;
@@ -7468,7 +7912,7 @@ A kulcs egy szöveges karaktersorozat, amely jelszóként használható a csator
     </message>
     <message>
         <source>Tokens</source>
-        <translation type="unfinished"/>
+        <translation>Kulcsok</translation>
     </message>
 </context>
 <context>
@@ -7487,39 +7931,41 @@ A kulcs egy szöveges karaktersorozat, amely jelszóként használható a csator
     </message>
     <message>
         <source>Who are you looking for?</source>
-        <translation type="unfinished"/>
+        <translation>Felhasználó keresése...</translation>
     </message>
     <message>
         <source>Days</source>
-        <translation type="unfinished"/>
+        <translation>napja</translation>
     </message>
     <message>
         <source>Weeks</source>
-        <translation type="unfinished"/>
+        <translation>hete</translation>
     </message>
     <message>
         <source>Months</source>
-        <translation type="unfinished"/>
+        <translation>hónapja</translation>
     </message>
     <message>
         <source>Years</source>
-        <translation type="unfinished"/>
+        <translation>éve</translation>
     </message>
     <message>
         <source>Inactive for</source>
-        <translation type="unfinished"/>
+        <translation>Belépve</translation>
     </message>
     <message numerus="yes">
         <source>Registered users: %n account(s)</source>
-        <translation type="unfinished"><numerusform></numerusform><numerusform></numerusform></translation>
+        <translation>
+            <numerusform>Regisztrált felhasználók: %n fiók összesen</numerusform>
+        </translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished"/>
+        <translation>Keresés</translation>
     </message>
     <message>
         <source>User list</source>
-        <translation type="unfinished"/>
+        <translation>Felhasználók listája</translation>
     </message>
 </context>
 <context>
@@ -7530,15 +7976,15 @@ A kulcs egy szöveges karaktersorozat, amely jelszóként használható a csator
     </message>
     <message>
         <source>Connection Information</source>
-        <translation>Kapcsolat információi</translation>
+        <translation>Információ</translation>
     </message>
     <message>
         <source>Version</source>
-        <translation>Verzió</translation>
+        <translation>Mumble</translation>
     </message>
     <message>
         <source>OS</source>
-        <translation>OP. rendszer</translation>
+        <translation>Rendszer</translation>
     </message>
     <message>
         <source>Certificate</source>
@@ -7546,7 +7992,7 @@ A kulcs egy szöveges karaktersorozat, amely jelszóként használható a csator
     </message>
     <message>
         <source>IP Address</source>
-        <translation>IP cím</translation>
+        <translation>IP-cím</translation>
     </message>
     <message>
         <source>CELT Versions</source>
@@ -7558,11 +8004,11 @@ A kulcs egy szöveges karaktersorozat, amely jelszóként használható a csator
     </message>
     <message>
         <source>Ping Statistics</source>
-        <translation>Kopogtatás statisztika</translation>
+        <translation>Válaszidő statisztika</translation>
     </message>
     <message>
         <source>Pings received</source>
-        <translation type="unfinished"/>
+        <translation>Fogadott</translation>
     </message>
     <message>
         <source>Average ping</source>
@@ -7570,11 +8016,11 @@ A kulcs egy szöveges karaktersorozat, amely jelszóként használható a csator
     </message>
     <message>
         <source>TCP (Control)</source>
-        <translation>TCP (Vezérlés)</translation>
+        <translation>TCP (vezérlés)</translation>
     </message>
     <message>
         <source>UDP (Voice)</source>
-        <translation>UDP (Hang)</translation>
+        <translation>UDP (hang)</translation>
     </message>
     <message>
         <source>UDP Network statistics</source>
@@ -7586,7 +8032,7 @@ A kulcs egy szöveges karaktersorozat, amely jelszóként használható a csator
     </message>
     <message>
         <source>Late</source>
-        <translation>Elkésett</translation>
+        <translation>Késett</translation>
     </message>
     <message>
         <source>Lost</source>
@@ -7594,15 +8040,15 @@ A kulcs egy szöveges karaktersorozat, amely jelszóként használható a csator
     </message>
     <message>
         <source>Resync</source>
-        <translation>Újra szinkronizálva</translation>
+        <translation>Újraszink.</translation>
     </message>
     <message>
         <source>From Client</source>
-        <translation>Klienstől</translation>
+        <translation>Küldött</translation>
     </message>
     <message>
         <source>To Client</source>
-        <translation>Kliensnek</translation>
+        <translation>Fogadott</translation>
     </message>
     <message>
         <source>Connection time</source>
@@ -7639,15 +8085,15 @@ A kulcs egy szöveges karaktersorozat, amely jelszóként használható a csator
     </message>
     <message>
         <source>Supported</source>
-        <translation type="unfinished"/>
+        <translation>Támogatott</translation>
     </message>
     <message>
         <source>Not Supported</source>
-        <translation type="unfinished"/>
+        <translation>Nem támogatott</translation>
     </message>
     <message>
         <source>Not Reported</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>%1 online (%2 idle)</source>
@@ -7680,54 +8126,73 @@ A kulcs egy szöveges karaktersorozat, amely jelszóként használható a csator
     <name>UserListModel</name>
     <message>
         <source>Nick</source>
-        <translation type="unfinished"/>
+        <translation>Felhasználónév</translation>
     </message>
     <message>
         <source>Inactive days</source>
-        <translation type="unfinished"/>
+        <translation>Belépve (x napja)</translation>
     </message>
     <message>
         <source>Last channel</source>
-        <translation type="unfinished"/>
+        <translation>Utoljára itt járt</translation>
     </message>
     <message>
         <source>Last seen: %1</source>
-        <translation type="unfinished"/>
+        <translation>Utoljára itt járt: %1</translation>
     </message>
     <message>
         <source>Never</source>
-        <translation type="unfinished"/>
+        <translation>Soha</translation>
     </message>
     <message>
         <source>Channel ID: %1</source>
-        <translation type="unfinished"/>
+        <translation>Csatornaazonosító: %1</translation>
+    </message>
+</context>
+<context>
+    <name>UserLocalNicknameDialog</name>
+    <message>
+        <source>Local nickname for other users</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Adjust the nickname of other users locally&lt;/b&gt;&lt;br /&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>User nickname</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Adjusting local nickname for %1</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>UserLocalVolumeDialog</name>
     <message>
         <source>Local volume for other users</source>
-        <translation type="unfinished"/>
+        <translation>Felhasználó hangerejének módosítása egyénileg</translation>
     </message>
     <message>
         <source>&lt;b&gt;Adjust the volume of other users locally&lt;/b&gt;&lt;br /&gt;Mumble supports adjusting the volume of other users locally.</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Adjusting local volume for %1</source>
-        <translation type="unfinished"/>
+        <translation>%1 felhasználó hangerejének módosítása</translation>
     </message>
     <message>
         <source> dB</source>
-        <translation type="unfinished"/>
+        <translation> dB</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Use the slider or the text box to change the volume of the user.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-weight:600;&quot;&gt;Attention!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Increasing the volume of a user too much can permanently damage your hearing. It may also increase the background noise of the user.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>User volume</source>
-        <translation type="unfinished"/>
+        <translation>Felhasználó hangereje</translation>
     </message>
 </context>
 <context>
@@ -7743,7 +8208,7 @@ A kulcs egy szöveges karaktersorozat, amely jelszóként használható a csator
     <message>
         <source>Shouting directly to your channel.</source>
         <oldsource>Whispering directly to your channel.</oldsource>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Whispering directly to you.</source>
@@ -7779,7 +8244,7 @@ A kulcs egy szöveges karaktersorozat, amely jelszóként használható a csator
     </message>
     <message>
         <source>Authenticated user</source>
-        <translation>Hitelesített felhasználó</translation>
+        <translation>Regisztrált felhasználó</translation>
     </message>
     <message>
         <source>Muted (manually muted by self)</source>
@@ -7799,7 +8264,7 @@ A kulcs egy szöveges karaktersorozat, amely jelszóként használható a csator
     </message>
     <message>
         <source>Muted (push-to-mute)</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Deafened (by self)</source>
@@ -7819,7 +8284,7 @@ A kulcs egy szöveges karaktersorozat, amely jelszóként használható a csator
     </message>
     <message>
         <source>Ignoring Text Messages</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>This shows the flags the channel has, if any:</source>
@@ -7835,7 +8300,7 @@ A kulcs egy szöveges karaktersorozat, amely jelszóként használható a csator
     </message>
     <message>
         <source>Channel will be hidden when filtering is enabled</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Name</source>
@@ -7847,7 +8312,7 @@ A kulcs egy szöveges karaktersorozat, amely jelszóként használható a csator
     </message>
     <message>
         <source>Are you sure you want to drag this user?</source>
-        <translation type="unfinished"/>
+        <translation>Biztos benne, hogy áthelyezi a felhasználót?</translation>
     </message>
     <message>
         <source>Are you sure you want to drag this channel?</source>
@@ -7857,37 +8322,53 @@ A kulcs egy szöveges karaktersorozat, amely jelszóként használható a csator
         <source>Cannot perform this movement automatically, please reset the numeric sorting indicators or adjust it manually.</source>
         <translation>Ezt a mozgatást nem tudom automatikusan végrehajtani, kérem a sorszámozást hozza alaphelyzetbe vagy állítsa be kézileg.</translation>
     </message>
+    <message>
+        <source>Talking while being muted on your end</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This is a channel listener. The corresponding user hears everything you say in this channel.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Channel has access restrictions so that you can&apos;t enter it</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Channel has access restrictions but you can enter nonetheless</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>VersionCheck</name>
     <message>
         <source>Upgrade Mumble</source>
-        <translation type="unfinished"/>
+        <translation>Mumble frissítése</translation>
     </message>
     <message>
         <source>A new version of Mumble has been detected and automatically downloaded. It is recommended that you either upgrade to this version, or downgrade to the latest stable release. Do you want to launch the installer now?</source>
-        <translation type="unfinished"/>
+        <translation>Megjelent a Mumble új változata, mely automatikusan letöltésre került. Javasolt a telepítési folyamat mihamarabbi megkezdése vagy a legfrissebb végleges kiadásra történő váltás. Telepíti most az új változatot?</translation>
     </message>
     <message>
         <source>Failed to launch snapshot installer.</source>
-        <translation type="unfinished"/>
+        <translation>Nem sikerült a fejlesztői kiadás telepítése.</translation>
     </message>
     <message>
         <source>Corrupt download of new version detected. Automatically removed.</source>
-        <translation type="unfinished"/>
+        <translation>A letöltött újabb kiadás hibás. Automatikusan törlésre került.</translation>
     </message>
     <message>
         <source>Downloading new snapshot from %1 to %2</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Failed to write new version to disk.</source>
         <oldsource>Failed to write new version to disc.</oldsource>
-        <translation type="unfinished"/>
+        <translation>Nem sikerült az újabb kiadás lemezre mentése.</translation>
     </message>
     <message>
         <source>Mumble failed to retrieve version information from the central server.</source>
-        <translation type="unfinished"/>
+        <translation>Nem sikerült a Mumble új változatának keresése.</translation>
     </message>
 </context>
 <context>
@@ -7906,27 +8387,27 @@ A kulcs egy szöveges karaktersorozat, amely jelszóként használható a csator
     </message>
     <message>
         <source>Common Name</source>
-        <translation type="unfinished"/>
+        <translation>Név</translation>
     </message>
     <message>
         <source>Organization</source>
-        <translation type="unfinished"/>
+        <translation>Szervezet</translation>
     </message>
     <message>
         <source>Subunit</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Country</source>
-        <translation type="unfinished"/>
+        <translation>Ország</translation>
     </message>
     <message>
         <source>Locality</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>State</source>
-        <translation type="unfinished"/>
+        <translation>Ország</translation>
     </message>
     <message>
         <source>Valid from: %1</source>
@@ -7938,11 +8419,11 @@ A kulcs egy szöveges karaktersorozat, amely jelszóként használható a csator
     </message>
     <message>
         <source>Serial: %1</source>
-        <translation>Sorszám: %1</translation>
+        <translation>Sorozatszám: %1</translation>
     </message>
     <message>
         <source>Public Key: %1 bits %2</source>
-        <translation>Nyilvános kulcs: %1 bit %2</translation>
+        <translation>Nyilvános kulcs: %1 bites %2</translation>
     </message>
     <message>
         <source>RSA</source>
@@ -7954,150 +8435,150 @@ A kulcs egy szöveges karaktersorozat, amely jelszóként használható a csator
     </message>
     <message>
         <source>Digest (SHA-1): %1</source>
-        <translation>kivonat (MD%): %1</translation>
+        <translation>Ujjlenyomat (SHA-1): %1</translation>
     </message>
     <message>
         <source>Digest (SHA-256): %1</source>
-        <translation type="unfinished"/>
+        <translation>Ujjlenyomat (SHA-256): %1</translation>
     </message>
     <message>
         <source>Email: %1</source>
-        <translation>Email: %1</translation>
+        <translation>E-mail cím: %1</translation>
     </message>
     <message>
         <source>DNS: %1</source>
-        <translation>DNS: %1</translation>
+        <translation>Tartománynév: %1</translation>
     </message>
     <message>
         <source>Issued by:</source>
-        <translation>Kibocsájtó:</translation>
+        <translation>Kibocsátó:</translation>
     </message>
     <message>
         <source>Unit Name</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>VoiceRecorder</name>
     <message>
         <source>Recorder failed to create directory &apos;%1&apos;</source>
-        <translation type="unfinished"/>
+        <translation>A(z) &apos;%1&apos; könyvtár létrehozása nem sikerült</translation>
     </message>
     <message>
         <source>Recorder failed to open file &apos;%1&apos;</source>
-        <translation type="unfinished"/>
+        <translation>A(z) &apos;%1&apos; fájl megnyitása nem sikerült</translation>
     </message>
     <message>
         <source>.wav - Uncompressed</source>
-        <translation>waw - tömörítetlen </translation>
+        <translation>.wav - tömörítetlen</translation>
     </message>
     <message>
         <source>.ogg (Vorbis) - Compressed</source>
-        <translation>ogg (Vorbis) - Tömörített </translation>
+        <translation>.ogg (Vorbis) - tömörített</translation>
     </message>
     <message>
         <source>.au - Uncompressed</source>
-        <translation type="unfinished"/>
+        <translation>.au - tömörítetlen</translation>
     </message>
     <message>
         <source>.flac - Lossless compressed</source>
-        <translation type="unfinished"/>
+        <translation>.flac - veszteségmentes</translation>
     </message>
 </context>
 <context>
     <name>VoiceRecorderDialog</name>
     <message>
         <source>Recorder</source>
-        <translation>felvevő </translation>
+        <translation>Rögzítés</translation>
     </message>
     <message>
         <source>Control</source>
-        <translation type="unfinished"/>
+        <translation>Vezérlés</translation>
     </message>
     <message>
         <source>00:00:00</source>
-        <translation type="unfinished"/>
+        <translation>00:00:00</translation>
     </message>
     <message>
         <source>&amp;Start</source>
-        <translation>indít </translation>
+        <translation>&amp;Kezdés</translation>
     </message>
     <message>
         <source>S&amp;top</source>
-        <translation>stop</translation>
+        <translation>&amp;Befejezés</translation>
     </message>
     <message>
         <source>Mode</source>
-        <translation type="unfinished"/>
+        <translation>Keverés</translation>
     </message>
     <message>
         <source>Multichannel</source>
-        <translation type="unfinished"/>
+        <translation>Többcsatornás</translation>
     </message>
     <message>
         <source>Output</source>
-        <translation>kimenet</translation>
+        <translation>Kimenet</translation>
     </message>
     <message>
         <source>Output format</source>
-        <translation>kimeneti formátum</translation>
+        <translation>Formátum</translation>
     </message>
     <message>
         <source>Target directory</source>
-        <translation>cél könyvtár</translation>
+        <translation>Célkönyvtár</translation>
     </message>
     <message>
         <source>Filename</source>
-        <translation type="unfinished"/>
+        <translation>Fájlnév</translation>
     </message>
     <message>
         <source>&amp;Browse...</source>
-        <translation>Böngészés</translation>
+        <translation>&amp;Tallózás...</translation>
     </message>
     <message>
         <source>Valid variables are:</source>
-        <translation type="unfinished"/>
+        <translation>Alkalmazható változók:</translation>
     </message>
     <message>
         <source>Inserts the user&apos;s name</source>
-        <translation type="unfinished"/>
+        <translation>Beilleszti a felhasználó nevét</translation>
     </message>
     <message>
         <source>Inserts the current date</source>
-        <translation type="unfinished"/>
+        <translation>Beilleszti a jelenlegi dátumot</translation>
     </message>
     <message>
         <source>Inserts the current time</source>
-        <translation type="unfinished"/>
+        <translation>Beilleszti a jelenlegi időpontot</translation>
     </message>
     <message>
         <source>Inserts the hostname</source>
-        <translation type="unfinished"/>
+        <translation>Beilleszti a kiszolgáló nevét</translation>
     </message>
     <message>
         <source>Recorder still running</source>
-        <translation>Felvevő müködik</translation>
+        <translation>Rögzítés folyamatban</translation>
     </message>
     <message>
         <source>Closing the recorder without stopping it will discard unwritten audio. Do you really want to close the recorder?</source>
-        <translation type="unfinished"/>
+        <translation>A hangrögzítés jelenleg folyamatban van. Biztos benne, hogy megszakítja a rögzítést?</translation>
     </message>
     <message>
         <source>Unable to start recording. Not connected to a server.</source>
-        <translation type="unfinished"/>
+        <translation>Rögzítés nem lehetséges. Nem kapcsolódik kiszolgálóhoz.</translation>
     </message>
     <message>
         <source>The server you are currently connected to is version 1.2.2 or older. For privacy reasons, recording on servers of versions older than 1.2.3 is not possible.
 Please contact your server administrator for further information.</source>
-        <translation type="unfinished"/>
+        <translation>Jelen kiszolgáló a Mumble 1.2.2.-es változatánál régebbi verziót futtat. Adatvédelmi okok miatt az 1.2.3-asnál régebbi változatokkal való hangrögzítés nem engedélyezett. Kérem, további tájékoztatásért vegye fel a kapcsolatot a kiszolgáló rendszergazdájával!</translation>
     </message>
     <message>
         <source>There is already a recorder active for this server.</source>
-        <translation type="unfinished"/>
+        <translation>A beszélgetést már rögzíti valaki.</translation>
     </message>
     <message>
         <source>Please select a recording format.</source>
-        <translation>Kérlek válaszd ki a felvétel formátumát</translation>
+        <translation>Kérem, válassza ki a formátumot!</translation>
     </message>
     <message>
         <source>Stopping</source>
@@ -8105,18 +8586,18 @@ Please contact your server administrator for further information.</source>
     </message>
     <message>
         <source>Select target directory</source>
-        <translation>Válasz cél könyvtárat</translation>
+        <translation>Célkönyvtár kiválasztása</translation>
     </message>
     <message>
         <source>Downmix</source>
-        <translation type="unfinished"/>
+        <translation>Lekeverés</translation>
     </message>
 </context>
 <context>
     <name>WASAPIInput</name>
     <message>
         <source>Access to the microphone was denied. Please check that your operating system&apos;s microphone settings allow Mumble to use the microphone.</source>
-        <translation type="unfinished"/>
+        <translation>Hozzáférés megtagadva. Kérem, ellenőrizze, hogy az operációs-rendszere engedélyezi-e a Mumble számára a mikrofonhoz való hozzáférést!</translation>
     </message>
 </context>
 <context>
@@ -8130,7 +8611,7 @@ Please contact your server administrator for further information.</source>
     <name>qwPTTButtonWidget</name>
     <message>
         <source>Mumble PTT</source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Push to talk</source>

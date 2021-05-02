@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2007-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -58,6 +58,17 @@ quint32 qHash(const QList< ShortcutTarget > &);
 QDataStream &operator<<(QDataStream &, const ShortcutTarget &);
 QDataStream &operator>>(QDataStream &, ShortcutTarget &);
 Q_DECLARE_METATYPE(ShortcutTarget)
+
+struct PluginSetting {
+	QString path;
+	bool enabled;
+	bool positionalDataEnabled;
+	bool allowKeyboardMonitoring;
+};
+QDataStream &operator>>(QDataStream &arch, PluginSetting &setting);
+QDataStream &operator<<(QDataStream &arch, const PluginSetting &setting);
+Q_DECLARE_METATYPE(PluginSetting);
+
 
 struct OverlaySettings {
 	enum OverlayPresets { AvatarAndName, LargeSquareAvatar };
@@ -165,6 +176,10 @@ struct Settings {
 	QString qsTxAudioCueOn;
 	QString qsTxAudioCueOff;
 
+	bool bTxMuteCue;
+	static const QString cqsDefaultMuteCue;
+	QString qsTxMuteCue;
+
 	bool bTransmitPosition;
 	bool bMute, bDeaf;
 	bool bTTS;
@@ -249,7 +264,9 @@ struct Settings {
 	bool bPositionalAudio;
 	bool bPositionalHeadphone;
 	float fAudioMinDistance, fAudioMaxDistance, fAudioMaxDistVolume, fAudioBloom;
-	QMap< QString, bool > qmPositionalAudioPlugins;
+	/// Contains the settings for each individual plugin. The key in this map is the Hex-represented SHA-1
+	/// hash of the plugin's UTF-8 encoded absolute file-path on the hard-drive.
+	QHash< QString, PluginSetting > qhPluginSettings;
 
 	OverlaySettings os;
 
@@ -267,11 +284,8 @@ struct Settings {
 	bool bEnableXInput2;
 	bool bEnableGKey;
 	bool bEnableXboxInput;
-	bool bEnableWinHooks;
-	/// Enable verbose logging in GlobalShortcutWin's DirectInput backend.
-	bool bDirectInputVerboseLogging;
-	/// Enable use of UIAccess (Windows's UI automation feature). This allows
-	/// Mumble greater access to global shortcuts.
+	/// Enable use of UIAccess (Windows's UI automation feature). This allows Mumble to receive WM_INPUT messages when
+	/// an application with elevated privileges is in foreground.
 	bool bEnableUIAccess;
 	QList< Shortcut > qlShortcuts;
 
@@ -351,6 +365,7 @@ struct Settings {
 
 	bool bUpdateCheck;
 	bool bPluginCheck;
+	bool bPluginAutoUpdate;
 
 	// PTT Button window
 	bool bShowPTTButtonWindow;

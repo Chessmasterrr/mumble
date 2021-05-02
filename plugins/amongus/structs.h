@@ -1,12 +1,14 @@
+// Copyright 2020-2021 The Mumble Developers. All rights reserved.
+// Use of this source code is governed by a BSD-style license
+// that can be found in the LICENSE file at the root of the
+// Mumble source tree or at <https://www.mumble.info/LICENSE>.
+
 #ifndef AMONGUS_STRUCTS
 #define AMONGUS_STRUCTS
 
 #include <cstdint>
 
 typedef uint32_t ptr_t;
-typedef int32_t sptr_t;
-
-typedef ptr_t il2cpp_array_size_t; // Originally uintptr_t
 
 enum class DisconnectReason {
 	ExitGame            = 0x0,
@@ -43,7 +45,7 @@ struct Il2CppType {
 	uint32_t bits;
 };
 
-struct Il2CppClass_1 {
+struct Il2CppClass_0 {
 	ptr_t image;
 	ptr_t gcDesc;
 	ptr_t name;
@@ -64,7 +66,6 @@ struct Il2CppClass_1 {
 	ptr_t methods;
 	ptr_t nestedTypes;
 	ptr_t implementedInterfaces;
-	ptr_t interfaceOffsets;
 };
 
 struct UnityEngine_Vector2_Fields {
@@ -88,7 +89,7 @@ struct String_o {
 };
 
 struct UnityEngine_Object_Fields {
-	sptr_t cachedPtr;
+	ptr_t cachedPtr;
 };
 
 struct InnerNet_InnerNetClient_Fields : UnityEngine_Object_Fields {
@@ -96,15 +97,18 @@ struct InnerNet_InnerNetClient_Fields : UnityEngine_Object_Fields {
 	uint32_t netIdCnt;
 	float timer;
 	ptr_t spawnableObjects;
+	ptr_t nonAddressableSpawnableObjects;
 	bool inOnlineScene;
 	ptr_t destroyedObjects;
 	ptr_t allObjects;
 	ptr_t allObjectsFast;
-	ptr_t streams;
+	ptr_t messageWriterArray;
+	int32_t unknown;
 	ptr_t networkAddress;
 	int32_t networkPort;
 	ptr_t connection;
 	Mode mode;
+	GameMode gameMode;
 	int32_t gameId;
 	int32_t hostId;
 	int32_t clientId;
@@ -150,8 +154,6 @@ struct CustomNetworkTransform_o {
 };
 
 struct AmongUsClient_Fields : InnerNet_InnerNetClient_Fields {
-	int32_t autoOpenStore;
-	GameMode gameMode;
 	ptr_t onlineScene;
 	ptr_t mainMenuScene;
 	ptr_t gameDataPrefab;
@@ -169,7 +171,8 @@ struct AmongUsClient_StaticFields {
 };
 
 struct AmongUsClient_c {
-	Il2CppClass_1 _1;
+	Il2CppClass_0 _0;
+	ptr_t interfaceOffsets;
 	ptr_t staticFields;
 };
 
@@ -194,18 +197,21 @@ struct PlayerControl_Fields : InnerNet_InnerNetObject_Fields {
 	ptr_t nameText;
 	ptr_t lightPrefab;
 	ptr_t myLight;
+	ptr_t textTranslator;
 	ptr_t collider;
 	ptr_t myPhysics;
 	ptr_t netTransform;
 	ptr_t currentPet;
 	ptr_t hatRenderer;
-	ptr_t myRend;
-	ptr_t hitBuffer;
+	ptr_t spriteRenderer;
+	ptr_t colliderArray;
 	ptr_t myTasks;
 	ptr_t scannerAnims;
 	ptr_t scannersImages;
 	ptr_t closest;
 	bool isNew;
+	bool isDummy;
+	bool notRealPlayer;
 	ptr_t cache;
 	ptr_t itemsInRange;
 	ptr_t newItemsInRange;
@@ -220,7 +226,8 @@ struct PlayerControl_StaticFields {
 };
 
 struct PlayerControl_c {
-	Il2CppClass_1 _1;
+	Il2CppClass_0 _0;
+	ptr_t interfaceOffsets;
 	ptr_t staticFields;
 };
 
@@ -233,7 +240,8 @@ struct PlayerControl_o {
 struct GameData_PlayerInfo_Fields {
 	uint8_t playerId;
 	ptr_t playerName;
-	uint8_t colorId;
+	bool unknown;
+	int32_t colorId;
 	uint32_t hatId;
 	uint32_t petId;
 	uint32_t skinId;

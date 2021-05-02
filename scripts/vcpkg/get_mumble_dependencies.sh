@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Copyright 2020-2021 The Mumble Developers. All rights reserved.
+# Use of this source code is governed by a BSD-style license
+# that can be found in the LICENSE file at the root of the
+# Mumble source tree or at <https://www.mumble.info/LICENSE>.
+
+
 # Copyright 2020 The 'mumble-releng-experimental' Authors. All rights reserved.
 # Use of this source code is governed by a BSD-style license that
 # can be found in the LICENSE file in the source tree or at
@@ -38,9 +44,9 @@ VCPKGDIR=~/vcpkg
 mumble_deps='qt5-base,
             qt5-svg,
             qt5-tools,
+            qt5-translations,
             grpc,
             boost-accumulators,
-            opus,
             poco,
             libvorbis,
             libogg,

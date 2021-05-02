@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2007-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -941,3 +941,8 @@ void MetaDBus::quit() {
 void MetaDBus::getVersion(int &major, int &minor, int &patch, QString &text) {
 	Meta::getVersion(major, minor, patch, text);
 }
+
+#undef PLAYER_SETUP_VAR
+#undef PLAYER_SETUP
+#undef CHANNEL_SETUP_VAR2
+#undef CHANNEL_SETUP_VAR

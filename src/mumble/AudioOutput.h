@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2007-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -127,6 +127,27 @@ public:
 	static float calcGain(float dotproduct, float distance);
 	unsigned int getMixerFreq() const;
 	void setBufferSize(unsigned int bufferSize);
+
+signals:
+	/// Signal emitted whenever an audio source has been fetched
+	///
+	/// @param outputPCM The fetched output PCM
+	/// @param sampleCount The amount of samples in the output
+	/// @param channelCount The amount of channels in the output
+	/// @param sampleRate The used sample rate in Hz
+	/// @param isSpeech Whether the fetched output is considered to be speech
+	/// @param A pointer to the user that this speech belongs to or nullptr if this isn't speech
+	void audioSourceFetched(float *outputPCM, unsigned int sampleCount, unsigned int channelCount,
+							unsigned int sampleRate, bool isSpeech, const ClientUser *user);
+	/// Signal emitted whenever an audio is about to be played to the user
+	///
+	/// @param outputPCM The output PCM that is to be played
+	/// @param sampleCount The amount of samples in the output
+	/// @param channelCount The amount of channels in the output
+	/// @param sampleRate The used sample rate in Hz
+	/// @param modifiedAudio Pointer to bool if audio has been modified or not and should be played
+	void audioOutputAboutToPlay(float *outputPCM, unsigned int sampleCount, unsigned int channelCount,
+								unsigned int sampleRate, bool *modifiedAudio);
 };
 
 #endif

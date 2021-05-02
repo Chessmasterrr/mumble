@@ -1,6 +1,6 @@
 #!/bin/bash -ex
 #
-# Copyright 2019-2020 The Mumble Developers. All rights reserved.
+# Copyright 2020-2021 The Mumble Developers. All rights reserved.
 # Use of this source code is governed by a BSD-style license
 # that can be found in the LICENSE file at the root of the
 # Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -14,4 +14,5 @@ sudo apt-get -y install build-essential g++-multilib ninja-build pkg-config \
                         libasound2-dev libasound2-plugins libasound2-plugins-extra\
                         libogg-dev libsndfile1-dev libspeechd-dev \
                         libavahi-compat-libdnssd-dev libzeroc-ice-dev \
-                        zsync appstream libgrpc++-dev protobuf-compiler-grpc
+                        zsync appstream libgrpc++-dev protobuf-compiler-grpc \
+                        libpoco-dev

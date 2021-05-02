@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2012-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -155,3 +155,5 @@ int CELTCodec070::encode(CELTEncoder *st, const celt_int16 *pcm, unsigned char *
 int CELTCodec070::decode_float(CELTDecoder *st, const unsigned char *data, int len, float *pcm) {
 	return celt_decode_float(st, data, len, pcm);
 }
+
+#undef RESOLVE

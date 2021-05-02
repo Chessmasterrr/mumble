@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2007-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -98,11 +98,14 @@ MetaParams::MetaParams() {
 	iChannelNestingLimit = 10;
 	iChannelCountLimit   = 1000;
 
-	qrUserName    = QRegExp(QLatin1String("[-=\\w\\[\\]\\{\\}\\(\\)\\@\\|\\.]+"));
-	qrChannelName = QRegExp(QLatin1String("[ \\-=\\w\\#\\[\\]\\{\\}\\(\\)\\@\\|]+"));
+	qrUserName    = QRegExp(QLatin1String("[ -=\\w\\[\\]\\{\\}\\(\\)\\@\\|\\.]+"));
+	qrChannelName = QRegExp(QLatin1String("[ -=\\w\\#\\[\\]\\{\\}\\(\\)\\@\\|]+"));
 
 	iMessageLimit = 1;
 	iMessageBurst = 5;
+
+	iPluginMessageLimit = 4;
+	iPluginMessageBurst = 15;
 
 	qsCiphers = MumbleSSL::defaultOpenSSLCipherString();
 
@@ -401,6 +404,9 @@ void MetaParams::read(QString fname) {
 
 	iMessageLimit = typeCheckedFromSettings("messagelimit", 1);
 	iMessageBurst = typeCheckedFromSettings("messageburst", 5);
+
+	iPluginMessageLimit = typeCheckedFromSettings("pluginmessagelimit", 4);
+	iPluginMessageBurst = typeCheckedFromSettings("pluginmessageburst", 15);
 
 	bool bObfuscate = typeCheckedFromSettings("obfuscate", false);
 	if (bObfuscate) {

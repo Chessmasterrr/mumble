@@ -1,4 +1,4 @@
-# Copyright 2019-2020 The Mumble Developers. All rights reserved.
+# Copyright 2020-2021 The Mumble Developers. All rights reserved.
 # Use of this source code is governed by a BSD-style license
 # that can be found in the LICENSE file at the root of the
 # Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -30,6 +30,7 @@ project(Mumble
 )
 
 set(3RDPARTY_DIR "${CMAKE_SOURCE_DIR}/3rdparty")
+set(PLUGINS_DIR "${CMAKE_SOURCE_DIR}/plugins")
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_OSX_DEPLOYMENT_TARGET 10.9)
@@ -105,10 +106,25 @@ if(tests)
 endif()
 
 
+# Make the build year accessible as a macro
+add_compile_definitions(MUMBLE_BUILD_YEAR=${MUMBLE_BUILD_YEAR})
+
+# Make sure that math constants are always defined
+add_compile_definitions(_USE_MATH_DEFINES)
+
+set(CMAKE_UNITY_BUILD_BATCH_SIZE 40)
+
 add_subdirectory(src)
 
 if(g15 AND WIN32)
 	add_subdirectory(g15helper)
+endif()
+
+if(APPLE AND CMAKE_SYSTEM_PROCESSOR MATCHES "arm64")
+	# mach_override doesn't support ARM
+	# https://github.com/rentzsch/mach_override/issues/6
+	set(overlay OFF CACHE BOOL "" FORCE)
+	message(STATUS "Disabling the overlay on ARM macOS")
 endif()
 
 if(overlay AND client)

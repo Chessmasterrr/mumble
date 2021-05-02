@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2007-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -139,6 +139,9 @@ public:
 
 	unsigned int iMessageLimit;
 	unsigned int iMessageBurst;
+
+	unsigned int iPluginMessageLimit;
+	unsigned int iPluginMessageBurst;
 
 	QVariant qvSuggestVersion;
 	QVariant qvSuggestPositional;
@@ -353,6 +356,7 @@ public:
 	void clearTempGroups(User *user, Channel *cChannel = nullptr, bool recurse = true);
 	void startListeningToChannel(ServerUser *user, Channel *cChannel);
 	void stopListeningToChannel(ServerUser *user, Channel *cChannel);
+	void sendWelcomeMessageTo(ServerUser *user);
 signals:
 	void registerUserSig(int &, const QMap< int, QString > &);
 	void unregisterUserSig(int &, int);

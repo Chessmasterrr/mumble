@@ -32,6 +32,12 @@ The documentation of the project can be found on the [wiki](https://wiki.mumble.
 
 We always welcome contributions to the project. If you have code that you would like to contribute, please go ahead and create a PR. While doing so, please try to make sure that you follow our [commit guidelines](COMMIT_GUIDELINES.md).
 
+### Translating
+
+Mumble supports various languages. We are always looking for qualified people to contribute translations.
+
+We are using Weblate as a translation platform. [Register on Weblate](https://hosted.weblate.org/accounts/register/), and join [our translation project](https://hosted.weblate.org/projects/mumble/).
+
 ## Building
 
 For information on how to build Mumble, checkout [the dedicated documentation](docs/dev/build-instructions/README.md).
@@ -110,8 +116,12 @@ The OpenGL overlay works by intercepting the call to switch buffers, and just
 before the buffer switch, we draw our nice GUI.
 
 To load a game with the overlay enabled, start the game like this:
-  LD_PRELOAD=/path/to/libmumble.so.1.1 gamename
+```bash
+LD_PRELOAD=/path/to/libmumble.so.1.1 gamename
+```
 
 If you have Mumble installed through the binary packages, this can be done by
 simply typing:
-  mumble-overlay gamename
+```bash
+mumble-overlay gamename
+```

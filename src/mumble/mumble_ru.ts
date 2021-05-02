@@ -1,4 +1,6 @@
-<?xml version="1.0" ?><!DOCTYPE TS><TS language="ru" version="2.1">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="ru">
 <context>
     <name>ACLEditor</name>
     <message>
@@ -274,11 +276,11 @@ Add a new group.</source>
     </message>
     <message>
         <source>Type in the name of a user you wish to add to the group and click Add.</source>
-        <translation>Введите имя пользователя, которого Вы хотите добавить в группу и нажмите Добавить.</translation>
+        <translation>Введите имя пользователя, которого Вы хотите добавить в группу, и нажмите Добавить.</translation>
     </message>
     <message>
         <source>Type in the name of a user you wish to remove from the group and click Add.</source>
-        <translation>Введите имя пользователя, которого Вы хотите исключить из группы и нажмите Добавить.</translation>
+        <translation>Введите имя пользователя, которого Вы хотите исключить из группы, и нажмите Добавить.</translation>
     </message>
     <message>
         <source>Exclude</source>
@@ -318,7 +320,7 @@ Add a new group.</source>
     </message>
     <message>
         <source>This controls which user this entry applies to. Just type in the user name and hit enter to query the server for a match.</source>
-        <translation>Управляет, к какому пользователю применить данную запись. Введите имя пользователя и нажмите Enter, чтобы послать запрос на сервер.</translation>
+        <translation>Пользователь, к которому нужно применить данную запись. Введите имя пользователя и нажмите Enter, чтобы послать запрос на сервер.</translation>
     </message>
     <message>
         <source>&amp;Properties</source>
@@ -336,7 +338,7 @@ When checked the channel created will be marked as temporary. This means when th
     <message>
         <source>&lt;b&gt;Group&lt;/b&gt;&lt;br /&gt;
 These are all the groups currently defined for the channel. To create a new group, just type in the name and press enter.</source>
-        <translation>&lt;b&gt;Группа&lt;/b&gt;&lt;br /&gt;В этом списке все группы, которые определены для данного канала. Чтобы создать новую группу, введите ее название и нажмите Ввод.</translation>
+        <translation>&lt;b&gt;Группа&lt;/b&gt;&lt;br /&gt;В этом списке находятся все группы, которые определены для данного канала. Чтобы создать новую группу, введите ее название и нажмите Ввод.</translation>
     </message>
     <message>
         <source>&lt;b&gt;Remove&lt;/b&gt;&lt;br /&gt;This removes the currently selected group. If the group was inherited, it will not be removed from the list, but all local information about the group will be cleared.</source>
@@ -396,7 +398,8 @@ Contains the list of members inherited by the current channel. Uncheck &lt;i&gt;
     <message>
         <source>&lt;b&gt;Maximum Users&lt;/b&gt;&lt;br /&gt;
 This value allows you to set the maximum number of users allowed in the channel. If the value is above zero, only that number of users will be allowed to enter the channel. If the value is zero, the maximum number of users in the channel is given by the server&apos;s default limit.</source>
-        <translation>&lt;b&gt;Макс. пользователей&lt;/b&gt;&lt;br /&gt;это значение дает возможность установить максимальное количество пользователей на канале. Если значение больше нуля, то этому количеству пользователей разрешено войти на канал. Если значение равно нулю, то максимальное количество пользователей устанавливается настройками сервера.</translation>
+        <translation>&lt;b&gt;Макс. пользователей&lt;/b&gt;&lt;br /&gt;
+Это значение дает возможность установить максимальное количество пользователей на канале. Если значение больше нуля, то этому количеству пользователей разрешено войти на канал. Если значение равно нулю, то максимальное количество пользователей устанавливается настройками сервера.</translation>
     </message>
     <message>
         <source>This is the sort order for the channel.</source>
@@ -404,7 +407,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Properties</source>
-        <translation type="unfinished"/>
+        <translation>Свойства</translation>
     </message>
     <message>
         <source>Channel password</source>
@@ -412,31 +415,31 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Maximum users</source>
-        <translation type="unfinished"/>
+        <translation>Макс. пользователей</translation>
     </message>
     <message>
         <source>Channel name</source>
-        <translation type="unfinished"/>
+        <translation>Имя канала</translation>
     </message>
     <message>
         <source>Inherited group members</source>
-        <translation type="unfinished"/>
+        <translation>Унаследованные члены группы</translation>
     </message>
     <message>
         <source>Foreign group members</source>
-        <translation type="unfinished"/>
+        <translation>Члены других групп</translation>
     </message>
     <message>
         <source>Inherited channel members</source>
-        <translation type="unfinished"/>
+        <translation>Унаследованные члены канала</translation>
     </message>
     <message>
         <source>Add members to group</source>
-        <translation type="unfinished"/>
+        <translation>Добавить пользователей в группу</translation>
     </message>
     <message>
         <source>List of ACL entries</source>
-        <translation type="unfinished"/>
+        <translation>Список записей в СУД</translation>
     </message>
 </context>
 <context>
@@ -459,6 +462,17 @@ This value allows you to set the maximum number of users allowed in the channel.
     <message>
         <source>Opening chosen ALSA Output failed: %1</source>
         <translation>Ошибка открытия вывода ALSA: %1</translation>
+    </message>
+</context>
+<context>
+    <name>ALSAEnumerator</name>
+    <message>
+        <source>Getting name (longname) of the sound card failed: %1</source>
+        <translation>Не удалось получить имя (полное имя) звуковой карты: %1</translation>
+    </message>
+    <message>
+        <source>Getting name of the sound card failed: %1</source>
+        <translation>Не удалось получить имя звуковой карты: %1</translation>
     </message>
 </context>
 <context>
@@ -570,11 +584,11 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>List of microphones</source>
-        <translation type="unfinished"/>
+        <translation>Список микрофонов</translation>
     </message>
     <message>
         <source>List of speakers</source>
-        <translation type="unfinished"/>
+        <translation>Список динамиков</translation>
     </message>
 </context>
 <context>
@@ -593,10 +607,6 @@ This value allows you to set the maximum number of users allowed in the channel.
     <message>
         <source>About Mumble</source>
         <translation>О Mumble</translation>
-    </message>
-    <message>
-        <source>&lt;h3&gt;Mumble (%1)&lt;/h3&gt;&lt;p&gt;%3&lt;/p&gt;&lt;p&gt;&lt;b&gt;A voice-chat utility for gamers&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;&lt;a href=&quot;%2&quot;&gt;%2&lt;/a&gt;&lt;/tt&gt;&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;Mumble (%1)&lt;/h3&gt;&lt;p&gt;%3&lt;/p&gt;&lt;p&gt;&lt;b&gt;Голосовая связь для игроков&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;&lt;a href=&quot;%2&quot;&gt;%2&lt;/a&gt;&lt;/tt&gt;&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&amp;About Mumble</source>
@@ -620,15 +630,19 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>License agreement</source>
-        <translation type="unfinished"/>
+        <translation>Лицензионное соглашение</translation>
     </message>
     <message>
         <source>Authors</source>
-        <translation type="unfinished"/>
+        <translation>Авторы</translation>
     </message>
     <message>
         <source>Third-party license agreements</source>
-        <translation type="unfinished"/>
+        <translation>Сторонние лицензии</translation>
+    </message>
+    <message>
+        <source>&lt;h3&gt;Mumble (%1)&lt;/h3&gt;&lt;p&gt;%3&lt;/p&gt;&lt;p&gt;&lt;b&gt;An Open Source, low-latency, high quality voice-chat utility&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;&lt;a href=&quot;%2&quot;&gt;%2&lt;/a&gt;&lt;/tt&gt;&lt;/p&gt;</source>
+        <translation>&lt;h3&gt;Mumble (%1)&lt;/h3&gt;&lt;p&gt;%3&lt;/p&gt;&lt;p&gt;&lt;b&gt;Голосового чат с открытым исходным кодом, низкой задержкой и высоким качеством&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;&lt;a href=&quot;%2&quot;&gt;%2&lt;/a&gt;&lt;/tt&gt;&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -719,7 +733,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Signal to Noise</source>
-        <translation>Сигнал/Шум</translation>
+        <translation>Сигнал/шум</translation>
     </message>
     <message>
         <source>&lt;b&gt;This sets speech detection to use Amplitude.&lt;/b&gt;&lt;br /&gt;In this mode, the raw strength of the input signal is used to detect speech.</source>
@@ -743,7 +757,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>&lt;b&gt;This sets the trigger values for voice detection.&lt;/b&gt;&lt;br /&gt;Use this together with the Audio Statistics window to manually tune the trigger values for detecting speech. Input values below &quot;Silence Below&quot; always count as silence. Values above &quot;Speech Above&quot; always count as voice. Values in between will count as voice if you&apos;re already talking, but will not trigger a new detection.</source>
-        <translation>&lt;b&gt;Устанавливает значения для срабатывания обнаружения голоса.&lt;/b&gt;&lt;br /&gt;Используйте вместе с окном Аудиостатистики, чтобы отрегулировать эти значения вручную. Значения левее &quot;Уровень тишины&quot; всегда будут считаться тишиной. Значения правее &quot;Уровень речи&quot; всегда будет считаться голосом. Значения между будут считаться голосом если вы уже говорите, но это не будет считаться новым срабатыванием.</translation>
+        <translation>&lt;b&gt;Устанавливает пороговые значения для обнаружения голоса.&lt;/b&gt;&lt;br /&gt;Используйте вместе с окном Аудиостатистики, чтобы отрегулировать эти значения вручную. Значения левее &quot;Уровень тишины&quot; всегда будут считаться тишиной. Значения правее &quot;Уровень речи&quot; всегда будет считаться голосом. Значения между ними будут считаться голосом, если вы уже говорите, но не будут заново активировать распознавание.</translation>
     </message>
     <message>
         <source>Speech Above</source>
@@ -935,7 +949,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>deafen</source>
-        <translation>заглушить</translation>
+        <translation>выключить звук</translation>
     </message>
     <message>
         <source>mute</source>
@@ -948,14 +962,6 @@ This value allows you to set the maximum number of users allowed in the channel.
     <message>
         <source>Echo Cancellation</source>
         <translation>Подавление эха</translation>
-    </message>
-    <message>
-        <source>Mixed echo cancellation</source>
-        <translation>Смешанное подавление эха</translation>
-    </message>
-    <message>
-        <source>Multichannel echo cancellation</source>
-        <translation>Многоканальное подавление эха</translation>
     </message>
     <message>
         <source>The idle action will be reversed upon any key or mouse button input</source>
@@ -987,31 +993,43 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Don&apos;t use noise suppression.</source>
-        <translation type="unfinished"/>
+        <translation>Не использовать шумоподавление.</translation>
     </message>
     <message>
         <source>Use the noise suppression algorithm provided by Speex.</source>
-        <translation type="unfinished"/>
+        <translation>Использовать алгоритм шумоподавления от Speex.</translation>
     </message>
     <message>
         <source>Use the noise suppression algorithm provided by RNNoise.</source>
-        <translation type="unfinished"/>
+        <translation>Использовать алгоритм шумоподавления RNNoise.</translation>
     </message>
     <message>
         <source>Use a combination of Speex and RNNoise to do noise suppression.</source>
-        <translation type="unfinished"/>
+        <translation>Использовать комбинацию алгоритмов шумоподавления Speex и RNNoise.</translation>
     </message>
     <message>
         <source>Both</source>
-        <translation type="unfinished"/>
+        <translation>Speex и RNNoise</translation>
     </message>
     <message>
         <source>This controls the amount by which Speex will suppress noise.</source>
-        <translation type="unfinished"/>
+        <translation>Настроить силу шумоподавления Speex.</translation>
     </message>
     <message>
         <source>Speex suppression strength</source>
-        <translation type="unfinished"/>
+        <translation>Сила шумоподавления Speex</translation>
+    </message>
+    <message>
+        <source>Mute cue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Br&amp;owse...</source>
+        <translation type="unfinished">&amp;Обзор…</translation>
+    </message>
+    <message>
+        <source>Pre&amp;view</source>
+        <translation type="unfinished">&amp;Предпросмотр</translation>
     </message>
 </context>
 <context>
@@ -1054,79 +1072,95 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>%1 kbit/s (Audio %2, Position %4, Overhead %3)</source>
-        <translation>%1 кбит/с (Аудио %2, Позиция %4, Загрузка %3)</translation>
+        <translation>%1 кбит/с (Аудио %2, Позиция %4, Накладные расходы %3)</translation>
     </message>
     <message>
         <source>Audio system</source>
-        <translation type="unfinished"/>
+        <translation>Система аудио</translation>
     </message>
     <message>
         <source>Input device</source>
-        <translation type="unfinished"/>
+        <translation>Устройство ввода</translation>
     </message>
     <message>
         <source>Echo cancellation mode</source>
-        <translation type="unfinished"/>
+        <translation>Режим подавления эха</translation>
     </message>
     <message>
         <source>Transmission mode</source>
-        <translation type="unfinished"/>
+        <translation>Режим передачи</translation>
     </message>
     <message>
         <source>PTT lock threshold</source>
-        <translation type="unfinished"/>
+        <translation>Время блокировки кнопки передачи</translation>
     </message>
     <message>
         <source>PTT hold threshold</source>
-        <translation type="unfinished"/>
+        <translation>Время удержания кнопки передачи</translation>
     </message>
     <message>
         <source>Silence below</source>
-        <translation type="unfinished"/>
+        <translation>Уровень тишины</translation>
     </message>
     <message>
         <source>Current speech detection chance</source>
-        <translation type="unfinished"/>
+        <translation>Шанс определения речи</translation>
     </message>
     <message>
         <source>Speech above</source>
-        <translation type="unfinished"/>
+        <translation>Уровень речи</translation>
     </message>
     <message>
         <source>Speech below</source>
-        <translation type="unfinished"/>
+        <translation>Максимальный уровень речи</translation>
     </message>
     <message>
         <source>Audio per packet</source>
-        <translation type="unfinished"/>
+        <translation>Аудио на пакет</translation>
     </message>
     <message>
         <source>Quality of compression (peak bandwidth)</source>
-        <translation type="unfinished"/>
+        <translation>Качество сжатия (пиковая ширина канала)</translation>
     </message>
     <message>
         <source>Noise suppression</source>
-        <translation type="unfinished"/>
+        <translation>Подавление шума</translation>
     </message>
     <message>
         <source>Maximum amplification</source>
-        <translation type="unfinished"/>
+        <translation>Макс. усиление</translation>
     </message>
     <message>
         <source>Transmission started sound</source>
-        <translation type="unfinished"/>
+        <translation>Звук начала передачи</translation>
     </message>
     <message>
         <source>Transmission stopped sound</source>
-        <translation type="unfinished"/>
+        <translation>Звук окончания передачи</translation>
     </message>
     <message>
         <source>Initiate idle action after (in minutes)</source>
-        <translation type="unfinished"/>
+        <translation>Начать простой через (в минутах)</translation>
     </message>
     <message>
         <source>Idle action</source>
-        <translation type="unfinished"/>
+        <translation>Простой</translation>
+    </message>
+    <message>
+        <source>Access to the microphone was denied. Please allow Mumble to use the microphone by changing the settings in System Preferences -&gt; Security &amp; Privacy -&gt; Privacy -&gt; Microphone.</source>
+        <translation>Доступ к микрофону запрещен. Разрешите Mumble использовать микрофон, изменив настройки в Системных настройках -&gt; Безопасность и конфиденциальность -&gt; Конфиденциальность -&gt; Микрофон.</translation>
+    </message>
+    <message>
+        <source>Access to the microphone was denied. Please check that your operating system&apos;s microphone settings allow Mumble to use the microphone.</source>
+        <translation>Доступ к микрофону запрещен. Убедитесь, что настройки микрофона вашей операционной системы позволяют Mumble использовать микрофон.</translation>
+    </message>
+    <message>
+        <source>Disabled</source>
+        <translation>Отключено</translation>
+    </message>
+    <message>
+        <source>Disable echo cancellation.</source>
+        <translation>Отключить эхоподавление.</translation>
     </message>
 </context>
 <context>
@@ -1141,7 +1175,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Output method for audio</source>
-        <translation>Метод вывода для звука</translation>
+        <translation>Метод для вывода звука</translation>
     </message>
     <message>
         <source>Device</source>
@@ -1149,11 +1183,11 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Output device for audio</source>
-        <translation>Устройство вывода для звука</translation>
+        <translation>Устройство для вывода звука</translation>
     </message>
     <message>
         <source>&lt;b&gt;This is the output device to use for audio.&lt;/b&gt;</source>
-        <translation>&lt;b&gt;Это устройство вывода для использования звука&lt;/b&gt;</translation>
+        <translation>&lt;b&gt;Это устройство вывода использутся для вывода звука.&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Positional Audio</source>
@@ -1169,7 +1203,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Safety margin for jitter buffer</source>
-        <translation>Безопасный размер буфера</translation>
+        <translation>Безопасный размер буфера джиттера. Помогает избежать искажений и прерываний.</translation>
     </message>
     <message>
         <source>&lt;b&gt;This sets the minimum safety margin for the jitter buffer.&lt;/b&gt;&lt;br /&gt;All incoming audio is buffered, and the jitter buffer continually tries to push the buffer to the minimum sustainable by your network, so latency can be as low as possible. This sets the minimum buffer size to use. If the start of sentences you hear is very jittery, increase this value.</source>
@@ -1209,7 +1243,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Amount of data to buffer</source>
-        <translation>Количество данных для буфера</translation>
+        <translation>Количество данных для буферизации</translation>
     </message>
     <message>
         <source>The connected &quot;speakers&quot; are actually headphones</source>
@@ -1395,11 +1429,11 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Enable</source>
-        <translation type="unfinished"/>
+        <translation>Включить</translation>
     </message>
     <message>
         <source>Attenuation</source>
-        <translation type="unfinished"/>
+        <translation>Приглушение</translation>
     </message>
 </context>
 <context>
@@ -1434,55 +1468,55 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Output system</source>
-        <translation type="unfinished"/>
+        <translation>Система вывода звука</translation>
     </message>
     <message>
         <source>Output device</source>
-        <translation type="unfinished"/>
+        <translation>Устройство вывода</translation>
     </message>
     <message>
         <source>Default jitter buffer</source>
-        <translation type="unfinished"/>
+        <translation>Стандартный буфер</translation>
     </message>
     <message>
         <source>Volume of incoming speech</source>
-        <translation type="unfinished"/>
+        <translation>Громкость входящей речи</translation>
     </message>
     <message>
         <source>Output delay</source>
-        <translation type="unfinished"/>
+        <translation>Задержка вывода</translation>
     </message>
     <message>
         <source>Attenuation of other applications during speech</source>
-        <translation type="unfinished"/>
+        <translation>Приглушение других приложений во время разговора</translation>
     </message>
     <message>
         <source>Minimum distance</source>
-        <translation type="unfinished"/>
+        <translation>Мин. дистанция</translation>
     </message>
     <message>
         <source>Maximum distance</source>
-        <translation type="unfinished"/>
+        <translation>Макс. дистанция</translation>
     </message>
     <message>
         <source>Minimum volume</source>
-        <translation type="unfinished"/>
+        <translation>Мин. громкость</translation>
     </message>
     <message>
         <source>Bloom</source>
-        <translation type="unfinished"/>
+        <translation>Пик</translation>
     </message>
     <message>
         <source>Delay variance</source>
-        <translation type="unfinished"/>
+        <translation>Разброс задержки</translation>
     </message>
     <message>
         <source>Packet loss</source>
-        <translation type="unfinished"/>
+        <translation>Потеря пакетов</translation>
     </message>
     <message>
         <source>Loopback</source>
-        <translation type="unfinished"/>
+        <translation>Обратная связь</translation>
     </message>
 </context>
 <context>
@@ -1509,11 +1543,11 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Audio Statistics</source>
-        <translation>Аудио статистика</translation>
+        <translation>Аудиостатистика</translation>
     </message>
     <message>
         <source>Input Levels</source>
-        <translation>Входящие уровни</translation>
+        <translation>Уровни входящего сигнала</translation>
     </message>
     <message>
         <source>Peak microphone level</source>
@@ -1533,12 +1567,12 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>This shows the peak power of the speakers in the last frame (20 ms). Unless you are using a multi-channel sampling method (such as ASIO) with speaker channels configured, this will be 0. If you have such a setup configured, and this still shows 0 while you&apos;re playing audio from other programs, your setup is not working.</source>
-        <oldsource>This shows the peak power in the last frame (20 ms) of the speakers. Unless you are using a multi-channel sampling method (such as ASIO) with speaker channels configured, this will be 0. If you have such a setup configured, and this still shows 0 while you're playing audio from other programs, your setup is not working.</oldsource>
-        <translation>Показывает пиковую мощность в последнем фрагменте (20 мс) динамиков. Пока Вы используете мультиканальный метод проб (такой как ASIO),настроенный на каналы динамика, она будет равна 0. Если у Вас они так сконфигурированы, все еще будет отображаться 0, пока Вы будете прослушивать звук из других программ, Ваши настройки не будут работать.</translation>
+        <oldsource>This shows the peak power in the last frame (20 ms) of the speakers. Unless you are using a multi-channel sampling method (such as ASIO) with speaker channels configured, this will be 0. If you have such a setup configured, and this still shows 0 while you&apos;re playing audio from other programs, your setup is not working.</oldsource>
+        <translation>Показывает пиковую мощность в последнем фрагменте (20 мс) динамиков. Если Вы не используете мультиканальный метод сэмплинга (например, ASIO) с настроенными каналами динамика, она будет равна 0. Иначе, если здесь отображается 0 даже при воспроизведении звука из других программ, с вашей конфигурацией что-то не так.</translation>
     </message>
     <message>
         <source>Peak clean level</source>
-        <translation>Пиковый уровень очистки</translation>
+        <translation>Пиковый уровень после обработки</translation>
     </message>
     <message>
         <source>This shows the peak power in the last frame (20 ms) after all processing. Ideally, this should be -96 dB when you&apos;re not talking. In reality, a sound studio should see -60 dB, and you should hopefully see somewhere around -20 dB. When you are talking, this should rise to somewhere between -5 and -10 dB.&lt;br /&gt;If you are using echo cancellation, and this rises to more than -15 dB when you&apos;re not talking, your setup is not working, and you&apos;ll annoy other users with echoes.</source>
@@ -1562,15 +1596,15 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Signal-To-Noise ratio</source>
-        <translation>Соотношение Сигнал/Шум</translation>
+        <translation>Соотношение Сигнал/шум</translation>
     </message>
     <message>
         <source>Signal-To-Noise ratio from the microphone</source>
-        <translation>Соотношение Сигнал/Шум от микрофона</translation>
+        <translation>Соотношение Сигнал/шум от микрофона</translation>
     </message>
     <message>
         <source>This is the Signal-To-Noise Ratio (SNR) of the microphone in the last frame (20 ms). It shows how much clearer the voice is compared to the noise.&lt;br /&gt;If this value is below 1.0, there&apos;s more noise than voice in the signal, and so quality is reduced.&lt;br /&gt;There is no upper limit to this value, but don&apos;t expect to see much above 40-50 without a sound studio.</source>
-        <translation>Отношение Сигнал/Шум (SNR) микрофона в последнем фрагменте (20 мс). Показывает, насколько чист голос по сравнению с шумом.&lt;br /&gt;Если значение ниже 1.0, в сигнале больше шума, нежели голоса, и поэтому ухудшается качество.&lt;br /&gt;Верхнего предела не существует, но не ожидайте увидеть выше 40-50, если Вы не в студии звукозаписи.</translation>
+        <translation>Отношение Сигнал/шум (SNR) микрофона в последнем фрагменте (20 мс). Показывает, насколько чист голос по сравнению с шумом.&lt;br /&gt;Если значение ниже 1.0, в сигнале больше шума, нежели голоса, и поэтому ухудшается качество.&lt;br /&gt;Верхнего предела не существует, но не ожидайте увидеть выше 40-50, если Вы не в студии звукозаписи.</translation>
     </message>
     <message>
         <source>Speech Probability</source>
@@ -1582,7 +1616,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>This is the probability that the last frame (20 ms) was speech and not environment noise.&lt;br /&gt;Voice activity transmission depends on this being right. The trick with this is that the middle of a sentence is always detected as speech; the problem is the pauses between words and the start of speech. It&apos;s hard to distinguish a sigh from a word starting with &apos;h&apos;.&lt;br /&gt;If this is in bold font, it means Mumble is currently transmitting (if you&apos;re connected).</source>
-        <translation>Вероятность того, что последний фрагмент (20 мс) был речью, а не шумом.&lt;br /&gt;Передача голосовой активности зависит от верности этого. Фишка в том, что середина предложения всегда распознается как речь; проблема в паузах между словами и началом разговора. Трудно отделить кашель от слова, начинающегося на &apos;х&apos;.&lt;br /&gt;Если это выделено жирным шрифтом, значит Mumble сейчас передает (если Вы подключены).</translation>
+        <translation>Вероятность того, что последний фрагмент (20 мс) был речью, а не шумом.&lt;br /&gt;Голосовая активация зависит от точности определения этого значения. Фишка в том, что середина предложения всегда распознается как речь; проблемы могут возникать в паузах между словами или в начале разговора. Трудно отделить кашель от слова, начинающегося на &apos;х&apos;.&lt;br /&gt;Если это выделено жирным шрифтом, значит Mumble сейчас передает голос (если Вы подключены).</translation>
     </message>
     <message>
         <source>Configuration feedback</source>
@@ -1626,11 +1660,11 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>This shows the power spectrum of the current input signal (red line) and the current noise estimate (filled blue).&lt;br /&gt;All amplitudes are multiplied by 30 to show the interesting parts (how much more signal than noise is present in each waveband).&lt;br /&gt;This is probably only of interest if you&apos;re trying to fine-tune noise conditions on your microphone. Under good conditions, there should be just a tiny flutter of blue at the bottom. If the blue is more than halfway up on the graph, you have a seriously noisy environment.</source>
-        <translation>Показывает мощностной спектр текущего входящего сигнала (красная линия) и текущая оценка шума (заполнена синим).&lt;br /&gt;Все амплитуды умножены на 30, чтобы показать интересные части (на сколько больше сигнала, чем шума представлено в каждом отрезке).&lt;br /&gt;Это только если Вы интересуетесь точными условиями шума вашего микрофона. При хороших условиях, это будет всего лишь крошечным синим отрезком внизу. Если синего на графике более половины, у Вас серьезные проблемы с шумом окружающей среды.</translation>
+        <translation>Показывает мощностной спектр текущего входящего сигнала (красная линия) и текущую оценку шума (заполнена синим).&lt;br /&gt;Все амплитуды умножены на 30, чтобы показать интересные части (насколько больше сигнала представлено в каждом отрезке в сравнении с шумом).&lt;br /&gt;Вероятно, вам будет это интересно только если Вы хотите точно настроить условия шума вашего микрофона. При хороших условиях вы увидите только малую долю синего в самом низу графика. Если синего на графике более половины, у Вас серьезные проблемы с шумом окружающей среды.</translation>
     </message>
     <message>
         <source>Echo Analysis</source>
-        <translation>Анализ Эха</translation>
+        <translation>Анализ эха</translation>
     </message>
     <message>
         <source>Weights of the echo canceller</source>
@@ -1638,11 +1672,11 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>This shows the weights of the echo canceller, with time increasing downwards and frequency increasing to the right.&lt;br /&gt;Ideally, this should be black, indicating no echo exists at all. More commonly, you&apos;ll have one or more horizontal stripes of bluish color representing time delayed echo. You should be able to see the weights updated in real time.&lt;br /&gt;Please note that as long as you have nothing to echo off, you won&apos;t see much useful data here. Play some music and things should stabilize. &lt;br /&gt;You can choose to view the real or imaginary parts of the frequency-domain weights, or alternately the computed modulus and phase. The most useful of these will likely be modulus, which is the amplitude of the echo, and shows you how much of the outgoing signal is being removed at that time step. The other viewing modes are mostly useful to people who want to tune the echo cancellation algorithms.&lt;br /&gt;Please note: If the entire image fluctuates massively while in modulus mode, the echo canceller fails to find any correlation whatsoever between the two input sources (speakers and microphone). Either you have a very long delay on the echo, or one of the input sources is configured wrong.</source>
-        <translation>Отображает значение подавления эха, со временем растущего вниз и увеличивающим частоту вправо.&lt;br /&gt;В идеале, все должно быть черным, отображая, что эха нет. В общем, у Вас будет 1 или несколько горизонтальных полосок синеватого цвета, отображающих время задержки эха. Вы должны видеть значения в реальном времени.&lt;br /&gt;Заметьте, что если у Вас нет эхо, которое нужно подавить, Вы не увидите здесь полезной информации. Запустите музыку, и все должно нормализоваться. &lt;br /&gt;Вы можете выбрать просмотр реальных или воображаемых частей доменно-частотных значений, или наоборот высчитанные модуль и фазу. Наиболее применимым из них будут, скорее всего модуль, который является амплитудой эха, и показывает, сколько сигнала было вырезано за промежуток времени. Другие режимы просмотра более полезны для людей, желающих настроить алгоритмы глушения эха.&lt;br /&gt;Внимание: если картина в целом обширно варьируется в режиме модулей, подавление эха не может найти соответствия между двумя входными источниками (динамиками и микрофоном). Или у Вас очень долгая задержка эха, или один из входящих источников настроен неправильно.</translation>
+        <translation>Отображает значение подавления эха, со временем растущего вниз и увеличивающим частоту вправо.&lt;br /&gt;В идеале, все должно быть черным, отображая, что эха нет. Вероятнее, у Вас будет 1 или несколько горизонтальных полосок синеватого цвета, отображающих время задержки эха. Вы должны видеть значения в реальном времени.&lt;br /&gt;Заметьте, что если у Вас нет эхо, которое нужно подавить, Вы не увидите здесь полезной информации. Запустите музыку, и все должно нормализоваться. &lt;br /&gt;Вы можете выбрать просмотр реальных или воображаемых частей доменно-частотных значений, или наоборот высчитанные модуль и фазу. Наиболее применимым из них будут, скорее всего модуль, который является амплитудой эха, и показывает, сколько сигнала было вырезано за промежуток времени. Другие режимы просмотра более полезны для людей, желающих настроить алгоритмы глушения эха.&lt;br /&gt;Внимание: если картина в целом обширно варьируется в режиме модулей, подавление эха не может найти соответствия между двумя входными источниками (динамиками и микрофоном). Или у Вас очень долгая задержка эха, или один из входящих источников настроен неправильно.</translation>
     </message>
     <message>
         <source>This is the audio bitrate of the last compressed frame (20 ms), and as such will jump up and down as the VBR adjusts the quality. The peak bitrate can be adjusted in the Settings dialog.</source>
-        <translation>Аудио битрейт последнего сжатого фрагмента (20 мс), который будет меняться, как VBR (Variable Bit Rate - переменная скорость передачи). Пиковый битрейт может быть отрегулирован в Настройках.</translation>
+        <translation>Битрейт последнего сжатого фрагмента аудио (20 мс), изменяющийся при работе VBR (Variable Bit Rate - переменная скорость передачи). Пиковый битрейт может быть отрегулирован в Настройках.</translation>
     </message>
 </context>
 <context>
@@ -1677,7 +1711,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>This is the device your microphone is connected to.</source>
-        <translation>Устройство куда подключен Ваш микрофон.</translation>
+        <translation>Устройство, в которое подключен Ваш микрофон.</translation>
     </message>
     <message>
         <source>System</source>
@@ -1705,15 +1739,15 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>Use echo cancellation</source>
-        <translation>Использовать подавление Эха</translation>
+        <translation>Использовать подавление эха</translation>
     </message>
     <message>
         <source>This enables echo cancellation of outgoing audio, which helps both on speakers and on headsets.</source>
-        <translation>Включает подавление эхо исходящего звука от колонок или наушников.</translation>
+        <translation>Включает подавление эхо для исходящего звука. Помогает устранить эхо от колонок или наушников.</translation>
     </message>
     <message>
         <source>This is the device your speakers or headphones are connected to.</source>
-        <translation>Устройство куда подключены Ваши колонки или наушники.</translation>
+        <translation>Устройство, в которое подключены Ваши колонки или наушники.</translation>
     </message>
     <message>
         <source>Output method for audio</source>
@@ -1750,7 +1784,7 @@ This value allows you to set the maximum number of users allowed in the channel.
     </message>
     <message>
         <source>&lt;p&gt;
-To keep latency to an absolute minimum, it's important to buffer as little audio as possible on the soundcard. However, many soundcards report that they require a much smaller buffer than what they can actually work with, so the only way to set this value is to try and fail.
+To keep latency to an absolute minimum, it&apos;s important to buffer as little audio as possible on the soundcard. However, many soundcards report that they require a much smaller buffer than what they can actually work with, so the only way to set this value is to try and fail.
 &lt;/p&gt;
 &lt;p&gt;
 You should hear a voice sample. Change the slider below to the lowest value which gives &lt;b&gt;no&lt;/b&gt; interruptions or jitter in the sound. Please note that local echo is disabled during this test.
@@ -1764,17 +1798,21 @@ You should hear a voice sample. Change the slider below to the lowest value whic
     </message>
     <message>
         <source>This sets the amount of data to pre-buffer in the output buffer. Experiment with different values and set it to the lowest which doesn&apos;t cause rapid jitter in the sound.</source>
-        <translation>Устанавливает размер данных для буферизации в буфере вывода. Экспериментируйте с различными значениями и сделайте его минимальным, чтобы не возникало прерываний звука.</translation>
+        <translation>Устанавливает размер данных для буферизации в буфере вывода. Экспериментируйте с различными значениями, чтобы найти минимум, при котором не возникает прерываний звука.</translation>
     </message>
     <message>
         <source>&lt;p&gt;
-Open your sound control panel and go to the recording settings. Make sure the microphone is selected as active input with maximum recording volume. If there's an option to enable a &quot;Microphone boost&quot; make sure it's checked.
+Open your sound control panel and go to the recording settings. Make sure the microphone is selected as active input with maximum recording volume. If there&apos;s an option to enable a &quot;Microphone boost&quot; make sure it&apos;s checked.
 &lt;/p&gt;
 &lt;p&gt;
 Speak loudly, as when you are annoyed or excited. Decrease the volume in the sound control panel until the bar below stays as high as possible in the blue and green but &lt;b&gt;not&lt;/b&gt; the red zone while you speak.
 &lt;/p&gt;
 </source>
-        <translation>&lt;p&gt;Откройте системную панель управления звуком и перейдите к параметрам записи. Убедитесь, что микрофон выбран в качестве активного входа с максимальной громкостью записи. Если есть возможность включить &quot;усиление Микрофона&quot; (Microphone Boost) - включите его.&lt;/p&gt;&lt;p&gt;Говорите громко, как будто Вы раздражены или взволнованы. Уменьшите громкость звука в системной панели управления так, чтобы показания индикатора звука были максимум в синей и зеленой зоне, но &lt;b&gt;НЕ&lt;/b&gt; красной, пока Вы говорите.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Откройте системную панель управления звуком и перейдите к параметрам записи. Убедитесь, что микрофон выбран в качестве активного входа с максимальной громкостью записи. Если есть возможность включить &quot;усиление микрофона&quot; (Microphone Boost) - включите его.&lt;/p&gt;
+&lt;p&gt;
+Говорите громко, как будто Вы раздражены или взволнованы. Уменьшите громкость звука в системной панели управления так, чтобы показания индикатора звука были максимум в синей и зеленой зоне, но &lt;b&gt;НЕ&lt;/b&gt; в красной, пока Вы говорите.
+&lt;/p&gt;
+</translation>
     </message>
     <message>
         <source>Positional Audio</source>
@@ -1782,7 +1820,7 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>Adjusting attenuation of positional audio.</source>
-        <translation>Регулировка затухания позиционированного звука.</translation>
+        <translation>Регулировка затухания позиционного звука.</translation>
     </message>
     <message>
         <source>Use headphones instead of speakers</source>
@@ -1793,7 +1831,7 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
 Congratulations. You should now be ready to enjoy a richer sound experience with Mumble.
 &lt;/p&gt;
 &lt;p&gt;
-Mumble is under continuous development, and the development team wants to focus on the features that benefit the most users. To this end, Mumble supports submitting anonymous statistics about your configuration to the developers. These statistics are essential for future development, and also make sure the features you use aren't deprecated.
+Mumble is under continuous development, and the development team wants to focus on the features that benefit the most users. To this end, Mumble supports submitting anonymous statistics about your configuration to the developers. These statistics are essential for future development, and also make sure the features you use aren&apos;t deprecated.
 &lt;/p&gt;
 </source>
         <translation>&lt;p&gt;Поздравляем. Теперь Вы готовы насладиться более богатым звуком с Mumble.&lt;/p&gt;&lt;p&gt;Mumble находится в процессе постоянного развития, и команда разработчиков хочет сосредоточиться на особенностях, которые приносят пользу большинству пользователей. С этой целью Mumble поддерживает сбор анонимной статистики для разработчиков о Вашей конфигурации. Эти статистические данные существенны для будущего развития. И Вы можете быть уверены, что конфигурацию, которую Вы используете, не посчитают устаревшей.&lt;/p&gt;</translation>
@@ -1824,7 +1862,7 @@ Mumble is under continuous development, and the development team wants to focus 
     </message>
     <message>
         <source>Letting Mumble figure out when you&apos;re talking and when you&apos;re silent.</source>
-        <translation>Укажите Mumble когда Вы говорите и когда Вы молчите.</translation>
+        <translation>Укажите Mumble, когда Вы говорите, и когда молчите.</translation>
     </message>
     <message>
         <source>This will help Mumble figure out when you are talking. The first step is selecting which data value to use.</source>
@@ -1836,12 +1874,12 @@ Mumble is under continuous development, and the development team wants to focus 
     </message>
     <message>
         <source>Signal-To-Noise ratio</source>
-        <translation>Соотношение Сигнал/Шум</translation>
+        <translation>Соотношение Сигнал/шум</translation>
     </message>
     <message>
         <source>Next you need to adjust the following slider. The first few utterances you say should end up in the green area (definitive speech). While talking, you should stay inside the yellow (might be speech) and when you&apos;re not talking, everything should be in the red (definitively not speech).</source>
-        <oldsource>Next you need to adjust the following two sliders. The first few utterances you say should end up in the green area (definitive speech). While talking, you should stay inside the yellow (might be speech) and when you're not talking, everything should be in the red (definitively not speech).</oldsource>
-        <translation>Затем Вы должны откорректировать бегунок ниже. С начала произнесения речи индикатор НЕ должен выходить на зеленую зону (Ваша речь). Когда Вы продолжаете говорить, индикатор должен остаться в желтой зоне (могла бы быть Ваша речь) и когда Вы молчите, индикатор должен оставаться в красной зоне (не речь).</translation>
+        <oldsource>Next you need to adjust the following two sliders. The first few utterances you say should end up in the green area (definitive speech). While talking, you should stay inside the yellow (might be speech) and when you&apos;re not talking, everything should be in the red (definitively not speech).</oldsource>
+        <translation>Затем Вы должны откорректировать бегунок ниже. После первых произнесённых слов индикатор должен доходить до зеленой зоны (определённо речь). Когда Вы продолжаете говорить, индикатор должен остаться в желтой зоне (возможно речь) и когда Вы молчите, индикатор должен оставаться в красной зоне (точно не речь).</translation>
     </message>
     <message>
         <source>Device tuning</source>
@@ -1917,7 +1955,7 @@ Mumble is under continuous development, and the development team wants to focus 
     </message>
     <message>
         <source>Enables attenuation of other applications while users talk to you. This means that as soon someone starts to speak to you in Mumble, the sound of all other applications (like audio players) will get attenuated so you can hear them more clearly.</source>
-        <translation>Включает приглушение других приложений пока говорят пользователи. Это означает, что как только кто-нибудь начинает говорить в Mumble, звук всех других приложений (например, аудио проигрывателя) приглушается, чтобы Вы смогли лучше слышать говорящих.</translation>
+        <translation>Включает приглушение других приложений пока говорят пользователи. Это означает, что как только кто-нибудь начинает говорить в Mumble, звук всех других приложений (например, аудиоплеера) приглушается, чтобы Вы смогли лучше слышать говорящих.</translation>
     </message>
     <message>
         <source>Apply some high contrast optimizations for visually impaired users</source>
@@ -1929,18 +1967,18 @@ Mumble is under continuous development, and the development team wants to focus 
     </message>
     <message>
         <source>Keep custom Text-To-Speech settings.</source>
-        <translation>Оставить текущие настройки текст-в-речь.</translation>
+        <translation>Оставить пользовательские настройки Текст-в-речь.</translation>
     </message>
     <message>
         <source>&lt;p&gt;
-Open your sound control panel and go to the recording settings. Make sure the microphone is selected as active input with maximum recording volume. If there's an option to enable a &quot;Microphone boost&quot; make sure it's checked.
+Open your sound control panel and go to the recording settings. Make sure the microphone is selected as active input with maximum recording volume. If there&apos;s an option to enable a &quot;Microphone boost&quot; make sure it&apos;s checked.
 &lt;/p&gt;
 &lt;p&gt;
 Speak loudly, as when you are annoyed or excited. Decrease the volume in the sound control panel until the bar below stays as high as possible in the striped and the empty but &lt;b&gt;not&lt;/b&gt; the crisscrossed zone while you speak.
 &lt;/p&gt;
 </source>
         <oldsource>&lt;p&gt;
-Open your sound control panel and go to the recording settings. Make sure the microphone is selected as active input with maximum recording volume. If there's an option to enable a &quot;Microphone boost&quot; make sure it's checked.
+Open your sound control panel and go to the recording settings. Make sure the microphone is selected as active input with maximum recording volume. If there&apos;s an option to enable a &quot;Microphone boost&quot; make sure it&apos;s checked.
 &lt;/p&gt;
 &lt;p&gt;
 Speak loudly, as when you are annoyed or excited. Decrease the volume in the sound control panel until the bar below stays as high as possible in the striped and the empty but &lt;b&gt;not&lt;/b&gt; the criss-crossed zone while you speak.
@@ -1957,7 +1995,7 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     <message>
         <source>Next you need to adjust the following slider. The first few utterances you say should end up in the empty area (definitive speech). While talking, you should stay inside the striped (might be speech) and when you&apos;re not talking, everything should be in the crisscrossed (definitively not speech).</source>
         <comment>For high contrast mode</comment>
-        <translation>Затем Вы должны откорректировать бегунок ниже. С начала произнесения речи индикатор НЕ должен выходить в пустую зону (Ваша речь). Когда Вы продолжаете говорить, индикатор должен остаться в полосатой зоне (могла бы быть Ваша речь) и когда Вы молчите, индикатор должен оставаться в сетчатой зоне (не речь).</translation>
+        <translation>Затем Вы должны откорректировать бегунок ниже. После первых произнесённых слов индикатор должен доходить до пустой зоны (определённо речь). Когда Вы продолжаете говорить, индикатор должен остаться в полосатой зоне (возможно речь) и когда Вы молчите, индикатор должен оставаться в сетчатой зоне (точно не речь).</translation>
     </message>
     <message>
         <source>In this configuration Mumble will use a &lt;b&gt;low amount of bandwidth&lt;/b&gt;. This will inevitably result in high latency and poor quality. Choose this only if your connection cannot handle the other settings. (16kbit/s, 60ms per packet)</source>
@@ -1989,35 +2027,39 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>Input system</source>
-        <translation type="unfinished"/>
+        <translation>Система ввода звука</translation>
     </message>
     <message>
         <source>Input device</source>
-        <translation type="unfinished"/>
+        <translation>Устройство ввода</translation>
     </message>
     <message>
         <source>Output system</source>
-        <translation type="unfinished"/>
+        <translation>Система вывода звука</translation>
     </message>
     <message>
         <source>Output device</source>
-        <translation type="unfinished"/>
+        <translation>Устройство вывода</translation>
     </message>
     <message>
         <source>Output delay</source>
-        <translation type="unfinished"/>
+        <translation>Задержка вывода</translation>
     </message>
     <message>
         <source>Maximum amplification</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <source>PTT key</source>
-        <translation type="unfinished"/>
+        <translation>Макс. усиление</translation>
     </message>
     <message>
         <source>VAD level</source>
-        <translation type="unfinished"/>
+        <translation>Уровень голосовой активации</translation>
+    </message>
+    <message>
+        <source>PTT shortcut</source>
+        <translation>Клавиша НЧГ (Нажать-чтобы-говорить)</translation>
+    </message>
+    <message>
+        <source>No buttons assigned</source>
+        <translation>Кнопки не назначены</translation>
     </message>
 </context>
 <context>
@@ -2128,15 +2170,15 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>Use this button if you want to add a new ban.</source>
-        <translation>Нажмите на кнопку чтобы добавить бан.</translation>
+        <translation>Нажмите на кнопку, чтобы добавить бан.</translation>
     </message>
     <message>
         <source>Use this button if you want to update ban information.</source>
-        <translation>Нажмите на кнопку чтобы изменить бан.</translation>
+        <translation>Нажмите на кнопку, чтобы изменить бан.</translation>
     </message>
     <message>
         <source>Use this button if you want to remove user from the ban list.</source>
-        <translation>Нажмите на кнопку чтобы снять бан с пользователя.</translation>
+        <translation>Нажмите на кнопку, чтобы снять бан с пользователя.</translation>
     </message>
     <message>
         <source>Clear all fields</source>
@@ -2144,7 +2186,7 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>This button clears all fields. Use it if you want to add a new ban.</source>
-        <translation>Эта кнопка очищает все поля. Нажмите чтобы добавить новый бан.</translation>
+        <translation>Эта кнопка очищает все поля. Нажмите, чтобы добавить новый бан.</translation>
     </message>
     <message>
         <source>Clear</source>
@@ -2152,27 +2194,31 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message numerus="yes">
         <source>Ban List - %n Ban(s)</source>
-        <translation><numerusform>Бан-лист - %n бан</numerusform><numerusform>Бан-лист - %n бана</numerusform><numerusform>Бан-лист - %n банов</numerusform><numerusform>Бан-лист - %n банов</numerusform></translation>
+        <translation>
+            <numerusform>Бан-лист - %n бан</numerusform>
+            <numerusform>Бан-лист - %n бана</numerusform>
+            <numerusform>Бан-лист - %n банов</numerusform>
+        </translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished"/>
+        <translation>Поиск</translation>
     </message>
     <message>
         <source>IP Address</source>
-        <translation type="unfinished"/>
+        <translation>IP адрес</translation>
     </message>
     <message>
         <source>Mask</source>
-        <translation type="unfinished"/>
+        <translation>Маска</translation>
     </message>
     <message>
         <source>Start date/time</source>
-        <translation type="unfinished"/>
+        <translation>Время/дата начала</translation>
     </message>
     <message>
         <source>End date/time</source>
-        <translation type="unfinished"/>
+        <translation>Время/дата окончания</translation>
     </message>
 </context>
 <context>
@@ -2242,11 +2288,11 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>Select file to export certificate to</source>
-        <translation>Выберите файл для сохранения сертификата в</translation>
+        <translation>Выберите файл для экспорта сертификата</translation>
     </message>
     <message>
         <source>Select file to import certificate from</source>
-        <translation>Выберите файл для импорта сертификата из</translation>
+        <translation>Выберите файл для импорта сертификата</translation>
     </message>
     <message>
         <source>Unable to import. Missing password or incompatible file type.</source>
@@ -2258,35 +2304,35 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>Current certificate</source>
-        <translation type="unfinished"/>
+        <translation>Текущий сертификат</translation>
     </message>
     <message>
         <source>Certificate file to import</source>
-        <translation type="unfinished"/>
+        <translation>Файл сертификата для импорта</translation>
     </message>
     <message>
         <source>Certificate password</source>
-        <translation type="unfinished"/>
+        <translation>Пароль сертификата</translation>
     </message>
     <message>
         <source>Certificate to import</source>
-        <translation type="unfinished"/>
+        <translation>Сертификат для импорта</translation>
     </message>
     <message>
         <source>New certificate</source>
-        <translation type="unfinished"/>
+        <translation>Новый сертификат</translation>
     </message>
     <message>
         <source>File to export certificate to</source>
-        <translation type="unfinished"/>
+        <translation>Файл для сохранения сертификата</translation>
     </message>
     <message>
         <source>Email address</source>
-        <translation type="unfinished"/>
+        <translation>E-mail адрес</translation>
     </message>
     <message>
         <source>Your name</source>
-        <translation type="unfinished"/>
+        <translation>Ваше имя</translation>
     </message>
 </context>
 <context>
@@ -2349,7 +2395,7 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
     </message>
     <message>
         <source>Import Certificate</source>
-        <translation>Импорт Сертификата</translation>
+        <translation>Импорт сертификата</translation>
     </message>
     <message>
         <source>PKCS #12 Certificate import</source>
@@ -2420,13 +2466,13 @@ Speak loudly, as when you are annoyed or excited. Decrease the volume in the sou
         <source>&lt;p&gt;You already have a certificate stored in Mumble, and you are about to replace it.&lt;/p&gt;
 &lt;p&gt;If you are upgrading to a certificate issued to you by a trusted CA and the email addresses match your current certificate, this is completely safe, and servers you connect to will automatically recognize the strong certificate for your email address.
 &lt;/p&gt;
-&lt;p&gt;If this is not the case, you will no longer be recognized by any server you previously have authenticated with. If you haven't been registered on any server yet, this is nothing to worry about.
+&lt;p&gt;If this is not the case, you will no longer be recognized by any server you previously have authenticated with. If you haven&apos;t been registered on any server yet, this is nothing to worry about.
 &lt;/p&gt;
 &lt;p&gt;
 Are you sure you wish to replace your certificate?
 &lt;/p&gt;
 </source>
-        <translation>&lt;p&gt;У Вас уже есть сертификат, используемый в Mumble, который Вы хотите заменить.&lt;/p&gt;&lt;p&gt;Если Вы обновляете сертификат, выданный Вам доверенным Бюро Сертификации, и адреса эл.почты сертификатов совпадают, то замена безопасна. Сервера, к которым Вы подключитесь в дальнейшем, автоматически распознают более значимый сертификат для вашего e-mail адреса.&lt;/p&gt;&lt;p&gt;В противном случае, сервера, на которых Вы были зарегистрированы, больше не примут Вас. Если же Вы еще не регистрировались ни на одном сервере Мамбл, Вам не о чем беспокоиться.&lt;/p&gt;&lt;p&gt;Вы уверенны что хотите заменить существующий сертификат?&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;У Вас уже есть сертификат, используемый в Mumble, который Вы хотите заменить.&lt;/p&gt;&lt;p&gt;Если Вы обновляете сертификат, выданный Вам доверенным Бюро Сертификации, и адреса эл.почты сертификатов совпадают, то замена безопасна. Сервера, к которым Вы подключитесь в дальнейшем, автоматически распознают более значимый сертификат для вашего e-mail адреса.&lt;/p&gt;&lt;p&gt;В противном случае, сервера, на которых Вы были зарегистрированы, больше не примут Вас. Если же Вы еще не регистрировались ни на одном сервере Mumble, Вам не о чем беспокоиться.&lt;/p&gt;&lt;p&gt;Вы уверены, что хотите заменить существующий сертификат?&lt;/p&gt;</translation>
     </message>
     <message>
         <source>This is the certificate Mumble currently uses. It will be replaced.</source>
@@ -2474,7 +2520,7 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>&lt;p&gt;Mumble will now generate a strong certificate for authentication to servers.&lt;/p&gt;&lt;p&gt;If you wish, you may provide some additional information to be stored in the certificate, which will be presented to servers when you connect. If you provide a valid email address, you can upgrade to a CA issued email certificate later on, which provides strong identification.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Мамбл сгенерирует надежный сертификат для авторизации на серверах.&lt;/p&gt;&lt;p&gt;По желанию, Вы можете внести дополнительную информацию, которая будет храниться в сертификате. Эта информация будет предоставлена серверам, к которым Вы подключаетесь. Если Вы предоставите настоящий e-mail адрес, Вы сможете улучшить его в дальнейшем на доверенный сертификат CA, который обеспечит надёжную идентификацию.&lt;/p&gt;</translation>
+        <translation>&lt;p&gt;Mumble сгенерирует надежный сертификат для авторизации на серверах.&lt;/p&gt;&lt;p&gt;По желанию, Вы можете внести дополнительную информацию, которая будет храниться в сертификате. Эта информация будет предоставлена серверам, к которым Вы подключаетесь. Если Вы предоставите настоящий e-mail адрес, Вы сможете улучшить его в дальнейшем на доверенный сертификат CA, который обеспечит надёжную идентификацию.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Name</source>
@@ -2546,7 +2592,7 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>Mute/Deafen</source>
-        <translation>Глушить</translation>
+        <translation>Выключать микрофон/звук</translation>
     </message>
     <message>
         <source>Make channel</source>
@@ -2582,27 +2628,27 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>This represents the permission to whisper to this channel from the outside. This works exactly like the &lt;i&gt;speak&lt;/i&gt; privilege, but applies to packets spoken with the Whisper key held down. This may be used to broadcast to a hierarchy of channels without linking.</source>
-        <translation>Предоставляет разрешение шептать в этот канал из другого канала. Это работает точно также, как право &lt;i&gt;Говорить&lt;/i&gt;, но применяется к речи при нажатой клавиши Шепота. Это может быть использовано для того чтобы объявить что-то в дерево каналов без необходимости их связывания.</translation>
+        <translation>Предоставляет разрешение шептать в этот канал из другого канала. Это работает точно также, как право &lt;i&gt;Говорить&lt;/i&gt;, но применяется к речи при нажатой клавиши Шёпота. Это может быть использовано для того чтобы объявить что-то в дерево каналов без необходимости их связывания.</translation>
     </message>
     <message>
         <source>This represents the permission to mute and deafen other users. Once muted, a user will stay muted until he is unmuted by another privileged user or reconnects to the server.</source>
-        <translation>Даёт разрешение выключать голос или звук у других пользователей. Глушение останется у пользователя до снятия состояния другим привелегированным пользователем, или до переподключения к серверу.</translation>
+        <translation>Даёт разрешение выключать микрофон или звук у других пользователей. Звук останется выключен у пользователя до снятия состояния другим привелегированным пользователем, или до переподключения к серверу.</translation>
     </message>
     <message>
         <source>This represents the permission to move a user to another channel or kick him from the server. To actually move the user, either the moving user must have Move privileges in the destination channel, or the user must normally be allowed to enter the channel. Users with this privilege can move users into channels the target user normally wouldn&apos;t have permission to enter.</source>
-        <translation>Предоставляет разрешение перемещать пользователя в другой канал или кикать его с сервера. Чтобы на самом деле переместить пользователя, перемещающий пользователь должен иметь привелегии Перемещения в канале назначения или пользователю должно быть позволено входить в тот канал. Пользователь с этой привилегией может перемещать пользователей в каналы, в которые перемещаемому пользователю доступ обычно закрыт.</translation>
+        <translation>Предоставляет разрешение перемещать пользователя в другой канал или выкидывать его с сервера. Чтобы переместить пользователя в другой канал, перемещающий пользователь должен иметь привелегии Перемещения в канале назначения, или пользователь должен иметь право входить в этот канал. Пользователь с этой привилегией может перемещать пользователей в каналы, в которые перемещаемому пользователю доступ обычно закрыт.</translation>
     </message>
     <message>
         <source>This represents the permission to make sub-channels. The user making the sub-channel will be added to the admin group of the sub-channel.</source>
-        <translation>Предоставляет разрешение создавать подканалы. Пользователь, создавший подканал будет добавлен в группу admin подканала.</translation>
+        <translation>Предоставляет разрешение создавать подканалы. Пользователь, создавший подканал, будет добавлен в группу admin подканала.</translation>
     </message>
     <message>
         <source>This represents the permission to make a temporary subchannel. The user making the sub-channel will be added to the admin group of the sub-channel. Temporary channels are not stored and disappear when the last user leaves.</source>
-        <translation>Предоставляет разрешение создавать временный подканал. Пользователь создавший временный подканал будет добавлен в группу admin подканала. Временные каналы не сохраняются и исчезают, когда все пользователи их покинут.</translation>
+        <translation>Предоставляет разрешение создавать временный подканал. Пользователь, создавший временный подканал, будет добавлен в группу admin подканала. Временные каналы исчезают, когда все пользователи их покинут.</translation>
     </message>
     <message>
         <source>This represents the permission to link channels. Users in linked channels hear each other, as long as the speaking user has the &lt;i&gt;speak&lt;/i&gt; privilege in the channel of the listener. You need the link privilege in both channels to create a link, but just in either channel to remove it.</source>
-        <translation>Предоставляет разрешение связывать каналы. Пользователи в связанных каналах будут слышать друг друга до тех пор, пока пользователь, который говорит имеет право &lt;i&gt;Говорить&lt;/i&gt; в канал того, кто слушает. Необходимо иметь разрешение Связывать в обоих каналах, чтобы создать связь, и только в одном из каналов, чтобы удалить связь.</translation>
+        <translation>Предоставляет разрешение связывать каналы. Пользователи в связанных каналах будут слышать друг друга, если пользователь, который говорит, имеет право &lt;i&gt;Говорить&lt;/i&gt; в канал того, кто слушает. Необходимо иметь разрешение Связывать в обоих каналах, чтобы создать связь, и только в одном из каналов, чтобы удалить связь.</translation>
     </message>
     <message>
         <source>This represents the permission to write text messages to other users in this channel.</source>
@@ -2626,7 +2672,7 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>Whisper</source>
-        <translation>Шепот</translation>
+        <translation>Шептать</translation>
     </message>
     <message>
         <source>Move</source>
@@ -2638,7 +2684,7 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>Kick</source>
-        <translation>Кикать</translation>
+        <translation>Выкидывать</translation>
     </message>
     <message>
         <source>Ban</source>
@@ -2646,11 +2692,11 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>Register User</source>
-        <translation>Регистрировать пользователя</translation>
+        <translation>Зарегистрировать пользователя</translation>
     </message>
     <message>
         <source>Register Self</source>
-        <translation>Регистрироваться</translation>
+        <translation>Зарегистрироваться</translation>
     </message>
     <message>
         <source>Write ACL</source>
@@ -2666,11 +2712,11 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>This represents the permission to reset the comment or avatar of a user.</source>
-        <translation type="unfinished"/>
+        <translation>Предоставляет разрешение удалить комментарий или аватар пользователя.</translation>
     </message>
     <message>
         <source>Reset User Content</source>
-        <translation type="unfinished"/>
+        <translation>Удалить данные пользователя</translation>
     </message>
 </context>
 <context>
@@ -2686,11 +2732,15 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>Unable to send image: too large.</source>
-        <translation type="unfinished"/>
+        <translation>Невозможно отправить изображение: слишком большой размер.</translation>
     </message>
     <message>
         <source>Unable to send image %1: too large.</source>
-        <translation type="unfinished"/>
+        <translation>Невозможно отправить изображение %1: слишком большой размер.</translation>
+    </message>
+    <message>
+        <source>This server does not allow sending images.</source>
+        <translation>Этот сервер не позволяет отправлять изображения.</translation>
     </message>
 </context>
 <context>
@@ -2721,7 +2771,7 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>Local Ignore (Text messages)</source>
-        <translation>Местное игнорирование (Текстовые сообщения)</translation>
+        <translation>Локальное игнорирование (Текстовые сообщения)</translation>
     </message>
     <message>
         <source>Local Mute</source>
@@ -2729,15 +2779,15 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>Muted (self)</source>
-        <translation>Микрофон выключен (сам)</translation>
+        <translation>Микрофон выключен (пользователем)</translation>
     </message>
     <message>
         <source>Deafened (self)</source>
-        <translation>Звук выключен (сам)</translation>
+        <translation>Звук выключен (пользователем)</translation>
     </message>
     <message>
         <source>Local Ignore (Text-To-Speech)</source>
-        <translation type="unfinished"/>
+        <translation>Локальное игнорирование (Текст-в-речь)</translation>
     </message>
 </context>
 <context>
@@ -2784,19 +2834,23 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>Configuration categories</source>
-        <translation type="unfinished"/>
+        <translation>Категории настроек</translation>
     </message>
     <message>
         <source>This button will restore the defaults for the settings on the current page. Other pages will not be changed.&lt;br /&gt;To restore all settings to their defaults, you can press the &quot;Defaults (All)&quot; button.</source>
-        <translation type="unfinished"/>
+        <translation>Вернуть стандартные настройки для данной страницы. Другие страницы не будут изменены.&lt;br /&gt;Чтобы вернуть все настройки на стандартные, Вы можете нажать кнопку &quot;Восстановить все настройки&quot;.</translation>
     </message>
     <message>
         <source>Restore all defaults</source>
-        <translation type="unfinished"/>
+        <translation>Восстановить все настройки по умолчанию</translation>
     </message>
     <message>
         <source>This button will restore the defaults for all settings.</source>
-        <translation type="unfinished"/>
+        <translation>Эта кнопка восстановит стандартные настройки для всех параметров.</translation>
+    </message>
+    <message>
+        <source>Defaults (All)</source>
+        <translation>По умолчанию (Все)</translation>
     </message>
 </context>
 <context>
@@ -2810,60 +2864,8 @@ Are you sure you wish to replace your certificate?
         <translation>Введите имя пользователя</translation>
     </message>
     <message>
-        <source>Adding host %1</source>
-        <translation>Добавление хоста %1</translation>
-    </message>
-    <message>
         <source>Servername</source>
         <translation>Название сервера</translation>
-    </message>
-    <message>
-        <source>Hostname</source>
-        <translation>Адрес</translation>
-    </message>
-    <message>
-        <source>Bonjour name</source>
-        <translation>Имя Bonjour</translation>
-    </message>
-    <message>
-        <source>Port</source>
-        <translation>Порт</translation>
-    </message>
-    <message>
-        <source>Addresses</source>
-        <translation>IP-адрес</translation>
-    </message>
-    <message>
-        <source>Website</source>
-        <translation>Веб-сайт</translation>
-    </message>
-    <message>
-        <source>Packet loss</source>
-        <translation>Потеря пакетов</translation>
-    </message>
-    <message>
-        <source>Ping (80%)</source>
-        <translation>Пинг (80%)</translation>
-    </message>
-    <message>
-        <source>%1 ms</source>
-        <translation>%1 мс</translation>
-    </message>
-    <message>
-        <source>Ping (95%)</source>
-        <translation>Пинг (95%)</translation>
-    </message>
-    <message>
-        <source>Bandwidth</source>
-        <translation>Канал</translation>
-    </message>
-    <message>
-        <source>%1 kbit/s</source>
-        <translation>%1 кбит/с</translation>
-    </message>
-    <message>
-        <source>&amp;Connect</source>
-        <translation>&amp;Подключиться</translation>
     </message>
     <message>
         <source>Unknown</source>
@@ -2872,10 +2874,6 @@ Are you sure you wish to replace your certificate?
     <message>
         <source>Users</source>
         <translation>Пользователей</translation>
-    </message>
-    <message>
-        <source>Version</source>
-        <translation>Версия</translation>
     </message>
     <message>
         <source>Failed to fetch server list</source>
@@ -2931,67 +2929,123 @@ Are you sure you wish to replace your certificate?
     </message>
     <message>
         <source>Server list</source>
-        <translation type="unfinished"/>
+        <translation>Список серверов</translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished"/>
+        <translation>Поиск</translation>
     </message>
     <message>
         <source>Location</source>
-        <translation type="unfinished"/>
+        <translation>Местоположение</translation>
     </message>
     <message>
         <source>Filter</source>
-        <translation type="unfinished"/>
+        <translation>Фильтр</translation>
     </message>
     <message>
         <source>Show All</source>
-        <translation type="unfinished"/>
+        <translation>Показать все</translation>
     </message>
     <message>
         <source>Show Populated</source>
-        <translation type="unfinished"/>
+        <translation>Показать населенные</translation>
     </message>
     <message>
         <source>Show Reachable</source>
-        <translation type="unfinished"/>
+        <translation>Показать доступные</translation>
     </message>
     <message>
         <source>All</source>
-        <translation type="unfinished"/>
+        <translation>Все</translation>
     </message>
     <message>
         <source>Africa</source>
-        <translation type="unfinished"/>
+        <translation>Африка</translation>
     </message>
     <message>
         <source>Asia</source>
-        <translation type="unfinished"/>
+        <translation>Азия</translation>
     </message>
     <message>
         <source>Europe</source>
-        <translation type="unfinished"/>
+        <translation>Европа</translation>
     </message>
     <message>
         <source>North America</source>
-        <translation type="unfinished"/>
+        <translation>Северная Америка</translation>
     </message>
     <message>
         <source>Oceania</source>
-        <translation type="unfinished"/>
+        <translation>Океания</translation>
     </message>
     <message>
         <source>South America</source>
-        <translation type="unfinished"/>
+        <translation>Южная Америка</translation>
     </message>
     <message>
         <source>Consent to the transmission of private data</source>
-        <translation type="unfinished"/>
+        <translation>Согласие на передачу личных данных</translation>
     </message>
     <message>
         <source>&lt;p&gt;To measure the latency (ping) of public servers and determine the number of active users, your IP address must be transmitted to each public server.&lt;/p&gt;&lt;p&gt;Do you consent to the transmission of your IP address? If you answer no, the public server list will be deactivated. However, you can reactivate it at any time in the network settings.&lt;/p&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;p&gt;Для измерения задержки (пинга) до публичных серверов и определения количества активных пользователей, ваш IP адрес должен быть передан каждому публичному серверу.&lt;/p&gt;&lt;p&gt;Согласны ли вы на передачу своего IP адреса? Если вы ответите &quot;нет&quot;, список публичных серверов будет деактивирован. Вы всегда можете включить его в настройках сети.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <source>C&amp;onnect</source>
+        <translation type="unfinished">&amp;Подключиться</translation>
+    </message>
+    <message>
+        <source>Adding host %1</source>
+        <translation>Добавление хоста %1</translation>
+    </message>
+    <message>
+        <source>Hostname</source>
+        <translation>Адрес</translation>
+    </message>
+    <message>
+        <source>Bonjour name</source>
+        <translation>Имя Bonjour</translation>
+    </message>
+    <message>
+        <source>Port</source>
+        <translation>Порт</translation>
+    </message>
+    <message>
+        <source>Addresses</source>
+        <translation>IP-адрес</translation>
+    </message>
+    <message>
+        <source>Website</source>
+        <translation>Веб-сайт</translation>
+    </message>
+    <message>
+        <source>Packet loss</source>
+        <translation>Потеря пакетов</translation>
+    </message>
+    <message>
+        <source>Ping (80%)</source>
+        <translation>Пинг (80%)</translation>
+    </message>
+    <message>
+        <source>%1 ms</source>
+        <translation>%1 мс</translation>
+    </message>
+    <message>
+        <source>Ping (95%)</source>
+        <translation>Пинг (95%)</translation>
+    </message>
+    <message>
+        <source>Bandwidth</source>
+        <translation>Канал</translation>
+    </message>
+    <message>
+        <source>%1 kbit/s</source>
+        <translation>%1 кбит/с</translation>
+    </message>
+    <message>
+        <source>Version</source>
+        <translation>Версия</translation>
     </message>
 </context>
 <context>
@@ -3017,7 +3071,7 @@ Are you sure you wish to replace your certificate?
         <source>&lt;b&gt;Address&lt;/b&gt;&lt;br/&gt;
 Internet address of the server. This can be a normal hostname, an IPv4/IPv6 address or a Bonjour service identifier. Bonjour service identifiers have to be prefixed with a &apos;@&apos; to be recognized by Mumble.</source>
         <oldsource>&lt;b&gt;Address&lt;/b&gt;&lt;/br&gt;
-Internet address of the server. This can be a normal hostname, an ipv4/6 address or a bonjour service identifier. Bonjour service identifiers have to be prefixed with a '@' to be recognized by Mumble.</oldsource>
+Internet address of the server. This can be a normal hostname, an ipv4/6 address or a bonjour service identifier. Bonjour service identifiers have to be prefixed with a &apos;@&apos; to be recognized by Mumble.</oldsource>
         <translation>&lt;b&gt;Адрес&lt;/b&gt;&lt;br/&gt;Сетевой адрес сервера. Может быть доменным именем или IPv4/IPv6 адресом, либо идентификатором службы Bonjour. Идентификаторы Bonjour должны иметь префикс &apos;@&apos;.</translation>
     </message>
     <message>
@@ -3118,14 +3172,7 @@ Label of the server. This is what the server will be named like in your server l
     </message>
     <message>
         <source>&amp;Ignore</source>
-        <translation type="unfinished"/>
-    </message>
-</context>
-<context>
-    <name>CoreAudioSystem</name>
-    <message>
-        <source>Default Device</source>
-        <translation>Устройство по умолчанию</translation>
+        <translation>&amp;Игнорировать</translation>
     </message>
 </context>
 <context>
@@ -3168,14 +3215,6 @@ Label of the server. This is what the server will be named like in your server l
         <translation>Отправка неудалась</translation>
     </message>
     <message>
-        <source>We&apos;re really sorry, but it appears the crash upload has failed with error %1 %2. Please inform a developer.</source>
-        <translation>Ошибка отправки отчёта %1 %2. Сообщите разработчику.</translation>
-    </message>
-    <message>
-        <source>This really isn&apos;t funny, but apparently there&apos;s a bug in the crash reporting code, and we&apos;ve failed to upload the report. You may inform a developer about error %1</source>
-        <translation>Это действительно не смешно. Очевидно, имеется ошибка в коде отправке отчета и его отправка не удалась. Вы можете проинформировать разработчика об ошибке %1</translation>
-    </message>
-    <message>
         <source>Uploading crash report</source>
         <translation>Отправка отчета об ошибке</translation>
     </message>
@@ -3183,21 +3222,29 @@ Label of the server. This is what the server will be named like in your server l
         <source>Abort upload</source>
         <translation>Отмена отправки</translation>
     </message>
+    <message>
+        <source>HTTP error %1: &quot;%2&quot;</source>
+        <translation>Ошибка HTTP %1: &quot;%2&quot;</translation>
+    </message>
+    <message>
+        <source>Internal error encountered in CrashReporter.cpp: Received network reply does not contain an HTTP status code. Please inform a developer about error code %1</source>
+        <translation>В CrashReporter.cpp обнаружена внутренняя ошибка: полученный сетевой ответ не содержит кода состояния HTTP. Сообщите разработчику о коде ошибки %1</translation>
+    </message>
 </context>
 <context>
     <name>Database</name>
     <message>
         <source>The database &apos;%1&apos; is read-only. Mumble cannot store server settings (i.e. SSL certificates) until you fix this problem.</source>
-        <oldsource>The database '%1' is read-only. Mumble can not store server settings (ie. SSL certificates) until you fix this problem.</oldsource>
+        <oldsource>The database &apos;%1&apos; is read-only. Mumble can not store server settings (ie. SSL certificates) until you fix this problem.</oldsource>
         <translation>База данных &apos;%1&apos; доступна только для чтения. Mumble не сможет хранить настройки сервера (такие как SSL сертификаты) до тех пор, пока Вы не исправите эту проблему.</translation>
     </message>
     <message>
         <source>The database file &apos;%1&apos; set in the configuration file does not exist. Do you want to create a new database file at this location?</source>
-        <translation type="unfinished"/>
+        <translation>Файл базы данных &apos;%1&apos;, указанный в конфигурационном файле, не существует. Вы хотите создать новую базу данных по этому адресу?</translation>
     </message>
     <message>
         <source>Mumble failed to initialize a database in any of the possible locations.</source>
-        <translation type="unfinished"/>
+        <translation>Mumble не удалось инициализировать базу данных ни в одном из доступных мест.</translation>
     </message>
 </context>
 <context>
@@ -3289,14 +3336,6 @@ Label of the server. This is what the server will be named like in your server l
         <translation>Дополнительные программы горячих клавиш</translation>
     </message>
     <message>
-        <source>&lt;b&gt;Enable Windows hooks&lt;/b&gt;.&lt;br /&gt;This enables the Windows hooks shortcut engine. Using this engine allows Mumble to suppress keypresses and mouse clicks.</source>
-        <translation>&lt;b&gt;Включить обработчики Windows&lt;/b&gt;.&lt;br /&gt; Эта функция включает механизм обработчиков Windows. Использование этого режима позволяет Mumble подавлять нажатия клавиш и клики мыши.</translation>
-    </message>
-    <message>
-        <source>Enable Windows hooks</source>
-        <translation>Включить обработчики Windows.</translation>
-    </message>
-    <message>
         <source>&lt;b&gt;Enable GKey&lt;/b&gt;.&lt;br /&gt;This setting enables support for the GKey shortcut engine, for &quot;G&quot;-keys found on Logitech keyboards.</source>
         <translation>&lt;b&gt;Включить GKey&lt;/b&gt;.&lt;br /&gt; Эта настройка включает поддержку &quot;G&quot;-клавиш, располагаемых на клавиатурах Logitech.</translation>
     </message>
@@ -3326,6 +3365,33 @@ Without this option enabled, using Mumble&apos;s global shortcuts in privileged 
     </message>
 </context>
 <context>
+    <name>GlobalShortcutButtons</name>
+    <message>
+        <source>Edit shortcut</source>
+        <translation>Изменить клавишу</translation>
+    </message>
+    <message>
+        <source>Start capture process</source>
+        <translation>Начать процесс захвата</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Starts the capture process: all buttons you press will be added to the tree.&lt;/p&gt;&lt;p&gt;Once all buttons are released, the capture process stops automatically.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Запускается процесс захвата: все кнопки, которые вы нажимаете, будут добавлены в дерево.&lt;/p&gt;&lt;p&gt;Как только все кнопки будут отпущены, процесс захвата автоматически остановится.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Add</source>
+        <translation>Добавить</translation>
+    </message>
+    <message>
+        <source>Remove the currently selected items</source>
+        <translation>Удалить выбранные в данный момент элементы</translation>
+    </message>
+    <message>
+        <source>Remove</source>
+        <translation>Удалить</translation>
+    </message>
+</context>
+<context>
     <name>GlobalShortcutConfig</name>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Mumble can currently only use mouse buttons and keyboard modifier keys (Alt, Ctrl, Cmd, etc.) for global shortcuts.&lt;/p&gt;&lt;p&gt;If you want more flexibility, you can add Mumble as a trusted accessibility program in the Security &amp; Privacy section of your Mac&apos;s System Preferences.&lt;/p&gt;&lt;p&gt;In the Security &amp; Privacy preference pane, change to the Privacy tab. Then choose Accessibility (near the bottom) in the list to the left. Finally, add Mumble to the list of trusted accessibility programs.&lt;/body&gt;&lt;/html&gt;</source>
@@ -3350,14 +3416,32 @@ Without this option enabled, using Mumble&apos;s global shortcuts in privileged 
     </message>
     <message>
         <source>Configured shortcuts</source>
-        <translation type="unfinished"/>
+        <translation>Настроенные горячие клавиши</translation>
+    </message>
+</context>
+<context>
+    <name>GlobalShortcutEngine</name>
+    <message>
+        <source>Unknown</source>
+        <translation>Неизвестная</translation>
+    </message>
+</context>
+<context>
+    <name>GlobalShortcutMac</name>
+    <message>
+        <source>Mouse</source>
+        <translation>Мышь</translation>
+    </message>
+    <message>
+        <source>Keyboard</source>
+        <translation>Клавиатура</translation>
     </message>
 </context>
 <context>
     <name>GlobalShortcutTarget</name>
     <message>
         <source>Whisper Target</source>
-        <translation>Цель Шепота</translation>
+        <translation>Цель шёпота</translation>
     </message>
     <message>
         <source>Channel Target</source>
@@ -3369,7 +3453,7 @@ Without this option enabled, using Mumble&apos;s global shortcuts in privileged 
     </message>
     <message>
         <source>If specified, only members of this group will receive the whisper.</source>
-        <translation>Если указано, только члены этой группы могут слышать шепот.</translation>
+        <translation>Если указано, только члены этой группы могут слышать шёпот.</translation>
     </message>
     <message>
         <source>List of users</source>
@@ -3389,7 +3473,7 @@ Without this option enabled, using Mumble&apos;s global shortcuts in privileged 
     </message>
     <message>
         <source>Do not send positional audio information when using this whisper shortcut.</source>
-        <translation>Не отсылать позицию в игре, когда используется шепот.</translation>
+        <translation>Не отсылать позицию в игре, когда используется шёпот.</translation>
     </message>
     <message>
         <source>Ignore positional audio</source>
@@ -3405,11 +3489,11 @@ Without this option enabled, using Mumble&apos;s global shortcuts in privileged 
     </message>
     <message>
         <source>The whisper will also be transmitted to linked channels.</source>
-        <translation>Шепот будет также передаваться в связанные каналы.</translation>
+        <translation>Шёпот будет также передаваться в связанные каналы.</translation>
     </message>
     <message>
         <source>The whisper will also be sent to the subchannels of the channel target.</source>
-        <translation>Шепот будет также передаваться в подканалы канала назначения.</translation>
+        <translation>Шёпот будет также передаваться в подканалы канала назначения.</translation>
     </message>
     <message>
         <source>Shout/Whisper to:</source>
@@ -3433,10 +3517,25 @@ Without this option enabled, using Mumble&apos;s global shortcuts in privileged 
     </message>
 </context>
 <context>
+    <name>GlobalShortcutWin</name>
+    <message>
+        <source>Mouse</source>
+        <translation>Мышь</translation>
+    </message>
+    <message>
+        <source>Keyboard</source>
+        <translation>Клавиатура</translation>
+    </message>
+</context>
+<context>
     <name>GlobalShortcutX</name>
     <message>
-        <source>Mouse %1</source>
-        <translation>Мышь %1</translation>
+        <source>Keyboard</source>
+        <translation>Клавиатура</translation>
+    </message>
+    <message>
+        <source>Mouse</source>
+        <translation>Мышь</translation>
     </message>
 </context>
 <context>
@@ -3520,11 +3619,11 @@ This field describes the size of an LCD device. The size is given either in pixe
     </message>
     <message>
         <source>Minimum column width</source>
-        <translation type="unfinished"/>
+        <translation>Мин. размер столбца</translation>
     </message>
     <message>
         <source>Splitter width</source>
-        <translation type="unfinished"/>
+        <translation>Ширина разделителя</translation>
     </message>
 </context>
 <context>
@@ -3562,7 +3661,7 @@ This field describes the size of an LCD device. The size is given either in pixe
     </message>
     <message>
         <source>User kicked (you or by you)</source>
-        <translation>Пользователь выкинул/выкинут (Вас или Вами)</translation>
+        <translation>Пользователь выкинул Вас или выкинут Вами</translation>
     </message>
     <message>
         <source>User kicked</source>
@@ -3570,7 +3669,7 @@ This field describes the size of an LCD device. The size is given either in pixe
     </message>
     <message>
         <source>You self-muted</source>
-        <translation>Вы наложили на себя онемение</translation>
+        <translation>Вы выключили микрофон</translation>
     </message>
     <message>
         <source>User muted (you)</source>
@@ -3586,15 +3685,15 @@ This field describes the size of an LCD device. The size is given either in pixe
     </message>
     <message>
         <source>You self-unmuted</source>
-        <translation>Самоонемение снято</translation>
+        <translation>Вы включили микрофон</translation>
     </message>
     <message>
         <source>You self-deafened</source>
-        <translation>Самоглушение установлено</translation>
+        <translation>Вы выключили звук</translation>
     </message>
     <message>
         <source>You self-undeafened</source>
-        <translation>Самоглушение снято</translation>
+        <translation>Вы включили звук</translation>
     </message>
     <message>
         <source>User renamed</source>
@@ -3675,7 +3774,7 @@ This field describes the size of an LCD device. The size is given either in pixe
     </message>
     <message>
         <source>Permission denied</source>
-        <translation>Доступ запрещен</translation>
+        <translation>Доступ запрещён</translation>
     </message>
     <message>
         <source>Text message</source>
@@ -3697,6 +3796,10 @@ This field describes the size of an LCD device. The size is given either in pixe
         <source>User stopped listening to channel</source>
         <translation> Пользователь перестал слушать канал</translation>
     </message>
+    <message>
+        <source>Plugin message</source>
+        <translation>Сообщение плагина</translation>
+    </message>
 </context>
 <context>
     <name>LogConfig</name>
@@ -3710,7 +3813,7 @@ This field describes the size of an LCD device. The size is given either in pixe
     </message>
     <message>
         <source>Toggle Text-To-Speech for %1 events</source>
-        <translation>Включение/выключение Текст-в речь для событий &quot;%1&quot;</translation>
+        <translation>Включение/выключение Текст-в-речь для событий &quot;%1&quot;</translation>
     </message>
     <message>
         <source>Click here to toggle sound notification for %1 events</source>
@@ -3718,7 +3821,7 @@ This field describes the size of an LCD device. The size is given either in pixe
     </message>
     <message>
         <source>Toggle window highlight (if not active) for %1 events</source>
-        <translation>Включение/выключение выделение окна (если не активно) для %1 событий</translation>
+        <translation>Включение/выключение выделения окна (если не активно) для %1 событий</translation>
     </message>
     <message>
         <source>Path to sound file used for sound notifications in the case of %1 events&lt;br /&gt;Single click to play&lt;br /&gt;Double-click to change</source>
@@ -3813,15 +3916,15 @@ This field describes the size of an LCD device. The size is given either in pixe
     </message>
     <message>
         <source>Whisper</source>
-        <translation>Шепот</translation>
+        <translation>Шёпот</translation>
     </message>
     <message>
         <source>If checked you will only hear whispers from users you added to your friend list.</source>
-        <translation>Если отмечено, Вы будете слышать шепот только от пользователей, которые добавлены в Ваш список друзей.</translation>
+        <translation>Если отмечено, Вы будете слышать шёпот только от пользователей, которые добавлены в Ваш список друзей.</translation>
     </message>
     <message>
         <source>Only accept whispers from friends</source>
-        <translation>Слышать шепот только от друзей</translation>
+        <translation>Слышать шёпот только от друзей</translation>
     </message>
     <message>
         <source>If enabled text messages you send will be read back to you with TTS</source>
@@ -3889,15 +3992,15 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Log messages</source>
-        <translation type="unfinished"/>
+        <translation>Сообшения в логе</translation>
     </message>
     <message>
         <source>TTS engine volume</source>
-        <translation type="unfinished"/>
+        <translation>Громкость сообщений Текст-в-речь</translation>
     </message>
     <message>
         <source>Chat message margins</source>
-        <translation type="unfinished"/>
+        <translation>Отступы сообщения в чате</translation>
     </message>
 </context>
 <context>
@@ -4102,7 +4205,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Tray Icon</source>
-        <translation>Системный Трей</translation>
+        <translation>Системный трей</translation>
     </message>
     <message>
         <source>Channel Tree</source>
@@ -4174,7 +4277,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>If this is checked, the local user (yourself) will always be visible in the TalkingUI (regardless of talking state).</source>
-        <translation>Если отмечено, локальный пользователь (вы сами) всегда будет виден в интерфейсе диалога (независимо от состояния разговора).</translation>
+        <translation>Если отмечено, локальный пользователь (вы) всегда будет виден в интерфейсе диалога (независимо от состояния разговора).</translation>
     </message>
     <message>
         <source>Always keep local user visible</source>
@@ -4254,55 +4357,63 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Prefix character count</source>
-        <translation type="unfinished"/>
+        <translation>Количество символов в префиксе</translation>
     </message>
     <message>
         <source>Postfix character count</source>
-        <translation type="unfinished"/>
+        <translation>Количество символов в окончании</translation>
     </message>
     <message>
         <source>Maximum name length</source>
-        <translation type="unfinished"/>
+        <translation>Максимальная длина имени</translation>
     </message>
     <message>
         <source>Relative font size</source>
-        <translation type="unfinished"/>
+        <translation>Относительный размер шрифта</translation>
     </message>
     <message>
         <source>Always on top</source>
-        <translation type="unfinished"/>
+        <translation>Отображать на переднем плане</translation>
     </message>
     <message>
         <source>Channel dragging</source>
-        <translation type="unfinished"/>
+        <translation>Перетаскивание канала</translation>
     </message>
     <message>
         <source>Automatically expand channels when</source>
-        <translation type="unfinished"/>
+        <translation>Автоматически разворачивать каналы</translation>
     </message>
     <message>
         <source>User dragging behavior</source>
-        <translation type="unfinished"/>
+        <translation>Перетаскивание пользователя</translation>
     </message>
     <message>
         <source>Silent user lifetime</source>
-        <translation type="unfinished"/>
+        <translation>Удалить молчаливого пользователя после</translation>
     </message>
     <message>
         <source>Show the local volume adjustment for each user (if any).</source>
-        <translation type="unfinished"/>
+        <translation>Показать локальную регулировку громкости для каждого пользователя (если есть).</translation>
     </message>
     <message>
         <source>Show volume adjustments</source>
-        <translation type="unfinished"/>
+        <translation>Показать регулировку громкости</translation>
     </message>
     <message>
         <source>Whether to show all of the local user&apos;s listeners (ears) in the TalkingUI (and thereby also the channels they are in). </source>
-        <translation type="unfinished"/>
+        <translation>Показывать всех слушателей локального пользователя (уши) в интерфейсе диалога (во всех каналах, где они присутствуют)</translation>
     </message>
     <message>
         <source>Show local user&apos;s listeners (ears)</source>
-        <translation type="unfinished"/>
+        <translation>Показывать слушателей локального пользователя (уши)</translation>
+    </message>
+    <message>
+        <source>Hide the username for each user if they have a nickname.</source>
+        <translation>Скрывать имя пользователя для всех, у кого есть ник.</translation>
+    </message>
+    <message>
+        <source>Show nicknames only</source>
+        <translation>Показывать только ники</translation>
     </message>
 </context>
 <context>
@@ -4324,7 +4435,7 @@ The setting only applies for new messages, the already shown ones will retain th
     <message>
         <source>This configures the push-to-talk button, and as long as you hold this button down, you will transmit voice.</source>
         <comment>Global Shortcut</comment>
-        <translation>Здесь настраивается кнопка для включения речи, пока Вы ее удерживаете, другие пользователи слышат Ваш голос.</translation>
+        <translation>Здесь настраивается кнопка для включения речи. Пока Вы ее удерживаете, другие пользователи слышат Ваш голос.</translation>
     </message>
     <message>
         <source>Reset Audio Processor</source>
@@ -4339,7 +4450,7 @@ The setting only applies for new messages, the already shown ones will retain th
     <message>
         <source>Push-to-Mute</source>
         <comment>Global Shortcut</comment>
-        <translation>Нажмите, чтобы выключить микрофон</translation>
+        <translation>Выключение микрофона при удержании</translation>
     </message>
     <message>
         <source>Join Channel</source>
@@ -4412,7 +4523,7 @@ The setting only applies for new messages, the already shown ones will retain th
     <message>
         <source>This will set or toggle your muted status. If you turn this off, you will also disable self-deafen.</source>
         <comment>Global Shortcut</comment>
-        <translation>Наложит/Снимет с Вас онемение. Если выключить - с Вас также будет снято глушение.</translation>
+        <translation>Включит или выключит ваш микрофон. Включение микрофона также включает звук.</translation>
     </message>
     <message>
         <source>Deafen Self</source>
@@ -4488,56 +4599,12 @@ The setting only applies for new messages, the already shown ones will retain th
         <translation>Установлен режим Постоянный</translation>
     </message>
     <message>
-        <source>&lt;p&gt;%1 (%2)&lt;br /&gt;%3&lt;/p&gt;</source>
-        <translation>&lt;p&gt;%1 (%2)&lt;br /&gt;%3&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;h2&gt;Voice channel&lt;/h2&gt;&lt;p&gt;Encrypted with 128 bit OCB-AES128&lt;br /&gt;%1 ms average latency (%4 deviation)&lt;/p&gt;</source>
-        <translation>&lt;h2&gt;Голосовой канал&lt;/h2&gt;&lt;p&gt;Шифрование 128 бит OCB-AES128&lt;br /&gt;%1 мс среднее время задержки (%4 отклонение)&lt;/p&gt;</translation>
-    </message>
-    <message>
         <source>Register yourself as %1</source>
         <translation>Зарегистрироваться как %1</translation>
     </message>
     <message>
         <source>&lt;p&gt;You are about to register yourself on this server. This action cannot be undone, and your username cannot be changed once this is done. You will forever be known as &apos;%1&apos; on this server.&lt;/p&gt;&lt;p&gt;Are you sure you want to register yourself?&lt;/p&gt;</source>
         <translation>&lt;p&gt;Вы собираетесь зарегистрироваться на этом сервере. Невозможно будет отметить данное действие и изменить Ваше имя для данного сертификата. Вы всегда будете известны как &lt;b&gt;&apos;%1&apos;&lt;/b&gt; на этом сервере.&lt;/p&gt;&lt;p&gt;Вы действительно желаете зарегистрироваться?&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;h2&gt;Version&lt;/h2&gt;&lt;p&gt;Protocol %1&lt;/p&gt;</source>
-        <translation>&lt;h2&gt;Версия&lt;/h2&gt;&lt;p&gt;Протокол %1&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;No build information or OS version available&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Информация о сборке или версии ОС недоступна&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>The connection is encrypted and authenticated using %1 and uses %2 as the key exchange mechanism (%3)</source>
-        <translation>Соединение зашифровано и аутентифицировано с использованием %1 и использует %2 в качестве механизма обмена ключами (%3).</translation>
-    </message>
-    <message>
-        <source>The connection is encrypted using %1, with %2 for message authentication and %3 as the key exchange mechanism (%4)</source>
-        <translation>Соединение зашифровано с использованием %1, вместе с %2 для аутентификации сообщений и %3 в качестве механизма обмена ключами (%4)</translation>
-    </message>
-    <message>
-        <source>The connection is secured by the cipher suite that OpenSSL identifies as %1</source>
-        <translation>Соединение защищено комбинацией шифров, который OpenSSL идентифицирует как %1</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;The connection provides perfect forward secrecy&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Соединение обеспечивает совершенную прямую секретность&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;The connection does not provide perfect forward secrecy&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Соединение не обеспечивает совершенную прямую секретность&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;h2&gt;Control channel&lt;/h2&gt;&lt;p&gt;The connection uses %1&lt;/p&gt;%2%3&lt;p&gt;%4 ms average latency (%5 deviation)&lt;/p&gt;&lt;p&gt;Remote host %6 (port %7)&lt;/p&gt;</source>
-        <translation>&lt;h2&gt;Канал управления&lt;/h2&gt;&lt;p&gt;Соединение использует %1&lt;/p&gt;%2%3&lt;p&gt;%4 среднее время задержки в мс (%5 отклонение)&lt;/p&gt;&lt;p&gt;Удаленный сервер %6 (порт %7)&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>Voice channel is sent over control channel</source>
-        <translation>Голосовой канал посылается через контрольный канал</translation>
     </message>
     <message>
         <source>Register user %1</source>
@@ -4549,7 +4616,7 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>Kicking user %1</source>
-        <translation>Выбросить пользователя %1</translation>
+        <translation>Выкинуть пользователя %1</translation>
     </message>
     <message>
         <source>Banning user %1</source>
@@ -4589,12 +4656,12 @@ The setting only applies for new messages, the already shown ones will retain th
     </message>
     <message>
         <source>&lt;center&gt;Type message to channel &apos;%1&apos; here&lt;/center&gt;</source>
-        <oldsource>Type message to channel '%1' here</oldsource>
+        <oldsource>Type message to channel &apos;%1&apos; here</oldsource>
         <translation>&lt;center&gt;Напечатайте здесь сообщение для канала &apos;%1&apos;&lt;/center&gt;</translation>
     </message>
     <message>
         <source>&lt;center&gt;Type message to user &apos;%1&apos; here&lt;/center&gt;</source>
-        <oldsource>Type message to user '%1' here</oldsource>
+        <oldsource>Type message to user &apos;%1&apos; here</oldsource>
         <translation>&lt;center&gt;Напечатайте здесь сообщение для пользователя &apos;%1&apos;&lt;/center&gt;</translation>
     </message>
     <message>
@@ -4714,46 +4781,6 @@ The setting only applies for new messages, the already shown ones will retain th
     <message>
         <source>Transmit Mode set to Push-to-Talk</source>
         <translation>Установлен режим &quot;нажми-чтобы-говорить&quot;</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;Connected users: %1/%2&lt;/p&gt;</source>
-        <translation>&lt;p&gt;Подключённые пользователи: %1/%2&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>UDP Statistics</source>
-        <translation>UDP статистика</translation>
-    </message>
-    <message>
-        <source>To Server</source>
-        <translation>К серверу</translation>
-    </message>
-    <message>
-        <source>From Server</source>
-        <translation>От сервера</translation>
-    </message>
-    <message>
-        <source>Good</source>
-        <translation>Хорошие</translation>
-    </message>
-    <message>
-        <source>Late</source>
-        <translation>С запозданием</translation>
-    </message>
-    <message>
-        <source>Lost</source>
-        <translation>Потерянные</translation>
-    </message>
-    <message>
-        <source>Resync</source>
-        <translation>Реcинхронизированные</translation>
-    </message>
-    <message>
-        <source>&lt;h2&gt;Audio bandwidth&lt;/h2&gt;&lt;p&gt;Maximum %1 kbit/s&lt;br /&gt;Current %2 kbit/s&lt;br /&gt;Codec: %3&lt;/p&gt;</source>
-        <translation>&lt;h2&gt;Качество звука&lt;/h2&gt;&lt;p&gt;Максимально %1 кбит/с&lt;br /&gt;Текущее %2 кбит/с&lt;br /&gt;Кодек: %3&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <source>Mumble Server Information</source>
-        <translation>Информация о сервере</translation>
     </message>
     <message>
         <source>&amp;View Certificate</source>
@@ -5124,11 +5151,11 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>&amp;Text-To-Speech</source>
-        <translation>Текст-в-&amp;Речь</translation>
+        <translation>Текст-в-&amp;речь</translation>
     </message>
     <message>
         <source>Toggle Text-To-Speech</source>
-        <translation>Включить/Выключить Текст-в-Речь</translation>
+        <translation>Включить/Выключить Текст-в-речь</translation>
     </message>
     <message>
         <source>Enable or disable the text-to-speech engine. Only messages enabled for TTS in the Configuration dialog will actually be spoken.</source>
@@ -5140,7 +5167,7 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>Pops up a small dialog with information about your current audio input.</source>
-        <translation>Вызывает маленькую подсказку о Вашем текущем входящем звуке.</translation>
+        <translation>Вызывает маленькую подсказку о Вашем текущем устройстве ввода.</translation>
     </message>
     <message>
         <source>Forcibly unlink plugin</source>
@@ -5408,7 +5435,7 @@ Otherwise abort and check your certificate and username.</source>
     </message>
     <message>
         <source>Permission denied.</source>
-        <translation>Доступ запрещен.</translation>
+        <translation>Доступ запрещён.</translation>
     </message>
     <message>
         <source>%1 connected and entered channel.</source>
@@ -5658,48 +5685,6 @@ Otherwise abort and check your certificate and username.</source>
 </translation>
     </message>
     <message>
-        <source>Usage: mumble rpc &lt;action&gt; [options]
-
-It is possible to remote control a running instance of Mumble by using
-the 'mumble rpc' command.
-
-Valid actions are:
-  mute
-                Mute self
-  unmute
-                Unmute self
-  togglemute
-                Toggle self-mute status
-  deaf
-                Deafen self
-  undeaf
-                Undeafen self
-  toggledeaf
-                Toggle self-deafen status
-
-</source>
-        <translation>Использование: mumble rpc [ключи]
-
-Можно дистанционно управлять запущенным экземпляром Mumble, используя
-команду &apos;mumble rpc&apos;.
-
-Допустимые ключи:
-  mute
-                Выключить микрофон
-  unmute
-                Включить микрофон
-  togglemute
-                Переключить состояние микрофона
-  deaf
-                Выключить звук
-  undeaf
-                Включить звук
-  toggledeaf
-                Переключить состояние звука
-
-</translation>
-    </message>
-    <message>
         <source>Invocation</source>
         <translation>Вызов</translation>
     </message>
@@ -5757,7 +5742,7 @@ Valid actions are:
     </message>
     <message>
         <source>&amp;Self</source>
-        <translation>Са&amp;м</translation>
+        <translation>&amp;Пользователь</translation>
     </message>
     <message>
         <source>&amp;Unlink Plugins</source>
@@ -5769,15 +5754,15 @@ Valid actions are:
     </message>
     <message>
         <source>Change your avatar image on this server</source>
-        <translation>Изменить изображение аватара на сервере</translation>
+        <translation>Изменить ваш аватар на сервере</translation>
     </message>
     <message>
         <source>&amp;Remove Avatar</source>
-        <translation>&amp;Удалить Аватар</translation>
+        <translation>&amp;Удалить аватар</translation>
     </message>
     <message>
         <source>Remove currently defined avatar image.</source>
-        <translation>Удалить текущее изображение аватара.</translation>
+        <translation>Удалить текущий аватар.</translation>
     </message>
     <message>
         <source>Icon Toolbar</source>
@@ -5899,7 +5884,7 @@ the channel&apos;s context menu.</source>
     </message>
     <message>
         <source>&amp;Kick...</source>
-        <translation>К&amp;икнуть</translation>
+        <translation>В&amp;ыкинуть...</translation>
     </message>
     <message>
         <source>&amp;Ban...</source>
@@ -5955,19 +5940,19 @@ the channel&apos;s context menu.</source>
     </message>
     <message>
         <source>&amp;Certificate Wizard...</source>
-        <translation>Мастер &amp;Сертификатов...</translation>
+        <translation>Мастер &amp;сертификатов...</translation>
     </message>
     <message>
         <source>&amp;Register...</source>
-        <translation>За&amp;регистрировать...</translation>
+        <translation>За&amp;регистрироваться...</translation>
     </message>
     <message>
         <source>Registered &amp;Users...</source>
-        <translation>&amp;Зарегистрированные Пользователи...</translation>
+        <translation>&amp;Зарегистрированные пользователи...</translation>
     </message>
     <message>
         <source>Change &amp;Avatar...</source>
-        <translation>Сменить &amp;Аватар...</translation>
+        <translation>Сменить &amp;аватар...</translation>
     </message>
     <message>
         <source>&amp;Access Tokens...</source>
@@ -5979,7 +5964,7 @@ the channel&apos;s context menu.</source>
     </message>
     <message>
         <source>Reset &amp;Avatar...</source>
-        <translation>&amp;Удалить Аватар...</translation>
+        <translation>&amp;Удалить аватар...</translation>
     </message>
     <message>
         <source>View Comment...</source>
@@ -6075,60 +6060,129 @@ the channel&apos;s context menu.</source>
     </message>
     <message>
         <source>Channels and users</source>
-        <translation type="unfinished"/>
+        <translation>Каналы и пользователи</translation>
     </message>
     <message>
         <source>Activity log</source>
-        <translation type="unfinished"/>
+        <translation>Лог активности</translation>
     </message>
     <message>
         <source>Chat message</source>
-        <translation type="unfinished"/>
+        <translation>Сообщение в чате</translation>
     </message>
     <message>
         <source>Disable Text-To-Speech</source>
-        <translation type="unfinished"/>
+        <translation>Выключить Текст-в-речь</translation>
     </message>
     <message>
         <source>Locally disable Text-To-Speech for this user&apos;s text chat messages.</source>
-        <translation type="unfinished"/>
+        <translation>Выключить Текст-в-речь для сообщений этого пользователя в чате.</translation>
     </message>
     <message>
         <source>Silently disables Text-To-Speech for all text messages from the user.</source>
-        <translation type="unfinished"/>
+        <translation>Выключить Текст-в-речь для всех сообщений этого пользователя.</translation>
     </message>
     <message>
         <source>Tree</source>
-        <translation type="unfinished"/>
+        <translation>Дерево</translation>
     </message>
     <message>
         <source>Channel</source>
-        <translation type="unfinished"/>
+        <translation>Канал</translation>
     </message>
     <message>
         <source>Private</source>
-        <translation type="unfinished"/>
+        <translation> Частный</translation>
     </message>
     <message>
         <source>%1: %2</source>
-        <translation type="unfinished"/>
+        <translation>%1: %2</translation>
     </message>
     <message>
         <source>(%1) %2</source>
-        <translation type="unfinished"/>
+        <translation>(%1) %2</translation>
     </message>
     <message>
         <source>Configuration file %1 does not exist or is not writable.
 </source>
-        <translation type="unfinished"/>
+        <translation>Файл конфигурации %1 не существует или недоступен для записи.
+</translation>
     </message>
     <message>
-        <source>Usage: mumble [options] [&lt;url&gt;]
+        <source>Hide/show main window</source>
+        <comment>Global Shortcut</comment>
+        <translation>Показать/скрыть основное окно</translation>
+    </message>
+    <message>
+        <source>&amp;Set Nickname...</source>
+        <translation>&amp;Установить ник...</translation>
+    </message>
+    <message>
+        <source>Set a local nickname</source>
+        <translation>Установить локальный ник</translation>
+    </message>
+    <message>
+        <source>Sets a local nickname for another user.</source>
+        <translation>Установить локальный ник для другого пользователя.</translation>
+    </message>
+    <message>
+        <source>Usage: mumble rpc &lt;action&gt; [options]
+
+It is possible to remote control a running instance of Mumble by using
+the &apos;mumble rpc&apos; command.
+
+Valid actions are:
+  mute
+                Mute self
+  unmute
+                Unmute self
+  togglemute
+                Toggle self-mute status
+  deaf
+                Deafen self
+  undeaf
+                Undeafen self
+  toggledeaf
+                Toggle self-deafen status
+  starttalking
+                Start talking
+  stoptalking
+                Stop talking
+
+</source>
+        <translation>Использование: mumble rpc &lt;действие&gt; [параметры]
+
+Можно удаленно управлять запущенным экземпляром Mumble с помощью
+команда mumble rpc.
+
+Допустимые действия:
+ mute
+ Без звука
+ unmute
+ Включить звук себе
+ togglemute
+ Переключить статус отключения звука
+ deaf
+ Заглушить себя
+ undeaf
+ Разглушить себя
+ toggledeaf
+ Переключить статус заглушения
+ starttalking
+ Начать говорить
+ stoptalking
+ Прекратить говорить
+
+</translation>
+    </message>
+    <message>
+        <source>Usage: mumble [options] [&lt;url&gt; | &lt;plugin_list&gt;]
 
 &lt;url&gt; specifies a URL to connect to after startup instead of showing
 the connection window, and has the following form:
 mumble://[&lt;username&gt;[:&lt;password&gt;]@]&lt;host&gt;[:&lt;port&gt;][/&lt;channel&gt;[/&lt;subchannel&gt;...]][?version=&lt;x.y.z&gt;]
 
+&lt;plugin_list&gt; is a list of plugin files that shall be installed
 The version query parameter has to be set in order to invoke the
 correct client version. It currently defaults to 1.2.0.
 
@@ -6139,7 +6193,11 @@ Valid options are:
   -c, --config
                 Specify an alternative configuration file.
                 If you use this to run multiple instances of Mumble at once,
-                make sure to set an alternative 'database' value in the config.
+                make sure to set an alternative &apos;database&apos; value in the config.
+  --default-certificate-dir &lt;dir&gt;
+                Specify an alternative default certificate path.
+                This path is only used if there is no certificate loaded
+                from the settings.
   -n, --noidentity
                 Suppress loading of identity files (i.e., certificates.)
   -jn, --jackname &lt;arg&gt;
@@ -6161,14 +6219,29 @@ Valid options are:
   --print-echocancel-queue
                 Print on stdout the echo cancellation queue state
                 (useful for debugging purposes)
-
+  --translation-dir &lt;dir&gt;
+                Specifies an additional translation fir &lt;dir&gt; in which
+                Mumble will search for translation files that overwrite
+                the bundled ones
+                Directories added this way have higher priority than
+                the default locations used otherwise
+  --print-translation-dirs
+                Print out the paths in which Mumble will search for
+                translation files that overwrite the bundled ones.
+                (Useful for translators testing their translations)
+  --locale &lt;locale&gt;
+                Overwrite the locale in Mumble&apos;s settings with a
+                locale that corresponds to the given locale string.
+                If the format is invalid, Mumble will error.
+                Otherwise the locale will be permanently saved to
+                Mumble&apos;s settings.
 </source>
-        <translation type="unfinished"/>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Hide/show main window</source>
-        <comment>Global Shortcut</comment>
-        <translation type="unfinished"/>
+        <source>Directory %1 does not exist.
+</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6247,15 +6320,15 @@ Valid options are:
     </message>
     <message>
         <source>Display</source>
-        <translation type="unfinished"/>
+        <translation>Вид</translation>
     </message>
     <message>
         <source>How long silent user&apos;s positions should stay marked after they have stopped talking (in seconds).</source>
-        <translation type="unfinished"/>
+        <translation>Как долго отображать позиции молчаливых пользователей после того, как они закончили говорить (в секундах).</translation>
     </message>
     <message>
         <source>Silent user displaytime:</source>
-        <translation type="unfinished"/>
+        <translation>Отображение молчаливых:</translation>
     </message>
 </context>
 <context>
@@ -6438,10 +6511,6 @@ Valid options are:
         <translation>Подключаться к последнему серверу при запуске</translation>
     </message>
     <message>
-        <source>Download plugin and overlay updates on startup</source>
-        <translation>Загружать обновления плагинов и табло при запуске</translation>
-    </message>
-    <message>
         <source>Privacy</source>
         <translation>Конфиденциальность</translation>
     </message>
@@ -6450,7 +6519,7 @@ Valid options are:
         <translation>Предотвратить передачу системной информации на сервера Mumble и веб-сервера</translation>
     </message>
     <message>
-        <source>&lt;b&gt;Don't send OS information to servers&lt;/b&gt;&lt;br/&gt;
+        <source>&lt;b&gt;Don&apos;t send OS information to servers&lt;/b&gt;&lt;br/&gt;
 Prevents the client from sending potentially identifying information about the operating system to the Mumble server and web servers.</source>
         <translation>&lt;b&gt;Не отправлять системную информацию на сервера&lt;/b&gt;&lt;br/&gt;Предотвращает отправку клиентом потенциально идентифицирующей информации об операционной системе на сервера Mumble и веб-сервера.</translation>
     </message>
@@ -6460,11 +6529,19 @@ Prevents the client from sending potentially identifying information about the o
     </message>
     <message>
         <source>When toggled this hides the public server list from the connect dialog</source>
-        <translation type="unfinished"/>
+        <translation>Скрывает список публичных серверов из диалога подключения.</translation>
     </message>
     <message>
         <source>Hide public server list</source>
-        <translation type="unfinished"/>
+        <translation>Скрыть список публичных серверов</translation>
+    </message>
+    <message>
+        <source>Check for plugin updates on startup</source>
+        <translation>Проверять обновления плагинов при запуске</translation>
+    </message>
+    <message>
+        <source>Automatically download and install plugin updates</source>
+        <translation>Автоматически загружать и устанавливать обновления плагинов</translation>
     </message>
 </context>
 <context>
@@ -6479,7 +6556,7 @@ Prevents the client from sending potentially identifying information about the o
     </message>
     <message>
         <source>Whisper</source>
-        <translation>Шепот</translation>
+        <translation>Шёпот</translation>
     </message>
     <message>
         <source>Shout</source>
@@ -6831,7 +6908,7 @@ To upgrade these files to their latest versions, click the button below.</source
     </message>
     <message>
         <source>Muted or deafened</source>
-        <translation>Выключензвук или микрофон</translation>
+        <translation>Выключен звук или микрофон</translation>
     </message>
     <message>
         <source>Mute state</source>
@@ -6851,7 +6928,7 @@ To upgrade these files to their latest versions, click the button below.</source
     </message>
     <message>
         <source>Zoom level</source>
-        <translation type="unfinished"/>
+        <translation>Уровень приближения</translation>
     </message>
 </context>
 <context>
@@ -6866,7 +6943,7 @@ To upgrade these files to their latest versions, click the button below.</source
     </message>
     <message>
         <source>Avatar and Name</source>
-        <translation>Аватар и Имя</translation>
+        <translation>Аватар и имя</translation>
     </message>
     <message>
         <source>User Opacity</source>
@@ -7020,31 +7097,189 @@ To upgrade these files to their latest versions, click the button below.</source
         <translation>Имя</translation>
     </message>
     <message>
-        <source>Enabled</source>
-        <translation>Включено</translation>
+        <source>Enable</source>
+        <translation type="unfinished">Включить</translation>
+    </message>
+    <message>
+        <source>PA</source>
+        <translation type="unfinished">PA</translation>
+    </message>
+    <message>
+        <source>KeyEvents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Install a plugin from a local file</source>
+        <translation>Установить плагин из локального файла</translation>
+    </message>
+    <message>
+        <source>Install plugin...</source>
+        <translation>Установка плагина…</translation>
+    </message>
+    <message>
+        <source>Unload the currently selected plugin. This will remove it from the plugin list for the current session.</source>
+        <translation>Выгрузите текущий выбранный плагин. Это удалит его из списка плагинов для текущего сеанса.</translation>
+    </message>
+    <message>
+        <source>Unload</source>
+        <translation>Выгрузить</translation>
+    </message>
+    <message>
+        <source>The plugin was installed successfully</source>
+        <translation>Плагин успешно установлен</translation>
+    </message>
+    <message>
+        <source>Unable to deactivate all requested features for plugin &quot;%1&quot;</source>
+        <translation>Невозможно деактивировать все запрошенные функции для плагина &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <source>Unable to load plugin &quot;%1&quot;</source>
+        <translation>Не удалось загрузить плагин &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <source>Whether the positional audio feature of this plugin should be enabled</source>
+        <translation>Должна ли быть включена функция позиционирования звука этого плагина</translation>
+    </message>
+    <message>
+        <source>This plugin does not provide support for positional audio</source>
+        <translation>Этот плагин не поддерживает позиционирование звука</translation>
+    </message>
+    <message>
+        <source>Whether this plugin has the permission to be listening to all keyboard events that occur while Mumble has focus</source>
+        <translation>Имеет ли этот плагин разрешение на прослушивание всех событий клавиатуры, которые происходят, пока Mumble находится в фокусе</translation>
+    </message>
+    <message>
+        <source>Whether this plugin should be enabled</source>
+        <translation>Должен ли этот плагин быть включен</translation>
     </message>
 </context>
 <context>
-    <name>Plugins</name>
+    <name>PluginInstaller</name>
     <message>
-        <source>Skipping plugin update in debug mode.</source>
-        <translation>Пропустить обновление плагина в режиме отладки.</translation>
+        <source>PluginInstaller</source>
+        <translation type="unfinished">Установка плагина</translation>
     </message>
     <message>
-        <source>Downloaded new or updated plugin to %1.</source>
-        <translation>Загрузка нового или обновленного плагина в %1.</translation>
+        <source>You are about to install the plugin listed below. Do you wish to proceed?</source>
+        <translation>Вы собираетесь установить плагин, указанный ниже. Вы хотите продолжить?</translation>
     </message>
     <message>
-        <source>Failed to install new plugin to %1.</source>
-        <translation>Ошибка при установке нового плагина в %1.</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Name:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Имя:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>%1 lost link.</source>
-        <translation>%1 потерял связь.</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Version:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Версия:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>%1 linked.</source>
-        <translation>%1 подключен.</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Author(s):&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Автор(ы):&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Description:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Описание:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&amp;No</source>
+        <translation>&amp;Нет</translation>
+    </message>
+    <message>
+        <source>&amp;Yes</source>
+        <translation>&amp;Да</translation>
+    </message>
+    <message>
+        <source>The file &quot;%1&quot; is not a valid plugin file!</source>
+        <translation>Файл &quot;%1&quot; не является действительным плагином!</translation>
+    </message>
+    <message>
+        <source>Found more than one plugin library for the current OS in &quot;%1&quot; (&quot;%2&quot; and &quot;%3&quot;)!</source>
+        <translation>Найдено более одной библиотеки плагина для текущей ОС в &quot;%1&quot; (&quot;%2&quot; и &quot;%3&quot;)!</translation>
+    </message>
+    <message>
+        <source>Unable to find a plugin for the current OS in &quot;%1&quot;</source>
+        <translation>Не удалось найти плагин для текущей операционной системы в &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <source>Unable to load plugin &quot;%1&quot; - check the plugin interface!</source>
+        <translation>Не удалось загрузить плагин &quot;%1&quot; - проверьте интерфейс плагина!</translation>
+    </message>
+    <message>
+        <source>Unable to delete old plugin at &quot;%1&quot;</source>
+        <translation>Не удалось удалить старый плагин &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <source>Unable to copy plugin library from &quot;%1&quot; to &quot;%2&quot;</source>
+        <translation>Не удалось скопировать библиотеку плагина с &quot;%1&quot; на &quot;%2&quot;</translation>
+    </message>
+    <message>
+        <source>Unable to move plugin library to &quot;%1&quot;</source>
+        <translation>Ну удалось переместить библиотеку плагина на &quot;%1&quot;</translation>
+    </message>
+</context>
+<context>
+    <name>PluginManager</name>
+    <message>
+        <source>%1 lost link</source>
+        <translation type="unfinished">%1 связь потеряна</translation>
+    </message>
+    <message>
+        <source>%1 linked</source>
+        <translation type="unfinished">%1 связан</translation>
+    </message>
+    <message>
+        <source>Plugin &quot;%1&quot; encountered a permanent error in positional data gathering</source>
+        <translation>Плагин &quot;%1&quot; обнаружил постоянную ошибку при сборе позиционных данных</translation>
+    </message>
+    <message>
+        <source>Non-plugin found in plugin directory: &quot;%1&quot;</source>
+        <translation type="unfinished">Не-плагин найден в каталоге плагинов: &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <source>Failed at loading manual plugin: %1</source>
+        <translation>Ошибка при загрузке плагина вручную: %1</translation>
+    </message>
+</context>
+<context>
+    <name>PluginUpdater</name>
+    <message>
+        <source>PluginUpdater</source>
+        <translation type="unfinished">Обновление плагина</translation>
+    </message>
+    <message>
+        <source>The following plugins can be updated.</source>
+        <translation>Следующие плагины могут быть обновлены.</translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation>Выбрать все</translation>
+    </message>
+    <message>
+        <source>Plugin</source>
+        <translation>Плагин</translation>
+    </message>
+    <message>
+        <source>Download-URL</source>
+        <translation>URL-адрес загрузки</translation>
+    </message>
+    <message>
+        <source>Do you want to update the selected plugins?</source>
+        <translation>Вы хотите обновить выбранные плагины?</translation>
+    </message>
+    <message>
+        <source>Unable to download plugin update for &quot;%1&quot; from &quot;%2&quot; (%3)</source>
+        <translation>Не удалось загрузить обновление плагина для &quot;%1&quot; из &quot;%2&quot; (%3)</translation>
+    </message>
+    <message>
+        <source>Update for plugin &quot;%1&quot; failed due to too many redirects</source>
+        <translation>Обновление для плагина &quot;%1&quot; не удалось из-за слишком большого количества переадресаций</translation>
+    </message>
+    <message>
+        <source>Unable to download plugin update for &quot;%1&quot; from &quot;%2&quot; (HTTP status code %3)</source>
+        <translation>Не удалось загрузить обновление плагина для &quot;%1&quot; из &quot;%2&quot; (код статуса HTTP %3)</translation>
+    </message>
+    <message>
+        <source>Successfully updated plugin &quot;%1&quot;</source>
+        <translation>Плагин &quot;%1&quot; успешно обновлён</translation>
     </message>
 </context>
 <context>
@@ -7075,6 +7310,10 @@ To upgrade these files to their latest versions, click the button below.</source
         <source>Mumble failed to restart itself. Please restart it manually.</source>
         <translation>Ошибка перезапуска Mumble. Сделайте это самостоятельно.</translation>
     </message>
+    <message>
+        <source>Mumble is currently connected to a server</source>
+        <translation>Mumble в настоящее время подключен к серверу</translation>
+    </message>
 </context>
 <context>
     <name>QObject</name>
@@ -7091,82 +7330,152 @@ To upgrade these files to their latest versions, click the button below.</source
         <translation>Подавление эха не поддерживается для комбинации интерфейсов &quot;%1&quot; (ввод) и &quot;%2&quot; (вывод).</translation>
     </message>
     <message>
-        <source>If enabled this tries to cancel out echo from the audio stream.
-Mixed echo cancellation mixes all speaker outputs in one mono stream and passes that stream to the echo canceller, while multichannel echo cancellation passes all audio channels to the echo canceller directly.
-Multichannel echo cancellation requires more CPU, so you should try mixed first</source>
-        <translation>Если этот параметр включен, он пытается отменить эхо из аудиопотока.
-Смешанное подавление эха смешивает все выходы динамиков в одном монопотоке и передает этот поток в эхоподавитель, в то время как многоканальное подавление эха передает все аудиоканалы напрямую в эхоподавитель.
-Многоканальное подавление эха требует больше ресурсов процессора, поэтому сначала попробуйте смешанное</translation>
-    </message>
-    <message>
-        <source>&lt;p&gt;If you're using Linux this is most likely because you are using a version from your distribution's package repository that have their own update cycles.&lt;/p&gt;&lt;p&gt;If you want to always have the most recent Mumble version, you should consider using a different method of installation.
+        <source>&lt;p&gt;If you&apos;re using Linux this is most likely because you are using a version from your distribution&apos;s package repository that have their own update cycles.&lt;/p&gt;&lt;p&gt;If you want to always have the most recent Mumble version, you should consider using a different method of installation.
 See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;the Mumble wiki&lt;/a&gt; for what alternatives there are.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Если вы используете Linux, то вероятнее всего, причина в использовании версии из репозитория вашего дистрибутива, который имеет свои циклы обновления.&lt;/p&gt;&lt;p&gt;Если вы хотите всегда иметь самую последнюю версию Mumble, вам следует подумать об использовании другого метода установки.
 Посмотрите &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;вики Mumble&lt;/a&gt; о том, какие есть альтернативы.</translation>
     </message>
     <message>
         <source>Local Mute</source>
-        <translation type="unfinished"/>
+        <translation>Не слушаю</translation>
     </message>
     <message>
         <source>Ignore Messages</source>
-        <translation type="unfinished"/>
+        <translation>Игнорировать сообщения</translation>
     </message>
     <message>
         <source>Disable Text-To-Speech</source>
-        <translation type="unfinished"/>
+        <translation>Отключить Текст-в-речь</translation>
     </message>
     <message>
         <source>&quot;%1&quot; could not be saved permanently and is lost on restart because %2 does not have a certificate.</source>
-        <translation type="unfinished"/>
+        <translation>&quot;%1&quot; не может быть сохранено навсегда и будет потеряно при перезапуске, так как у %2 нет сертификата.</translation>
     </message>
     <message>
         <source>Local Volume Adjustment...</source>
-        <translation type="unfinished"/>
+        <translation>Локальная регулировка громкости...</translation>
     </message>
     <message>
         <source>&lt;p&gt;You&apos;re using a Mumble version that &lt;b&gt;explicitly disabled&lt;/b&gt; update-checks.&lt;/p&gt;&lt;p&gt;This means that the update notification you might receive by using this option will &lt;b&gt;most likely be meaningless&lt;/b&gt; for you.&lt;/p&gt;</source>
-        <translation type="unfinished"/>
+        <translation>&lt;p&gt;Вы используете версию Mumble, в которой &lt;b&gt;отключена&lt;/b&gt; проверка обновлений. &lt;p&gt;&lt;p&gt;Это означает, что уведомление об обновлении, которое вы можете получить с помощью этой опции, скорее всего, будет для вас &lt;b&gt;бессмысленным&lt;/b&gt;.&lt;p&gt;</translation>
     </message>
     <message>
         <source>Talking (muted)</source>
-        <translation type="unfinished"/>
+        <translation>Говорит (заглушен)</translation>
     </message>
     <message>
         <source>All messages</source>
-        <translation type="unfinished"/>
+        <translation>Все сообщения</translation>
     </message>
     <message>
         <source>Toggle console for all events</source>
-        <translation type="unfinished"/>
+        <translation>Включение/выключение консоли для всех событий</translation>
     </message>
     <message>
         <source>Toggle pop-up notifications for all events</source>
-        <translation type="unfinished"/>
+        <translation>Включение/выключение всплывающих уведомлений для всех событий</translation>
     </message>
     <message>
         <source>Toggle window highlight (if not active) for all events</source>
-        <translation type="unfinished"/>
+        <translation>Включение/выключение выделения окна (если не активно) для всех событий</translation>
     </message>
     <message>
         <source>Click here to toggle sound notifications for all events</source>
-        <translation type="unfinished"/>
+        <translation>Кликните здесь, чтобы Включить/выключить звуковые уведомления для всех событий</translation>
     </message>
     <message>
         <source>Toggle Text-to-Speech for all events</source>
-        <translation type="unfinished"/>
+        <translation>Включение/выключение Текст-в-речь для всех событий</translation>
     </message>
     <message>
         <source>RNNoise is not available due to a sample rate mismatch.</source>
-        <translation type="unfinished"/>
+        <translation>RNNoise недоступно из-за отличия частоты дискретизации.</translation>
     </message>
     <message>
         <source>Reset all settings?</source>
-        <translation type="unfinished"/>
+        <translation>Сбросить все настройки?</translation>
     </message>
     <message>
         <source>Do you really want to reset all settings (not only the ones currently visible) to their default value?</source>
-        <translation type="unfinished"/>
+        <translation>Вы действительно хотите сбросить все настройки (не только видимые в данный момент) на значения по умолчанию?</translation>
+    </message>
+    <message>
+        <source>Local Nickname Adjustment...</source>
+        <translation>Локальная настройка ника...</translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Blocked URL scheme &quot;%1&quot;&lt;/b&gt;</source>
+        <translation>&lt;b&gt;Заблокированная схема URL &quot;%1&quot;&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>The URL uses a scheme that has been blocked for security reasons.</source>
+        <translation>URL-адрес использует схему, которая была заблокирована из соображений безопасности.</translation>
+    </message>
+    <message>
+        <source>Blocked URL: &quot;%1&quot;</source>
+        <translation>Заблокированный URL: &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <source>Default Device</source>
+        <translation>Устройство по умолчанию</translation>
+    </message>
+    <message>
+        <source>Access to the microphone was denied. Please allow Mumble to use the microphone by changing the settings in System Preferences -&gt; Security &amp; Privacy -&gt; Privacy -&gt; Microphone.</source>
+        <translation>Доступ к микрофону запрещен. Разрешите Mumble использовать микрофон, изменив настройки в Системных настройках -&gt; Безопасность и конфиденциальность -&gt; Конфиденциальность -&gt; Микрофон.</translation>
+    </message>
+    <message>
+        <source>Access to the microphone was denied due to system restrictions. You will not be ableto use the microphone in this session.</source>
+        <translation>Доступ к микрофону запрещен из-за системных ограничений. Вы не сможете использовать микрофон в этом сеансе.</translation>
+    </message>
+    <message>
+        <source>If enabled this tries to cancel out echo from the audio stream.</source>
+        <translation>Если включено, эта функция будет пытается убрать эхо из аудиопотока.</translation>
+    </message>
+    <message>
+        <source>Disabled</source>
+        <translation>Отключено</translation>
+    </message>
+    <message>
+        <source>Echo cancellation is disabled.</source>
+        <translation>Подавление эха отключено.</translation>
+    </message>
+    <message>
+        <source>Mixed echo cancellation (speex)</source>
+        <translation>Смешанное подавление эха (speex)</translation>
+    </message>
+    <message>
+        <source>Mixed has low CPU impact, but only works well if your speakers are equally loud and equidistant from the microphone.</source>
+        <translation>Смешанное подавление эха имеет низкую нагрузку на процессор, но работает хорошо, только если ваши динамики одинаково громкие и равноудалены от микрофона.</translation>
+    </message>
+    <message>
+        <source>Multichannel echo cancellation (speex)</source>
+        <translation>Многоканальное подавление эха (speex)</translation>
+    </message>
+    <message>
+        <source>Multichannel echo cancellation provides much better echo cancellation, but at a higher CPU cost. Multichannel echo cancellation requires more CPU, so you should try mixed first.</source>
+        <translation>Многоканальное подавление эха обеспечивает гораздо лучшее подавление эха, но при более высокой потреблении процессора. Многоканальное подавление эхо требует больше ресурсов ЦП, поэтому сначала следует попробовать смешанное.</translation>
+    </message>
+    <message>
+        <source>The provided URL uses an invalid version format: &quot;%1&quot;</source>
+        <translation>В указанном URL используется недопустимый формат версии: &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <source>The directories in which Mumble searches for extra translation files are:
+</source>
+        <translation>Каталоги, в которых Mumble ищет дополнительные файлы переводов:
+</translation>
+    </message>
+    <message>
+        <source>Invocation</source>
+        <translation type="unfinished">Вызов</translation>
+    </message>
+    <message>
+        <source>EXPERIMENTAL: Acoustic echo cancellation (Apple).</source>
+        <translation>ЭКСПЕРИМЕНТАЛЬНО: Подавление акустического эха (Apple).</translation>
+    </message>
+    <message>
+        <source>The support for this option is experimental only! This option works best when using built-in microphone and speaker.</source>
+        <translation>Поддержка этой опции только экспериментальная! Этот вариант лучше всего работает при использовании встроенного микрофона и динамика.</translation>
     </message>
 </context>
 <context>
@@ -7283,6 +7592,145 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     </message>
 </context>
 <context>
+    <name>ServerInformation</name>
+    <message>
+        <source>Server information</source>
+        <translation>Информация о сервере</translation>
+    </message>
+    <message>
+        <source>Server Information</source>
+        <translation>Информация о сервере</translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Host:&lt;/b&gt;</source>
+        <translation>&lt;b&gt;Хост:&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Port:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Порт:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Users&lt;/b&gt;:</source>
+        <translation>&lt;b&gt;Пользователи&lt;/b&gt;:</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Protocol:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Протокол:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Release:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Релиз:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;OS:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;ОС:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Audio</source>
+        <translation>Аудио</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Allowed:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Разрешено:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Current:&lt;/b&gt;</source>
+        <translation>&lt;b&gt;Текущий:&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Codec:&lt;/b&gt;</source>
+        <translation>&lt;b&gt;Кодек:&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Connection details</source>
+        <translation>Подробности подключения</translation>
+    </message>
+    <message>
+        <source>UDP (Voice)</source>
+        <translation type="unfinished">UDP (Голос)</translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Encryption:&lt;/b&gt;</source>
+        <translation>&lt;b&gt;Шифрование:&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Avg. latency:&lt;/b&gt;</source>
+        <translation>&lt;b&gt;Средняя задержка:&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>Statistics</source>
+        <translation>Статистика</translation>
+    </message>
+    <message>
+        <source>Good</source>
+        <translation type="unfinished">Хорошие</translation>
+    </message>
+    <message>
+        <source>Late</source>
+        <translation type="unfinished">С запозданием</translation>
+    </message>
+    <message>
+        <source>Lost</source>
+        <translation type="unfinished">Потерянные</translation>
+    </message>
+    <message>
+        <source>Resync</source>
+        <translation type="unfinished">Реcинхронизированные</translation>
+    </message>
+    <message>
+        <source>Outgoing</source>
+        <translation type="unfinished">Исходящий</translation>
+    </message>
+    <message>
+        <source>Incoming</source>
+        <translation type="unfinished">Входящий</translation>
+    </message>
+    <message>
+        <source>Voice packets is currently sent over TCP.</source>
+        <translation>Голосовые пакеты в настоящее время отправляются по TCP.</translation>
+    </message>
+    <message>
+        <source>TCP (Control)</source>
+        <translation type="unfinished">TCP (Управление)</translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;TLS version:&lt;/b&gt;</source>
+        <translation>&lt;b&gt;Версия TLS:&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Cipher suite:&lt;/b&gt;</source>
+        <translation type="unfinished">&lt;b&gt;Набор шифров:&lt;/b&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;forward secrecy&gt;</source>
+        <translation type="unfinished">&lt;прямая секретность&gt;</translation>
+    </message>
+    <message>
+        <source>&amp;View certificate</source>
+        <translation type="unfinished">&amp;Посмотреть сертификат</translation>
+    </message>
+    <message>
+        <source>&amp;Ok</source>
+        <translation type="unfinished">&amp;ОК</translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation>Неизвестно</translation>
+    </message>
+    <message>
+        <source>The connection provides perfect forward secrecy.</source>
+        <translation type="unfinished">Соединение обеспечивает идеальную прямую секретность.</translation>
+    </message>
+    <message>
+        <source>The connection does NOT provide perfect forward secrecy.</source>
+        <translation type="unfinished">Соединение НЕ обеспечивает идеальной прямой секретности.</translation>
+    </message>
+    <message>
+        <source>No information about forward secrecy available.</source>
+        <translation type="unfinished">Нет информации о прямой секретности.</translation>
+    </message>
+</context>
+<context>
     <name>ServerView</name>
     <message>
         <source>Favorite</source>
@@ -7323,15 +7771,12 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
         <translation>Не назначено</translation>
     </message>
     <message>
-        <source>Shortcut button combination:</source>
-        <translation type="unfinished"/>
+        <source>No buttons assigned</source>
+        <translation>Кнопки не назначены</translation>
     </message>
-</context>
-<context>
-    <name>ShortcutKeyWidget</name>
     <message>
-        <source>Press Shortcut</source>
-        <translation>Нажмите клавишу</translation>
+        <source>Press to show button combination</source>
+        <translation>Нажмите, чтобы показать комбинацию кнопок</translation>
     </message>
 </context>
 <context>
@@ -7424,7 +7869,7 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     </message>
     <message>
         <source>Message</source>
-        <translation type="unfinished"/>
+        <translation>Сообщение</translation>
     </message>
 </context>
 <context>
@@ -7444,7 +7889,7 @@ See &lt;a href=&quot;https://wiki.mumble.info/wiki/Installing_Mumble&quot;&gt;th
     <message>
         <source>&lt;b&gt;This is an editable list of access tokens on the connected server.&lt;/b&gt;
 &lt;br /&gt;
-An access token is a text string, which can be used as a password for very simple access management on channels. Mumble will remember the tokens you've used and resend them to the server next time you reconnect, so you don't have to enter these every time.
+An access token is a text string, which can be used as a password for very simple access management on channels. Mumble will remember the tokens you&apos;ve used and resend them to the server next time you reconnect, so you don&apos;t have to enter these every time.
 </source>
         <translation>&lt;b&gt;Это редкатируемый список токенов доступа для данного сервера.&lt;/b&gt;
 &lt;br /&gt;
@@ -7468,7 +7913,7 @@ An access token is a text string, which can be used as a password for very simpl
     </message>
     <message>
         <source>Tokens</source>
-        <translation type="unfinished"/>
+        <translation>Токены</translation>
     </message>
 </context>
 <context>
@@ -7511,15 +7956,19 @@ An access token is a text string, which can be used as a password for very simpl
     </message>
     <message numerus="yes">
         <source>Registered users: %n account(s)</source>
-        <translation><numerusform>Зарегистрировано: %n пользователь</numerusform><numerusform>Зарегистрировано: %n пользователя</numerusform><numerusform>Зарегистрировано: %n пользователей</numerusform><numerusform>Зарегистрировано: %n пользователей</numerusform></translation>
+        <translation>
+            <numerusform>Зарегистрировано: %n пользователь</numerusform>
+            <numerusform>Зарегистрировано: %n пользователя</numerusform>
+            <numerusform>Зарегистрировано: %n пользователей</numerusform>
+        </translation>
     </message>
     <message>
         <source>Search</source>
-        <translation type="unfinished"/>
+        <translation>Поиск</translation>
     </message>
     <message>
         <source>User list</source>
-        <translation type="unfinished"/>
+        <translation>Список пользователей</translation>
     </message>
 </context>
 <context>
@@ -7704,6 +8153,25 @@ An access token is a text string, which can be used as a password for very simpl
     </message>
 </context>
 <context>
+    <name>UserLocalNicknameDialog</name>
+    <message>
+        <source>Local nickname for other users</source>
+        <translation>Локальные ники для других пользователей</translation>
+    </message>
+    <message>
+        <source>&lt;b&gt;Adjust the nickname of other users locally&lt;/b&gt;&lt;br /&gt;</source>
+        <translation>&lt;b&gt;Локально настроить ники других пользователей&lt;/b&gt;&lt;br /&gt;</translation>
+    </message>
+    <message>
+        <source>User nickname</source>
+        <translation>Ник пользователя</translation>
+    </message>
+    <message>
+        <source>Adjusting local nickname for %1</source>
+        <translation>Локальный ник установлен для %1</translation>
+    </message>
+</context>
+<context>
     <name>UserLocalVolumeDialog</name>
     <message>
         <source>Local volume for other users</source>
@@ -7727,7 +8195,7 @@ An access token is a text string, which can be used as a password for very simpl
     </message>
     <message>
         <source>User volume</source>
-        <translation type="unfinished"/>
+        <translation>Громкость пользователя</translation>
     </message>
 </context>
 <context>
@@ -7747,7 +8215,7 @@ An access token is a text string, which can be used as a password for very simpl
     </message>
     <message>
         <source>Whispering directly to you.</source>
-        <translation>Шепчет прямо вам.</translation>
+        <translation>Шепчет лично Вам.</translation>
     </message>
     <message>
         <source>Not talking.</source>
@@ -7783,11 +8251,11 @@ An access token is a text string, which can be used as a password for very simpl
     </message>
     <message>
         <source>Muted (manually muted by self)</source>
-        <translation>Микрофон выключен (вручную, сам)</translation>
+        <translation>Микрофон выключен (пользователем)</translation>
     </message>
     <message>
         <source>Muted (manually muted by admin)</source>
-        <translation>Микрофон выключен (вручную, администратором)</translation>
+        <translation>Микрофон выключен (администратором)</translation>
     </message>
     <message>
         <source>Muted (not allowed to speak in current channel)</source>
@@ -7799,15 +8267,15 @@ An access token is a text string, which can be used as a password for very simpl
     </message>
     <message>
         <source>Muted (push-to-mute)</source>
-        <translation>Микрофон выключен (Нажмите, чтобы выключить микрофон)</translation>
+        <translation>Микрофон выключен (удержанием кнопки)</translation>
     </message>
     <message>
         <source>Deafened (by self)</source>
-        <translation>Звук выключен (собой)</translation>
+        <translation>Звук выключен (пользователем)</translation>
     </message>
     <message>
         <source>Deafened (by admin)</source>
-        <translation>Звук выкл (администратором)</translation>
+        <translation>Звук выключен (администратором)</translation>
     </message>
     <message>
         <source>User has a new comment set (click to show)</source>
@@ -7856,6 +8324,22 @@ An access token is a text string, which can be used as a password for very simpl
     <message>
         <source>Cannot perform this movement automatically, please reset the numeric sorting indicators or adjust it manually.</source>
         <translation>Автоматическое перемещение невозможно - сбросьте нумерацию каналов или настройте вручную.</translation>
+    </message>
+    <message>
+        <source>Talking while being muted on your end</source>
+        <translation>Говорить, когда на вашем конце отключен звук</translation>
+    </message>
+    <message>
+        <source>This is a channel listener. The corresponding user hears everything you say in this channel.</source>
+        <translation>Это слушатель канала. Соответствующий пользователь слышит все, что вы говорите на этом канале.</translation>
+    </message>
+    <message>
+        <source>Channel has access restrictions so that you can&apos;t enter it</source>
+        <translation>Канал имеет ограничения доступа, так что вы не можете войти в него</translation>
+    </message>
+    <message>
+        <source>Channel has access restrictions but you can enter nonetheless</source>
+        <translation>Канал имеет ограничения доступа, но вы все равно можете войти</translation>
     </message>
 </context>
 <context>
@@ -8116,7 +8600,7 @@ Please contact your server administrator for further information.</source>
     <name>WASAPIInput</name>
     <message>
         <source>Access to the microphone was denied. Please check that your operating system&apos;s microphone settings allow Mumble to use the microphone.</source>
-        <translation>Доступ к микрофону был запрещен. Проверьте, позволяют ли настройки микрофона ОС предоставить Mumble доступ к микрофону.</translation>
+        <translation>Доступ к микрофону был запрещён. Проверьте настройки микрофона в системе, чтобы Mumble смог получить доступ к нему.</translation>
     </message>
 </context>
 <context>

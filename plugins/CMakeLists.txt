@@ -1,4 +1,4 @@
-# Copyright 2019-2020 The Mumble Developers. All rights reserved.
+# Copyright 2020-2021 The Mumble Developers. All rights reserved.
 # Use of this source code is governed by a BSD-style license
 # that can be found in the LICENSE file at the root of the
 # Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -29,6 +29,11 @@ foreach(ITEM ${ITEMS})
 		# If the plugin is retracted the corresponding CMakeLists.txt is supposed to set the
 		# PLUGIN_RETRACTED variable in the parent scope so that we can access it here
 		add_subdirectory(${ITEM})
+
+		if(${ITEM} STREQUAL "testPlugin" AND NOT ${CMAKE_BUILD_TYPE} MATCHES Debug)
+			# The testPlugin is only included in Debug builds
+			continue()
+		endif()
 
 		if(PLUGIN_RETRACTED AND NOT retracted-plugins)
 			# The included subdir didn't actually add a target since the associated plugin is retracted

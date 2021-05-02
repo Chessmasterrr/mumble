@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2007-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -43,6 +43,10 @@ public slots:
 	void on_qpbPushClickBrowseOff_clicked();
 	void on_qpbPushClickPreview_clicked();
 	void on_qpbPushClickReset_clicked();
+
+	void on_qcbMuteCue_clicked(bool);
+	void on_qpbMuteCueBrowse_clicked();
+	void on_qpbMuteCuePreview_clicked();
 
 	void on_qsTransmitHold_valueChanged(int v);
 	void on_qsFrames_valueChanged(int v);

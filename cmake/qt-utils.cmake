@@ -1,4 +1,4 @@
-# Copyright 2019-2020 The Mumble Developers. All rights reserved.
+# Copyright 2020-2021 The Mumble Developers. All rights reserved.
 # Use of this source code is governed by a BSD-style license
 # that can be found in the LICENSE file at the root of the
 # Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -15,6 +15,13 @@ function(include_qt_plugin TARGET SCOPE PLUGIN)
 			set(FOUND TRUE)
 		endif()
 	endif()
+
+	# We have to exclude these files from unity builds since we have one of that for the client
+	# and one for the server. If they happen to get included in the same build or just with some
+	# other code that happens to include one of the plugins statically, then there'll be errors.
+	# We set the property on existing files as well in order to ensure that it is set even
+	# if the file existed already (and setting the property multiple times should not hurt).
+	set_property(SOURCE ${PATH} PROPERTY SKIP_UNITY_BUILD_INCLUSION TRUE)
 
 	if(NOT FOUND)
 		file(APPEND ${PATH} "Q_IMPORT_PLUGIN(${PLUGIN})\n")

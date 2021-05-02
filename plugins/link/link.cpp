@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2007-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -10,7 +10,8 @@
 #include <windows.h>
 #include <math.h>
 
-#include "../mumble_plugin.h"
+#define MUMBLE_ALLOW_DEPRECATED_LEGACY_PLUGIN_API
+#include "../mumble_legacy_plugin.h"
 
 static std::wstring wsPluginName;
 static std::wstring wsDescription;

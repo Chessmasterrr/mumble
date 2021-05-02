@@ -1,12 +1,14 @@
-// Copyright 2020 The Mumble Developers. All rights reserved.
+// Copyright 2020-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
 
 #include "Game.h"
 
-#include "mumble_plugin.h"
-#include "mumble_plugin_utils.h"
+#define MUMBLE_ALLOW_DEPRECATED_LEGACY_PLUGIN_API
+#include "../mumble_legacy_plugin.h"
+
+#include "../mumble_positional_audio_utils.h"
 
 #include <sstream>
 
@@ -80,7 +82,7 @@ static int tryLock(const std::multimap< std::wstring, unsigned long long int > &
 		return false;
 	}
 
-	game = std::make_unique<Game>(id, name);
+	game = std::make_unique< Game >(id, name);
 	if (!game->isOk()) {
 		game.reset();
 		return false;

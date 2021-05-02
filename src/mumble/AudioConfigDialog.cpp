@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2007-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -55,8 +55,8 @@ static ConfigWidget *AudioOutputDialogNew(Settings &st) {
 	return new AudioOutputDialog(st);
 }
 
-static ConfigRegistrar iregistrar(1000, AudioInputDialogNew);
-static ConfigRegistrar oregistrar(1010, AudioOutputDialogNew);
+static ConfigRegistrar registrarAudioInputDialog(1000, AudioInputDialogNew);
+static ConfigRegistrar registrarAudioOutputDialog(1010, AudioOutputDialogNew);
 
 void AudioInputDialog::hideEvent(QHideEvent *) {
 	qtTick->stop();
@@ -112,9 +112,10 @@ AudioInputDialog::AudioInputDialog(Settings &st) : ConfigWidget(st) {
 
 	qcbDevice->view()->setTextElideMode(Qt::ElideRight);
 
-	on_qcbPushClick_clicked(g.s.bTxAudioCue);
+	on_qcbPushClick_clicked(Global::get().s.bTxAudioCue);
+	on_qcbMuteCue_clicked(Global::get().s.bTxMuteCue);
 	on_Tick_timeout();
-	on_qcbIdleAction_currentIndexChanged(g.s.iaeIdleAction);
+	on_qcbIdleAction_currentIndexChanged(Global::get().s.iaeIdleAction);
 
 	// Hide the slider by default
 	showSpeexNoiseSuppressionSlider(false);
@@ -156,6 +157,7 @@ void AudioInputDialog::load(const Settings &r) {
 
 	qlePushClickPathOn->setText(r.qsTxAudioCueOn);
 	qlePushClickPathOff->setText(r.qsTxAudioCueOff);
+	qleMuteCuePath->setText(r.qsTxMuteCue);
 
 	loadComboBox(qcbTransmit, r.atTransmit);
 	loadSlider(qsTransmitHold, r.iVoiceHold);
@@ -172,6 +174,7 @@ void AudioInputDialog::load(const Settings &r) {
 
 	loadCheckBox(qcbPushWindow, r.bShowPTTButtonWindow);
 	loadCheckBox(qcbPushClick, r.bTxAudioCue);
+	loadCheckBox(qcbMuteCue, r.bTxMuteCue);
 	loadSlider(qsQuality, r.iQuality);
 	loadCheckBox(qcbAllowLowDelay, r.bAllowLowDelay);
 	if (r.iSpeexNoiseCancelStrength != 0) {
@@ -245,13 +248,14 @@ void AudioInputDialog::verifyMicrophonePermission() {
 		qcbDevice->setEnabled(false);
 		if (air->name == QLatin1String("CoreAudio")) {
 			qlInputHelp->setVisible(true);
-			qlInputHelp->setText(tr("Access to the microphone was denied. Please allow Mumble to use the microphone "
-			                        "by changing the settings in System Preferences -> Security & Privacy -> Privacy -> "
-			                        "Microphone."));
+			qlInputHelp->setText(
+				tr("Access to the microphone was denied. Please allow Mumble to use the microphone "
+				   "by changing the settings in System Preferences -> Security & Privacy -> Privacy -> "
+				   "Microphone."));
 		} else if (air->name == QLatin1String("WASAPI")) {
 			qlInputHelp->setVisible(true);
-			qlInputHelp->setText( tr("Access to the microphone was denied. Please check that your operating system's "
-			                         "microphone settings allow Mumble to use the microphone."));
+			qlInputHelp->setText(tr("Access to the microphone was denied. Please check that your operating system's "
+									"microphone settings allow Mumble to use the microphone."));
 		}
 	} else {
 		qcbDevice->setEnabled(true);
@@ -296,8 +300,11 @@ void AudioInputDialog::save() const {
 	s.qsTxAudioCueOn       = qlePushClickPathOn->text();
 	s.qsTxAudioCueOff      = qlePushClickPathOff->text();
 
+	s.bTxMuteCue  = qcbMuteCue->isChecked();
+	s.qsTxMuteCue = qleMuteCuePath->text();
+
 	s.qsAudioInput    = qcbSystem->currentText();
-	s.echoOption    = static_cast<EchoCancelOptionID>(qcbEcho->currentData().toInt());
+	s.echoOption      = static_cast< EchoCancelOptionID >(qcbEcho->currentData().toInt());
 	s.bExclusiveInput = qcbExclusive->isChecked();
 
 	if (AudioInputRegistrar::qmNew) {
@@ -374,7 +381,7 @@ void AudioInputDialog::updateBitrate() {
 	if (NetworkConfig::TcpModeEnabled())
 		overhead += 100 * 8 * 12;
 
-	if (g.s.bTransmitPosition)
+	if (Global::get().s.bTransmitPosition)
 		posrate = 12;
 	else
 		posrate = 0;
@@ -388,7 +395,7 @@ void AudioInputDialog::updateBitrate() {
 
 	QPalette pal;
 
-	if (g.uiSession && (total > g.iMaxBandwidth)) {
+	if (Global::get().uiSession && (total > Global::get().iMaxBandwidth)) {
 		pal.setColor(qlBitrate->foregroundRole(), Qt::red);
 	}
 
@@ -431,7 +438,7 @@ void AudioInputDialog::on_qpbPushClickBrowseOff_clicked() {
 }
 
 void AudioInputDialog::on_qpbPushClickPreview_clicked() {
-	AudioOutputPtr ao = g.ao;
+	AudioOutputPtr ao = Global::get().ao;
 	if (ao) {
 		AudioOutputSample *sample = ao->playSample(qlePushClickPathOn->text());
 		if (sample)
@@ -441,8 +448,28 @@ void AudioInputDialog::on_qpbPushClickPreview_clicked() {
 	}
 }
 
+void AudioInputDialog::on_qcbMuteCue_clicked(bool b) {
+	qleMuteCuePath->setEnabled(b);
+	qpbMuteCueBrowse->setEnabled(b);
+	qpbMuteCuePreview->setEnabled(b);
+}
+
+void AudioInputDialog::on_qpbMuteCueBrowse_clicked() {
+	QString defaultpath(qleMuteCuePath->text());
+	QString qsnew = AudioOutputSample::browseForSndfile(defaultpath);
+	if (!qsnew.isEmpty())
+		qleMuteCuePath->setText(qsnew);
+}
+
+
+void AudioInputDialog::on_qpbMuteCuePreview_clicked() {
+	AudioOutputPtr ao = Global::get().ao;
+	if (ao)
+		ao->playSample(qleMuteCuePath->text());
+}
+
 void AudioInputDialog::continuePlayback() {
-	AudioOutputPtr ao = g.ao;
+	AudioOutputPtr ao = Global::get().ao;
 	if (ao) {
 		ao->playSample(qlePushClickPathOff->text());
 	}
@@ -519,9 +546,9 @@ void AudioInputDialog::updateEchoEnableState() {
 	for (EchoCancelOptionID ecoid : air->echoOptions) {
 		if (air->canEcho(ecoid, outputInterface)) {
 			++i;
-			hasUsableEchoOption = true;
-			const EchoCancelOption &echoOption = echoCancelOptions[static_cast<int>(ecoid)];
-			qcbEcho->insertItem(i, echoOption.description, static_cast<int>(ecoid));
+			hasUsableEchoOption                = true;
+			const EchoCancelOption &echoOption = echoCancelOptions[static_cast< int >(ecoid)];
+			qcbEcho->insertItem(i, echoOption.description, static_cast< int >(ecoid));
 			qcbEcho->setItemData(i, echoOption.explanation, Qt::ToolTipRole);
 			if (s.echoOption == ecoid) {
 				qcbEcho->setCurrentIndex(i);
@@ -535,9 +562,9 @@ void AudioInputDialog::updateEchoEnableState() {
 		qcbEcho->setCurrentIndex(0);
 		qcbEcho->setEnabled(false);
 		qcbEcho->setToolTip(QObject::tr("Echo cancellation is not supported for the interface "
-		                                "combination \"%1\" (in) and \"%2\" (out).")
-			                    .arg(air->name)
-			                    .arg(outputInterface));
+										"combination \"%1\" (in) and \"%2\" (out).")
+								.arg(air->name)
+								.arg(outputInterface));
 	}
 }
 
@@ -548,7 +575,7 @@ void AudioInputDialog::showSpeexNoiseSuppressionSlider(bool show) {
 }
 
 void AudioInputDialog::on_Tick_timeout() {
-	AudioInputPtr ai = g.ai;
+	AudioInputPtr ai = Global::get().ai;
 
 	if (!ai.get() || !ai->sppPreprocess)
 		return;

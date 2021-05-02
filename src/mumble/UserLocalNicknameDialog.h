@@ -1,4 +1,4 @@
-// Copyright 2020 The Mumble Developers. All rights reserved.
+// Copyright 2020-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -20,7 +20,7 @@ class UserLocalNicknameDialog;
  * A typedef for a unique pointer (std::unique_ptr) using the deleter-function dedicated for QObjects
  * instead of using raw delete
  */
-typedef std::unique_ptr< UserLocalNicknameDialog, decltype(&deleteQObject) > NicknameDialogPtr;
+typedef std::unique_ptr< UserLocalNicknameDialog, decltype(&Mumble::QtUtils::deleteQObject) > NicknameDialogPtr;
 
 class UserLocalNicknameDialog : public QDialog, private Ui::UserLocalNicknameDialog {
 	Q_OBJECT
@@ -40,12 +40,10 @@ public slots:
 	void reject();
 
 public:
-	static void
-		present(unsigned int sessionId,
-				std::unordered_map< unsigned int, NicknameDialogPtr > &qmUserNicknameTracker);
-	UserLocalNicknameDialog(
-		unsigned int sessionId,
-		std::unordered_map< unsigned int, NicknameDialogPtr > &qmUserNicknameTracker);
+	static void present(unsigned int sessionId,
+						std::unordered_map< unsigned int, NicknameDialogPtr > &qmUserNicknameTracker);
+	UserLocalNicknameDialog(unsigned int sessionId,
+							std::unordered_map< unsigned int, NicknameDialogPtr > &qmUserNicknameTracker);
 };
 
 #endif

@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2007-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -10,6 +10,7 @@
 #include "Group.h"
 #include "Message.h"
 #include "Meta.h"
+#include "MumbleConstants.h"
 #include "Server.h"
 #include "ServerDB.h"
 #include "ServerUser.h"
@@ -180,7 +181,7 @@ void Server::msgAuthenticate(ServerUser *uSource, MumbleProto::Authenticate &msg
 	Channel *root = qhChannels.value(0);
 	Channel *c;
 
-	uSource->qsName = u8(msg.username());
+	uSource->qsName = u8(msg.username()).trimmed();
 
 	bool ok     = false;
 	bool nameok = validateUserName(uSource->qsName);
@@ -379,7 +380,10 @@ void Server::msgAuthenticate(ServerUser *uSource, MumbleProto::Authenticate &msg
 
 	{
 		QWriteLocker wl(&qrwlVoiceThread);
-		uSource->sState = ServerUser::Authenticated;
+		uSource->uiSession = qqIds.dequeue();
+		uSource->sState    = ServerUser::Authenticated;
+		qhUsers.insert(uSource->uiSession, uSource);
+		qhHostUsers[uSource->haAddress].insert(uSource);
 	}
 
 	mpus.set_session(uSource->uiSession);
@@ -1413,9 +1417,7 @@ void Server::msgTextMessage(ServerUser *uSource, MumbleProto::TextMessage &msg) 
 		}
 
 		// Users directly in that channel
-		foreach (User *p, c->qlUsers) {
-			users.insert(static_cast< ServerUser * >(p));
-		}
+		foreach (User *p, c->qlUsers) { users.insert(static_cast< ServerUser * >(p)); }
 
 		// Users only listening in that channel
 		foreach (unsigned int session, ChannelListener::getListenersForChannel(c)) {
@@ -1454,13 +1456,9 @@ void Server::msgTextMessage(ServerUser *uSource, MumbleProto::TextMessage &msg) 
 	while (!q.isEmpty()) {
 		Channel *c = q.dequeue();
 		if (ChanACL::hasPermission(uSource, c, ChanACL::TextMessage, &acCache)) {
-			foreach (Channel *sub, c->qlChannels) {
-				q.enqueue(sub);
-			}
+			foreach (Channel *sub, c->qlChannels) { q.enqueue(sub); }
 			// Users directly in that channel
-			foreach (User *p, c->qlUsers) {
-				users.insert(static_cast< ServerUser * >(p));
-			}
+			foreach (User *p, c->qlUsers) { users.insert(static_cast< ServerUser * >(p)); }
 			// Users only listening in that channel
 			foreach (unsigned int session, ChannelListener::getListenersForChannel(c)) {
 				ServerUser *currentUser = qhUsers.value(session);
@@ -1490,9 +1488,7 @@ void Server::msgTextMessage(ServerUser *uSource, MumbleProto::TextMessage &msg) 
 	users.remove(uSource);
 
 	// Actually send the original message to the affected users
-	foreach (ServerUser *u, users) {
-		sendMessage(u, msg);
-	}
+	foreach (ServerUser *u, users) { sendMessage(u, msg); }
 
 	// Emit the signal for RPC consumers
 	emit userTextMessage(uSource, tm);
@@ -1936,7 +1932,7 @@ void Server::msgUserList(ServerUser *uSource, MumbleProto::UserList &msg) {
 				log(uSource, QString::fromLatin1("Unregistered user %1").arg(id));
 				unregisterUser(id);
 			} else {
-				const QString &name = u8(user.name());
+				const QString &name = u8(user.name()).trimmed();
 				if (validateUserName(name)) {
 					log(uSource, QString::fromLatin1("Renamed user %1 to '%2'").arg(QString::number(id), name));
 
@@ -2161,3 +2157,70 @@ void Server::msgServerConfig(ServerUser *, MumbleProto::ServerConfig &) {
 
 void Server::msgSuggestConfig(ServerUser *, MumbleProto::SuggestConfig &) {
 }
+
+void Server::msgPluginDataTransmission(ServerUser *sender, MumbleProto::PluginDataTransmission &msg) {
+	// A client's plugin has sent us a message that we shall delegate to its receivers
+
+	if (sender->m_pluginMessageBucket.ratelimit(1)) {
+		qWarning("Dropping plugin message sent from \"%s\" (%d)", qUtf8Printable(sender->qsName), sender->uiSession);
+		return;
+	}
+
+	if (!msg.has_data() || !msg.has_dataid()) {
+		// Messages without data and/or without a data ID can't be used by the clients. Thus we don't even have to send
+		// them
+		return;
+	}
+
+	if (msg.data().size() > Mumble::Plugins::PluginMessage::MAX_DATA_LENGTH) {
+		qWarning("Dropping plugin message sent from \"%s\" (%d) - data too large", qUtf8Printable(sender->qsName),
+				 sender->uiSession);
+		return;
+	}
+	if (msg.dataid().size() > Mumble::Plugins::PluginMessage::MAX_DATA_ID_LENGTH) {
+		qWarning("Dropping plugin message sent from \"%s\" (%d) - data ID too long", qUtf8Printable(sender->qsName),
+				 sender->uiSession);
+		return;
+	}
+
+	// Always set the sender's session and don't rely on it being set correctly (would
+	// allow spoofing the sender's session)
+	msg.set_sendersession(sender->uiSession);
+
+	// Copy needed data from message in order to be able to remove info about receivers from the message as this doesn't
+	// matter for the client
+	size_t receiverAmount                                                                 = msg.receiversessions_size();
+	const ::google::protobuf::RepeatedField<::google::protobuf::uint32 > receiverSessions = msg.receiversessions();
+
+	msg.clear_receiversessions();
+
+	QSet< uint32_t > uniqueReceivers;
+	uniqueReceivers.reserve(receiverSessions.size());
+
+	for (int i = 0; static_cast< size_t >(i) < receiverAmount; i++) {
+		uint32_t userSession = receiverSessions.Get(i);
+
+		if (!uniqueReceivers.contains(userSession)) {
+			uniqueReceivers.insert(userSession);
+		} else {
+			// Duplicate entry -> ignore
+			continue;
+		}
+
+		ServerUser *receiver = qhUsers.value(receiverSessions.Get(i));
+
+		if (receiver) {
+			// We can simply redirect the message we have received to the clients
+			sendMessage(receiver, msg);
+		}
+	}
+}
+
+#undef RATELIMIT
+#undef MSG_SETUP
+#undef MSG_SETUP_NO_UNIDLE
+#undef VICTIM_SETUP
+#undef PERM_DENIED
+#undef PERM_DENIED_TYPE
+#undef PERM_DENIED_FALLBACK
+#undef PERM_DENIED_HASH

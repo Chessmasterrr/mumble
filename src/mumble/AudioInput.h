@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2007-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -6,6 +6,7 @@
 #ifndef MUMBLE_MUMBLE_AUDIOINPUT_H_
 #define MUMBLE_MUMBLE_AUDIOINPUT_H_
 
+#include <QElapsedTimer>
 #include <QtCore/QObject>
 #include <QtCore/QThread>
 #include <boost/array.hpp>
@@ -193,6 +194,8 @@ private:
 	int encodeOpusFrame(short *source, int size, EncodingOutputBuffer &buffer);
 	int encodeCELTFrame(short *pSource, EncodingOutputBuffer &buffer);
 
+	QElapsedTimer qetLastMuteCue;
+
 protected:
 	MessageHandler::UDPMessageType umtType;
 	SampleFormat eMicFormat, eEchoFormat;
@@ -227,6 +230,9 @@ protected:
 	/// Number of 10ms audio "frames" per packet (!= frames in packet)
 	int iAudioFrames;
 
+	/// The minimum time in ms that has to pass between the playback of two consecutive mute cues.
+	static constexpr unsigned int iMuteCueDelay = 5000;
+
 	float *pfMicInput;
 	float *pfEchoInput;
 
@@ -254,6 +260,15 @@ protected:
 signals:
 	void doDeaf();
 	void doMute();
+	/// A signal emitted if audio input is being encountered
+	///
+	/// @param inputPCM The encountered input PCM
+	/// @param sampleCount The amount of samples in the input
+	/// @param channelCount The amount of channels in the input
+	/// @param sampleRate The used sample rate in Hz
+	/// @param isSpeech Whether Mumble considers the inpu to be speech
+	void audioInputEncountered(short *inputPCM, unsigned int sampleCount, unsigned int channelCount,
+							   unsigned int sampleRate, bool isSpeech);
 
 public:
 	typedef enum { ActivityStateIdle, ActivityStateReturnedFromIdle, ActivityStateActive } ActivityState;

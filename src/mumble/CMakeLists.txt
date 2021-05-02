@@ -1,4 +1,4 @@
-# Copyright 2019-2020 The Mumble Developers. All rights reserved.
+# Copyright 2020-2021 The Mumble Developers. All rights reserved.
 # Use of this source code is governed by a BSD-style license
 # that can be found in the LICENSE file at the root of the
 # Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -34,6 +34,9 @@ option(qtspeech "Use Qt's text-to-speech system (part of the Qt Speech module) i
 
 option(jackaudio "Build support for JackAudio." ON)
 option(portaudio "Build support for PortAudio" ON)
+
+option(plugin-debug "Build Mumble with debug output for plugin developers." OFF)
+option(plugin-callback-debug "Build Mumble with debug output for plugin callbacks inside of Mumble." OFF)
 
 if(WIN32)
 	option(asio "Build support for ASIO audio input." OFF)
@@ -81,6 +84,8 @@ set(MUMBLE_SOURCES
 	"ACLEditor.cpp"
 	"ACLEditor.h"
 	"ACLEditor.ui"
+	"API_v_1_0_x.cpp"
+	"API.h"
 	"ApplicationPalette.h"
 	"AudioConfigDialog.cpp"
 	"AudioConfigDialog.h"
@@ -142,6 +147,8 @@ set(MUMBLE_SOURCES
 	"LCD.cpp"
 	"LCD.h"
 	"LCD.ui"
+	"LegacyPlugin.cpp"
+	"LegacyPlugin.h"
 	"ListenerLocalVolumeDialog.cpp"
 	"Log.cpp"
 	"Log.h"
@@ -162,9 +169,21 @@ set(MUMBLE_SOURCES
 	"NetworkConfig.ui"
 	"OpusCodec.cpp"
 	"OpusCodec.h"
-	"Plugins.cpp"
-	"Plugins.h"
-	"Plugins.ui"
+	"PluginConfig.cpp"
+	"PluginConfig.h"
+	"PluginConfig.ui"
+	"Plugin.cpp"
+	"Plugin.h"
+	"PluginInstaller.cpp"
+	"PluginInstaller.h"
+	"PluginInstaller.ui"
+	"PluginManager.cpp"
+	"PluginManager.h"
+	"PluginUpdater.cpp"
+	"PluginUpdater.h"
+	"PluginUpdater.ui"
+	"PositionalData.cpp"
+	"PositionalData.h"
 	"PTTButtonWidget.cpp"
 	"PTTButtonWidget.h"
 	"PTTButtonWidget.ui"
@@ -176,6 +195,9 @@ set(MUMBLE_SOURCES
 	"Screen.h"
 	"ServerHandler.cpp"
 	"ServerHandler.h"
+	"ServerInformation.cpp"
+	"ServerInformation.h"
+	"ServerInformation.ui"
 	"Settings.cpp"
 	"Settings.h"
 	"SharedMemory.cpp"
@@ -203,6 +225,8 @@ set(MUMBLE_SOURCES
 	"Tokens.cpp"
 	"Tokens.h"
 	"Tokens.ui"
+	"Translations.cpp"
+	"Translations.h"
 	"Usage.cpp"
 	"Usage.h"
 	"UserEdit.cpp"
@@ -267,7 +291,7 @@ set(MUMBLE_SOURCES
 if(static AND WIN32)
 	# On Windows, building a static client means building the main app into a DLL.
 	add_library(mumble SHARED ${MUMBLE_SOURCES})
-	add_compile_definitions(mumble PRIVATE "MUMBLEAPP_DLL")
+	target_compile_definitions(mumble PRIVATE "MUMBLEAPP_DLL")
 
 	set_target_properties(mumble PROPERTIES OUTPUT_NAME "mumble_app")
 	if(MINGW)
@@ -342,12 +366,79 @@ target_include_directories(mumble
 		"widgets"
 		${SHARED_SOURCE_DIR}
 		"${3RDPARTY_DIR}/smallft"
+		"${PLUGINS_DIR}"
 )
 
-find_pkg("LibSndFile;sndfile" REQUIRED)
+find_pkg(Poco COMPONENTS Zip)
 
+if(TARGET Poco::Zip)
+	target_link_libraries(mumble
+		PRIVATE
+			Poco::Zip
+	)
+else()
+	message(STATUS "Regular Poco search failed - looking for Poco include dir manually...")
+
+	if(MINGW)
+		# These are the paths for our MXE environment
+		if(32_BIT)
+			set(POCO_INCLUDE_DIR_HINT "/usr/lib/mxe/usr/i686-w64-mingw32.static/include/")
+		else()
+			set(POCO_INCLUDE_DIR_HINT "/usr/lib/mxe/usr/x86_64-w64-mingw32.static/include/")
+		endif()
+	else()
+		set(POCO_INCLUDE_DIR_HINT "/usr/include")
+	endif()
+
+	find_path(POCO_INCLUDE_DIR "Poco/Poco.h" HINTS ${POCO_INCLUDE_DIR_HINT})
+
+	if(POCO_INCLUDE_DIR)
+		message(STATUS "Found Poco include dir at \"${POCO_INCLUDE_DIR}\"")
+	else()
+		message(FATAL_ERROR "Unable to locate Poco include directory")
+	endif()
+
+	find_library(POCO_LIB_FOUNDATION NAMES PocoFoundation PocoFoundationmd REQUIRED)
+	find_library(POCO_LIB_UTIL NAMES PocoUtil PocoUtilmd REQUIRED)
+	find_library(POCO_LIB_XML NAMES PocoXML PocoXMLmd REQUIRED)
+	find_library(POCO_LIB_ZIP NAMES PocoZip PocoZipmd REQUIRED)
+
+	if(POCO_LIB_ZIP)
+		message(STATUS "Found Poco Zip library at \"${POCO_LIB_ZIP}\"")
+	else()
+		message(FATAL_ERROR "Unable to find Poco Zip library")
+	endif()
+
+
+	# Now use the found include dir and libraries by linking it to the target
+	target_include_directories(mumble
+		PRIVATE
+			${POCO_INCLUDE_DIR}
+	)
+
+	target_link_libraries(mumble
+		PRIVATE
+			${POCO_LIB_ZIP}
+			${POCO_LIB_XML}
+			${POCO_LIB_UTIL}
+			${POCO_LIB_FOUNDATION}
+	)
+
+	if(static)
+		target_compile_definitions(mumble
+			PUBLIC
+				POCO_STATIC
+		)
+	endif()
+endif()
+
+find_pkg("SndFile;LibSndFile;sndfile" REQUIRED)
+
+# Look for various targets as they are named differently on different platforms
 if(static AND TARGET sndfile-static)
 	target_link_libraries(mumble PRIVATE sndfile-static)
+elseif(TARGET SndFile::sndfile)
+	target_link_libraries(mumble PRIVATE SndFile::sndfile)
 elseif(TARGET sndfile)
 	target_link_libraries(mumble PRIVATE sndfile)
 else()
@@ -399,6 +490,12 @@ if(WIN32)
 		"${CMAKE_SOURCE_DIR}/overlay/ods.cpp"
 	)
 
+	# WinGUIDs.cpp includes initguid.h which causes a macro definition in guiddef.h to be
+	# chaged in such a way that subsequent usages break (redefinition errors).
+	# Thus we must not package this source file in a unity build allowing other files
+	# to include plain guiddef.h without having to worry about side-effects.
+	set_source_files_properties("WinGUIDs.cpp" PROPERTIES SKIP_UNITY_BUILD_INCLUSION TRUE)
+
 	find_pkg(Boost
 		COMPONENTS
 			system
@@ -436,8 +533,8 @@ if(WIN32)
 	target_link_libraries(mumble
 		PRIVATE
 			dbghelp.lib
-			dinput8.lib
 			dxguid.lib
+			hid.lib
 			wintrust.lib
 	)
 else()
@@ -517,6 +614,9 @@ if(bundled-opus)
 
 	# Disable all warnings that the Opus code may emit
 	disable_warnings_for_all_targets_in("${3RDPARTY_DIR}/opus")
+
+	# Opus doesn't work in unity builds
+	set_target_properties(opus PROPERTIES UNITY_BUILD FALSE)
 
 	add_dependencies(mumble opus)
 
@@ -725,6 +825,7 @@ if(translations)
 		"mumble_pt_PT.ts"
 		"mumble_ro.ts"
 		"mumble_ru.ts"
+		"mumble_si.ts"
 		"mumble_sv.ts"
 		"mumble_te.ts"
 		"mumble_th.ts"
@@ -975,5 +1076,48 @@ if(wasapi)
 
 	if(MSVC)
 		set_property(TARGET mumble APPEND_STRING PROPERTY LINK_FLAGS " /DELAYLOAD:avrt.dll")
+	endif()
+endif()
+
+if(${CMAKE_VERSION} VERSION_GREATER_EQUAL "3.16.0")
+	if (APPLE)
+		# Prevent objective C files from being included in unity builds as that causes issues
+		set_source_files_properties(
+			"AppNap.mm"
+			"GlobalShortcut_macx.mm"
+			"Log_macx.mm"
+			"os_macx.mm"
+			"TextToSpeech_macx.mm"
+			"Overlay_macx.mm"
+			"CoreAudio.mm"
+			PROPERTIES
+				SKIP_UNITY_BUILD_INCLUSION TRUE
+		)
+	elseif(UNIX)
+		# Exclude source files that include the X11 headers as these define
+		# an awful lot of macros that can conflict with other code
+		set_source_files_properties(
+			"GlobalShortcut_unix.cpp"
+			PROPERTIES
+				SKIP_UNITY_BUILD_INCLUSION TRUE
+		)
+	endif()
+endif()
+
+if(plugin-debug)
+	target_compile_definitions(mumble PRIVATE "MUMBLE_PLUGIN_DEBUG")
+endif()
+
+if(plugin-callback-debug)
+	target_compile_definitions(mumble PRIVATE "MUMBLE_PLUGIN_CALLBACK_DEBUG")
+endif()
+
+if(UNIX)
+	if(${CMAKE_SYSTEM_NAME} STREQUAL "FreeBSD")
+		# On FreeBSD we need the util library for src/ProcessResolver.cpp to work
+		target_link_libraries(mumble PRIVATE util)
+	elseif(${CMAKE_SYSTEM_NAME} MATCHES ".*BSD")
+		# On any other BSD we need the kvm library for src/ProcessResolver.cpp to work
+		target_link_libraries(mumble PRIVATE kvm)
 	endif()
 endif()

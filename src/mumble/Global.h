@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2007-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -22,7 +22,7 @@ class AudioInput;
 class AudioOutput;
 class Database;
 class Log;
-class Plugins;
+class PluginManager;
 class QSettings;
 class Overlay;
 class LCD;
@@ -41,6 +41,8 @@ private:
 	Q_DISABLE_COPY(Global)
 public:
 	static Global *g_global_struct;
+	static Global &get();
+
 	MainWindow *mw;
 	Settings s;
 	boost::shared_ptr< ServerHandler > sh;
@@ -51,7 +53,8 @@ public:
 	 */
 	Database *db;
 	Log *l;
-	Plugins *p;
+	/// A pointer to the PluginManager that is used in this session
+	PluginManager *pluginManager;
 	QSettings *qs;
 #ifdef USE_OVERLAY
 	Overlay *o;
@@ -136,11 +139,5 @@ public:
 
 /// Special exit code which causes mumble to restart itself. The outward facing return code with be 0
 const int MUMBLE_EXIT_CODE_RESTART = 64738;
-
-// -Wshadow is bugged. If an inline function of a class uses a variable or
-// parameter named 'g', that will generate a warning even if the class header
-// is included long before this definition.
-
-#define g (*Global::g_global_struct)
 
 #endif

@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2007-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -53,7 +53,7 @@ public:
 
 	QString getUserLocalNickname(const QString &hash);
 	void setUserLocalNickname(const QString &hash, const QString &nickname);
-	
+
 	bool isChannelFiltered(const QByteArray &server_cert_digest, const int channel_id);
 	void setChannelFiltered(const QByteArray &server_cert_digest, const int channel_id, bool hidden);
 

@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2018-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -100,3 +100,5 @@ bool OpusCodec::isValid() const {
 void OpusCodec::report() const {
 	qDebug("%s from %s", opus_get_version_string(), qPrintable(qlOpus.fileName()));
 }
+
+#undef RESOLVE

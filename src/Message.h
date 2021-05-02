@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2007-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -41,7 +41,8 @@
 	MUMBLE_MH_MSG(UserStats)           \
 	MUMBLE_MH_MSG(RequestBlob)         \
 	MUMBLE_MH_MSG(ServerConfig)        \
-	MUMBLE_MH_MSG(SuggestConfig)
+	MUMBLE_MH_MSG(SuggestConfig)       \
+	MUMBLE_MH_MSG(PluginDataTransmission)
 
 class MessageHandler {
 public:

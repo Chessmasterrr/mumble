@@ -1,4 +1,4 @@
-// Copyright 2020 The Mumble Developers. All rights reserved.
+// Copyright 2020-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -351,7 +351,7 @@ QString markdownToHTML(const QString &markdownInput) {
 	// Replace linebreaks afterwards in order to not mess up the RegEx used by the
 	// different functions.
 	static const QRegularExpression s_lineBreakRegEx(QLatin1String("\r\n|\n|\r"));
-	htmlString.replace(s_lineBreakRegEx, QLatin1String("</br>"));
+	htmlString.replace(s_lineBreakRegEx, QLatin1String("<br/>"));
 
 	// Resore linebreaks in <pre> blocks
 	htmlString.replace(regularLineBreakPlaceholder, QLatin1String("\n"));

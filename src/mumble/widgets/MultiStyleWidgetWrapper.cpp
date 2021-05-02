@@ -1,17 +1,17 @@
-// Copyright 2020 The Mumble Developers. All rights reserved.
+// Copyright 2020-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
 
 #include "MultiStyleWidgetWrapper.h"
 
-#include <QWidget>
 #include <QFont>
 #include <QFontMetrics>
+#include <QWidget>
 
 const uint32_t MultiStyleWidgetWrapper::UNSET_FONTSIZE = 0;
-const QString MultiStyleWidgetWrapper::UNSET_COLOR = "";
-const QString MultiStyleWidgetWrapper::UNSET_SELECTOR = "*";
+const QString MultiStyleWidgetWrapper::UNSET_COLOR     = "";
+const QString MultiStyleWidgetWrapper::UNSET_SELECTOR  = "*";
 
 MultiStyleWidgetWrapper::MultiStyleWidgetWrapper(QWidget *widget) : m_widget(widget) {
 }

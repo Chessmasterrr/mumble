@@ -1,4 +1,4 @@
-// Copyright 2005-2020 The Mumble Developers. All rights reserved.
+// Copyright 2007-2021 The Mumble Developers. All rights reserved.
 // Use of this source code is governed by a BSD-style license
 // that can be found in the LICENSE file at the root of the
 // Mumble source tree or at <https://www.mumble.info/LICENSE>.
@@ -17,8 +17,8 @@
 #include "Message.h"
 #include "Mumble.pb.h"
 #include "Usage.h"
-#include "UserLocalVolumeDialog.h"
 #include "UserLocalNicknameDialog.h"
+#include "UserLocalVolumeDialog.h"
 
 #include "ui_MainWindow.h"
 
@@ -81,7 +81,8 @@ public:
 	GlobalShortcut *gsToggleOverlay;
 #endif
 	GlobalShortcut *gsMinimal, *gsVolumeUp, *gsVolumeDown, *gsWhisper, *gsLinkChannel;
-	GlobalShortcut *gsCycleTransmitMode, *gsToggleMainWindowVisibility, *gsTransmitModePushToTalk, *gsTransmitModeContinuous, *gsTransmitModeVAD;
+	GlobalShortcut *gsCycleTransmitMode, *gsToggleMainWindowVisibility, *gsTransmitModePushToTalk,
+		*gsTransmitModeContinuous, *gsTransmitModeVAD;
 	GlobalShortcut *gsSendTextMessage, *gsSendClipboardTextMessage;
 	DockTitleBar *dtbLogDockTitle, *dtbChatDockTitle;
 
@@ -198,7 +199,7 @@ public slots:
 	void on_qaSelfComment_triggered();
 	void on_qaSelfRegister_triggered();
 	void qcbTransmitMode_activated(int index);
-	void updateTransmitModeComboBox();
+	void updateTransmitModeComboBox(Settings::AudioTransmit newMode);
 	void qmUser_aboutToShow();
 	void qmListener_aboutToShow();
 	void on_qaUserCommentReset_triggered();
@@ -311,6 +312,15 @@ public slots:
 	/// Updates the user's image directory to the given path (any included
 	/// filename is discarded).
 	void updateImagePath(QString filepath) const;
+	void setTransmissionMode(Settings::AudioTransmit mode);
+	/// Sets the local user's mute state
+	///
+	/// @param mute Whether to mute the user
+	void setAudioMute(bool mute);
+	/// Sets the local user's deaf state
+	///
+	/// @param deaf Whether to deafen the user
+	void setAudioDeaf(bool deaf);
 signals:
 	/// Signal emitted when the server and the client have finished
 	/// synchronizing (after a new connection).
@@ -319,6 +329,7 @@ signals:
 	void userAddedChannelListener(ClientUser *user, Channel *channel);
 	/// Signal emitted whenever a user removes a ChannelListener
 	void userRemovedChannelListener(ClientUser *user, Channel *channel);
+	void transmissionModeChanged(Settings::AudioTransmit newMode);
 
 public:
 	MainWindow(QWidget *parent);
